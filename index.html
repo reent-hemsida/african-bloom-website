@@ -26,6 +26,77 @@
     html, body { margin:0; padding:0; }
     #ab-scale-outer { overflow:hidden; width:100%; }
     #ab-scale-wrap { width:1440px; transform-origin: top left; }
+
+    /* Real mobile/tablet layout: on screens this narrow, the scaled-down
+       desktop canvas makes every link, button and form field too small to
+       tap accurately (technically clickable, not practically usable). Below
+       this breakpoint we cancel the scale trick and let the design reflow
+       at its natural, readable, properly tappable size instead. */
+    @media (max-width: 1024px) {
+      #ab-scale-outer { height: auto !important; }
+      #ab-scale-wrap { width: 100% !important; min-width: 0 !important; transform: none !important; }
+
+      #ab-scale-wrap div[style*="width: 1440px"] { width: 100% !important; }
+
+      /* Any flex row wraps instead of overflowing or squeezing unreadably. */
+      #ab-scale-wrap div[style*="display:flex"] { flex-wrap: wrap !important; }
+
+      /* Any multi-column grid stacks to a single column. */
+      #ab-scale-wrap div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+
+      /* The generous desktop section padding (64px sides) becomes phone-friendly. */
+      #ab-scale-wrap div[style*="padding: 26px 64px"],
+      #ab-scale-wrap div[style*="padding: 56px 64px"],
+      #ab-scale-wrap div[style*="padding: 64px 64px"],
+      #ab-scale-wrap div[style*="padding: 72px 64px"],
+      #ab-scale-wrap div[style*="padding: 80px 64px"],
+      #ab-scale-wrap div[style*="padding: 88px 64px"],
+      #ab-scale-wrap div[style*="padding: 96px 64px"],
+      #ab-scale-wrap div[style*="padding: 100px 64px"],
+      #ab-scale-wrap div[style*="padding: 32px 64px"],
+      #ab-scale-wrap div[style*="padding: 48px 64px"],
+      #ab-scale-wrap div[style*="padding: 80px 72px"] {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+
+      /* Header: stack logo / nav / language switcher instead of one tight row. */
+      #ab-scale-wrap div[style*="justify-content:space-between; padding: 26px 64px"] {
+        justify-content: center !important;
+        text-align: center !important;
+        row-gap: 14px !important;
+        padding-top: 18px !important;
+        padding-bottom: 18px !important;
+      }
+
+      /* Footer's 3-column layout and the two-column info/form split on
+         Contact both use grid and are already covered above; give the
+         stacked columns some breathing room. */
+      #ab-scale-wrap div[style*="grid-template-columns"] > div { min-width: 0 !important; }
+
+      #ab-scale-wrap img { max-width: 100% !important; }
+
+      /* Large desktop display type is oversized for a phone-width column
+         and can overflow or crowd a decorative graphic — scale it down. */
+      #ab-scale-wrap [style*="font-size:64px"] { font-size: 32px !important; }
+      #ab-scale-wrap [style*="font-size:52px"] { font-size: 28px !important; }
+      #ab-scale-wrap [style*="font-size:48px"] { font-size: 30px !important; }
+      #ab-scale-wrap [style*="font-size:44px"] { font-size: 28px !important; }
+      #ab-scale-wrap [style*="font-size:42px"] { font-size: 26px !important; }
+
+      /* Section-level 64px side margins get the same phone-friendly treatment
+         as the padding above. */
+      #ab-scale-wrap [style*="margin: 100px 64px"],
+      #ab-scale-wrap [style*="margin: 88px 64px"] {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+      }
+
+      /* Purely decorative absolute-positioned flourishes (e.g. the flower
+         graphic on the Standing Order band) fight for space with reflowed
+         mobile text — hide them below the breakpoint. */
+      #ab-scale-wrap div[style*="position:absolute; right:40px; top:50%"] { display: none !important; }
+    }
 </style>
 </head>
 <body>
@@ -1263,6 +1334,7 @@ function setLang(code) {
 
 <script>
 function abFitScale() {
+  if (window.innerWidth <= 1024) return;
   var outer = document.getElementById('ab-scale-outer');
   var wrap = document.getElementById('ab-scale-wrap');
   if (!outer || !wrap) return;
