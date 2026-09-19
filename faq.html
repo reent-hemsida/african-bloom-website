@@ -12,7 +12,7 @@
     * { box-sizing: border-box; }
     body { margin: 0; background: #FAF4E8; font-family: 'EB Garamond', Georgia, serif; color: #201C1A; }
     a { color: #9C5323; text-decoration: none; }
-    a:hover { color: #B5622C; }
+    a:hover { color: #663711; }
     .navlink { position:relative; padding-bottom:14px; transition: color 0.15s ease; }
     .navlink:hover { color: #9C5323 !important; }
     .navlink.active { color:#9C5323; }
@@ -31,7 +31,7 @@
        tap accurately (technically clickable, not practically usable). Below
        this breakpoint we cancel the scale trick and let the design reflow
        at its natural, readable, properly tappable size instead. */
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
       #ab-scale-outer { height: auto !important; }
       #ab-scale-wrap { width: 100% !important; min-width: 0 !important; transform: none !important; }
 
@@ -97,8 +97,102 @@
       #ab-scale-wrap div[style*="position:absolute; right:40px; top:50%"] { display: none !important; }
     }
 </style>
+<meta name="theme-color" content="#FAF4E8">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="African Bloom">
+<meta property="og:title" content="FAQ — African Bloom">
+<meta property="og:description" content="Answers to the most common questions retailers ask before their first standing order with African Bloom.">
+<meta property="og:image" content="https://www.africane.se/hero-roses.jpg">
+<link rel="canonical" href="https://www.africane.se/faq.html">
+<style>
+  a:focus-visible, [role="button"]:focus-visible, input:focus-visible, textarea:focus-visible, button:focus-visible { outline: 2px solid #CC7A40; outline-offset: 3px; }
+  .skip-link { position:absolute; left:-9999px; top:8px; background:#241E17; color:#fff; padding:10px 16px; z-index:100; }
+  .skip-link:focus { left:8px; color:#fff; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+<style>
+  .ab-burger { display:none; background:none; border:0; padding:10px; margin:-10px -10px -10px 0; cursor:pointer; }
+  .ab-search { }
+  @media (max-width: 1200px) {
+    #ab-scale-wrap div.ab-header[style] { position:relative !important; flex-wrap:nowrap !important; padding:14px 20px !important; gap:12px; }
+    #ab-scale-wrap div.ab-header img { height:30px !important; }
+    #ab-scale-wrap div.ab-header span[style*="letter-spacing:0.14em"] { font-size:15px !important; letter-spacing:0.1em !important; white-space:nowrap; }
+    #ab-scale-wrap div.ab-right[style] { gap:14px !important; flex-wrap:nowrap !important; }
+    #ab-scale-wrap div.ab-right span[onclick] { padding:8px 3px; }
+    .ab-burger { display:block; }
+    .ab-search { display:none; }
+    #ab-scale-wrap div.ab-nav[style] { display:none !important; position:absolute; top:100%; left:0; right:0; z-index:60; background:#FAF4E8; flex-direction:column !important; align-items:stretch !important; gap:0 !important; padding:6px 20px 16px; border-bottom:1px solid #241E17; font-size:17px !important; }
+    #ab-scale-wrap div.ab-nav.open[style] { display:flex !important; }
+    #ab-scale-wrap div.ab-nav a { padding:13px 0; border-bottom:1px solid #E9DFCF; }
+    #ab-scale-wrap div.ab-nav .navlink::after { display:none; }
+    #ab-scale-wrap div[style*="px 64px"] { padding-left:20px !important; padding-right:20px !important; }
+    input, textarea, select { font-size:16px !important; }
+    img { max-width:100%; }
+  }
+</style>
+<style>
+  @media (max-width: 1200px) {
+    #ab-scale-wrap div.ab-header div[style*="display:flex"] { flex-wrap:nowrap !important; }
+    #ab-scale-wrap div.ab-header > div:first-child { min-width:0; gap:8px !important; }
+    #ab-scale-wrap div[style*="margin:24px 64px"], #ab-scale-wrap div[style*="margin: 100px 64px"], #ab-scale-wrap div[style*="margin: 88px 64px"] { margin-left:16px !important; margin-right:16px !important; }
+    #ab-scale-wrap div[style*="px 72px"] { padding-left:20px !important; padding-right:20px !important; }
+    #ab-scale-wrap div[style*="height:520px"], #ab-scale-wrap div[style*="height:560px"], #ab-scale-wrap div[style*="height:440px"] { height:340px !important; }
+    #ab-scale-wrap div[style*="left:40px; bottom:40px"] { left:20px !important; bottom:24px !important; right:20px; max-width:none !important; }
+    #ab-scale-wrap [style*="font-size:64px"] { font-size:36px !important; }
+    #ab-scale-wrap [style*="font-size:52px"], #ab-scale-wrap [style*="font-size:48px"] { font-size:32px !important; }
+    #ab-scale-wrap [style*="font-size:44px"], #ab-scale-wrap [style*="font-size:42px"] { font-size:30px !important; }
+    #ab-scale-wrap div[style*="gap:64px"], #ab-scale-wrap div[style*="gap:56px"] { gap:28px !important; }
+  }
+</style>
+<style>
+  @media (max-width: 1200px) {
+    #ab-scale-wrap div.ab-header span[style*="letter-spacing:0.14em"] { font-size:13px !important; letter-spacing:0.06em !important; }
+    #ab-scale-wrap div.ab-right span[style*="D8CDBE"] { display:none; }
+    #ab-scale-wrap div.ab-right > div[style] { gap:4px !important; }
+    #ab-scale-wrap div.ab-right { gap:6px !important; }
+    #ab-scale-wrap div.ab-right span[onclick] { padding:10px 6px; font-size:12.5px !important; }
+  }
+</style>
+<style>
+  @media (max-width: 480px) {
+    #ab-scale-wrap div.ab-header span[style*="letter-spacing:0.14em"] { display:none; }
+    #ab-scale-wrap div.ab-header img { height:44px !important; }
+  }
+</style>
+<style>/* ab-readable */
+#ab-scale-wrap [style*="font-size:11px"]{font-size:17px !important;}
+#ab-scale-wrap [style*="font-size:11.5px"]{font-size:17px !important;}
+#ab-scale-wrap [style*="font-size:12px"]{font-size:17px !important;}
+#ab-scale-wrap [style*="font-size:12.5px"]{font-size:17px !important;}
+#ab-scale-wrap [style*="font-size:13px"]{font-size:19px !important;}
+#ab-scale-wrap [style*="font-size:13.5px"]{font-size:22px !important;}
+#ab-scale-wrap [style*="font-size:14px"]{font-size:22px !important;}
+#ab-scale-wrap [style*="font-size:14.5px"]{font-size:24px !important;}
+#ab-scale-wrap [style*="font-size:15px"]{font-size:24px !important;}
+#ab-scale-wrap [style*="font-size:16px"]{font-size:24px !important;}
+#ab-scale-wrap [style*="font-size:17px"]{font-size:25px !important;}
+#ab-scale-wrap [style*="font-size:19px"]{font-size:26px !important;}
+#ab-scale-wrap [style*="font-size:21px"]{font-size:27px !important;}
+#ab-scale-wrap [style*="font-size:22px"]{font-size:27px !important;}
+.field-box{font-size:20px !important;}
+#ab-scale-wrap p{line-height:1.7;}
+</style>
+<style>/* ab-qa */
+#ab-scale-wrap [style*="color:#D8C9A3"], #ab-scale-wrap [style*="color:#FBF8F2"] { text-shadow: 0 1px 8px rgba(0,0,0,.55); }
+.field-label { font-size:15px !important; }
+.ab-car-dots button { box-sizing:content-box; padding:9px; background-clip:content-box; width:13px; height:13px; }
+.ab-car-dots { gap:0 !important; }
+@media (max-width:1200px){
+  #ab-scale-wrap div.ab-right span[onclick] { font-size:15px !important; padding:12px 6px !important; }
+  #ab-scale-wrap div.ab-header span[style*="letter-spacing:0.14em"] { font-size:16px !important; }
+  #ab-scale-wrap div[style*="border-top:1px solid #241E17; padding: "] a { display:block; padding:9px 0; }
+  #ab-scale-wrap .ab-promo-img img { opacity:.16 !important; }
+}
+@media (max-width:480px){ #ab-scale-wrap div.ab-header span[style*="letter-spacing:0.14em"] { display:none !important; } }
+</style>
 </head>
 <body>
+<a class="skip-link" href="#ab-scale-wrap">Skip to content</a>
 <div id="ab-scale-outer">
 <div id="ab-scale-wrap">
 
@@ -107,32 +201,31 @@
 <div data-lang="en" style="display:block;">
 
   <!-- Header -->
-  <div style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
+  <div class="ab-header" style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
     <div style="display:flex; align-items:center; gap:12px;">
       <img src="logo-header.png" alt="African Bloom" style="height:36px; width:auto; display:block;">
       <span style="font-family:'EB Garamond',serif; font-size:21px; letter-spacing:0.14em; font-weight:500;">AFRICAN BLOOM</span>
     </div>
-    <div style="display:flex; align-items:center; gap:26px; font-size:13px; color:#201C1A;">
+    <div class="ab-nav" style="display:flex; align-items:center; gap:26px; font-size:13px; color:#201C1A;">
       <a href="index.html" style="text-decoration:none; color:inherit;"><span class="navlink">Home</span></a>
       <a href="about.html" style="text-decoration:none; color:inherit;"><span class="navlink">About</span></a>
       <a href="collection.html" style="text-decoration:none; color:inherit;"><span class="navlink">Collection</span></a>
       <a href="ordering.html" style="text-decoration:none; color:inherit;"><span class="navlink">How to Order</span></a>
-      <a href="certifications.html" style="text-decoration:none; color:inherit;"><span class="navlink">Certifications</span></a>
       <a href="faq.html" style="text-decoration:none; color:inherit;"><span class="navlink active">FAQ</span></a>
       <a href="contact.html" style="text-decoration:none; color:inherit;"><span class="navlink">Contact</span></a>
     </div>
-    <div style="display:flex; align-items:center; gap:20px;">
-      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#9C5323; font-weight:600; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#9C9186; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#9C9186; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#9C9186; cursor:pointer;">SV</span></div>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
-      <svg width="20" height="14" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg>
+    <div class="ab-right" style="display:flex; align-items:center; gap:20px;">
+      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#5E564F; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#5E564F; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#5E564F; cursor:pointer;">SV</span></div>
+      <svg class="ab-search" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+      <button class="ab-burger" type="button" aria-label="Menu" aria-expanded="false"><svg width="22" height="16" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg></button>
     </div>
   </div>
 
   <!-- Title band -->
   <div style="padding: 64px 64px 48px; border-bottom:1px solid #241E17;">
-    <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#9C5323;">Home &nbsp;/&nbsp; FAQ</span>
+    <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#8A4A1E;">Home &nbsp;/&nbsp; FAQ</span>
     <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:48px; margin:14px 0 0;">Frequently Asked Questions</h1>
-    <p style="font-size:15px; color:#6E6660; max-width:620px; margin:16px 0 0; line-height:1.7;">Everything retailers usually ask before their first standing order.</p>
+    <p style="font-size:15px; color:#4F4741; max-width:620px; margin:16px 0 0; line-height:1.7;">Everything retailers usually ask before their first standing order.</p>
   </div>
 
   <!-- FAQ list -->
@@ -140,42 +233,42 @@
 
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">What is your minimum order quantity?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Minimum order is 1,000 stems, which can be combined across varieties and quality tiers within a single standing order.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Minimum order is 1,000 stems, which can be combined across varieties and quality tiers within a single standing order.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">How is pricing structured?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Per stem for roses, spray roses, alstroemeria and ranunculus, and per bunch for gypsophila, across four quality tiers &mdash; see Collection &amp; Pricing for full 2026 rates.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Per stem for roses, spray roses, alstroemeria and ranunculus, and per bunch for gypsophila, across four quality tiers.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">What does "EUR per stem, ex-works" mean?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Prices are quoted in EUR from the farm gate; onward freight and customs are arranged separately &mdash; see How to Order for a full walkthrough.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Prices are quoted in EUR from the farm gate; onward freight and customs are arranged separately &mdash; see How to Order for a full walkthrough.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">Do you ship outside Sweden?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Yes &mdash; Cabrera Group AB distributes to retailers worldwide from our Sweden HQ.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Yes &mdash; African Bloom distributes to retailers worldwide from our Sweden HQ.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">Can I mix varieties in one standing order?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Yes &mdash; the 1,000-stem minimum applies across your combined selection, not per variety.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Yes &mdash; the 1,000-stem minimum applies across your combined selection, not per variety.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">What happens if my shipment arrives damaged?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Contact your account representative with photos as soon as possible so we can resolve it quickly.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Contact your account representative with photos as soon as possible so we can resolve it quickly.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">Can I change or pause a standing order?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Yes &mdash; reach out to your account contact; standing orders can be adjusted between shipments.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Yes &mdash; reach out to your account contact; standing orders can be adjusted between shipments.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">How do I get the full catalogue?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Request it directly through the Contact page, or use the "Request the Catalogue" button on our Home page.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Request it directly through the Contact page, or use the "Request the Catalogue" button on our Home page.</p>
     </div>
   </div>
 
   <!-- CTA -->
   <div style="padding: 96px 64px 96px; text-align:center;">
     <h2 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:34px; margin:0;">Still Have Questions?</h2>
-    <p style="font-size:14.5px; color:#6E6660; margin:16px 0 0;">Our team is happy to walk you through anything not covered here.</p>
+    <p style="font-size:14.5px; color:#4F4741; margin:16px 0 0;">Our team is happy to walk you through anything not covered here.</p>
     <a href="contact.html" class="cta-box" style="display:inline-block; margin-top:30px; background:#241E17; border:1px solid #241E17; color:#FFFFFF; padding:15px 34px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase;">Talk to Our Team</a>
   </div>
 
@@ -187,26 +280,26 @@
           <img src="logo-header.png" alt="African Bloom" style="height:26px; width:auto;">
           <span style="font-size:15px; letter-spacing:0.12em;">AFRICAN BLOOM</span>
         </div>
-        <p style="font-size:13px; line-height:1.7; color:#6E6660; max-width:280px; margin:0;">Wholesale cut-flower imports for retailers worldwide, based in Sweden.</p>
+        <p style="font-size:13px; line-height:1.7; color:#4F4741; max-width:280px; margin:0;">Wholesale cut-flower imports for retailers worldwide, based in Sweden.</p>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Explore</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Explore</span>
         <a href="about.html" style="text-decoration:none; color:inherit;"><span>About</span></a>
         <a href="collection.html" style="text-decoration:none; color:inherit;"><span>Collection</span></a>
         <a href="ordering.html" style="text-decoration:none; color:inherit;"><span>How to Order</span></a>
-        <a href="certifications.html" style="text-decoration:none; color:inherit;"><span>Certifications</span></a>
         <a href="faq.html" style="text-decoration:none; color:inherit;"><span>FAQ</span></a>
         <a href="contact.html" style="text-decoration:none; color:inherit;"><span>Contact</span></a>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Contact</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Contact</span>
         <span>info@africane.se</span>
         <span>+46 73 756 57 58</span>
+        <a href="https://wa.me/46737565758" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;"><span>WhatsApp</span></a>
         <span>Sweden</span>
       </div>
     </div>
-    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#9C9186;">
-      <span>&copy; 2026 African Bloom &mdash; Cabrera Group AB</span>
+    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#5E564F;">
+      <span>&copy; 2026 African Bloom</span>
       <span>www.africane.se</span>
     </div>
   </div>
@@ -215,32 +308,31 @@
 <div data-lang="es" style="display:none;">
 
   <!-- Header -->
-  <div style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
+  <div class="ab-header" style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
     <div style="display:flex; align-items:center; gap:12px;">
       <img src="logo-header.png" alt="African Bloom" style="height:36px; width:auto; display:block;">
       <span style="font-family:'EB Garamond',serif; font-size:21px; letter-spacing:0.14em; font-weight:500;">AFRICAN BLOOM</span>
     </div>
-    <div style="display:flex; align-items:center; gap:26px; font-size:13px; color:#201C1A;">
+    <div class="ab-nav" style="display:flex; align-items:center; gap:26px; font-size:13px; color:#201C1A;">
       <a href="index.html" style="text-decoration:none; color:inherit;"><span class="navlink">Inicio</span></a>
       <a href="about.html" style="text-decoration:none; color:inherit;"><span class="navlink">Nosotros</span></a>
       <a href="collection.html" style="text-decoration:none; color:inherit;"><span class="navlink">Colección</span></a>
       <a href="ordering.html" style="text-decoration:none; color:inherit;"><span class="navlink">Cómo Pedir</span></a>
-      <a href="certifications.html" style="text-decoration:none; color:inherit;"><span class="navlink">Certificaciones</span></a>
       <a href="faq.html" style="text-decoration:none; color:inherit;"><span class="navlink active">FAQ</span></a>
       <a href="contact.html" style="text-decoration:none; color:inherit;"><span class="navlink">Contacto</span></a>
     </div>
-    <div style="display:flex; align-items:center; gap:20px;">
-      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#9C9186; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#9C5323; font-weight:600; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#9C9186; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#9C9186; cursor:pointer;">SV</span></div>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
-      <svg width="20" height="14" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg>
+    <div class="ab-right" style="display:flex; align-items:center; gap:20px;">
+      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#5E564F; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#5E564F; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#5E564F; cursor:pointer;">SV</span></div>
+      <svg class="ab-search" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+      <button class="ab-burger" type="button" aria-label="Menu" aria-expanded="false"><svg width="22" height="16" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg></button>
     </div>
   </div>
 
   <!-- Title band -->
   <div style="padding: 64px 64px 48px; border-bottom:1px solid #241E17;">
-    <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#9C5323;">Inicio &nbsp;/&nbsp; FAQ</span>
+    <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#8A4A1E;">Inicio &nbsp;/&nbsp; FAQ</span>
     <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:48px; margin:14px 0 0;">Preguntas Frecuentes</h1>
-    <p style="font-size:15px; color:#6E6660; max-width:620px; margin:16px 0 0; line-height:1.7;">Todo lo que los minoristas suelen preguntar antes de su primer pedido fijo.</p>
+    <p style="font-size:15px; color:#4F4741; max-width:620px; margin:16px 0 0; line-height:1.7;">Todo lo que los minoristas suelen preguntar antes de su primer pedido fijo.</p>
   </div>
 
   <!-- FAQ list -->
@@ -248,42 +340,42 @@
 
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">¿Cuál es su cantidad mínima de pedido?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">El pedido mínimo es de 1.000 tallos, que se pueden combinar entre variedades y niveles de calidad dentro de un mismo pedido fijo.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">El pedido mínimo es de 1.000 tallos, que se pueden combinar entre variedades y niveles de calidad dentro de un mismo pedido fijo.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">¿Cómo se estructuran los precios?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Por tallo para rosas, rosas spray, alstroemeria y ranunculus, y por ramo para gypsophila, en cuatro niveles de calidad &mdash; consulte Colección y Precios para las tarifas completas de 2026.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Por tallo para rosas, rosas spray, alstroemeria y ranúnculos, y por ramo para gypsophila, en cuatro niveles de calidad.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">¿Qué significa "EUR por tallo, ex-works"?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Los precios se cotizan en EUR desde la puerta de la granja; el flete y la aduana posteriores se gestionan por separado &mdash; consulte Cómo Pedir para una explicación completa.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Los precios se cotizan en EUR desde la puerta de la granja; el flete y la aduana posteriores se gestionan por separado &mdash; consulte Cómo Pedir para una explicación completa.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">¿Envían fuera de Suecia?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Sí &mdash; Cabrera Group AB distribuye a minoristas de todo el mundo desde nuestra sede en Suecia.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Sí &mdash; African Bloom distribuye a minoristas de todo el mundo desde nuestra sede en Suecia.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">¿Puedo mezclar variedades en un mismo pedido fijo?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Sí &mdash; el mínimo de 1.000 tallos se aplica a su selección combinada, no por variedad.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Sí &mdash; el mínimo de 1.000 tallos se aplica a su selección combinada, no por variedad.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">¿Qué pasa si mi envío llega dañado?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Contáctenos con su representante de cuenta y fotos lo antes posible para poder resolverlo rápidamente.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Contáctenos con su representante de cuenta y fotos lo antes posible para poder resolverlo rápidamente.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">¿Puedo cambiar o pausar un pedido fijo?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Sí &mdash; contáctenos a través de su contacto de cuenta; los pedidos fijos se pueden ajustar entre envíos.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Sí &mdash; contáctenos a través de su contacto de cuenta; los pedidos fijos se pueden ajustar entre envíos.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">¿Cómo obtengo el catálogo completo?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Solícitelo directamente a través de la página de Contacto, o use el botón "Solicitar el Catálogo" en nuestra página de Inicio.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Solicítelo directamente a través de la página de Contacto, o use el botón "Solicitar el Catálogo" en nuestra página de Inicio.</p>
     </div>
   </div>
 
   <!-- CTA -->
   <div style="padding: 96px 64px 96px; text-align:center;">
     <h2 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:34px; margin:0;">¿Aún Tiene Preguntas?</h2>
-    <p style="font-size:14.5px; color:#6E6660; margin:16px 0 0;">Nuestro equipo estará encantado de explicarle cualquier cosa que no esté aquí.</p>
+    <p style="font-size:14.5px; color:#4F4741; margin:16px 0 0;">Nuestro equipo estará encantado de explicarle cualquier cosa que no esté aquí.</p>
     <a href="contact.html" class="cta-box" style="display:inline-block; margin-top:30px; background:#241E17; border:1px solid #241E17; color:#FFFFFF; padding:15px 34px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase;">Hable con Nuestro Equipo</a>
   </div>
 
@@ -295,26 +387,26 @@
           <img src="logo-header.png" alt="African Bloom" style="height:26px; width:auto;">
           <span style="font-size:15px; letter-spacing:0.12em;">AFRICAN BLOOM</span>
         </div>
-        <p style="font-size:13px; line-height:1.7; color:#6E6660; max-width:280px; margin:0;">Importación mayorista de flores cortadas para minoristas de todo el mundo, con sede en Suecia.</p>
+        <p style="font-size:13px; line-height:1.7; color:#4F4741; max-width:280px; margin:0;">Importación mayorista de flores cortadas para minoristas de todo el mundo, con sede en Suecia.</p>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Explorar</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Explorar</span>
         <a href="about.html" style="text-decoration:none; color:inherit;"><span>Nosotros</span></a>
         <a href="collection.html" style="text-decoration:none; color:inherit;"><span>Colección</span></a>
         <a href="ordering.html" style="text-decoration:none; color:inherit;"><span>Cómo Pedir</span></a>
-        <a href="certifications.html" style="text-decoration:none; color:inherit;"><span>Certificaciones</span></a>
         <a href="faq.html" style="text-decoration:none; color:inherit;"><span>FAQ</span></a>
         <a href="contact.html" style="text-decoration:none; color:inherit;"><span>Contacto</span></a>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Contacto</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Contacto</span>
         <span>info@africane.se</span>
         <span>+46 73 756 57 58</span>
-        <span>Sweden</span>
+        <a href="https://wa.me/46737565758" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;"><span>WhatsApp</span></a>
+        <span>Suecia</span>
       </div>
     </div>
-    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#9C9186;">
-      <span>&copy; 2026 African Bloom &mdash; Cabrera Group AB</span>
+    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#5E564F;">
+      <span>&copy; 2026 African Bloom</span>
       <span>www.africane.se</span>
     </div>
   </div>
@@ -323,32 +415,31 @@
 <div data-lang="ru" style="display:none;">
 
   <!-- Header -->
-  <div style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
+  <div class="ab-header" style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
     <div style="display:flex; align-items:center; gap:12px;">
       <img src="logo-header.png" alt="African Bloom" style="height:36px; width:auto; display:block;">
       <span style="font-family:'EB Garamond',serif; font-size:21px; letter-spacing:0.14em; font-weight:500;">AFRICAN BLOOM</span>
     </div>
-    <div style="display:flex; align-items:center; gap:26px; font-size:13px; color:#201C1A;">
+    <div class="ab-nav" style="display:flex; align-items:center; gap:26px; font-size:13px; color:#201C1A;">
       <a href="index.html" style="text-decoration:none; color:inherit;"><span class="navlink">Главная</span></a>
       <a href="about.html" style="text-decoration:none; color:inherit;"><span class="navlink">О нас</span></a>
       <a href="collection.html" style="text-decoration:none; color:inherit;"><span class="navlink">Коллекция</span></a>
       <a href="ordering.html" style="text-decoration:none; color:inherit;"><span class="navlink">Как Заказать</span></a>
-      <a href="certifications.html" style="text-decoration:none; color:inherit;"><span class="navlink">Сертификаты</span></a>
       <a href="faq.html" style="text-decoration:none; color:inherit;"><span class="navlink active">FAQ</span></a>
       <a href="contact.html" style="text-decoration:none; color:inherit;"><span class="navlink">Контакты</span></a>
     </div>
-    <div style="display:flex; align-items:center; gap:20px;">
-      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#9C9186; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#9C9186; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#9C5323; font-weight:600; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#9C9186; cursor:pointer;">SV</span></div>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
-      <svg width="20" height="14" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg>
+    <div class="ab-right" style="display:flex; align-items:center; gap:20px;">
+      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#5E564F; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#5E564F; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#5E564F; cursor:pointer;">SV</span></div>
+      <svg class="ab-search" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+      <button class="ab-burger" type="button" aria-label="Menu" aria-expanded="false"><svg width="22" height="16" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg></button>
     </div>
   </div>
 
   <!-- Title band -->
   <div style="padding: 64px 64px 48px; border-bottom:1px solid #241E17;">
-    <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#9C5323;">Главная &nbsp;/&nbsp; FAQ</span>
+    <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#8A4A1E;">Главная &nbsp;/&nbsp; FAQ</span>
     <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:48px; margin:14px 0 0;">Часто задаваемые вопросы</h1>
-    <p style="font-size:15px; color:#6E6660; max-width:620px; margin:16px 0 0; line-height:1.7;">Всё, что обычно спрашивают ритейлеры перед первым постоянным заказом.</p>
+    <p style="font-size:15px; color:#4F4741; max-width:620px; margin:16px 0 0; line-height:1.7;">Всё, что обычно спрашивают ритейлеры перед первым постоянным заказом.</p>
   </div>
 
   <!-- FAQ list -->
@@ -356,42 +447,42 @@
 
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">Какой у вас минимальный размер заказа?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Минимальный заказ — 1000 стеблей, которые можно комбинировать между сортами и уровнями качества в рамках одного постоянного заказа.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Минимальный заказ — 1000 стеблей, которые можно комбинировать между сортами и уровнями качества в рамках одного постоянного заказа.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">Как формируются цены?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">За стебель — для роз, спрей-роз, альстромерии и ранункулюса, за букет — для гипсофилы, в четырёх уровнях качества — полный прайс-лист 2026 года смотрите на странице «Коллекция и цены».</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">За стебель — для роз, спрей-роз, альстромерии и ранункулюса, за букет — для гипсофилы, в четырёх уровнях качества.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">Что означает «евро за стебель, франко-завод»?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Цены указаны в евро с ворот фермы; дальнейшая транспортировка и таможенное оформление организуются отдельно — подробнее смотрите на странице «Как Заказать».</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Цены указаны в евро с ворот фермы; дальнейшая транспортировка и таможенное оформление организуются отдельно — подробнее смотрите на странице «Как Заказать».</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">Вы отправляете за пределы Швеции?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Да — Cabrera Group AB распределяет товар ритейлерам по всему миру из нашей штаб-квартиры в Швеции.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Да — African Bloom поставляет товар ритейлерам по всему миру из нашей штаб-квартиры в Швеции.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">Можно ли смешивать сорта в одном постоянном заказе?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Да — минимум в 1000 стеблей действует на весь ваш комбинированный выбор, а не на каждый сорт отдельно.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Да — минимум в 1000 стеблей действует на весь ваш комбинированный выбор, а не на каждый сорт отдельно.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">Что делать, если груз пришёл повреждённым?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Свяжитесь с вашим менеджером и пришлите фотографии как можно скорее, чтобы мы смогли быстро всё решить.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Свяжитесь с вашим менеджером и пришлите фотографии как можно скорее, чтобы мы смогли быстро всё решить.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">Можно ли изменить или приостановить постоянный заказ?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Да — свяжитесь с вашим менеджером; постоянные заказы можно корректировать между поставками.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Да — свяжитесь с вашим менеджером; постоянные заказы можно корректировать между поставками.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">Как получить полный каталог?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Запросите его напрямую через страницу контактов или кнопку «Запросить каталог» на главной странице.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Запросите его напрямую через страницу контактов или кнопку «Запросить каталог» на главной странице.</p>
     </div>
   </div>
 
   <!-- CTA -->
   <div style="padding: 96px 64px 96px; text-align:center;">
     <h2 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:34px; margin:0;">Ещё есть вопросы?</h2>
-    <p style="font-size:14.5px; color:#6E6660; margin:16px 0 0;">Наша команда с радостью ответит на всё, что не вошло в этот список.</p>
+    <p style="font-size:14.5px; color:#4F4741; margin:16px 0 0;">Наша команда с радостью ответит на всё, что не вошло в этот список.</p>
     <a href="contact.html" class="cta-box" style="display:inline-block; margin-top:30px; background:#241E17; border:1px solid #241E17; color:#FFFFFF; padding:15px 34px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase;">Связаться с нами</a>
   </div>
 
@@ -403,26 +494,26 @@
           <img src="logo-header.png" alt="African Bloom" style="height:26px; width:auto;">
           <span style="font-size:15px; letter-spacing:0.12em;">AFRICAN BLOOM</span>
         </div>
-        <p style="font-size:13px; line-height:1.7; color:#6E6660; max-width:280px; margin:0;">Оптовый импорт срезанных цветов для ритейлеров по всему миру, штаб-квартира в Швеции.</p>
+        <p style="font-size:13px; line-height:1.7; color:#4F4741; max-width:280px; margin:0;">Оптовый импорт срезанных цветов для ритейлеров по всему миру, штаб-квартира в Швеции.</p>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Разделы</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Разделы</span>
         <a href="about.html" style="text-decoration:none; color:inherit;"><span>О нас</span></a>
         <a href="collection.html" style="text-decoration:none; color:inherit;"><span>Коллекция</span></a>
         <a href="ordering.html" style="text-decoration:none; color:inherit;"><span>Как Заказать</span></a>
-        <a href="certifications.html" style="text-decoration:none; color:inherit;"><span>Сертификаты</span></a>
         <a href="faq.html" style="text-decoration:none; color:inherit;"><span>FAQ</span></a>
         <a href="contact.html" style="text-decoration:none; color:inherit;"><span>Контакты</span></a>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Контакты</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Контакты</span>
         <span>info@africane.se</span>
         <span>+46 73 756 57 58</span>
-        <span>Sweden</span>
+        <a href="https://wa.me/46737565758" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;"><span>WhatsApp</span></a>
+        <span>Швеция</span>
       </div>
     </div>
-    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#9C9186;">
-      <span>&copy; 2026 African Bloom &mdash; Cabrera Group AB</span>
+    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#5E564F;">
+      <span>&copy; 2026 African Bloom</span>
       <span>www.africane.se</span>
     </div>
   </div>
@@ -431,32 +522,31 @@
 <div data-lang="sv" style="display:none;">
 
   <!-- Header -->
-  <div style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
+  <div class="ab-header" style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
     <div style="display:flex; align-items:center; gap:12px;">
       <img src="logo-header.png" alt="African Bloom" style="height:36px; width:auto; display:block;">
       <span style="font-family:'EB Garamond',serif; font-size:21px; letter-spacing:0.14em; font-weight:500;">AFRICAN BLOOM</span>
     </div>
-    <div style="display:flex; align-items:center; gap:26px; font-size:13px; color:#201C1A;">
+    <div class="ab-nav" style="display:flex; align-items:center; gap:26px; font-size:13px; color:#201C1A;">
       <a href="index.html" style="text-decoration:none; color:inherit;"><span class="navlink">Hem</span></a>
       <a href="about.html" style="text-decoration:none; color:inherit;"><span class="navlink">Om Oss</span></a>
       <a href="collection.html" style="text-decoration:none; color:inherit;"><span class="navlink">Kollektion</span></a>
       <a href="ordering.html" style="text-decoration:none; color:inherit;"><span class="navlink">Beställning</span></a>
-      <a href="certifications.html" style="text-decoration:none; color:inherit;"><span class="navlink">Certifieringar</span></a>
       <a href="faq.html" style="text-decoration:none; color:inherit;"><span class="navlink active">FAQ</span></a>
       <a href="contact.html" style="text-decoration:none; color:inherit;"><span class="navlink">Kontakt</span></a>
     </div>
-    <div style="display:flex; align-items:center; gap:20px;">
-      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#9C9186; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#9C9186; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#9C9186; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#9C5323; font-weight:600; cursor:pointer;">SV</span></div>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
-      <svg width="20" height="14" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg>
+    <div class="ab-right" style="display:flex; align-items:center; gap:20px;">
+      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#5E564F; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#5E564F; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#5E564F; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">SV</span></div>
+      <svg class="ab-search" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+      <button class="ab-burger" type="button" aria-label="Menu" aria-expanded="false"><svg width="22" height="16" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg></button>
     </div>
   </div>
 
   <!-- Title band -->
   <div style="padding: 64px 64px 48px; border-bottom:1px solid #241E17;">
-    <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#9C5323;">Hem &nbsp;/&nbsp; FAQ</span>
+    <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#8A4A1E;">Hem &nbsp;/&nbsp; FAQ</span>
     <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:48px; margin:14px 0 0;">Vanliga Frågor</h1>
-    <p style="font-size:15px; color:#6E6660; max-width:620px; margin:16px 0 0; line-height:1.7;">Allt återförsäljare brukar fråga innan sin första stående beställning.</p>
+    <p style="font-size:15px; color:#4F4741; max-width:620px; margin:16px 0 0; line-height:1.7;">Allt återförsäljare brukar fråga innan sin första stående beställning.</p>
   </div>
 
   <!-- FAQ list -->
@@ -464,42 +554,42 @@
 
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">Vad är er minsta beställningskvantitet?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Minsta beställning är 1 000 stjälkar, som kan kombineras mellan sorter och kvalitetsnivåer inom samma stående beställning.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Minsta beställning är 1 000 stjälkar, som kan kombineras mellan sorter och kvalitetsnivåer inom samma stående beställning.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">Hur är priserna uppbyggda?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Per stjälk för rosor, sprayrosor, alstromeria och ranunkel, och per bunt för gypsophila, över fyra kvalitetsnivåer &mdash; se Kollektion & Priser för fullständiga 2026-priser.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Per stjälk för rosor, sprayrosor, alstroemeria och ranunkel, och per bunt för gypsophila, över fyra kvalitetsnivåer.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">Vad betyder "EUR per stjälk, fritt fabrik"?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Priser anges i EUR från gårdsgrinden; vidare frakt och tull ordnas separat &mdash; se Beställning för en fullständig genomgång.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Priser anges i EUR från gårdsgrinden; vidare frakt och tull ordnas separat &mdash; se Beställning för en fullständig genomgång.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">Levererar ni utanför Sverige?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Ja &mdash; Cabrera Group AB distribuerar till återförsäljare världen över från vårt huvudkontor i Sverige.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Ja &mdash; African Bloom distribuerar till återförsäljare världen över från vårt huvudkontor i Sverige.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">Kan jag blanda sorter i en stående beställning?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Ja &mdash; minimikravet på 1 000 stjälkar gäller för ditt samlade urval, inte per sort.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Ja &mdash; minimikravet på 1 000 stjälkar gäller för ditt samlade urval, inte per sort.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">Vad händer om min leverans kommer skadad?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Kontakta din kontaktperson med bilder så snart som möjligt så att vi kan lösa det snabbt.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Kontakta din kontaktperson med bilder så snart som möjligt så att vi kan lösa det snabbt.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">Kan jag ändra eller pausa en stående beställning?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Ja &mdash; kontakta din kontaktperson; stående beställningar kan justeras mellan leveranser.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Ja &mdash; kontakta din kontaktperson; stående beställningar kan justeras mellan leveranser.</p>
     </div>
     <div style="padding:26px 0; border-bottom:1px solid #E4DFD8;">
       <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:19px; margin:0 0 8px; color:#241E17;">Hur får jag hela katalogen?</h3>
-      <p style="font-size:14px; line-height:1.7; color:#6E6660; margin:0; max-width:680px;">Begär den direkt via kontaktsidan, eller använd knappen "Begär Katalogen" på vår startsida.</p>
+      <p style="font-size:14px; line-height:1.7; color:#4F4741; margin:0; max-width:680px;">Begär den direkt via kontaktsidan, eller använd knappen "Begär Katalogen" på vår startsida.</p>
     </div>
   </div>
 
   <!-- CTA -->
   <div style="padding: 96px 64px 96px; text-align:center;">
     <h2 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:34px; margin:0;">Har Du Fortfarande Frågor?</h2>
-    <p style="font-size:14.5px; color:#6E6660; margin:16px 0 0;">Vårt team hjälper gärna till med allt som inte täcks här.</p>
+    <p style="font-size:14.5px; color:#4F4741; margin:16px 0 0;">Vårt team hjälper gärna till med allt som inte täcks här.</p>
     <a href="contact.html" class="cta-box" style="display:inline-block; margin-top:30px; background:#241E17; border:1px solid #241E17; color:#FFFFFF; padding:15px 34px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase;">Prata med Vårt Team</a>
   </div>
 
@@ -511,26 +601,26 @@
           <img src="logo-header.png" alt="African Bloom" style="height:26px; width:auto;">
           <span style="font-size:15px; letter-spacing:0.12em;">AFRICAN BLOOM</span>
         </div>
-        <p style="font-size:13px; line-height:1.7; color:#6E6660; max-width:280px; margin:0;">Grossistimport av snittblommor till återförsäljare världen över, baserat i Sverige.</p>
+        <p style="font-size:13px; line-height:1.7; color:#4F4741; max-width:280px; margin:0;">Grossistimport av snittblommor till återförsäljare världen över, baserat i Sverige.</p>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Utforska</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Utforska</span>
         <a href="about.html" style="text-decoration:none; color:inherit;"><span>Om Oss</span></a>
         <a href="collection.html" style="text-decoration:none; color:inherit;"><span>Kollektion</span></a>
         <a href="ordering.html" style="text-decoration:none; color:inherit;"><span>Beställning</span></a>
-        <a href="certifications.html" style="text-decoration:none; color:inherit;"><span>Certifieringar</span></a>
         <a href="faq.html" style="text-decoration:none; color:inherit;"><span>FAQ</span></a>
         <a href="contact.html" style="text-decoration:none; color:inherit;"><span>Kontakt</span></a>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Kontakt</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Kontakt</span>
         <span>info@africane.se</span>
         <span>+46 73 756 57 58</span>
-        <span>Sweden</span>
+        <a href="https://wa.me/46737565758" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;"><span>WhatsApp</span></a>
+        <span>Sverige</span>
       </div>
     </div>
-    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#9C9186;">
-      <span>&copy; 2026 African Bloom &mdash; Cabrera Group AB</span>
+    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#5E564F;">
+      <span>&copy; 2026 African Bloom</span>
       <span>www.africane.se</span>
     </div>
   </div>
@@ -546,13 +636,28 @@ function setLang(code) {
   for (var i = 0; i < blocks.length; i++) {
     blocks[i].style.display = (blocks[i].getAttribute('data-lang') === code) ? 'block' : 'none';
   }
+  document.documentElement.lang = code;
+  try { localStorage.setItem('ab-lang', code); } catch (e) {}
 }
-</script>
+(function () {
+  // Make the EN / ES / RU / SV switchers keyboard-accessible.
+  document.querySelectorAll('span[onclick^="setLang("]').forEach(function (el) {
+    el.setAttribute('role', 'button');
+    el.setAttribute('tabindex', '0');
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+    });
+  });
+  // Remember the visitor's language across pages.
+  var saved = null;
+  try { saved = localStorage.getItem('ab-lang'); } catch (e) {}
+  if (saved && saved !== 'en' && document.querySelector('[data-lang="' + saved + '"]')) setLang(saved);
+})();
 </script>
 
 <script>
 function abFitScale() {
-  if (window.innerWidth <= 1024) return;
+  if (window.innerWidth <= 1200) return;
   var outer = document.getElementById('ab-scale-outer');
   var wrap = document.getElementById('ab-scale-wrap');
   if (!outer || !wrap) return;
@@ -567,5 +672,33 @@ var abOrigSetLang = setLang;
 setLang = function(code) { abOrigSetLang(code); setTimeout(abFitScale, 0); };
 </script>
 
+<script>
+document.querySelectorAll('.ab-burger').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var nav = b.closest('.ab-header').querySelector('.ab-nav');
+    b.setAttribute('aria-expanded', nav.classList.toggle('open'));
+  });
+});
+</script>
+<a id="ab-wa" href="https://wa.me/46737565758" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="WhatsApp +46 73 756 57 58">
+  <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><path fill="#fff" d="M16 3.2C8.9 3.2 3.2 8.9 3.2 16c0 2.4.7 4.7 1.9 6.7L3.1 28.9l6.4-1.7c1.9 1 4 1.6 6.5 1.6 7.1 0 12.8-5.7 12.8-12.8S23.1 3.2 16 3.2z"/><path fill="#25D366" d="M22.5 19.6c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.2.2 2.2 3.3 5.3 4.6 3 1.2 3 .8 3.6.8.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+</a>
+<style>
+#ab-wa{position:fixed;right:22px;bottom:22px;z-index:900;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.28);transition:transform .15s,box-shadow .15s;}
+#ab-wa:hover{transform:scale(1.08);box-shadow:0 6px 18px rgba(0,0,0,.34);}
+#ab-wa:focus-visible{outline:3px solid #201C1A;outline-offset:3px;}
+@media (max-width:640px){#ab-wa{right:14px;bottom:14px;width:56px;height:56px;}}
+</style>
+<script>
+(function(){
+  var L={en:['Chat on WhatsApp','Hello African Bloom, I would like to ask about your flowers.'],
+         es:['Escribir por WhatsApp','Hola African Bloom, me gustaría consultar sobre sus flores.'],
+         ru:['Написать в WhatsApp','Здравствуйте, African Bloom! Хочу узнать о ваших цветах.'],
+         sv:['Chatta på WhatsApp','Hej African Bloom, jag vill fråga om era blommor.']};
+  var a=document.getElementById('ab-wa');
+  function upd(){var l=L[document.documentElement.lang]||L.en;a.setAttribute('aria-label',l[0]);a.href='https://wa.me/46737565758?text='+encodeURIComponent(l[1]);}
+  var o=window.setLang;window.setLang=function(c){o(c);upd();};upd();
+})();
+</script>
 </body>
 </html>

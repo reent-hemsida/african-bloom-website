@@ -3,24 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Collection & Pricing — African Bloom</title>
-<meta name="description" content="Browse African Bloom's five flower families and four quality tiers, with 2026 wholesale pricing.">
+<title>Collection — African Bloom</title>
+<meta name="description" content="Browse the named rose, spray rose, alstroemeria, ranunculus and gypsophila varieties supplied by African Bloom.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B9%3C/text%3E%3C/svg%3E">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
   <style>
     * { box-sizing: border-box; }
     body { margin: 0; background: #FAF4E8; font-family: 'EB Garamond', Georgia, serif; color: #201C1A; }
-    a { color: #CC7A40; text-decoration: none; }
-    a:hover { color: #B5622C; }
+    a { color: #8A4A1E; text-decoration: none; }
+    a:hover { color: #663711; }
     .navlink { position:relative; padding-bottom:14px; }
     .navlink::after { content:""; position:absolute; left:0; right:0; bottom:0; height:1px; background:#241E17; }
     .navlink.active { color:#9C5323; }
-    .price-table th { text-align:right; font-weight:500; font-size:12.5px; letter-spacing:0.06em; text-transform:uppercase; color:#6E6660; padding-bottom:10px; }
-    .price-table th:first-child { text-align:left; }
-    .price-table td { text-align:right; padding:10px 0; font-size:15px; border-top:1px solid #EDE7DE; }
-    .price-table td:first-child { text-align:left; }
-    .tier-badge { display:inline-block; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; padding:4px 10px; border:1px solid #9C5323; color:#9C5323; }
+    .field-label { font-size:11.5px; letter-spacing:0.1em; text-transform:uppercase; color:#6E6660; }
+    .field-box { border:1px solid #D9C7B3; padding:14px 16px; font-size:14px; color:#241E17; margin-top:8px; background:#FFFFFF; }
+    .field-box::placeholder { color:#6E6660; opacity:1; }
   </style>
 
 <style>
@@ -33,7 +31,7 @@
        tap accurately (technically clickable, not practically usable). Below
        this breakpoint we cancel the scale trick and let the design reflow
        at its natural, readable, properly tappable size instead. */
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
       #ab-scale-outer { height: auto !important; }
       #ab-scale-wrap { width: 100% !important; min-width: 0 !important; transform: none !important; }
 
@@ -99,8 +97,180 @@
       #ab-scale-wrap div[style*="position:absolute; right:40px; top:50%"] { display: none !important; }
     }
 </style>
+<meta name="theme-color" content="#FAF4E8">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="African Bloom">
+<meta property="og:title" content="Collection — African Bloom">
+<meta property="og:description" content="Get in touch with African Bloom to request the catalogue, check availability, or open a wholesale account.">
+<meta property="og:image" content="https://www.africane.se/hero-roses.jpg">
+<link rel="canonical" href="https://www.africane.se/collection.html">
+<style>
+  a:focus-visible, [role="button"]:focus-visible, input:focus-visible, textarea:focus-visible, button:focus-visible { outline: 2px solid #CC7A40; outline-offset: 3px; }
+  .skip-link { position:absolute; left:-9999px; top:8px; background:#241E17; color:#fff; padding:10px 16px; z-index:100; }
+  .skip-link:focus { left:8px; color:#fff; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+<style>
+  .ab-burger { display:none; background:none; border:0; padding:10px; margin:-10px -10px -10px 0; cursor:pointer; }
+  .ab-search { }
+  @media (max-width: 1200px) {
+    #ab-scale-wrap div.ab-header[style] { position:relative !important; flex-wrap:nowrap !important; padding:14px 20px !important; gap:12px; }
+    #ab-scale-wrap div.ab-header img { height:30px !important; }
+    #ab-scale-wrap div.ab-header span[style*="letter-spacing:0.14em"] { font-size:15px !important; letter-spacing:0.1em !important; white-space:nowrap; }
+    #ab-scale-wrap div.ab-right[style] { gap:14px !important; flex-wrap:nowrap !important; }
+    #ab-scale-wrap div.ab-right span[onclick] { padding:8px 3px; }
+    .ab-burger { display:block; }
+    .ab-search { display:none; }
+    #ab-scale-wrap div.ab-nav[style] { display:none !important; position:absolute; top:100%; left:0; right:0; z-index:60; background:#FAF4E8; flex-direction:column !important; align-items:stretch !important; gap:0 !important; padding:6px 20px 16px; border-bottom:1px solid #241E17; font-size:17px !important; }
+    #ab-scale-wrap div.ab-nav.open[style] { display:flex !important; }
+    #ab-scale-wrap div.ab-nav a { padding:13px 0; border-bottom:1px solid #E9DFCF; }
+    #ab-scale-wrap div.ab-nav .navlink::after { display:none; }
+    #ab-scale-wrap div[style*="px 64px"] { padding-left:20px !important; padding-right:20px !important; }
+    input, textarea, select { font-size:16px !important; }
+    img { max-width:100%; }
+  }
+</style>
+<style>
+  @media (max-width: 1200px) {
+    #ab-scale-wrap div.ab-header div[style*="display:flex"] { flex-wrap:nowrap !important; }
+    #ab-scale-wrap div.ab-header > div:first-child { min-width:0; gap:8px !important; }
+    #ab-scale-wrap div[style*="margin:24px 64px"], #ab-scale-wrap div[style*="margin: 100px 64px"], #ab-scale-wrap div[style*="margin: 88px 64px"] { margin-left:16px !important; margin-right:16px !important; }
+    #ab-scale-wrap div[style*="px 72px"] { padding-left:20px !important; padding-right:20px !important; }
+    #ab-scale-wrap div[style*="height:520px"], #ab-scale-wrap div[style*="height:560px"], #ab-scale-wrap div[style*="height:440px"] { height:340px !important; }
+    #ab-scale-wrap div[style*="left:40px; bottom:40px"] { left:20px !important; bottom:24px !important; right:20px; max-width:none !important; }
+    #ab-scale-wrap [style*="font-size:64px"] { font-size:36px !important; }
+    #ab-scale-wrap [style*="font-size:52px"], #ab-scale-wrap [style*="font-size:48px"] { font-size:32px !important; }
+    #ab-scale-wrap [style*="font-size:44px"], #ab-scale-wrap [style*="font-size:42px"] { font-size:30px !important; }
+    #ab-scale-wrap div[style*="gap:64px"], #ab-scale-wrap div[style*="gap:56px"] { gap:28px !important; }
+  }
+</style>
+<style>
+  @media (max-width: 1200px) {
+    #ab-scale-wrap div.ab-header span[style*="letter-spacing:0.14em"] { font-size:13px !important; letter-spacing:0.06em !important; }
+    #ab-scale-wrap div.ab-right span[style*="D8CDBE"] { display:none; }
+    #ab-scale-wrap div.ab-right > div[style] { gap:4px !important; }
+    #ab-scale-wrap div.ab-right { gap:6px !important; }
+    #ab-scale-wrap div.ab-right span[onclick] { padding:10px 6px; font-size:12.5px !important; }
+  }
+</style>
+<style>
+  @media (max-width: 480px) {
+    #ab-scale-wrap div.ab-header span[style*="letter-spacing:0.14em"] { display:none; }
+    #ab-scale-wrap div.ab-header img { height:44px !important; }
+  }
+</style>
+<style>/* ab-readable */
+#ab-scale-wrap [style*="font-size:11px"]{font-size:17px !important;}
+#ab-scale-wrap [style*="font-size:11.5px"]{font-size:17px !important;}
+#ab-scale-wrap [style*="font-size:12px"]{font-size:17px !important;}
+#ab-scale-wrap [style*="font-size:12.5px"]{font-size:17px !important;}
+#ab-scale-wrap [style*="font-size:13px"]{font-size:19px !important;}
+#ab-scale-wrap [style*="font-size:13.5px"]{font-size:22px !important;}
+#ab-scale-wrap [style*="font-size:14px"]{font-size:22px !important;}
+#ab-scale-wrap [style*="font-size:14.5px"]{font-size:24px !important;}
+#ab-scale-wrap [style*="font-size:15px"]{font-size:24px !important;}
+#ab-scale-wrap [style*="font-size:16px"]{font-size:24px !important;}
+#ab-scale-wrap [style*="font-size:17px"]{font-size:25px !important;}
+#ab-scale-wrap [style*="font-size:19px"]{font-size:26px !important;}
+#ab-scale-wrap [style*="font-size:21px"]{font-size:27px !important;}
+#ab-scale-wrap [style*="font-size:22px"]{font-size:27px !important;}
+.field-box{font-size:20px !important;}
+#ab-scale-wrap p{line-height:1.7;}
+</style>
+<style>/* ab-varieties */
+.vc-body{display:grid;grid-template-columns:300px minmax(0,1fr);gap:64px;padding:56px 64px 0;}
+.vc-side h3{font-family:'EB Garamond',serif;font-weight:500;font-size:22px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 20px;}
+.vc-cats{display:flex;flex-direction:column;}
+.vc-cat{display:flex;justify-content:space-between;align-items:center;gap:12px;background:none;border:0;border-bottom:1px solid #E4DFD8;padding:14px 0;font:inherit;font-size:22px;color:#201C1A;text-align:left;cursor:pointer;}
+.vc-cat span{font-size:17px;color:#5E564F;}
+.vc-cat:hover,.vc-cat.on{color:#8A4A1E;}
+.vc-cat.on{font-weight:600;}
+.vc-colors{margin-top:36px;}
+.vc-toolbar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid #241E17;}
+.vc-toolbar .vc-count{flex:1;font-size:22px;}
+.vc-view{display:flex;gap:8px;}
+.vc-view button{width:44px;height:44px;border:1px solid #241E17;background:#fff;color:#241E17;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;}
+.vc-view button.on{background:#8A4A1E;border-color:#8A4A1E;color:#fff;}
+.vc-sort{display:flex;align-items:center;gap:10px;font-size:20px;}
+.vc-sort select{font:inherit;font-size:20px;padding:8px 10px;border:1px solid #241E17;background:#fff;color:#201C1A;border-radius:0;}
+.vc-info{font-size:20px;line-height:1.6;color:#4F4741;margin:26px 0 0;max-width:820px;}
+.vc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 28px;margin-top:36px;}
+.vc-card{display:flex;flex-direction:column;gap:14px;text-align:center;}
+.vc-photo{aspect-ratio:4/5;overflow:hidden;background:#EFE7DA;border-radius:6px;}
+.vc-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s;}
+.vc-card:hover .vc-photo img{transform:scale(1.04);}
+.vc-name{font-size:22px;letter-spacing:.08em;text-transform:uppercase;color:#201C1A;}
+.vc-meta{font-size:18px;color:#5E564F;margin-top:-6px;}
+.vc-price{font-size:18px;letter-spacing:.06em;text-transform:uppercase;color:#8A4A1E;text-decoration:none;border-bottom:1px solid #8A4A1E;align-self:center;}
+.vc-grid.list{grid-template-columns:1fr;gap:22px;}
+.vc-grid.list .vc-card{flex-direction:row;align-items:center;text-align:left;gap:28px;padding-bottom:22px;border-bottom:1px solid #E4DFD8;}
+.vc-grid.list .vc-photo{width:150px;flex:0 0 150px;}
+.vc-grid.list .vc-meta{margin-top:0;}
+.vc-grid.list .vc-text{flex:1;display:flex;flex-direction:column;gap:6px;}
+.vc-grid.list .vc-price{align-self:flex-start;margin-top:6px;}
+.vc-note{font-size:17px;color:#5E564F;margin:44px 0 0;max-width:820px;line-height:1.6;}
+@media (max-width:1200px){.vc-body{grid-template-columns:1fr;gap:28px;padding:32px 20px 0;}.vc-cats{flex-direction:row;flex-wrap:wrap;gap:8px;}.vc-cat{border:1px solid #241E17;border-radius:999px;padding:9px 18px;font-size:19px;}.vc-cat.on{background:#8A4A1E;border-color:#8A4A1E;color:#fff;}.vc-cat.on span{color:#fff;}.vc-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 16px;}.vc-name{font-size:19px;}}
+@media (max-width:640px){.vc-grid.list .vc-photo{width:96px;flex-basis:96px;}.vc-grid.list .vc-card{gap:16px;}}
+</style>
+<style>/* ab-varieties-2 */
+.vc-search{font:inherit;font-size:19px;padding:9px 12px;border:1px solid #241E17;background:#fff;color:#201C1A;min-width:190px;border-radius:0;}
+.vc-dot{display:inline-block;width:16px;height:16px;border-radius:50%;border:1px solid rgba(36,30,23,.35);flex:0 0 16px;}
+.vc-photo{position:relative;}
+.vc-photo .vc-dot{position:absolute;left:10px;top:10px;width:22px;height:22px;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.25);}
+.vc-colbtn em{display:flex;align-items:center;gap:12px;font-style:normal;}
+.vc-colors .vc-cats{max-height:520px;overflow:auto;}
+.vc-len{font-size:16px;color:#5E564F;}
+.vc-pages{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;margin-top:52px;}
+.vc-pages button{min-width:44px;height:44px;padding:0 14px;border:1px solid #241E17;background:#fff;color:#241E17;font:inherit;font-size:19px;cursor:pointer;}
+.vc-pages button.on{background:#8A4A1E;border-color:#8A4A1E;color:#fff;}
+.vc-pages button[disabled]{opacity:.35;cursor:default;}
+.vc-pages span{padding:0 4px;font-size:19px;}
+.vc-empty{font-size:20px;color:#4F4741;margin:40px 0;}
+.vc-clear{font:inherit;font-size:19px;background:none;border:0;color:#8A4A1E;text-decoration:underline;cursor:pointer;padding:0;}
+@media (max-width:1200px){.vc-search{flex:1 1 100%;order:5;}.vc-colors .vc-cats{max-height:none;}.vc-colbtn{padding:8px 14px;}.vc-colbtn span{display:none;}}
+</style>
+<style>/* ab-varieties-3 */
+.vc-tile{background-size:cover;box-shadow:inset 0 0 0 1px rgba(36,30,23,.12);}
+.vc-card:hover .vc-tile{transform:none;}
+.vc-banner{position:relative;aspect-ratio:3/1;overflow:hidden;border-radius:6px;margin-top:26px;background:#EFE7DA;}
+.vc-banner img{width:100%;height:100%;object-fit:cover;display:block;}
+.vc-banner:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,16,13,.6) 0%,rgba(20,16,13,0) 60%);}
+.vc-banner span{position:absolute;left:28px;bottom:22px;z-index:2;color:#fff;font-family:'Cormorant Garamond',serif;font-size:40px;letter-spacing:.04em;text-shadow:0 1px 8px rgba(0,0,0,.4);}
+.vc-grid.list .vc-tile{aspect-ratio:1/1;}
+@media (max-width:1200px){.vc-banner{aspect-ratio:2/1;}.vc-banner span{font-size:30px;left:18px;bottom:14px;}}
+</style>
+<style>/* ab-qa */
+#ab-scale-wrap [style*="color:#D8C9A3"], #ab-scale-wrap [style*="color:#FBF8F2"] { text-shadow: 0 1px 8px rgba(0,0,0,.55); }
+.field-label { font-size:15px !important; }
+.ab-car-dots button { box-sizing:content-box; padding:9px; background-clip:content-box; width:13px; height:13px; }
+.ab-car-dots { gap:0 !important; }
+@media (max-width:1200px){
+  #ab-scale-wrap div.ab-right span[onclick] { font-size:15px !important; padding:12px 6px !important; }
+  #ab-scale-wrap div.ab-header span[style*="letter-spacing:0.14em"] { font-size:16px !important; }
+  #ab-scale-wrap div[style*="border-top:1px solid #241E17; padding: "] a { display:block; padding:9px 0; }
+  #ab-scale-wrap .ab-promo-img img { opacity:.16 !important; }
+}
+@media (max-width:480px){ #ab-scale-wrap div.ab-header span[style*="letter-spacing:0.14em"] { display:none !important; } }
+</style>
+<style>/* ab-collection-mobile */
+.vc-coltoggle{display:block;width:100%;background:none;border:0;padding:0;margin:0;text-align:left;font:inherit;color:inherit;cursor:default;position:relative;}
+.vc-coltoggle h3{margin:0 0 20px;}
+.vc-coltoggle i{display:none;}
+@media (max-width:1200px){
+  .vc-coltoggle{cursor:pointer;border:1px solid #241E17;border-radius:999px;padding:12px 20px;background:#fff;}
+  .vc-coltoggle h3{margin:0;font-size:19px;padding-right:28px;}
+  .vc-coltoggle i{display:block;position:absolute;right:22px;top:50%;width:9px;height:9px;border-right:2px solid #241E17;border-bottom:2px solid #241E17;transform:translateY(-70%) rotate(45deg);transition:transform .15s;}
+  .vc-colors.open .vc-coltoggle i{transform:translateY(-30%) rotate(-135deg);}
+  .vc-colors .vc-cats{display:none;margin-top:12px;}
+  .vc-colors.open .vc-cats{display:flex;}
+  .vc-photo{aspect-ratio:1/1;}
+  .vc-name{font-size:18px;}
+}
+</style>
+<style>@media (max-width:1200px){.vc-price{padding:10px 0 6px;}}</style>
 </head>
 <body>
+<a class="skip-link" href="#ab-scale-wrap">Skip to content</a>
 <div id="ab-scale-outer">
 <div id="ab-scale-wrap">
 
@@ -109,172 +279,63 @@
 <div data-lang="en" style="display:block;">
 
   <!-- Header -->
-  <div style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
+  <div class="ab-header" style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
     <div style="display:flex; align-items:center; gap:12px;">
       <img src="logo-header.png" alt="African Bloom" style="height:36px; width:auto; display:block;">
       <span style="font-family:'EB Garamond',serif; font-size:21px; letter-spacing:0.14em; font-weight:500;">AFRICAN BLOOM</span>
     </div>
-    <div style="display:flex; align-items:center; gap:38px; font-size:14px; color:#201C1A;">
+    <div class="ab-nav" style="display:flex; align-items:center; gap:38px; font-size:14px; color:#201C1A;">
       <a href="index.html" style="text-decoration:none; color:inherit;"><span class="navlink">Home</span></a>
       <a href="about.html" style="text-decoration:none; color:inherit;"><span class="navlink">About</span></a>
       <a href="collection.html" style="text-decoration:none; color:inherit;"><span class="navlink active">Collection</span></a>
       <a href="ordering.html" style="text-decoration:none; color:inherit;"><span class="navlink">How to Order</span></a>
-      <a href="certifications.html" style="text-decoration:none; color:inherit;"><span class="navlink">Certifications</span></a>
       <a href="faq.html" style="text-decoration:none; color:inherit;"><span class="navlink">FAQ</span></a>
       <a href="contact.html" style="text-decoration:none; color:inherit;"><span class="navlink">Contact</span></a>
     </div>
-    <div style="display:flex; align-items:center; gap:20px;">
-      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#9C5323; font-weight:600; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#9C9186; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#9C9186; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#9C9186; cursor:pointer;">SV</span></div>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
-      <svg width="20" height="14" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg>
+    <div class="ab-right" style="display:flex; align-items:center; gap:20px;">
+      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#5E564F; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#5E564F; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#5E564F; cursor:pointer;">SV</span></div>
+      <svg class="ab-search" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+      <button class="ab-burger" type="button" aria-label="Menu" aria-expanded="false"><svg width="22" height="16" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg></button>
     </div>
   </div>
 
   <!-- Page title band -->
-  <div style="position:relative; height:300px; overflow:hidden; margin:24px 64px 0; border-radius:20px;">
-    <img src="collection-header.jpg" alt="Rose greenhouse" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
-    <div style="position:absolute; inset:0; background: linear-gradient(90deg, rgba(20,16,13,0.80) 0%, rgba(20,16,13,0.45) 55%, rgba(20,16,13,0.15) 100%);"></div>
-    <div style="position:absolute; left:40px; top:0; bottom:0; display:flex; flex-direction:column; justify-content:center; max-width:640px;">
-      <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#D8C9A3;">Home &nbsp;/&nbsp; Collection</span>
-      <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:48px; margin:14px 0 0; color:#FBF8F2;">The Collection &amp; 2026 Pricing</h1>
-      <p style="font-size:15px; color:#E4DFD8; margin:16px 0 0; line-height:1.7;">300+ varieties across five flower families, graded into consistent quality tiers. Standing-order pricing shown in EUR per stem, ex-works &mdash; ask your account contact for full variety lists and current availability.</p>
-    </div>
+  <div style="padding: 64px 64px 48px; border-bottom:1px solid #241E17;">
+    <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#8A4A1E;">Home &nbsp;/&nbsp; Collection</span>
+    <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:48px; margin:14px 0 0;">Our Collection</h1>
+    <p style="font-size:15px; color:#4F4741; max-width:680px; margin:16px 0 0; line-height:1.7;">Browse the named varieties across our flower families. Full variety lists and current availability on request.</p>
   </div>
 
-  <!-- Tier legend -->
-  <div style="padding: 48px 64px 0;">
-    <div style="display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:24px;">
-      <div>
-        <span class="tier-badge">Special+</span>
-        <p style="font-size:13.5px; color:#6E6660; margin:12px 0 0; line-height:1.6;">Our highest rose grade &mdash; the tightest bud form and longest vase life.</p>
-      </div>
-      <div>
-        <span class="tier-badge">Special</span>
-        <p style="font-size:13.5px; color:#6E6660; margin:12px 0 0; line-height:1.6;">Excellent everyday quality across the widest variety selection.</p>
-      </div>
-      <div>
-        <span class="tier-badge">Super Premium</span>
-        <p style="font-size:13.5px; color:#6E6660; margin:12px 0 0; line-height:1.6;">A step above standard premium, for retailers who want more per stem.</p>
-      </div>
-      <div>
-        <span class="tier-badge">Premium</span>
-        <p style="font-size:13.5px; color:#6E6660; margin:12px 0 0; line-height:1.6;">Reliable volume grade for everyday bunches and arrangements.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Roses pricing -->
-  <div style="padding: 32px 64px 0; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;"><div><span style="font-size:12px; color:#6E6660; letter-spacing:0.04em; margin-right:14px;">Jump to a category:</span><a href="#roses" style="display:inline-block; border:1px solid #9C5323; color:#9C5323; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Roses</a><a href="#sprayroses" style="display:inline-block; border:1px solid #7A5A17; color:#7A5A17; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Spray Roses</a><a href="#alstroemeria" style="display:inline-block; border:1px solid #3E6A47; color:#3E6A47; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Alstroemeria</a><a href="#gypsophila" style="display:inline-block; border:1px solid #241E17; color:#241E17; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Gypsophila</a><a href="#ranunculus" style="display:inline-block; border:1px solid #65427C; color:#65427C; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Ranunculus</a></div><a href="contact.html" style="display:inline-block; background:#241E17; border:1px solid #241E17; color:#FFFFFF; padding:12px 26px; font-size:12.5px; letter-spacing:0.06em; text-transform:uppercase;">Request a Quote</a></div><div style="padding: 64px 64px 0;">
-    <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #9C5323; padding-bottom:14px; margin-bottom:8px;">
-      <h2 id="roses" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#9C5323;">Roses</h2>
-      <span style="font-size:12.5px; color:#6E6660;">EUR per stem &middot; by tier and stem length</span>
-    </div>
-    <table class="price-table" style="width:100%; border-collapse:collapse;">
-      <tr><th>Tier</th><th>40cm</th><th>50cm</th><th>60cm</th><th>70cm</th><th>80cm</th></tr>
-      <tr><td>Special+</td><td>&euro;0.80</td><td>&euro;0.90</td><td>&euro;1.05</td><td>&euro;1.15</td><td>&euro;1.25</td></tr>
-      <tr><td>Special</td><td>&euro;0.75</td><td>&euro;0.85</td><td>&euro;0.95</td><td>&euro;1.05</td><td>&euro;1.15</td></tr>
-      <tr><td>Super Premium</td><td>&euro;0.70</td><td>&euro;0.80</td><td>&euro;0.90</td><td>&euro;1.00</td><td>&euro;1.10</td></tr>
-      <tr><td>Premium</td><td>&euro;0.60</td><td>&euro;0.70</td><td>&euro;0.80</td><td>&euro;0.90</td><td>&euro;1.00</td></tr>
-    </table>
-    <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">150+ named varieties across all four tiers, including Country Candy, Freedom, Vendela and Mondial &mdash; full list on request.</p>
-  </div>
-
-  <!-- Spray roses pricing -->
-  <div style="padding: 56px 64px 0;">
-    <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #7A5A17; padding-bottom:14px; margin-bottom:8px;">
-      <h2 id="sprayroses" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#7A5A17;">Spray Roses</h2>
-      <span style="font-size:12.5px; color:#6E6660;">EUR per stem &middot; by tier and stem length</span>
-    </div>
-    <table class="price-table" style="width:100%; border-collapse:collapse;">
-      <tr><th>Tier</th><th>40cm</th><th>50cm</th><th>60cm</th><th>70cm</th></tr>
-      <tr><td>Special+</td><td>&euro;1.05</td><td>&euro;1.15</td><td>&euro;1.30</td><td>&euro;1.40</td></tr>
-      <tr><td>Special</td><td>&euro;0.85</td><td>&euro;0.95</td><td>&euro;1.10</td><td>&euro;1.20</td></tr>
-      <tr><td>Premium</td><td>&euro;0.70</td><td>&euro;0.80</td><td>&euro;0.95</td><td>&euro;1.05</td></tr>
-    </table>
-    <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">80+ named varieties, including the Fibonacci and Trendsetter lines &mdash; full list on request.</p>
-  </div>
-
-  <!-- Alstroemeria + Gypsophila side by side -->
-  <div style="padding: 56px 64px 0; display:grid; grid-template-columns: 1.3fr 1fr; gap:56px;">
-    <div>
-      <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #3E6A47; padding-bottom:14px; margin-bottom:8px;">
-        <h2 id="alstroemeria" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#3E6A47;">Alstroemeria</h2>
-        <span style="font-size:12.5px; color:#6E6660;">EUR per stem</span>
-      </div>
-      <table class="price-table" style="width:100%; border-collapse:collapse;">
-        <tr><th>&nbsp;</th><th>60cm</th><th>70cm</th><th>80cm</th><th>90cm</th></tr>
-        <tr><td>All varieties</td><td>&euro;0.56</td><td>&euro;0.62</td><td>&euro;0.66</td><td>&euro;0.70</td></tr>
-      </table>
-      <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">75+ named varieties in bicolor, pastel and saturated tones.</p>
-    </div>
-    <div>
-      <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #241E17; padding-bottom:14px; margin-bottom:8px;">
-        <h2 id="gypsophila" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#241E17;">Gypsophila</h2>
-        <span style="font-size:12.5px; color:#6E6660;">EUR per bunch</span>
-      </div>
-      <table class="price-table" style="width:100%; border-collapse:collapse;">
-        <tr><th>750gr</th><th>1000gr</th><th>Rainbow</th><th>Tinted</th></tr>
-        <tr><td>&euro;0.52</td><td>&euro;0.58</td><td>&euro;0.83</td><td>&euro;0.66</td></tr>
-      </table>
-      <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">Xlence line &mdash; standard, rainbow-dyed and tinted.</p>
-    </div>
-  </div>
-
-  <!-- Ranunculus -->
-  <div style="padding: 56px 64px 0;">
-    <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #65427C; padding-bottom:14px; margin-bottom:8px;">
-      <h2 id="ranunculus" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#65427C;">Ranunculus</h2>
-      <span style="font-size:12.5px; color:#6E6660;">EUR per stem &middot; by line and stem length</span>
-    </div>
-    <table class="price-table" style="width:100%; border-collapse:collapse;">
-      <tr><th>Line</th><th>30cm</th><th>40cm</th><th>50cm</th><th>60cm</th><th>70cm</th></tr>
-      <tr><td>Cloni Success Hanoi</td><td>&euro;1.55</td><td>&euro;1.75</td><td>&euro;1.95</td><td>&euro;2.15</td><td>&euro;2.35</td></tr>
-      <tr><td>Cloni Success</td><td>&euro;0.95</td><td>&euro;1.25</td><td>&euro;1.45</td><td>&euro;1.65</td><td>&euro;1.85</td></tr>
-      <tr><td>Elegance</td><td>&euro;0.65</td><td>&euro;0.85</td><td>&euro;1.05</td><td>&euro;1.25</td><td>&euro;1.45</td></tr>
-    </table>
-    <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">Cloni Success Hanoi, Cloni Success and Elegance lines, in white, pink, salmon and bicolor.</p>
-  </div>
-
-  <!-- Note -->
-  <div style="padding: 48px 64px 0;">
-    <p style="font-size:12.5px; color:#9C9186; border-top:1px solid #EDE7DE; padding-top:20px;">All accounts must be current at time of shipment. Availability and prices may change due to seasonal and weather conditions. Standing-order pricing valid for the 2026 season.</p>
-  </div>
-
-  <!-- CTA -->
-  <div style="padding: 80px 64px 100px; text-align:center;">
-    <h2 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:32px; margin:0;">Want the full variety list?</h2>
-    <p style="font-size:14.5px; color:#6E6660; margin:14px 0 0;">Request the complete 2026 catalogue with all named varieties and current availability.</p>
-    <a href="contact.html" style="display:inline-block; margin-top:28px; border:1px solid #201C1A; color:#201C1A; padding:15px 34px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase;">Request the Catalogue</a>
-  </div>
+  <div class="vc-body" data-vc="en"></div>
 
   <!-- Footer -->
-  <div style="border-top:1px solid #241E17; padding: 56px 64px 32px;">
+  <div style="border-top:1px solid #241E17; padding: 96px 64px 32px; margin-top:32px;">
     <div style="display:grid; grid-template-columns: 1.4fr 1fr 1fr; gap:48px;">
       <div style="display:flex; flex-direction:column; gap:14px;">
         <div style="display:flex; align-items:center; gap:10px;">
           <img src="logo-header.png" alt="African Bloom" style="height:26px; width:auto;">
           <span style="font-size:15px; letter-spacing:0.12em;">AFRICAN BLOOM</span>
         </div>
-        <p style="font-size:13px; line-height:1.7; color:#6E6660; max-width:280px; margin:0;">Wholesale cut-flower imports for retailers worldwide, based in Sweden.</p>
+        <p style="font-size:13px; line-height:1.7; color:#4F4741; max-width:280px; margin:0;">Wholesale cut-flower imports for retailers worldwide, based in Sweden.</p>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Explore</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Explore</span>
         <a href="about.html" style="text-decoration:none; color:inherit;"><span>About</span></a>
         <a href="collection.html" style="text-decoration:none; color:inherit;"><span>Collection</span></a>
         <a href="ordering.html" style="text-decoration:none; color:inherit;"><span>How to Order</span></a>
-        <a href="certifications.html" style="text-decoration:none; color:inherit;"><span>Certifications</span></a>
         <a href="faq.html" style="text-decoration:none; color:inherit;"><span>FAQ</span></a>
         <a href="contact.html" style="text-decoration:none; color:inherit;"><span>Contact</span></a>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Contact</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Contact</span>
         <span>info@africane.se</span>
         <span>+46 73 756 57 58</span>
+        <a href="https://wa.me/46737565758" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;"><span>WhatsApp</span></a>
         <span>Sweden</span>
       </div>
     </div>
-    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#9C9186;">
-      <span>&copy; 2026 African Bloom &mdash; Cabrera Group AB</span>
+    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#5E564F;">
+      <span>&copy; 2026 African Bloom</span>
       <span>www.africane.se</span>
     </div>
   </div>
@@ -283,172 +344,63 @@
 <div data-lang="es" style="display:none;">
 
   <!-- Header -->
-  <div style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
+  <div class="ab-header" style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
     <div style="display:flex; align-items:center; gap:12px;">
       <img src="logo-header.png" alt="African Bloom" style="height:36px; width:auto; display:block;">
       <span style="font-family:'EB Garamond',serif; font-size:21px; letter-spacing:0.14em; font-weight:500;">AFRICAN BLOOM</span>
     </div>
-    <div style="display:flex; align-items:center; gap:38px; font-size:14px; color:#201C1A;">
+    <div class="ab-nav" style="display:flex; align-items:center; gap:38px; font-size:14px; color:#201C1A;">
       <a href="index.html" style="text-decoration:none; color:inherit;"><span class="navlink">Inicio</span></a>
       <a href="about.html" style="text-decoration:none; color:inherit;"><span class="navlink">Nosotros</span></a>
       <a href="collection.html" style="text-decoration:none; color:inherit;"><span class="navlink active">Colección</span></a>
       <a href="ordering.html" style="text-decoration:none; color:inherit;"><span class="navlink">Cómo Pedir</span></a>
-      <a href="certifications.html" style="text-decoration:none; color:inherit;"><span class="navlink">Certificaciones</span></a>
       <a href="faq.html" style="text-decoration:none; color:inherit;"><span class="navlink">FAQ</span></a>
       <a href="contact.html" style="text-decoration:none; color:inherit;"><span class="navlink">Contacto</span></a>
     </div>
-    <div style="display:flex; align-items:center; gap:20px;">
-      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#9C9186; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#9C5323; font-weight:600; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#9C9186; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#9C9186; cursor:pointer;">SV</span></div>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
-      <svg width="20" height="14" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg>
+    <div class="ab-right" style="display:flex; align-items:center; gap:20px;">
+      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#5E564F; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#5E564F; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#5E564F; cursor:pointer;">SV</span></div>
+      <svg class="ab-search" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+      <button class="ab-burger" type="button" aria-label="Menu" aria-expanded="false"><svg width="22" height="16" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg></button>
     </div>
   </div>
 
   <!-- Page title band -->
-  <div style="position:relative; height:300px; overflow:hidden; margin:24px 64px 0; border-radius:20px;">
-    <img src="collection-header.jpg" alt="Rose greenhouse" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
-    <div style="position:absolute; inset:0; background: linear-gradient(90deg, rgba(20,16,13,0.80) 0%, rgba(20,16,13,0.45) 55%, rgba(20,16,13,0.15) 100%);"></div>
-    <div style="position:absolute; left:40px; top:0; bottom:0; display:flex; flex-direction:column; justify-content:center; max-width:640px;">
-      <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#D8C9A3;">Inicio &nbsp;/&nbsp; Colección</span>
-      <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:48px; margin:14px 0 0; color:#FBF8F2;">La Colección y Precios 2026</h1>
-      <p style="font-size:15px; color:#E4DFD8; margin:16px 0 0; line-height:1.7;">300+ variedades en cinco familias de flores, clasificadas en categorías de calidad uniformes. Precios de pedido fijo mostrados en EUR por tallo, ex-works &mdash; consulte a su contacto de cuenta para las listas completas de variedades y la disponibilidad actual.</p>
-    </div>
+  <div style="padding: 64px 64px 48px; border-bottom:1px solid #241E17;">
+    <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#8A4A1E;">Inicio &nbsp;/&nbsp; Colección</span>
+    <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:48px; margin:14px 0 0;">Nuestra Colección</h1>
+    <p style="font-size:15px; color:#4F4741; max-width:680px; margin:16px 0 0; line-height:1.7;">Explore las variedades con nombre de nuestras familias de flores. Listas completas y disponibilidad actual bajo petición.</p>
   </div>
 
-  <!-- Categoría legend -->
-  <div style="padding: 48px 64px 0;">
-    <div style="display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:24px;">
-      <div>
-        <span class="tier-badge">Special+</span>
-        <p style="font-size:13.5px; color:#6E6660; margin:12px 0 0; line-height:1.6;">Nuestra categoría de rosa más alta &mdash; el capullo más cerrado y la mayor vida en florero.</p>
-      </div>
-      <div>
-        <span class="tier-badge">Special</span>
-        <p style="font-size:13.5px; color:#6E6660; margin:12px 0 0; line-height:1.6;">Excelente calidad diaria en la selección de variedades más amplia.</p>
-      </div>
-      <div>
-        <span class="tier-badge">Super Premium</span>
-        <p style="font-size:13.5px; color:#6E6660; margin:12px 0 0; line-height:1.6;">Un paso por encima del premium estándar, para minoristas que buscan más por tallo.</p>
-      </div>
-      <div>
-        <span class="tier-badge">Premium</span>
-        <p style="font-size:13.5px; color:#6E6660; margin:12px 0 0; line-height:1.6;">Categoría de volumen fiable para ramos y arreglos diarios.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Rosas pricing -->
-  <div style="padding: 32px 64px 0; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;"><div><span style="font-size:12px; color:#6E6660; letter-spacing:0.04em; margin-right:14px;">Ir a una categoría:</span><a href="#roses" style="display:inline-block; border:1px solid #9C5323; color:#9C5323; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Rosas</a><a href="#sprayroses" style="display:inline-block; border:1px solid #7A5A17; color:#7A5A17; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Rosas Spray</a><a href="#alstroemeria" style="display:inline-block; border:1px solid #3E6A47; color:#3E6A47; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Alstroemeria</a><a href="#gypsophila" style="display:inline-block; border:1px solid #241E17; color:#241E17; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Gypsophila</a><a href="#ranunculus" style="display:inline-block; border:1px solid #65427C; color:#65427C; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Ranúnculos</a></div><a href="contact.html" style="display:inline-block; background:#241E17; border:1px solid #241E17; color:#FFFFFF; padding:12px 26px; font-size:12.5px; letter-spacing:0.06em; text-transform:uppercase;">Solicitar una Cotización</a></div><div style="padding: 64px 64px 0;">
-    <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #9C5323; padding-bottom:14px; margin-bottom:8px;">
-      <h2 id="roses" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#9C5323;">Rosas</h2>
-      <span style="font-size:12.5px; color:#6E6660;">EUR por tallo &middot; por categoría y longitud de tallo</span>
-    </div>
-    <table class="price-table" style="width:100%; border-collapse:collapse;">
-      <tr><th>Categoría</th><th>40cm</th><th>50cm</th><th>60cm</th><th>70cm</th><th>80cm</th></tr>
-      <tr><td>Special+</td><td>&euro;0.80</td><td>&euro;0.90</td><td>&euro;1.05</td><td>&euro;1.15</td><td>&euro;1.25</td></tr>
-      <tr><td>Special</td><td>&euro;0.75</td><td>&euro;0.85</td><td>&euro;0.95</td><td>&euro;1.05</td><td>&euro;1.15</td></tr>
-      <tr><td>Super Premium</td><td>&euro;0.70</td><td>&euro;0.80</td><td>&euro;0.90</td><td>&euro;1.00</td><td>&euro;1.10</td></tr>
-      <tr><td>Premium</td><td>&euro;0.60</td><td>&euro;0.70</td><td>&euro;0.80</td><td>&euro;0.90</td><td>&euro;1.00</td></tr>
-    </table>
-    <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">150+ variedades con nombre en las cuatro categorías, incluyendo País Candy, Freedom, Vendela y Mondial &mdash; lista completa a petición.</p>
-  </div>
-
-  <!-- Spray roses pricing -->
-  <div style="padding: 56px 64px 0;">
-    <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #7A5A17; padding-bottom:14px; margin-bottom:8px;">
-      <h2 id="sprayroses" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#7A5A17;">Rosas Spray</h2>
-      <span style="font-size:12.5px; color:#6E6660;">EUR por tallo &middot; por categoría y longitud de tallo</span>
-    </div>
-    <table class="price-table" style="width:100%; border-collapse:collapse;">
-      <tr><th>Categoría</th><th>40cm</th><th>50cm</th><th>60cm</th><th>70cm</th></tr>
-      <tr><td>Special+</td><td>&euro;1.05</td><td>&euro;1.15</td><td>&euro;1.30</td><td>&euro;1.40</td></tr>
-      <tr><td>Special</td><td>&euro;0.85</td><td>&euro;0.95</td><td>&euro;1.10</td><td>&euro;1.20</td></tr>
-      <tr><td>Premium</td><td>&euro;0.70</td><td>&euro;0.80</td><td>&euro;0.95</td><td>&euro;1.05</td></tr>
-    </table>
-    <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">80+ variedades con nombre, incluyendo las líneas Fibonacci y Trendsetter &mdash; lista completa a petición.</p>
-  </div>
-
-  <!-- Alstroemeria + Gypsophila side by side -->
-  <div style="padding: 56px 64px 0; display:grid; grid-template-columns: 1.3fr 1fr; gap:56px;">
-    <div>
-      <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #3E6A47; padding-bottom:14px; margin-bottom:8px;">
-        <h2 id="alstroemeria" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#3E6A47;">Alstroemeria</h2>
-        <span style="font-size:12.5px; color:#6E6660;">EUR por tallo</span>
-      </div>
-      <table class="price-table" style="width:100%; border-collapse:collapse;">
-        <tr><th>&nbsp;</th><th>60cm</th><th>70cm</th><th>80cm</th><th>90cm</th></tr>
-        <tr><td>Todas las variedades</td><td>&euro;0.56</td><td>&euro;0.62</td><td>&euro;0.66</td><td>&euro;0.70</td></tr>
-      </table>
-      <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">75+ variedades con nombre en tonos bicolor, pastel y saturados.</p>
-    </div>
-    <div>
-      <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #241E17; padding-bottom:14px; margin-bottom:8px;">
-        <h2 id="gypsophila" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#241E17;">Gypsophila</h2>
-        <span style="font-size:12.5px; color:#6E6660;">EUR por ramo</span>
-      </div>
-      <table class="price-table" style="width:100%; border-collapse:collapse;">
-        <tr><th>750gr</th><th>1000gr</th><th>Arcoíris</th><th>Teñido</th></tr>
-        <tr><td>&euro;0.52</td><td>&euro;0.58</td><td>&euro;0.83</td><td>&euro;0.66</td></tr>
-      </table>
-      <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">Línea Xlence &mdash; estándar, teñida arcoíris y teñida.</p>
-    </div>
-  </div>
-
-  <!-- Ranúnculos -->
-  <div style="padding: 56px 64px 0;">
-    <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #65427C; padding-bottom:14px; margin-bottom:8px;">
-      <h2 id="ranunculus" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#65427C;">Ranúnculos</h2>
-      <span style="font-size:12.5px; color:#6E6660;">EUR por tallo &middot; por línea y longitud de tallo</span>
-    </div>
-    <table class="price-table" style="width:100%; border-collapse:collapse;">
-      <tr><th>Línea</th><th>30cm</th><th>40cm</th><th>50cm</th><th>60cm</th><th>70cm</th></tr>
-      <tr><td>Cloni Success Hanoi</td><td>&euro;1.55</td><td>&euro;1.75</td><td>&euro;1.95</td><td>&euro;2.15</td><td>&euro;2.35</td></tr>
-      <tr><td>Cloni Success</td><td>&euro;0.95</td><td>&euro;1.25</td><td>&euro;1.45</td><td>&euro;1.65</td><td>&euro;1.85</td></tr>
-      <tr><td>Elegance</td><td>&euro;0.65</td><td>&euro;0.85</td><td>&euro;1.05</td><td>&euro;1.25</td><td>&euro;1.45</td></tr>
-    </table>
-    <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">Líneas Cloni Success Hanoi, Cloni Success y Elegance, en blanco, rosa, salmón y bicolor.</p>
-  </div>
-
-  <!-- Note -->
-  <div style="padding: 48px 64px 0;">
-    <p style="font-size:12.5px; color:#9C9186; border-top:1px solid #EDE7DE; padding-top:20px;">Todas las cuentas deben estar al día en el momento del envío. La disponibilidad y los precios pueden cambiar por condiciones estacionales y climáticas. Precios de pedido fijo válidos para la temporada 2026.</p>
-  </div>
-
-  <!-- CTA -->
-  <div style="padding: 80px 64px 100px; text-align:center;">
-    <h2 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:32px; margin:0;">¿Quiere la lista completa de variedades?</h2>
-    <p style="font-size:14.5px; color:#6E6660; margin:14px 0 0;">Solicite el catálogo completo 2026 con todas las variedades con nombre y la disponibilidad actual.</p>
-    <a href="contact.html" style="display:inline-block; margin-top:28px; border:1px solid #201C1A; color:#201C1A; padding:15px 34px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase;">Solicitar el Catálogo</a>
-  </div>
+  <div class="vc-body" data-vc="es"></div>
 
   <!-- Footer -->
-  <div style="border-top:1px solid #241E17; padding: 56px 64px 32px;">
+  <div style="border-top:1px solid #241E17; padding: 96px 64px 32px; margin-top:32px;">
     <div style="display:grid; grid-template-columns: 1.4fr 1fr 1fr; gap:48px;">
       <div style="display:flex; flex-direction:column; gap:14px;">
         <div style="display:flex; align-items:center; gap:10px;">
           <img src="logo-header.png" alt="African Bloom" style="height:26px; width:auto;">
           <span style="font-size:15px; letter-spacing:0.12em;">AFRICAN BLOOM</span>
         </div>
-        <p style="font-size:13px; line-height:1.7; color:#6E6660; max-width:280px; margin:0;">Importación mayorista de flor cortada para minoristas de todo el mundo, con sede en Suecia.</p>
+        <p style="font-size:13px; line-height:1.7; color:#4F4741; max-width:280px; margin:0;">Importación mayorista de flor cortada para minoristas de todo el mundo, con sede en Suecia.</p>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Explorar</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Explorar</span>
         <a href="about.html" style="text-decoration:none; color:inherit;"><span>Nosotros</span></a>
         <a href="collection.html" style="text-decoration:none; color:inherit;"><span>Colección</span></a>
         <a href="ordering.html" style="text-decoration:none; color:inherit;"><span>Cómo Pedir</span></a>
-        <a href="certifications.html" style="text-decoration:none; color:inherit;"><span>Certificaciones</span></a>
         <a href="faq.html" style="text-decoration:none; color:inherit;"><span>FAQ</span></a>
         <a href="contact.html" style="text-decoration:none; color:inherit;"><span>Contacto</span></a>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Contacto</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Contacto</span>
         <span>info@africane.se</span>
         <span>+46 73 756 57 58</span>
+        <a href="https://wa.me/46737565758" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;"><span>WhatsApp</span></a>
         <span>Suecia</span>
       </div>
     </div>
-    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#9C9186;">
-      <span>&copy; 2026 African Bloom &mdash; Cabrera Group AB</span>
+    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#5E564F;">
+      <span>&copy; 2026 African Bloom</span>
       <span>www.africane.se</span>
     </div>
   </div>
@@ -457,172 +409,63 @@
 <div data-lang="ru" style="display:none;">
 
   <!-- Header -->
-  <div style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
+  <div class="ab-header" style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
     <div style="display:flex; align-items:center; gap:12px;">
       <img src="logo-header.png" alt="African Bloom" style="height:36px; width:auto; display:block;">
       <span style="font-family:'EB Garamond',serif; font-size:21px; letter-spacing:0.14em; font-weight:500;">AFRICAN BLOOM</span>
     </div>
-    <div style="display:flex; align-items:center; gap:38px; font-size:14px; color:#201C1A;">
+    <div class="ab-nav" style="display:flex; align-items:center; gap:38px; font-size:14px; color:#201C1A;">
       <a href="index.html" style="text-decoration:none; color:inherit;"><span class="navlink">Главная</span></a>
       <a href="about.html" style="text-decoration:none; color:inherit;"><span class="navlink">О нас</span></a>
       <a href="collection.html" style="text-decoration:none; color:inherit;"><span class="navlink active">Коллекция</span></a>
       <a href="ordering.html" style="text-decoration:none; color:inherit;"><span class="navlink">Как Заказать</span></a>
-      <a href="certifications.html" style="text-decoration:none; color:inherit;"><span class="navlink">Сертификаты</span></a>
       <a href="faq.html" style="text-decoration:none; color:inherit;"><span class="navlink">FAQ</span></a>
       <a href="contact.html" style="text-decoration:none; color:inherit;"><span class="navlink">Контакты</span></a>
     </div>
-    <div style="display:flex; align-items:center; gap:20px;">
-      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#9C9186; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#9C9186; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#9C5323; font-weight:600; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#9C9186; cursor:pointer;">SV</span></div>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
-      <svg width="20" height="14" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg>
+    <div class="ab-right" style="display:flex; align-items:center; gap:20px;">
+      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#5E564F; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#5E564F; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#5E564F; cursor:pointer;">SV</span></div>
+      <svg class="ab-search" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+      <button class="ab-burger" type="button" aria-label="Menu" aria-expanded="false"><svg width="22" height="16" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg></button>
     </div>
   </div>
 
   <!-- Page title band -->
-  <div style="position:relative; height:300px; overflow:hidden; margin:24px 64px 0; border-radius:20px;">
-    <img src="collection-header.jpg" alt="Rose greenhouse" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
-    <div style="position:absolute; inset:0; background: linear-gradient(90deg, rgba(20,16,13,0.80) 0%, rgba(20,16,13,0.45) 55%, rgba(20,16,13,0.15) 100%);"></div>
-    <div style="position:absolute; left:40px; top:0; bottom:0; display:flex; flex-direction:column; justify-content:center; max-width:640px;">
-      <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#D8C9A3;">Главная &nbsp;/&nbsp; Коллекция</span>
-      <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:48px; margin:14px 0 0; color:#FBF8F2;">Коллекция и Цены на 2026 год</h1>
-      <p style="font-size:15px; color:#E4DFD8; margin:16px 0 0; line-height:1.7;">300+ сортов в пяти семействах цветов, разделённых на единые категории качества. Цены по постоянным заказам указаны в евро за стебель, франко-склад &mdash; уточните у вашего менеджера полные списки сортов и текущую доступность.</p>
-    </div>
+  <div style="padding: 64px 64px 48px; border-bottom:1px solid #241E17;">
+    <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#8A4A1E;">Главная &nbsp;/&nbsp; Коллекция</span>
+    <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:48px; margin:14px 0 0;">Наша коллекция</h1>
+    <p style="font-size:15px; color:#4F4741; max-width:680px; margin:16px 0 0; line-height:1.7;">Ознакомьтесь с именными сортами в наших семействах цветов. Полные списки и текущая доступность — по запросу.</p>
   </div>
 
-  <!-- Категория legend -->
-  <div style="padding: 48px 64px 0;">
-    <div style="display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:24px;">
-      <div>
-        <span class="tier-badge">Special+</span>
-        <p style="font-size:13.5px; color:#6E6660; margin:12px 0 0; line-height:1.6;">Наш высший сорт роз &mdash; самый плотный бутон и самый долгий срок жизни в вазе.</p>
-      </div>
-      <div>
-        <span class="tier-badge">Special</span>
-        <p style="font-size:13.5px; color:#6E6660; margin:12px 0 0; line-height:1.6;">Отличное повседневное качество при самом широком выборе сортов.</p>
-      </div>
-      <div>
-        <span class="tier-badge">Super Premium</span>
-        <p style="font-size:13.5px; color:#6E6660; margin:12px 0 0; line-height:1.6;">На ступень выше стандартного премиума &mdash; для продавцов, которым важно больше в каждом стебле.</p>
-      </div>
-      <div>
-        <span class="tier-badge">Premium</span>
-        <p style="font-size:13.5px; color:#6E6660; margin:12px 0 0; line-height:1.6;">Надёжный объёмный сорт для повседневных букетов и композиций.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Розы pricing -->
-  <div style="padding: 32px 64px 0; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;"><div><span style="font-size:12px; color:#6E6660; letter-spacing:0.04em; margin-right:14px;">Перейти к категории:</span><a href="#roses" style="display:inline-block; border:1px solid #9C5323; color:#9C5323; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Розы</a><a href="#sprayroses" style="display:inline-block; border:1px solid #7A5A17; color:#7A5A17; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Спрей-розы</a><a href="#alstroemeria" style="display:inline-block; border:1px solid #3E6A47; color:#3E6A47; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Альстромерия</a><a href="#gypsophila" style="display:inline-block; border:1px solid #241E17; color:#241E17; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Гипсофила</a><a href="#ranunculus" style="display:inline-block; border:1px solid #65427C; color:#65427C; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Ранункулюс</a></div><a href="contact.html" style="display:inline-block; background:#241E17; border:1px solid #241E17; color:#FFFFFF; padding:12px 26px; font-size:12.5px; letter-spacing:0.06em; text-transform:uppercase;">Запросить расчёт</a></div><div style="padding: 64px 64px 0;">
-    <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #9C5323; padding-bottom:14px; margin-bottom:8px;">
-      <h2 id="roses" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#9C5323;">Розы</h2>
-      <span style="font-size:12.5px; color:#6E6660;">Евро за стебель &middot; по категории и длине стебля</span>
-    </div>
-    <table class="price-table" style="width:100%; border-collapse:collapse;">
-      <tr><th>Категория</th><th>40cm</th><th>50cm</th><th>60cm</th><th>70cm</th><th>80cm</th></tr>
-      <tr><td>Special+</td><td>&euro;0.80</td><td>&euro;0.90</td><td>&euro;1.05</td><td>&euro;1.15</td><td>&euro;1.25</td></tr>
-      <tr><td>Special</td><td>&euro;0.75</td><td>&euro;0.85</td><td>&euro;0.95</td><td>&euro;1.05</td><td>&euro;1.15</td></tr>
-      <tr><td>Super Premium</td><td>&euro;0.70</td><td>&euro;0.80</td><td>&euro;0.90</td><td>&euro;1.00</td><td>&euro;1.10</td></tr>
-      <tr><td>Premium</td><td>&euro;0.60</td><td>&euro;0.70</td><td>&euro;0.80</td><td>&euro;0.90</td><td>&euro;1.00</td></tr>
-    </table>
-    <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">150+ именных сортов во всех четырёх категориях, включая Страна Candy, Freedom, Vendela и Mondial &mdash; полный список по запросу.</p>
-  </div>
-
-  <!-- Spray roses pricing -->
-  <div style="padding: 56px 64px 0;">
-    <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #7A5A17; padding-bottom:14px; margin-bottom:8px;">
-      <h2 id="sprayroses" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#7A5A17;">Спрей-розы</h2>
-      <span style="font-size:12.5px; color:#6E6660;">Евро за стебель &middot; по категории и длине стебля</span>
-    </div>
-    <table class="price-table" style="width:100%; border-collapse:collapse;">
-      <tr><th>Категория</th><th>40cm</th><th>50cm</th><th>60cm</th><th>70cm</th></tr>
-      <tr><td>Special+</td><td>&euro;1.05</td><td>&euro;1.15</td><td>&euro;1.30</td><td>&euro;1.40</td></tr>
-      <tr><td>Special</td><td>&euro;0.85</td><td>&euro;0.95</td><td>&euro;1.10</td><td>&euro;1.20</td></tr>
-      <tr><td>Premium</td><td>&euro;0.70</td><td>&euro;0.80</td><td>&euro;0.95</td><td>&euro;1.05</td></tr>
-    </table>
-    <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">80+ именных сортов, включая линейки Fibonacci и Trendsetter &mdash; полный список по запросу.</p>
-  </div>
-
-  <!-- Альстромерия + Гипсофила side by side -->
-  <div style="padding: 56px 64px 0; display:grid; grid-template-columns: 1.3fr 1fr; gap:56px;">
-    <div>
-      <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #3E6A47; padding-bottom:14px; margin-bottom:8px;">
-        <h2 id="alstroemeria" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#3E6A47;">Альстромерия</h2>
-        <span style="font-size:12.5px; color:#6E6660;">Евро за стебель</span>
-      </div>
-      <table class="price-table" style="width:100%; border-collapse:collapse;">
-        <tr><th>&nbsp;</th><th>60cm</th><th>70cm</th><th>80cm</th><th>90cm</th></tr>
-        <tr><td>Все сорта</td><td>&euro;0.56</td><td>&euro;0.62</td><td>&euro;0.66</td><td>&euro;0.70</td></tr>
-      </table>
-      <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">75+ именных сортов в двухцветных, пастельных и насыщенных тонах.</p>
-    </div>
-    <div>
-      <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #241E17; padding-bottom:14px; margin-bottom:8px;">
-        <h2 id="gypsophila" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#241E17;">Гипсофила</h2>
-        <span style="font-size:12.5px; color:#6E6660;">Евро за пучок</span>
-      </div>
-      <table class="price-table" style="width:100%; border-collapse:collapse;">
-        <tr><th>750gr</th><th>1000gr</th><th>Радужная</th><th>Тонированная</th></tr>
-        <tr><td>&euro;0.52</td><td>&euro;0.58</td><td>&euro;0.83</td><td>&euro;0.66</td></tr>
-      </table>
-      <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">Линия Xlence &mdash; стандартная, радужного окрашивания и тонированная.</p>
-    </div>
-  </div>
-
-  <!-- Ранункулюс -->
-  <div style="padding: 56px 64px 0;">
-    <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #65427C; padding-bottom:14px; margin-bottom:8px;">
-      <h2 id="ranunculus" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#65427C;">Ранункулюс</h2>
-      <span style="font-size:12.5px; color:#6E6660;">Евро за стебель &middot; по линии и длине стебля</span>
-    </div>
-    <table class="price-table" style="width:100%; border-collapse:collapse;">
-      <tr><th>Линия</th><th>30cm</th><th>40cm</th><th>50cm</th><th>60cm</th><th>70cm</th></tr>
-      <tr><td>Cloni Success Hanoi</td><td>&euro;1.55</td><td>&euro;1.75</td><td>&euro;1.95</td><td>&euro;2.15</td><td>&euro;2.35</td></tr>
-      <tr><td>Cloni Success</td><td>&euro;0.95</td><td>&euro;1.25</td><td>&euro;1.45</td><td>&euro;1.65</td><td>&euro;1.85</td></tr>
-      <tr><td>Elegance</td><td>&euro;0.65</td><td>&euro;0.85</td><td>&euro;1.05</td><td>&euro;1.25</td><td>&euro;1.45</td></tr>
-    </table>
-    <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">Линии Cloni Success Hanoi, Cloni Success и Elegance, в белом, розовом, лососевом и двухцветном исполнении.</p>
-  </div>
-
-  <!-- Note -->
-  <div style="padding: 48px 64px 0;">
-    <p style="font-size:12.5px; color:#9C9186; border-top:1px solid #EDE7DE; padding-top:20px;">Все счета должны быть оплачены на момент отгрузки. Наличие и цены могут меняться в зависимости от сезона и погодных условий. Цены по постоянным заказам действительны на сезон 2026 года.</p>
-  </div>
-
-  <!-- CTA -->
-  <div style="padding: 80px 64px 100px; text-align:center;">
-    <h2 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:32px; margin:0;">Нужен полный список сортов?</h2>
-    <p style="font-size:14.5px; color:#6E6660; margin:14px 0 0;">Запросите полный каталог на 2026 год со всеми именными сортами и текущей доступностью.</p>
-    <a href="contact.html" style="display:inline-block; margin-top:28px; border:1px solid #201C1A; color:#201C1A; padding:15px 34px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase;">Запросить Каталог</a>
-  </div>
+  <div class="vc-body" data-vc="ru"></div>
 
   <!-- Footer -->
-  <div style="border-top:1px solid #241E17; padding: 56px 64px 32px;">
+  <div style="border-top:1px solid #241E17; padding: 96px 64px 32px; margin-top:32px;">
     <div style="display:grid; grid-template-columns: 1.4fr 1fr 1fr; gap:48px;">
       <div style="display:flex; flex-direction:column; gap:14px;">
         <div style="display:flex; align-items:center; gap:10px;">
           <img src="logo-header.png" alt="African Bloom" style="height:26px; width:auto;">
           <span style="font-size:15px; letter-spacing:0.12em;">AFRICAN BLOOM</span>
         </div>
-        <p style="font-size:13px; line-height:1.7; color:#6E6660; max-width:280px; margin:0;">Оптовый импорт срезанных цветов для розничных продавцов по всему миру, базируется в Швеции.</p>
+        <p style="font-size:13px; line-height:1.7; color:#4F4741; max-width:280px; margin:0;">Оптовый импорт срезанных цветов для розничных продавцов по всему миру, базируется в Швеции.</p>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Разделы</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Разделы</span>
         <a href="about.html" style="text-decoration:none; color:inherit;"><span>О нас</span></a>
         <a href="collection.html" style="text-decoration:none; color:inherit;"><span>Коллекция</span></a>
         <a href="ordering.html" style="text-decoration:none; color:inherit;"><span>Как Заказать</span></a>
-        <a href="certifications.html" style="text-decoration:none; color:inherit;"><span>Сертификаты</span></a>
         <a href="faq.html" style="text-decoration:none; color:inherit;"><span>FAQ</span></a>
         <a href="contact.html" style="text-decoration:none; color:inherit;"><span>Контакты</span></a>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Контакты</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Контакты</span>
         <span>info@africane.se</span>
         <span>+46 73 756 57 58</span>
+        <a href="https://wa.me/46737565758" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;"><span>WhatsApp</span></a>
         <span>Швеция</span>
       </div>
     </div>
-    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#9C9186;">
-      <span>&copy; 2026 African Bloom &mdash; Cabrera Group AB</span>
+    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#5E564F;">
+      <span>&copy; 2026 African Bloom</span>
       <span>www.africane.se</span>
     </div>
   </div>
@@ -631,172 +474,63 @@
 <div data-lang="sv" style="display:none;">
 
   <!-- Header -->
-  <div style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
+  <div class="ab-header" style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
     <div style="display:flex; align-items:center; gap:12px;">
       <img src="logo-header.png" alt="African Bloom" style="height:36px; width:auto; display:block;">
       <span style="font-family:'EB Garamond',serif; font-size:21px; letter-spacing:0.14em; font-weight:500;">AFRICAN BLOOM</span>
     </div>
-    <div style="display:flex; align-items:center; gap:38px; font-size:14px; color:#201C1A;">
+    <div class="ab-nav" style="display:flex; align-items:center; gap:38px; font-size:14px; color:#201C1A;">
       <a href="index.html" style="text-decoration:none; color:inherit;"><span class="navlink">Hem</span></a>
       <a href="about.html" style="text-decoration:none; color:inherit;"><span class="navlink">Om Oss</span></a>
       <a href="collection.html" style="text-decoration:none; color:inherit;"><span class="navlink active">Kollektion</span></a>
       <a href="ordering.html" style="text-decoration:none; color:inherit;"><span class="navlink">Beställning</span></a>
-      <a href="certifications.html" style="text-decoration:none; color:inherit;"><span class="navlink">Certifieringar</span></a>
       <a href="faq.html" style="text-decoration:none; color:inherit;"><span class="navlink">FAQ</span></a>
       <a href="contact.html" style="text-decoration:none; color:inherit;"><span class="navlink">Kontakt</span></a>
     </div>
-    <div style="display:flex; align-items:center; gap:20px;">
-      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#9C9186; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#9C9186; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#9C9186; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#9C5323; font-weight:600; cursor:pointer;">SV</span></div>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
-      <svg width="20" height="14" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg>
+    <div class="ab-right" style="display:flex; align-items:center; gap:20px;">
+      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#5E564F; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#5E564F; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#5E564F; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">SV</span></div>
+      <svg class="ab-search" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+      <button class="ab-burger" type="button" aria-label="Menu" aria-expanded="false"><svg width="22" height="16" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg></button>
     </div>
   </div>
 
   <!-- Page title band -->
-  <div style="position:relative; height:300px; overflow:hidden; margin:24px 64px 0; border-radius:20px;">
-    <img src="collection-header.jpg" alt="Rose greenhouse" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
-    <div style="position:absolute; inset:0; background: linear-gradient(90deg, rgba(20,16,13,0.80) 0%, rgba(20,16,13,0.45) 55%, rgba(20,16,13,0.15) 100%);"></div>
-    <div style="position:absolute; left:40px; top:0; bottom:0; display:flex; flex-direction:column; justify-content:center; max-width:640px;">
-      <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#D8C9A3;">Hem &nbsp;/&nbsp; Kollektion</span>
-      <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:48px; margin:14px 0 0; color:#FBF8F2;">Kollektionen och Priser 2026</h1>
-      <p style="font-size:15px; color:#E4DFD8; margin:16px 0 0; line-height:1.7;">300+ sorter fördelade på fem blomsterfamiljer, indelade i enhetliga kvalitetsklasser. Priser för stående beställningar anges i EUR per stjälk, fritt fabrik &mdash; kontakta din kontaktperson för fullständiga sortlistor och aktuell tillgänglighet.</p>
-    </div>
+  <div style="padding: 64px 64px 48px; border-bottom:1px solid #241E17;">
+    <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#8A4A1E;">Hem &nbsp;/&nbsp; Kollektion</span>
+    <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:48px; margin:14px 0 0;">Vår Kollektion</h1>
+    <p style="font-size:15px; color:#4F4741; max-width:680px; margin:16px 0 0; line-height:1.7;">Bläddra bland de namngivna sorterna i våra blomsterfamiljer. Fullständiga sortlistor och aktuell tillgänglighet på begäran.</p>
   </div>
 
-  <!-- Klass legend -->
-  <div style="padding: 48px 64px 0;">
-    <div style="display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:24px;">
-      <div>
-        <span class="tier-badge">Special+</span>
-        <p style="font-size:13.5px; color:#6E6660; margin:12px 0 0; line-height:1.6;">Vår högsta rosklass &mdash; den tätaste knoppformen och längsta vaslivslängden.</p>
-      </div>
-      <div>
-        <span class="tier-badge">Special</span>
-        <p style="font-size:13.5px; color:#6E6660; margin:12px 0 0; line-height:1.6;">Utmärkt vardagskvalitet med det bredaste sortimentet.</p>
-      </div>
-      <div>
-        <span class="tier-badge">Super Premium</span>
-        <p style="font-size:13.5px; color:#6E6660; margin:12px 0 0; line-height:1.6;">Ett steg över standardpremium, för återförsäljare som vill ha mer per stjälk.</p>
-      </div>
-      <div>
-        <span class="tier-badge">Premium</span>
-        <p style="font-size:13.5px; color:#6E6660; margin:12px 0 0; line-height:1.6;">Pålitlig volymklass för vardagsbuketter och arrangemang.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Rosor pricing -->
-  <div style="padding: 32px 64px 0; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;"><div><span style="font-size:12px; color:#6E6660; letter-spacing:0.04em; margin-right:14px;">Hoppa till en kategori:</span><a href="#roses" style="display:inline-block; border:1px solid #9C5323; color:#9C5323; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Rosor</a><a href="#sprayroses" style="display:inline-block; border:1px solid #7A5A17; color:#7A5A17; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Sprayrosor</a><a href="#alstroemeria" style="display:inline-block; border:1px solid #3E6A47; color:#3E6A47; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Alstroemeria</a><a href="#gypsophila" style="display:inline-block; border:1px solid #241E17; color:#241E17; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Gypsophila</a><a href="#ranunculus" style="display:inline-block; border:1px solid #65427C; color:#65427C; border-radius:20px; padding:7px 16px; font-size:12.5px; letter-spacing:0.04em; margin-right:10px;">Ranunkel</a></div><a href="contact.html" style="display:inline-block; background:#241E17; border:1px solid #241E17; color:#FFFFFF; padding:12px 26px; font-size:12.5px; letter-spacing:0.06em; text-transform:uppercase;">Begär en Offert</a></div><div style="padding: 64px 64px 0;">
-    <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #9C5323; padding-bottom:14px; margin-bottom:8px;">
-      <h2 id="roses" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#9C5323;">Rosor</h2>
-      <span style="font-size:12.5px; color:#6E6660;">EUR per stjälk &middot; efter klass och stjälklängd</span>
-    </div>
-    <table class="price-table" style="width:100%; border-collapse:collapse;">
-      <tr><th>Klass</th><th>40cm</th><th>50cm</th><th>60cm</th><th>70cm</th><th>80cm</th></tr>
-      <tr><td>Special+</td><td>&euro;0.80</td><td>&euro;0.90</td><td>&euro;1.05</td><td>&euro;1.15</td><td>&euro;1.25</td></tr>
-      <tr><td>Special</td><td>&euro;0.75</td><td>&euro;0.85</td><td>&euro;0.95</td><td>&euro;1.05</td><td>&euro;1.15</td></tr>
-      <tr><td>Super Premium</td><td>&euro;0.70</td><td>&euro;0.80</td><td>&euro;0.90</td><td>&euro;1.00</td><td>&euro;1.10</td></tr>
-      <tr><td>Premium</td><td>&euro;0.60</td><td>&euro;0.70</td><td>&euro;0.80</td><td>&euro;0.90</td><td>&euro;1.00</td></tr>
-    </table>
-    <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">150+ namngivna sorter i alla fyra klasser, inklusive Land Candy, Freedom, Vendela och Mondial &mdash; fullständig lista på begäran.</p>
-  </div>
-
-  <!-- Spray roses pricing -->
-  <div style="padding: 56px 64px 0;">
-    <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #7A5A17; padding-bottom:14px; margin-bottom:8px;">
-      <h2 id="sprayroses" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#7A5A17;">Sprayrosor</h2>
-      <span style="font-size:12.5px; color:#6E6660;">EUR per stjälk &middot; efter klass och stjälklängd</span>
-    </div>
-    <table class="price-table" style="width:100%; border-collapse:collapse;">
-      <tr><th>Klass</th><th>40cm</th><th>50cm</th><th>60cm</th><th>70cm</th></tr>
-      <tr><td>Special+</td><td>&euro;1.05</td><td>&euro;1.15</td><td>&euro;1.30</td><td>&euro;1.40</td></tr>
-      <tr><td>Special</td><td>&euro;0.85</td><td>&euro;0.95</td><td>&euro;1.10</td><td>&euro;1.20</td></tr>
-      <tr><td>Premium</td><td>&euro;0.70</td><td>&euro;0.80</td><td>&euro;0.95</td><td>&euro;1.05</td></tr>
-    </table>
-    <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">80+ namngivna sorter, inklusive linjerna Fibonacci och Trendsetter &mdash; fullständig lista på begäran.</p>
-  </div>
-
-  <!-- Alstroemeria + Gypsophila side by side -->
-  <div style="padding: 56px 64px 0; display:grid; grid-template-columns: 1.3fr 1fr; gap:56px;">
-    <div>
-      <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #3E6A47; padding-bottom:14px; margin-bottom:8px;">
-        <h2 id="alstroemeria" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#3E6A47;">Alstroemeria</h2>
-        <span style="font-size:12.5px; color:#6E6660;">EUR per stjälk</span>
-      </div>
-      <table class="price-table" style="width:100%; border-collapse:collapse;">
-        <tr><th>&nbsp;</th><th>60cm</th><th>70cm</th><th>80cm</th><th>90cm</th></tr>
-        <tr><td>Alla sorter</td><td>&euro;0.56</td><td>&euro;0.62</td><td>&euro;0.66</td><td>&euro;0.70</td></tr>
-      </table>
-      <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">75+ namngivna sorter i tvåfärgade, pastell- och mättade toner.</p>
-    </div>
-    <div>
-      <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #241E17; padding-bottom:14px; margin-bottom:8px;">
-        <h2 id="gypsophila" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#241E17;">Gypsophila</h2>
-        <span style="font-size:12.5px; color:#6E6660;">EUR per bunt</span>
-      </div>
-      <table class="price-table" style="width:100%; border-collapse:collapse;">
-        <tr><th>750gr</th><th>1000gr</th><th>Regnbåge</th><th>Tonad</th></tr>
-        <tr><td>&euro;0.52</td><td>&euro;0.58</td><td>&euro;0.83</td><td>&euro;0.66</td></tr>
-      </table>
-      <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">Xlence-linjen &mdash; standard, regnbågsfärgad och tonad.</p>
-    </div>
-  </div>
-
-  <!-- Ranunkel -->
-  <div style="padding: 56px 64px 0;">
-    <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #65427C; padding-bottom:14px; margin-bottom:8px;">
-      <h2 id="ranunculus" style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:26px; margin:0; color:#65427C;">Ranunkel</h2>
-      <span style="font-size:12.5px; color:#6E6660;">EUR per stjälk &middot; efter linje och stjälklängd</span>
-    </div>
-    <table class="price-table" style="width:100%; border-collapse:collapse;">
-      <tr><th>Linje</th><th>30cm</th><th>40cm</th><th>50cm</th><th>60cm</th><th>70cm</th></tr>
-      <tr><td>Cloni Success Hanoi</td><td>&euro;1.55</td><td>&euro;1.75</td><td>&euro;1.95</td><td>&euro;2.15</td><td>&euro;2.35</td></tr>
-      <tr><td>Cloni Success</td><td>&euro;0.95</td><td>&euro;1.25</td><td>&euro;1.45</td><td>&euro;1.65</td><td>&euro;1.85</td></tr>
-      <tr><td>Elegance</td><td>&euro;0.65</td><td>&euro;0.85</td><td>&euro;1.05</td><td>&euro;1.25</td><td>&euro;1.45</td></tr>
-    </table>
-    <p style="font-size:12.5px; color:#9C9186; margin-top:14px;">Linjerna Cloni Success Hanoi, Cloni Success och Elegance, i vitt, rosa, laxrosa och tvåfärgat.</p>
-  </div>
-
-  <!-- Note -->
-  <div style="padding: 48px 64px 0;">
-    <p style="font-size:12.5px; color:#9C9186; border-top:1px solid #EDE7DE; padding-top:20px;">Alla konton måste vara aktuella vid leveranstillfället. Tillgänglighet och priser kan ändras på grund av säsongs- och väderförhållanden. Priser för stående beställningar gäller för säsongen 2026.</p>
-  </div>
-
-  <!-- CTA -->
-  <div style="padding: 80px 64px 100px; text-align:center;">
-    <h2 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:32px; margin:0;">Vill du ha den fullständiga sortlistan?</h2>
-    <p style="font-size:14.5px; color:#6E6660; margin:14px 0 0;">Begär den kompletta katalogen för 2026 med alla namngivna sorter och aktuell tillgänglighet.</p>
-    <a href="contact.html" style="display:inline-block; margin-top:28px; border:1px solid #201C1A; color:#201C1A; padding:15px 34px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase;">Begär Katalogen</a>
-  </div>
+  <div class="vc-body" data-vc="sv"></div>
 
   <!-- Footer -->
-  <div style="border-top:1px solid #241E17; padding: 56px 64px 32px;">
+  <div style="border-top:1px solid #241E17; padding: 96px 64px 32px; margin-top:32px;">
     <div style="display:grid; grid-template-columns: 1.4fr 1fr 1fr; gap:48px;">
       <div style="display:flex; flex-direction:column; gap:14px;">
         <div style="display:flex; align-items:center; gap:10px;">
           <img src="logo-header.png" alt="African Bloom" style="height:26px; width:auto;">
           <span style="font-size:15px; letter-spacing:0.12em;">AFRICAN BLOOM</span>
         </div>
-        <p style="font-size:13px; line-height:1.7; color:#6E6660; max-width:280px; margin:0;">Partihandel med snittblommor för återförsäljare världen över, baserat i Sverige.</p>
+        <p style="font-size:13px; line-height:1.7; color:#4F4741; max-width:280px; margin:0;">Partihandel med snittblommor för återförsäljare världen över, baserat i Sverige.</p>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Utforska</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Utforska</span>
         <a href="about.html" style="text-decoration:none; color:inherit;"><span>Om Oss</span></a>
         <a href="collection.html" style="text-decoration:none; color:inherit;"><span>Kollektion</span></a>
         <a href="ordering.html" style="text-decoration:none; color:inherit;"><span>Beställning</span></a>
-        <a href="certifications.html" style="text-decoration:none; color:inherit;"><span>Certifieringar</span></a>
         <a href="faq.html" style="text-decoration:none; color:inherit;"><span>FAQ</span></a>
         <a href="contact.html" style="text-decoration:none; color:inherit;"><span>Kontakt</span></a>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Kontakt</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Kontakt</span>
         <span>info@africane.se</span>
         <span>+46 73 756 57 58</span>
+        <a href="https://wa.me/46737565758" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;"><span>WhatsApp</span></a>
         <span>Sverige</span>
       </div>
     </div>
-    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#9C9186;">
-      <span>&copy; 2026 African Bloom &mdash; Cabrera Group AB</span>
+    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#5E564F;">
+      <span>&copy; 2026 African Bloom</span>
       <span>www.africane.se</span>
     </div>
   </div>
@@ -813,13 +547,28 @@ function setLang(code) {
   for (var i = 0; i < blocks.length; i++) {
     blocks[i].style.display = (blocks[i].getAttribute('data-lang') === code) ? 'block' : 'none';
   }
+  document.documentElement.lang = code;
+  try { localStorage.setItem('ab-lang', code); } catch (e) {}
 }
-</script>
+(function () {
+  // Make the EN / ES / RU / SV switchers keyboard-accessible.
+  document.querySelectorAll('span[onclick^="setLang("]').forEach(function (el) {
+    el.setAttribute('role', 'button');
+    el.setAttribute('tabindex', '0');
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+    });
+  });
+  // Remember the visitor's language across pages.
+  var saved = null;
+  try { saved = localStorage.getItem('ab-lang'); } catch (e) {}
+  if (saved && saved !== 'en' && document.querySelector('[data-lang="' + saved + '"]')) setLang(saved);
+})();
 </script>
 
 <script>
 function abFitScale() {
-  if (window.innerWidth <= 1024) return;
+  if (window.innerWidth <= 1200) return;
   var outer = document.getElementById('ab-scale-outer');
   var wrap = document.getElementById('ab-scale-wrap');
   if (!outer || !wrap) return;
@@ -834,5 +583,155 @@ var abOrigSetLang = setLang;
 setLang = function(code) { abOrigSetLang(code); setTimeout(abFitScale, 0); };
 </script>
 
+<script>
+document.querySelectorAll('.ab-burger').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var nav = b.closest('.ab-header').querySelector('.ab-nav');
+    b.setAttribute('aria-expanded', nav.classList.toggle('open'));
+  });
+});
+</script>
+<script src="varieties-data.js"></script>
+<script>
+(function () {
+  var T = {"en": {"home": "Home", "title": "Our Varieties", "intro": "Browse the named varieties across our five flower families. Full variety lists and current availability on request.", "cats": "Categories", "all": "All varieties", "color": "Filter by color", "showing": "Showing {a}–{b} of {n} results", "sort": "Sort by", "az": "A to Z", "za": "Z to A", "price": "Request price", "length": "Length", "grid": "Grid view", "list": "List view", "note": "Colors shown are indicative. Ask your account contact for full variety lists with photos and current availability.", "cat_labels": ["Roses", "Garden Roses", "Spray Roses", "Carnations", "Alstroemeria", "Ranunculus", "Gypsophila", "Other Flowers"], "len_g": "Bunches 750 g / 1000 g", "cm": "cm", "alstro_card": "75+ varieties", "info": {"roses": "150+ named varieties across all four tiers, including Country Candy, Freedom, Vendela and Mondial — full list on request.", "spray": "80+ named varieties, including the Fibonacci and Trendsetter lines — full list on request.", "alstro": "75+ named varieties in bicolor, pastel and saturated tones.", "ranun": "Cloni Success Hanoi, Cloni Success and Elegance lines, in white, pink, salmon and bicolor.", "gyps": "Xlence line — standard, rainbow-dyed and tinted.", "garden": "Available varieties and current pricing on request.", "carn": "Available varieties and current pricing on request.", "other": "Available varieties and current pricing on request."}, "search": "Search varieties", "none": "No varieties match your filters.", "clear": "Clear filters", "prev": "Previous", "next": "Next", "page": "Page", "generic": "Available varieties and current pricing on request.", "colors": ["Bicolor", "Blue", "Bronze", "Burgundy", "Cream", "Gold", "Green", "Hot Pink", "Lavender", "Light Blue", "Light Pink", "Mix Color", "Orange", "Peach", "Pink", "Purple", "Red", "White", "Yellow"], "subs": {"gl": "Garden-like", "hs": "Hashtag", "cl": "Cloni", "el": "Elegance", "ch": "Chrysanthemum", "hy": "Hydrangea", "de": "Delphinium", "st": "Stock", "an": "Anemone"}}, "es": {"home": "Inicio", "title": "Nuestras Variedades", "intro": "Explore las variedades con nombre de nuestras cinco familias de flores. Listas completas y disponibilidad actual bajo petición.", "cats": "Categorías", "all": "Todas las variedades", "color": "Filtrar por color", "showing": "Mostrando {a}–{b} de {n} resultados", "sort": "Ordenar por", "az": "A a Z", "za": "Z a A", "price": "Solicitar precio", "length": "Longitud", "grid": "Vista de cuadrícula", "list": "Vista de lista", "note": "Los colores mostrados son orientativos. Solicite a su contacto de cuenta las listas completas con fotos y la disponibilidad actual.", "cat_labels": ["Rosas", "Rosas de Jardín", "Rosas Spray", "Claveles", "Alstroemeria", "Ranúnculos", "Gypsophila", "Otras Flores"], "len_g": "Ramos de 750 g / 1000 g", "cm": "cm", "alstro_card": "75+ variedades", "info": {"roses": "150+ variedades con nombre en las cuatro categorías, incluyendo Country Candy, Freedom, Vendela y Mondial — lista completa a petición.", "spray": "80+ variedades con nombre, incluyendo las líneas Fibonacci y Trendsetter — lista completa a petición.", "alstro": "75+ variedades con nombre en tonos bicolor, pastel y saturados.", "ranun": "Líneas Cloni Success Hanoi, Cloni Success y Elegance, en blanco, rosa, salmón y bicolor.", "gyps": "Línea Xlence — estándar, teñida arcoíris y teñida.", "garden": "Variedades disponibles y precios actuales bajo petición.", "carn": "Variedades disponibles y precios actuales bajo petición.", "other": "Variedades disponibles y precios actuales bajo petición."}, "search": "Buscar variedades", "none": "Ninguna variedad coincide con sus filtros.", "clear": "Borrar filtros", "prev": "Anterior", "next": "Siguiente", "page": "Página", "generic": "Variedades disponibles y precios actuales bajo petición.", "colors": ["Bicolor", "Azul", "Bronce", "Burdeos", "Crema", "Dorado", "Verde", "Rosa fuerte", "Lavanda", "Azul claro", "Rosa claro", "Multicolor", "Naranja", "Melocotón", "Rosa", "Morado", "Rojo", "Blanco", "Amarillo"], "subs": {"gl": "Tipo jardín", "hs": "Hashtag", "cl": "Cloni", "el": "Elegance", "ch": "Crisantemo", "hy": "Hortensia", "de": "Delphinium", "st": "Alhelí", "an": "Anémona"}}, "ru": {"home": "Главная", "title": "Наши сорта", "intro": "Ознакомьтесь с именными сортами в пяти семействах цветов. Полные списки и текущая доступность — по запросу.", "cats": "Категории", "all": "Все сорта", "color": "Фильтр по цвету", "showing": "Показано {a}–{b} из {n}", "sort": "Сортировка", "az": "А — Я", "za": "Я — А", "price": "Запросить цену", "length": "Длина", "grid": "Плитка", "list": "Список", "note": "Показанные цвета ориентировочные. Полные списки сортов с фотографиями и текущую доступность уточняйте у вашего менеджера.", "cat_labels": ["Розы", "Садовые розы", "Спрей-розы", "Гвоздики", "Альстромерия", "Ранункулюс", "Гипсофила", "Другие цветы"], "len_g": "Пучки 750 г / 1000 г", "cm": "см", "alstro_card": "75+ сортов", "info": {"roses": "150+ именных сортов во всех четырёх категориях, включая Country Candy, Freedom, Vendela и Mondial — полный список по запросу.", "spray": "80+ именных сортов, включая линейки Fibonacci и Trendsetter — полный список по запросу.", "alstro": "75+ именных сортов в двухцветных, пастельных и насыщенных тонах.", "ranun": "Линии Cloni Success Hanoi, Cloni Success и Elegance, в белом, розовом, лососевом и двухцветном исполнении.", "gyps": "Линия Xlence — стандартная, радужного окрашивания и тонированная.", "garden": "Доступные сорта и актуальные цены — по запросу.", "carn": "Доступные сорта и актуальные цены — по запросу.", "other": "Доступные сорта и актуальные цены — по запросу."}, "search": "Поиск сортов", "none": "По вашим фильтрам сортов не найдено.", "clear": "Сбросить фильтры", "prev": "Назад", "next": "Далее", "page": "Страница", "generic": "Доступные сорта и актуальные цены — по запросу.", "colors": ["Двухцветный", "Синий", "Бронзовый", "Бордовый", "Кремовый", "Золотой", "Зелёный", "Ярко-розовый", "Лавандовый", "Голубой", "Светло-розовый", "Микс", "Оранжевый", "Персиковый", "Розовый", "Фиолетовый", "Красный", "Белый", "Жёлтый"], "subs": {"gl": "Садовый тип", "hs": "Hashtag", "cl": "Cloni", "el": "Elegance", "ch": "Хризантема", "hy": "Гортензия", "de": "Дельфиниум", "st": "Маттиола", "an": "Анемон"}}, "sv": {"home": "Hem", "title": "Våra Sorter", "intro": "Bläddra bland de namngivna sorterna i våra blomsterfamiljer. Fullständiga sortlistor och aktuell tillgänglighet på begäran.", "cats": "Kategorier", "all": "Alla sorter", "color": "Filtrera på färg", "showing": "Visar {a}–{b} av {n} resultat", "sort": "Sortera efter", "az": "A till Ö", "za": "Ö till A", "price": "Begär pris", "length": "Längd", "grid": "Rutnät", "list": "Lista", "note": "Färgerna som visas är vägledande. Be din kontaktperson om fullständiga sortlistor med bilder och aktuell tillgänglighet.", "cat_labels": ["Rosor", "Trädgårdsrosor", "Sprayrosor", "Nejlikor", "Alstroemeria", "Ranunkel", "Gypsophila", "Övriga blommor"], "len_g": "Buntar 750 g / 1000 g", "cm": "cm", "alstro_card": "75+ sorter", "info": {"roses": "150+ namngivna sorter i alla fyra klasser, inklusive Country Candy, Freedom, Vendela och Mondial — fullständig lista på begäran.", "spray": "80+ namngivna sorter, inklusive linjerna Fibonacci och Trendsetter — fullständig lista på begäran.", "alstro": "75+ namngivna sorter i tvåfärgade, pastell- och mättade toner.", "ranun": "Linjerna Cloni Success Hanoi, Cloni Success och Elegance, i vitt, rosa, laxrosa och tvåfärgat.", "gyps": "Xlence-linjen — standard, regnbågsfärgad och tonad.", "garden": "Tillgängliga sorter och aktuella priser på begäran.", "carn": "Tillgängliga sorter och aktuella priser på begäran.", "other": "Tillgängliga sorter och aktuella priser på begäran."}, "search": "Sök sorter", "none": "Inga sorter matchar dina filter.", "clear": "Rensa filter", "prev": "Föregående", "next": "Nästa", "page": "Sida", "generic": "Tillgängliga sorter och aktuella priser på begäran.", "colors": ["Tvåfärgad", "Blå", "Brons", "Vinröd", "Gräddvit", "Guld", "Grön", "Cerise", "Lavendel", "Ljusblå", "Ljusrosa", "Blandade färger", "Orange", "Persika", "Rosa", "Lila", "Röd", "Vit", "Gul"], "subs": {"gl": "Trädgårdstyp", "hs": "Hashtag", "cl": "Cloni", "el": "Elegance", "ch": "Krysantemum", "hy": "Hortensia", "de": "Riddarsporre", "st": "Viol", "an": "Anemon"}}};
+  var CATS = ['roses', 'garden', 'spray', 'carn', 'alstro', 'ranun', 'gyps', 'other'];
+  var CODE = { r: 'roses', g: 'garden', s: 'spray', c: 'carn', a: 'alstro', u: 'ranun', y: 'gyps', o: 'other' };
+  var HEX = ['#E9B8A0', '#4A6FA5', '#A97142', '#6D1F2F', '#F1E6C8', '#C9A227', '#5E8C4A', '#D9257A', '#B39DDB', '#9FC7E8', '#F4C2D0', '#E88FB0', '#E8892B', '#F4B393', '#E88FB0', '#7B4A9B', '#C0272D', '#FFFFFF', '#F2CB3A'];
+  var PHOTOS = {
+    roses: ['photo-roses.jpg'], garden: ['photo-garden-roses.jpg'], spray: ['photo-spray-roses.jpg'],
+    carn: ['photo-carnations.jpg'], alstro: ['photo-alstroemeria.jpg'], ranun: ['photo-ranunculus.jpg'],
+    gyps: ['photo-gypsophila.jpg'], other: ['photo-other-flowers.jpg']
+  };
+  var POS = ['50% 50%', '25% 40%', '75% 60%', '50% 20%', '35% 70%'];
+  var LEN = { roses: [40, 80], spray: [40, 70], alstro: [60, 90], ranun: [30, 70] };
+  var PER = 18;
+  var V = (window.VARIETY_DATA || '').split('\n').filter(Boolean).map(function (l, i) {
+    var p = l.split('|');
+    return { n: p[0], c: CODE[p[1]], s: p[2] || '', col: p[3] === '' || p[3] == null ? null : +p[3], photo: p[4] || '', h: i };
+  });
+  var q = (location.search.match(/[?&]c=([a-z]+)/) || [])[1];
+  var state = { cat: CATS.indexOf(q) > -1 ? q : 'all', color: null, sort: 'az', view: 'grid', page: 1, search: '', colorsOpen: window.innerWidth > 1200 };
+  var ICON_GRID = '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="6.5" height="6.5"/><rect x="10.5" y="1" width="6.5" height="6.5"/><rect x="1" y="10.5" width="6.5" height="6.5"/><rect x="10.5" y="10.5" width="6.5" height="6.5"/></svg>';
+  var ICON_LIST = '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 3h11M6 9h11M6 15h11M1 3h1.5M1 9h1.5M1 15h1.5"/></svg>';
+  function esc(x) { return String(x).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); }
+  function catLabel(t, c) { return t.cat_labels[CATS.indexOf(c)]; }
+  function dot(col) {
+    if (col === null) return '';
+    var bg = col === 0 ? 'linear-gradient(135deg,#D9577A 50%,#F5E6C8 50%)' : col === 11 ? 'conic-gradient(#D9257A,#F2CB3A,#5E8C4A,#4A6FA5,#7B4A9B,#D9257A)' : HEX[col];
+    return '<span class="vc-dot" style="background:' + bg + '"></span>';
+  }
+  function tile(v) {
+    if (v.photo) return '<div class="vc-photo"><img src="' + esc(v.photo) + '" alt="' + esc(v.n) + '" loading="lazy" decoding="async"></div>';
+    var bg = v.col === null ? '#EFE7DA' : v.col === 0 ? 'linear-gradient(135deg,#D9577A 50%,#F5E6C8 50%)' : v.col === 11 ? 'conic-gradient(#D9257A,#F2CB3A,#5E8C4A,#4A6FA5,#7B4A9B,#D9257A)' : HEX[v.col];
+    return '<div class="vc-photo vc-tile" style="background:' + bg + '" role="img" aria-label="' + esc(v.n) + '"></div>';
+  }
+  function lenText(t, v) {
+    if (v.c === 'gyps') return t.len_g;
+    var l = LEN[v.c]; return l ? t.length + ' ' + l[0] + '–' + l[1] + ' ' + t.cm : '';
+  }
+  function matches(v, catOnly, colOnly, search) {
+    if (catOnly !== 'all' && v.c !== catOnly) return false;
+    if (colOnly !== null && v.col !== colOnly) return false;
+    if (search && v.n.toLowerCase().indexOf(search) < 0) return false;
+    return true;
+  }
+  function pages(cur, total) {
+    var out = [], last = 0;
+    for (var i = 1; i <= total; i++) {
+      if (i === 1 || i === total || Math.abs(i - cur) <= 1) { if (last && i - last > 1) out.push('…'); out.push(i); last = i; }
+    }
+    return out;
+  }
+  var focusSearch = false;
+  function render(root) {
+    var lang = root.getAttribute('data-vc'), t = T[lang], s = state, needle = s.search.trim().toLowerCase();
+    var list = V.filter(function (v) { return matches(v, s.cat, s.color, needle); });
+    list.sort(function (a, b) { var r = a.n.localeCompare(b.n, lang, { sensitivity: 'base' }); return s.sort === 'az' ? r : -r; });
+    var total = list.length, tp = Math.max(1, Math.ceil(total / PER));
+    if (s.page > tp) s.page = tp;
+    var from = total ? (s.page - 1) * PER : 0, view = list.slice(from, from + PER);
+    // sidebar
+    var catCount = {}; V.forEach(function (v) { if (matches(v, 'all', s.color, needle)) catCount[v.c] = (catCount[v.c] || 0) + 1; });
+    var allCount = V.filter(function (v) { return matches(v, 'all', s.color, needle); }).length;
+    var side = '<div class="vc-side"><h3>' + t.cats + '</h3><div class="vc-cats">' +
+      '<button type="button" class="vc-cat' + (s.cat === 'all' ? ' on' : '') + '" data-cat="all">' + t.all + '<span>' + allCount + '</span></button>' +
+      CATS.map(function (c) { return '<button type="button" class="vc-cat' + (s.cat === c ? ' on' : '') + '" data-cat="' + c + '">' + catLabel(t, c) + '<span>' + (catCount[c] || 0) + '</span></button>'; }).join('') + '</div>';
+    var colCount = {}; V.forEach(function (v) { if (v.col !== null && matches(v, s.cat, null, needle)) colCount[v.col] = (colCount[v.col] || 0) + 1; });
+    side += '<div class="vc-colors' + (s.colorsOpen ? ' open' : '') + '"><button type="button" class="vc-coltoggle" data-toggle-colors aria-expanded="' + (s.colorsOpen ? 'true' : 'false') + '"><h3>' + t.color + (s.color !== null ? ' · ' + esc(t.colors[s.color]) : '') + '</h3><i aria-hidden="true"></i></button><div class="vc-cats">' + t.colors.map(function (name, i) {
+      if (!colCount[i] && s.color !== i) return '';
+      return '<button type="button" class="vc-cat vc-colbtn' + (s.color === i ? ' on' : '') + '" data-color="' + i + '"><em>' + dot(i) + esc(name) + '</em><span>' + (colCount[i] || 0) + '</span></button>';
+    }).join('') + '</div></div></div>';
+    // toolbar
+    var tb = '<div class="vc-toolbar"><div class="vc-view"><button type="button" data-view="grid" aria-label="' + t.grid + '" class="' + (s.view === 'grid' ? 'on' : '') + '">' + ICON_GRID + '</button><button type="button" data-view="list" aria-label="' + t.list + '" class="' + (s.view === 'list' ? 'on' : '') + '">' + ICON_LIST + '</button></div>' +
+      '<div class="vc-count">' + (total ? t.showing.replace('{a}', from + 1).replace('{b}', from + view.length).replace('{n}', total) : '') + '</div>' +
+      '<input class="vc-search" type="search" data-search placeholder="' + esc(t.search) + '" aria-label="' + esc(t.search) + '" value="' + esc(s.search) + '">' +
+      '<label class="vc-sort">' + t.sort + ' <select data-sort><option value="az"' + (s.sort === 'az' ? ' selected' : '') + '>' + t.az + '</option><option value="za"' + (s.sort === 'za' ? ' selected' : '') + '>' + t.za + '</option></select></label></div>';
+    var banner = s.cat !== 'all' ? '<div class="vc-banner"><img src="' + PHOTOS[s.cat][0] + '" alt="" loading="lazy" decoding="async"><span>' + catLabel(t, s.cat) + '</span></div>' : '';
+    var info = s.cat !== 'all' ? '<p class="vc-info">' + t.info[s.cat] + '</p>' : '';
+    var cards = view.map(function (v) {
+      var meta = [catLabel(t, v.c)]; if (v.s && t.subs[v.s]) meta.push(t.subs[v.s]); if (v.col !== null) meta.push(t.colors[v.col]);
+      var len = lenText(t, v);
+      return '<article class="vc-card">' + tile(v) +
+        '<div class="vc-text"><div class="vc-name">' + esc(v.n) + '</div><div class="vc-meta">' + esc(meta.join(' · ')) + '</div>' + (len ? '<div class="vc-len">' + esc(len) + '</div>' : '') +
+        '<a class="vc-price" href="contact.html">' + t.price + '</a></div></article>';
+    }).join('');
+    if (!total) cards = '<p class="vc-empty">' + t.none + ' <button type="button" class="vc-clear" data-clear>' + t.clear + '</button></p>';
+    var pg = '';
+    if (tp > 1) {
+      pg = '<nav class="vc-pages" aria-label="' + t.page + '"><button type="button" data-page="' + (s.page - 1) + '"' + (s.page === 1 ? ' disabled' : '') + '>‹ ' + t.prev + '</button>' +
+        pages(s.page, tp).map(function (p) { return p === '…' ? '<span>…</span>' : '<button type="button" data-page="' + p + '" class="' + (p === s.page ? 'on' : '') + '"' + (p === s.page ? ' aria-current="page"' : '') + '>' + p + '</button>'; }).join('') +
+        '<button type="button" data-page="' + (s.page + 1) + '"' + (s.page === tp ? ' disabled' : '') + '>' + t.next + ' ›</button></nav>';
+    }
+    root.innerHTML = side + '<div class="vc-main">' + tb + banner + info + '<div class="vc-grid' + (s.view === 'list' ? ' list' : '') + '">' + cards + '</div>' + pg + '<p class="vc-note">' + t.note + '</p></div>';
+    if (focusSearch) {
+      var inp = root.querySelector('[data-search]');
+      if (inp && root.offsetParent) { inp.focus(); inp.setSelectionRange(inp.value.length, inp.value.length); }
+    }
+  }
+  var roots = [].slice.call(document.querySelectorAll('[data-vc]'));
+  function all(scroll) {
+    roots.forEach(render);
+    if (window.abFitScale) setTimeout(window.abFitScale, 0);
+    if (scroll) { var v = roots.filter(function (r) { return r.offsetParent; })[0]; if (v) { var m = v.querySelector('.vc-main'); if (m && m.getBoundingClientRect().top < 0) m.scrollIntoView({ block: 'start' }); } }
+  }
+  roots.forEach(function (r) {
+    r.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-cat],[data-view],[data-color],[data-page],[data-clear],[data-toggle-colors]'); if (!b || b.disabled) return;
+      focusSearch = false;
+      if (b.hasAttribute('data-cat')) { state.cat = b.getAttribute('data-cat'); state.page = 1; }
+      if (b.hasAttribute('data-toggle-colors')) { state.colorsOpen = !state.colorsOpen; all(false); return; }
+      if (b.hasAttribute('data-view')) state.view = b.getAttribute('data-view');
+      if (b.hasAttribute('data-color')) { var c = +b.getAttribute('data-color'); state.color = state.color === c ? null : c; state.page = 1; }
+      if (b.hasAttribute('data-page')) state.page = +b.getAttribute('data-page');
+      if (b.hasAttribute('data-clear')) { state.cat = 'all'; state.color = null; state.search = ''; state.page = 1; }
+      all(b.hasAttribute('data-page'));
+    });
+    r.addEventListener('change', function (e) { if (e.target.hasAttribute('data-sort')) { focusSearch = false; state.sort = e.target.value; state.page = 1; all(); } });
+    r.addEventListener('input', function (e) { if (e.target.hasAttribute('data-search')) { focusSearch = true; state.search = e.target.value; state.page = 1; all(); } });
+  });
+  all();
+})();
+</script>
+<a id="ab-wa" href="https://wa.me/46737565758" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="WhatsApp +46 73 756 57 58">
+  <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><path fill="#fff" d="M16 3.2C8.9 3.2 3.2 8.9 3.2 16c0 2.4.7 4.7 1.9 6.7L3.1 28.9l6.4-1.7c1.9 1 4 1.6 6.5 1.6 7.1 0 12.8-5.7 12.8-12.8S23.1 3.2 16 3.2z"/><path fill="#25D366" d="M22.5 19.6c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.2.2 2.2 3.3 5.3 4.6 3 1.2 3 .8 3.6.8.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+</a>
+<style>
+#ab-wa{position:fixed;right:22px;bottom:22px;z-index:900;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.28);transition:transform .15s,box-shadow .15s;}
+#ab-wa:hover{transform:scale(1.08);box-shadow:0 6px 18px rgba(0,0,0,.34);}
+#ab-wa:focus-visible{outline:3px solid #201C1A;outline-offset:3px;}
+@media (max-width:640px){#ab-wa{right:14px;bottom:14px;width:56px;height:56px;}}
+</style>
+<script>
+(function(){
+  var L={en:['Chat on WhatsApp','Hello African Bloom, I would like to ask about your flowers.'],
+         es:['Escribir por WhatsApp','Hola African Bloom, me gustaría consultar sobre sus flores.'],
+         ru:['Написать в WhatsApp','Здравствуйте, African Bloom! Хочу узнать о ваших цветах.'],
+         sv:['Chatta på WhatsApp','Hej African Bloom, jag vill fråga om era blommor.']};
+  var a=document.getElementById('ab-wa');
+  function upd(){var l=L[document.documentElement.lang]||L.en;a.setAttribute('aria-label',l[0]);a.href='https://wa.me/46737565758?text='+encodeURIComponent(l[1]);}
+  var o=window.setLang;window.setLang=function(c){o(c);upd();};upd();
+})();
+</script>
 </body>
 </html>

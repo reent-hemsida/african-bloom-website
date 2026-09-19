@@ -12,7 +12,7 @@
     * { box-sizing: border-box; }
     body { margin: 0; background: #FAF4E8; font-family: 'EB Garamond', Georgia, serif; color: #201C1A; }
     a { color: #9C5323; text-decoration: none; }
-    a:hover { color: #B5622C; }
+    a:hover { color: #663711; }
     .navlink { position:relative; padding-bottom:14px; transition: color 0.15s ease; }
     .navlink:hover { color: #9C5323 !important; }
     .navlink.active { color:#9C5323; }
@@ -31,7 +31,7 @@
        tap accurately (technically clickable, not practically usable). Below
        this breakpoint we cancel the scale trick and let the design reflow
        at its natural, readable, properly tappable size instead. */
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
       #ab-scale-outer { height: auto !important; }
       #ab-scale-wrap { width: 100% !important; min-width: 0 !important; transform: none !important; }
 
@@ -97,8 +97,102 @@
       #ab-scale-wrap div[style*="position:absolute; right:40px; top:50%"] { display: none !important; }
     }
 </style>
+<meta name="theme-color" content="#FAF4E8">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="African Bloom">
+<meta property="og:title" content="About & Our Farms — African Bloom">
+<meta property="og:description" content="Two origins, one standard: how African Bloom sources from South America and Kenya, and runs its Sweden HQ.">
+<meta property="og:image" content="https://www.africane.se/hero-roses.jpg">
+<link rel="canonical" href="https://www.africane.se/about.html">
+<style>
+  a:focus-visible, [role="button"]:focus-visible, input:focus-visible, textarea:focus-visible, button:focus-visible { outline: 2px solid #CC7A40; outline-offset: 3px; }
+  .skip-link { position:absolute; left:-9999px; top:8px; background:#241E17; color:#fff; padding:10px 16px; z-index:100; }
+  .skip-link:focus { left:8px; color:#fff; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+<style>
+  .ab-burger { display:none; background:none; border:0; padding:10px; margin:-10px -10px -10px 0; cursor:pointer; }
+  .ab-search { }
+  @media (max-width: 1200px) {
+    #ab-scale-wrap div.ab-header[style] { position:relative !important; flex-wrap:nowrap !important; padding:14px 20px !important; gap:12px; }
+    #ab-scale-wrap div.ab-header img { height:30px !important; }
+    #ab-scale-wrap div.ab-header span[style*="letter-spacing:0.14em"] { font-size:15px !important; letter-spacing:0.1em !important; white-space:nowrap; }
+    #ab-scale-wrap div.ab-right[style] { gap:14px !important; flex-wrap:nowrap !important; }
+    #ab-scale-wrap div.ab-right span[onclick] { padding:8px 3px; }
+    .ab-burger { display:block; }
+    .ab-search { display:none; }
+    #ab-scale-wrap div.ab-nav[style] { display:none !important; position:absolute; top:100%; left:0; right:0; z-index:60; background:#FAF4E8; flex-direction:column !important; align-items:stretch !important; gap:0 !important; padding:6px 20px 16px; border-bottom:1px solid #241E17; font-size:17px !important; }
+    #ab-scale-wrap div.ab-nav.open[style] { display:flex !important; }
+    #ab-scale-wrap div.ab-nav a { padding:13px 0; border-bottom:1px solid #E9DFCF; }
+    #ab-scale-wrap div.ab-nav .navlink::after { display:none; }
+    #ab-scale-wrap div[style*="px 64px"] { padding-left:20px !important; padding-right:20px !important; }
+    input, textarea, select { font-size:16px !important; }
+    img { max-width:100%; }
+  }
+</style>
+<style>
+  @media (max-width: 1200px) {
+    #ab-scale-wrap div.ab-header div[style*="display:flex"] { flex-wrap:nowrap !important; }
+    #ab-scale-wrap div.ab-header > div:first-child { min-width:0; gap:8px !important; }
+    #ab-scale-wrap div[style*="margin:24px 64px"], #ab-scale-wrap div[style*="margin: 100px 64px"], #ab-scale-wrap div[style*="margin: 88px 64px"] { margin-left:16px !important; margin-right:16px !important; }
+    #ab-scale-wrap div[style*="px 72px"] { padding-left:20px !important; padding-right:20px !important; }
+    #ab-scale-wrap div[style*="height:520px"], #ab-scale-wrap div[style*="height:560px"], #ab-scale-wrap div[style*="height:440px"] { height:340px !important; }
+    #ab-scale-wrap div[style*="left:40px; bottom:40px"] { left:20px !important; bottom:24px !important; right:20px; max-width:none !important; }
+    #ab-scale-wrap [style*="font-size:64px"] { font-size:36px !important; }
+    #ab-scale-wrap [style*="font-size:52px"], #ab-scale-wrap [style*="font-size:48px"] { font-size:32px !important; }
+    #ab-scale-wrap [style*="font-size:44px"], #ab-scale-wrap [style*="font-size:42px"] { font-size:30px !important; }
+    #ab-scale-wrap div[style*="gap:64px"], #ab-scale-wrap div[style*="gap:56px"] { gap:28px !important; }
+  }
+</style>
+<style>
+  @media (max-width: 1200px) {
+    #ab-scale-wrap div.ab-header span[style*="letter-spacing:0.14em"] { font-size:13px !important; letter-spacing:0.06em !important; }
+    #ab-scale-wrap div.ab-right span[style*="D8CDBE"] { display:none; }
+    #ab-scale-wrap div.ab-right > div[style] { gap:4px !important; }
+    #ab-scale-wrap div.ab-right { gap:6px !important; }
+    #ab-scale-wrap div.ab-right span[onclick] { padding:10px 6px; font-size:12.5px !important; }
+  }
+</style>
+<style>
+  @media (max-width: 480px) {
+    #ab-scale-wrap div.ab-header span[style*="letter-spacing:0.14em"] { display:none; }
+    #ab-scale-wrap div.ab-header img { height:44px !important; }
+  }
+</style>
+<style>/* ab-readable */
+#ab-scale-wrap [style*="font-size:11px"]{font-size:17px !important;}
+#ab-scale-wrap [style*="font-size:11.5px"]{font-size:17px !important;}
+#ab-scale-wrap [style*="font-size:12px"]{font-size:17px !important;}
+#ab-scale-wrap [style*="font-size:12.5px"]{font-size:17px !important;}
+#ab-scale-wrap [style*="font-size:13px"]{font-size:19px !important;}
+#ab-scale-wrap [style*="font-size:13.5px"]{font-size:22px !important;}
+#ab-scale-wrap [style*="font-size:14px"]{font-size:22px !important;}
+#ab-scale-wrap [style*="font-size:14.5px"]{font-size:24px !important;}
+#ab-scale-wrap [style*="font-size:15px"]{font-size:24px !important;}
+#ab-scale-wrap [style*="font-size:16px"]{font-size:24px !important;}
+#ab-scale-wrap [style*="font-size:17px"]{font-size:25px !important;}
+#ab-scale-wrap [style*="font-size:19px"]{font-size:26px !important;}
+#ab-scale-wrap [style*="font-size:21px"]{font-size:27px !important;}
+#ab-scale-wrap [style*="font-size:22px"]{font-size:27px !important;}
+.field-box{font-size:20px !important;}
+#ab-scale-wrap p{line-height:1.7;}
+</style>
+<style>/* ab-qa */
+#ab-scale-wrap [style*="color:#D8C9A3"], #ab-scale-wrap [style*="color:#FBF8F2"] { text-shadow: 0 1px 8px rgba(0,0,0,.55); }
+.field-label { font-size:15px !important; }
+.ab-car-dots button { box-sizing:content-box; padding:9px; background-clip:content-box; width:13px; height:13px; }
+.ab-car-dots { gap:0 !important; }
+@media (max-width:1200px){
+  #ab-scale-wrap div.ab-right span[onclick] { font-size:15px !important; padding:12px 6px !important; }
+  #ab-scale-wrap div.ab-header span[style*="letter-spacing:0.14em"] { font-size:16px !important; }
+  #ab-scale-wrap div[style*="border-top:1px solid #241E17; padding: "] a { display:block; padding:9px 0; }
+  #ab-scale-wrap .ab-promo-img img { opacity:.16 !important; }
+}
+@media (max-width:480px){ #ab-scale-wrap div.ab-header span[style*="letter-spacing:0.14em"] { display:none !important; } }
+</style>
 </head>
 <body>
+<a class="skip-link" href="#ab-scale-wrap">Skip to content</a>
 <div id="ab-scale-outer">
 <div id="ab-scale-wrap">
 
@@ -107,24 +201,23 @@
 <div data-lang="en" style="display:block;">
 
   <!-- Header -->
-  <div style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
+  <div class="ab-header" style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
     <div style="display:flex; align-items:center; gap:12px;">
       <img src="logo-header.png" alt="African Bloom" style="height:36px; width:auto; display:block;">
       <span style="font-family:'EB Garamond',serif; font-size:21px; letter-spacing:0.14em; font-weight:500;">AFRICAN BLOOM</span>
     </div>
-    <div style="display:flex; align-items:center; gap:26px; font-size:13px; color:#201C1A;">
+    <div class="ab-nav" style="display:flex; align-items:center; gap:26px; font-size:13px; color:#201C1A;">
       <a href="index.html" style="text-decoration:none; color:inherit;"><span class="navlink">Home</span></a>
       <a href="about.html" style="text-decoration:none; color:inherit;"><span class="navlink active">About</span></a>
       <a href="collection.html" style="text-decoration:none; color:inherit;"><span class="navlink">Collection</span></a>
       <a href="ordering.html" style="text-decoration:none; color:inherit;"><span class="navlink">How to Order</span></a>
-      <a href="certifications.html" style="text-decoration:none; color:inherit;"><span class="navlink">Certifications</span></a>
       <a href="faq.html" style="text-decoration:none; color:inherit;"><span class="navlink">FAQ</span></a>
       <a href="contact.html" style="text-decoration:none; color:inherit;"><span class="navlink">Contact</span></a>
     </div>
-    <div style="display:flex; align-items:center; gap:20px;">
-      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#9C5323; font-weight:600; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#9C9186; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#9C9186; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#9C9186; cursor:pointer;">SV</span></div>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
-      <svg width="20" height="14" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg>
+    <div class="ab-right" style="display:flex; align-items:center; gap:20px;">
+      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#5E564F; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#5E564F; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#5E564F; cursor:pointer;">SV</span></div>
+      <svg class="ab-search" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+      <button class="ab-burger" type="button" aria-label="Menu" aria-expanded="false"><svg width="22" height="16" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg></button>
     </div>
   </div>
 
@@ -135,7 +228,7 @@
     <div style="position:absolute; left:40px; bottom:40px; max-width:640px;">
       <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#D8C9A3;">Home &nbsp;/&nbsp; About</span>
       <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:52px; line-height:1.15; margin:16px 0 0; color:#FBF8F2;">Two Origins, One Standard.</h1>
-      <p style="font-size:14.5px; color:#E4DFD8; margin:16px 0 0; line-height:1.7; max-width:560px;">Cabrera Group AB is a Sweden-based wholesale importer bringing 300+ cut-flower varieties from trusted growers in South America, with Kenyan farms now joining the program.</p>
+      <p style="font-size:14.5px; color:#E4DFD8; margin:16px 0 0; line-height:1.7; max-width:560px;">African Bloom is a Sweden-based wholesale importer bringing 300+ cut-flower varieties from trusted growers in South America, with Kenyan farms now joining the program.</p>
     </div>
   </div>
 
@@ -152,8 +245,8 @@
     <div style="display:grid; grid-template-columns: 1.1fr 1fr; gap:56px; align-items:center;">
       <p style="font-size:15px; line-height:1.8; color:#3A342E; margin:0;">Our longest-standing relationships are with rose, spray rose, alstroemeria and ranunculus growers across South America’s flower-growing regions. These farms have supplied African Bloom since day one, and their consistency is what our four-tier grading system is built on. From open-field rose houses to industrial steel-frame greenhouses, every farm in our South American network is inspected against the same standard before a single stem ships.</p>
       <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
-        <div style="height:260px; overflow:hidden; border-radius:14px;"><img src="farm-southamerica-1.jpg" alt="South America rose greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
-        <div style="height:260px; overflow:hidden; border-radius:14px;"><img src="farm-southamerica-2.jpg" alt="South America tulip greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+        <div style="height:260px; overflow:hidden; border-radius:14px;"><img loading="lazy" decoding="async" src="farm-southamerica-1.jpg" alt="South America rose greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+        <div style="height:260px; overflow:hidden; border-radius:14px;"><img loading="lazy" decoding="async" src="farm-southamerica-2.jpg" alt="South America tulip greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
       </div>
     </div>
   </div>
@@ -165,8 +258,8 @@
     </div>
     <div style="display:grid; grid-template-columns: 1fr 1.1fr; gap:56px; align-items:center;">
       <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
-        <div style="height:260px; overflow:hidden; border-radius:14px;"><img src="farm-kenya-1.jpg" alt="Kenya dahlia farm" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
-        <div style="height:260px; overflow:hidden; border-radius:14px;"><img src="farm-kenya-2.jpg" alt="Kenya dianthus greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+        <div style="height:260px; overflow:hidden; border-radius:14px;"><img loading="lazy" decoding="async" src="farm-kenya-1.jpg" alt="Kenya dahlia farm" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+        <div style="height:260px; overflow:hidden; border-radius:14px;"><img loading="lazy" decoding="async" src="farm-kenya-2.jpg" alt="Kenya dianthus greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
       </div>
       <p style="font-size:15px; line-height:1.8; color:#3A342E; margin:0;">In 2026 we began onboarding Kenyan growers to broaden our origin base and bring African-grown stems into the same standing-order program. Kenya’s climate supports a wider range of varieties &mdash; from dahlias to dianthus &mdash; grown alongside the banana groves and open fields that define East African flower farming. We’re building these relationships the same way we built our South American ones: slowly, with our own people on the ground.</p>
     </div>
@@ -175,13 +268,13 @@
   <!-- Sweden HQ -->
   <div style="margin: 88px 64px 0; background:#241E17; border-radius:20px; padding:56px 64px; display:grid; grid-template-columns: 1fr 1.6fr; gap:48px; align-items:center;">
     <h2 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:28px; margin:0; color:#F6ECE0;">Sweden &mdash; HQ &amp; Logistics</h2>
-    <p style="font-size:14.5px; line-height:1.8; color:#C9B8A8; margin:0;">Cabrera Group AB is headquartered in Sweden, where every order is coordinated, invoiced in EUR, and routed to retailers worldwide. Our small logistics team is the single point of contact for every account, from first inquiry to standing-order renewal.</p>
+    <p style="font-size:14.5px; line-height:1.8; color:#C9B8A8; margin:0;">African Bloom is headquartered in Sweden, where every order is coordinated, invoiced in EUR, and routed to retailers worldwide. Our small logistics team is the single point of contact for every account, from first inquiry to standing-order renewal.</p>
   </div>
 
   <!-- CTA -->
   <div style="padding: 96px 64px 96px; text-align:center;">
     <h2 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:34px; margin:0;">Ready to Stock African Bloom?</h2>
-    <p style="font-size:14.5px; color:#6E6660; margin:16px 0 0;">Standing-order pricing for 2026 is open for new retail partners.</p>
+    <p style="font-size:14.5px; color:#4F4741; margin:16px 0 0;">Standing-order pricing for 2026 is open for new retail partners.</p>
     <a href="contact.html" class="cta-box" style="display:inline-block; margin-top:30px; border:1px solid #201C1A; color:#201C1A; padding:15px 34px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase;">Request the Catalogue</a>
   </div>
 
@@ -193,26 +286,26 @@
           <img src="logo-header.png" alt="African Bloom" style="height:26px; width:auto;">
           <span style="font-size:15px; letter-spacing:0.12em;">AFRICAN BLOOM</span>
         </div>
-        <p style="font-size:13px; line-height:1.7; color:#6E6660; max-width:280px; margin:0;">Wholesale cut-flower imports for retailers worldwide, based in Sweden.</p>
+        <p style="font-size:13px; line-height:1.7; color:#4F4741; max-width:280px; margin:0;">Wholesale cut-flower imports for retailers worldwide, based in Sweden.</p>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Explore</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Explore</span>
         <a href="about.html" style="text-decoration:none; color:inherit;"><span>About</span></a>
         <a href="collection.html" style="text-decoration:none; color:inherit;"><span>Collection</span></a>
         <a href="ordering.html" style="text-decoration:none; color:inherit;"><span>How to Order</span></a>
-        <a href="certifications.html" style="text-decoration:none; color:inherit;"><span>Certifications</span></a>
         <a href="faq.html" style="text-decoration:none; color:inherit;"><span>FAQ</span></a>
         <a href="contact.html" style="text-decoration:none; color:inherit;"><span>Contact</span></a>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Contact</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Contact</span>
         <span>info@africane.se</span>
         <span>+46 73 756 57 58</span>
+        <a href="https://wa.me/46737565758" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;"><span>WhatsApp</span></a>
         <span>Sweden</span>
       </div>
     </div>
-    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#9C9186;">
-      <span>&copy; 2026 African Bloom &mdash; Cabrera Group AB</span>
+    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#5E564F;">
+      <span>&copy; 2026 African Bloom</span>
       <span>www.africane.se</span>
     </div>
   </div>
@@ -221,24 +314,23 @@
 <div data-lang="es" style="display:none;">
 
   <!-- Header -->
-  <div style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
+  <div class="ab-header" style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
     <div style="display:flex; align-items:center; gap:12px;">
       <img src="logo-header.png" alt="African Bloom" style="height:36px; width:auto; display:block;">
       <span style="font-family:'EB Garamond',serif; font-size:21px; letter-spacing:0.14em; font-weight:500;">AFRICAN BLOOM</span>
     </div>
-    <div style="display:flex; align-items:center; gap:26px; font-size:13px; color:#201C1A;">
+    <div class="ab-nav" style="display:flex; align-items:center; gap:26px; font-size:13px; color:#201C1A;">
       <a href="index.html" style="text-decoration:none; color:inherit;"><span class="navlink">Inicio</span></a>
       <a href="about.html" style="text-decoration:none; color:inherit;"><span class="navlink active">Nosotros</span></a>
       <a href="collection.html" style="text-decoration:none; color:inherit;"><span class="navlink">Colección</span></a>
       <a href="ordering.html" style="text-decoration:none; color:inherit;"><span class="navlink">Cómo Pedir</span></a>
-      <a href="certifications.html" style="text-decoration:none; color:inherit;"><span class="navlink">Certificaciones</span></a>
       <a href="faq.html" style="text-decoration:none; color:inherit;"><span class="navlink">FAQ</span></a>
       <a href="contact.html" style="text-decoration:none; color:inherit;"><span class="navlink">Contacto</span></a>
     </div>
-    <div style="display:flex; align-items:center; gap:20px;">
-      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#9C9186; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#9C5323; font-weight:600; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#9C9186; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#9C9186; cursor:pointer;">SV</span></div>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
-      <svg width="20" height="14" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg>
+    <div class="ab-right" style="display:flex; align-items:center; gap:20px;">
+      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#5E564F; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#5E564F; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#5E564F; cursor:pointer;">SV</span></div>
+      <svg class="ab-search" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+      <button class="ab-burger" type="button" aria-label="Menu" aria-expanded="false"><svg width="22" height="16" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg></button>
     </div>
   </div>
 
@@ -249,7 +341,7 @@
     <div style="position:absolute; left:40px; bottom:40px; max-width:640px;">
       <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#D8C9A3;">Inicio &nbsp;/&nbsp; Nosotros</span>
       <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:52px; line-height:1.15; margin:16px 0 0; color:#FBF8F2;">Dos Orígenes, Un Solo Estándar.</h1>
-      <p style="font-size:14.5px; color:#E4DFD8; margin:16px 0 0; line-height:1.7; max-width:560px;">Cabrera Group AB es un importador mayorista con sede en Suecia que trae más de 300 variedades de flores cortadas de cultivadores de confianza en América del Sur, con granjas de Kenia sumándose ahora al programa.</p>
+      <p style="font-size:14.5px; color:#E4DFD8; margin:16px 0 0; line-height:1.7; max-width:560px;">African Bloom es un importador mayorista con sede en Suecia que trae más de 300 variedades de flores cortadas de cultivadores de confianza en América del Sur, con granjas de Kenia sumándose ahora al programa.</p>
     </div>
   </div>
 
@@ -264,10 +356,10 @@
       <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:28px; margin:0; color:#3E6A47;">América del Sur &mdash; Abastecimiento Actual</h2>
     </div>
     <div style="display:grid; grid-template-columns: 1.1fr 1fr; gap:56px; align-items:center;">
-      <p style="font-size:15px; line-height:1.8; color:#3A342E; margin:0;">Nuestras relaciones más antiguas son con cultivadores de rosas, rosas spray, alstroemeria y ranunculus en las regiones florales de América del Sur. Estas granjas han abastecido a African Bloom desde el primer día, y su consistencia es la base de nuestro sistema de clasificación de cuatro niveles. Desde invernaderos de rosas a cielo abierto hasta estructuras industriales de acero, cada granja de nuestra red sudamericana se inspecciona bajo el mismo estándar antes de enviar un solo tallo.</p>
+      <p style="font-size:15px; line-height:1.8; color:#3A342E; margin:0;">Nuestras relaciones más antiguas son con cultivadores de rosas, rosas spray, alstroemeria y ranúnculos en las regiones florales de América del Sur. Estas granjas han abastecido a African Bloom desde el primer día, y su consistencia es la base de nuestro sistema de clasificación de cuatro niveles. Desde invernaderos de rosas a cielo abierto hasta estructuras industriales de acero, cada granja de nuestra red sudamericana se inspecciona bajo el mismo estándar antes de enviar un solo tallo.</p>
       <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
-        <div style="height:260px; overflow:hidden; border-radius:14px;"><img src="farm-southamerica-1.jpg" alt="South America rose greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
-        <div style="height:260px; overflow:hidden; border-radius:14px;"><img src="farm-southamerica-2.jpg" alt="South America tulip greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+        <div style="height:260px; overflow:hidden; border-radius:14px;"><img loading="lazy" decoding="async" src="farm-southamerica-1.jpg" alt="South America rose greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+        <div style="height:260px; overflow:hidden; border-radius:14px;"><img loading="lazy" decoding="async" src="farm-southamerica-2.jpg" alt="South America tulip greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
       </div>
     </div>
   </div>
@@ -279,23 +371,23 @@
     </div>
     <div style="display:grid; grid-template-columns: 1fr 1.1fr; gap:56px; align-items:center;">
       <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
-        <div style="height:260px; overflow:hidden; border-radius:14px;"><img src="farm-kenya-1.jpg" alt="Kenya dahlia farm" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
-        <div style="height:260px; overflow:hidden; border-radius:14px;"><img src="farm-kenya-2.jpg" alt="Kenya dianthus greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+        <div style="height:260px; overflow:hidden; border-radius:14px;"><img loading="lazy" decoding="async" src="farm-kenya-1.jpg" alt="Kenya dahlia farm" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+        <div style="height:260px; overflow:hidden; border-radius:14px;"><img loading="lazy" decoding="async" src="farm-kenya-2.jpg" alt="Kenya dianthus greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
       </div>
       <p style="font-size:15px; line-height:1.8; color:#3A342E; margin:0;">En 2026 comenzamos a incorporar cultivadores keniatas para ampliar nuestra base de origen y traer tallos de origen africano al mismo programa de pedidos fijos. El clima de Kenia permite una gama más amplia de variedades &mdash; desde dalias hasta claveles chinos &mdash; cultivadas junto a los bananales y campos abiertos que definen el cultivo de flores en África Oriental. Estamos construyendo estas relaciones de la misma forma en que construimos las sudamericanas: despacio, con nuestra propia gente sobre el terreno.</p>
     </div>
   </div>
 
-  <!-- Sweden HQ -->
+  <!-- Suecia HQ -->
   <div style="margin: 88px 64px 0; background:#241E17; border-radius:20px; padding:56px 64px; display:grid; grid-template-columns: 1fr 1.6fr; gap:48px; align-items:center;">
     <h2 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:28px; margin:0; color:#F6ECE0;">Suecia &mdash; Sede y Logística</h2>
-    <p style="font-size:14.5px; line-height:1.8; color:#C9B8A8; margin:0;">Cabrera Group AB tiene su sede en Suecia, donde se coordina cada pedido, se factura en EUR y se distribuye a minoristas de todo el mundo. Nuestro pequeño equipo de logística es el punto de contacto único para cada cuenta, desde la primera consulta hasta la renovación del pedido fijo.</p>
+    <p style="font-size:14.5px; line-height:1.8; color:#C9B8A8; margin:0;">African Bloom tiene su sede en Suecia, donde se coordina cada pedido, se factura en EUR y se distribuye a minoristas de todo el mundo. Nuestro pequeño equipo de logística es el punto de contacto único para cada cuenta, desde la primera consulta hasta la renovación del pedido fijo.</p>
   </div>
 
   <!-- CTA -->
   <div style="padding: 96px 64px 96px; text-align:center;">
     <h2 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:34px; margin:0;">¿Listo para Vender African Bloom?</h2>
-    <p style="font-size:14.5px; color:#6E6660; margin:16px 0 0;">Los precios de pedidos fijos para 2026 están abiertos a nuevos socios minoristas.</p>
+    <p style="font-size:14.5px; color:#4F4741; margin:16px 0 0;">Los precios de pedidos fijos para 2026 están abiertos a nuevos socios minoristas.</p>
     <a href="contact.html" class="cta-box" style="display:inline-block; margin-top:30px; border:1px solid #201C1A; color:#201C1A; padding:15px 34px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase;">Solicitar el Catálogo</a>
   </div>
 
@@ -307,26 +399,26 @@
           <img src="logo-header.png" alt="African Bloom" style="height:26px; width:auto;">
           <span style="font-size:15px; letter-spacing:0.12em;">AFRICAN BLOOM</span>
         </div>
-        <p style="font-size:13px; line-height:1.7; color:#6E6660; max-width:280px; margin:0;">Importación mayorista de flores cortadas para minoristas de todo el mundo, con sede en Suecia.</p>
+        <p style="font-size:13px; line-height:1.7; color:#4F4741; max-width:280px; margin:0;">Importación mayorista de flores cortadas para minoristas de todo el mundo, con sede en Suecia.</p>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Explorar</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Explorar</span>
         <a href="about.html" style="text-decoration:none; color:inherit;"><span>Nosotros</span></a>
         <a href="collection.html" style="text-decoration:none; color:inherit;"><span>Colección</span></a>
         <a href="ordering.html" style="text-decoration:none; color:inherit;"><span>Cómo Pedir</span></a>
-        <a href="certifications.html" style="text-decoration:none; color:inherit;"><span>Certificaciones</span></a>
         <a href="faq.html" style="text-decoration:none; color:inherit;"><span>FAQ</span></a>
         <a href="contact.html" style="text-decoration:none; color:inherit;"><span>Contacto</span></a>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Contacto</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Contacto</span>
         <span>info@africane.se</span>
         <span>+46 73 756 57 58</span>
-        <span>Sweden</span>
+        <a href="https://wa.me/46737565758" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;"><span>WhatsApp</span></a>
+        <span>Suecia</span>
       </div>
     </div>
-    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#9C9186;">
-      <span>&copy; 2026 African Bloom &mdash; Cabrera Group AB</span>
+    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#5E564F;">
+      <span>&copy; 2026 African Bloom</span>
       <span>www.africane.se</span>
     </div>
   </div>
@@ -335,24 +427,23 @@
 <div data-lang="ru" style="display:none;">
 
   <!-- Header -->
-  <div style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
+  <div class="ab-header" style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
     <div style="display:flex; align-items:center; gap:12px;">
       <img src="logo-header.png" alt="African Bloom" style="height:36px; width:auto; display:block;">
       <span style="font-family:'EB Garamond',serif; font-size:21px; letter-spacing:0.14em; font-weight:500;">AFRICAN BLOOM</span>
     </div>
-    <div style="display:flex; align-items:center; gap:26px; font-size:13px; color:#201C1A;">
+    <div class="ab-nav" style="display:flex; align-items:center; gap:26px; font-size:13px; color:#201C1A;">
       <a href="index.html" style="text-decoration:none; color:inherit;"><span class="navlink">Главная</span></a>
       <a href="about.html" style="text-decoration:none; color:inherit;"><span class="navlink active">О нас</span></a>
       <a href="collection.html" style="text-decoration:none; color:inherit;"><span class="navlink">Коллекция</span></a>
       <a href="ordering.html" style="text-decoration:none; color:inherit;"><span class="navlink">Как Заказать</span></a>
-      <a href="certifications.html" style="text-decoration:none; color:inherit;"><span class="navlink">Сертификаты</span></a>
       <a href="faq.html" style="text-decoration:none; color:inherit;"><span class="navlink">FAQ</span></a>
       <a href="contact.html" style="text-decoration:none; color:inherit;"><span class="navlink">Контакты</span></a>
     </div>
-    <div style="display:flex; align-items:center; gap:20px;">
-      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#9C9186; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#9C9186; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#9C5323; font-weight:600; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#9C9186; cursor:pointer;">SV</span></div>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
-      <svg width="20" height="14" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg>
+    <div class="ab-right" style="display:flex; align-items:center; gap:20px;">
+      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#5E564F; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#5E564F; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#5E564F; cursor:pointer;">SV</span></div>
+      <svg class="ab-search" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+      <button class="ab-burger" type="button" aria-label="Menu" aria-expanded="false"><svg width="22" height="16" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg></button>
     </div>
   </div>
 
@@ -363,7 +454,7 @@
     <div style="position:absolute; left:40px; bottom:40px; max-width:640px;">
       <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#D8C9A3;">Главная &nbsp;/&nbsp; О нас</span>
       <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:52px; line-height:1.15; margin:16px 0 0; color:#FBF8F2;">Два региона — один стандарт.</h1>
-      <p style="font-size:14.5px; color:#E4DFD8; margin:16px 0 0; line-height:1.7; max-width:560px;">Cabrera Group AB — оптовый импортёр со штаб-квартирой в Швеции, поставляющий более 300 сортов срезанных цветов от проверенных производителей из Южной Америки; фермы Кении теперь тоже присоединяются к программе.</p>
+      <p style="font-size:14.5px; color:#E4DFD8; margin:16px 0 0; line-height:1.7; max-width:560px;">African Bloom — оптовый импортёр со штаб-квартирой в Швеции, поставляющий более 300 сортов срезанных цветов от проверенных производителей из Южной Америки; фермы Кении теперь тоже присоединяются к программе.</p>
     </div>
   </div>
 
@@ -380,8 +471,8 @@
     <div style="display:grid; grid-template-columns: 1.1fr 1fr; gap:56px; align-items:center;">
       <p style="font-size:15px; line-height:1.8; color:#3A342E; margin:0;">Наши самые длительные отношения — с производителями роз, спрей-роз, альстромерии и ранункулюса в цветоводческих регионах Южной Америки. Эти фермы поставляют African Bloom с самого первого дня, и именно на их стабильности построена наша система из четырёх сортов. От открытых розариев до промышленных теплиц на стальном каркасе — каждая ферма в нашей южноамериканской сети проверяется по одному и тому же стандарту перед отправкой каждого стебля.</p>
       <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
-        <div style="height:260px; overflow:hidden; border-radius:14px;"><img src="farm-southamerica-1.jpg" alt="South America rose greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
-        <div style="height:260px; overflow:hidden; border-radius:14px;"><img src="farm-southamerica-2.jpg" alt="South America tulip greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+        <div style="height:260px; overflow:hidden; border-radius:14px;"><img loading="lazy" decoding="async" src="farm-southamerica-1.jpg" alt="South America rose greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+        <div style="height:260px; overflow:hidden; border-radius:14px;"><img loading="lazy" decoding="async" src="farm-southamerica-2.jpg" alt="South America tulip greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
       </div>
     </div>
   </div>
@@ -393,23 +484,23 @@
     </div>
     <div style="display:grid; grid-template-columns: 1fr 1.1fr; gap:56px; align-items:center;">
       <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
-        <div style="height:260px; overflow:hidden; border-radius:14px;"><img src="farm-kenya-1.jpg" alt="Kenya dahlia farm" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
-        <div style="height:260px; overflow:hidden; border-radius:14px;"><img src="farm-kenya-2.jpg" alt="Kenya dianthus greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+        <div style="height:260px; overflow:hidden; border-radius:14px;"><img loading="lazy" decoding="async" src="farm-kenya-1.jpg" alt="Kenya dahlia farm" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+        <div style="height:260px; overflow:hidden; border-radius:14px;"><img loading="lazy" decoding="async" src="farm-kenya-2.jpg" alt="Kenya dianthus greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
       </div>
       <p style="font-size:15px; line-height:1.8; color:#3A342E; margin:0;">В 2026 году мы начали подключать кенийских производителей, чтобы расширить географию поставок и включить африканские стебли в ту же программу постоянных заказов. Климат Кении позволяет выращивать более широкий ассортимент — от георгин до гвоздик — рядом с банановыми рощами и открытыми полями, характерными для цветоводства Восточной Африки. Мы строим эти отношения так же, как и южноамериканские: неторопливо, силами собственных людей на местах.</p>
     </div>
   </div>
 
-  <!-- Sweden HQ -->
+  <!-- Швеция HQ -->
   <div style="margin: 88px 64px 0; background:#241E17; border-radius:20px; padding:56px 64px; display:grid; grid-template-columns: 1fr 1.6fr; gap:48px; align-items:center;">
     <h2 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:28px; margin:0; color:#F6ECE0;">Швеция — Штаб-квартира и логистика</h2>
-    <p style="font-size:14.5px; line-height:1.8; color:#C9B8A8; margin:0;">Штаб-квартира Cabrera Group AB находится в Швеции, где координируется каждый заказ, выставляются счета в евро и организуется доставка ритейлерам по всему миру. Наша небольшая логистическая команда — единая точка контакта для каждого клиента — от первого запроса до продления постоянного заказа.</p>
+    <p style="font-size:14.5px; line-height:1.8; color:#C9B8A8; margin:0;">Штаб-квартира African Bloom находится в Швеции, где координируется каждый заказ, выставляются счета в евро и организуется доставка ритейлерам по всему миру. Наша небольшая логистическая команда — единая точка контакта для каждого клиента — от первого запроса до продления постоянного заказа.</p>
   </div>
 
   <!-- CTA -->
   <div style="padding: 96px 64px 96px; text-align:center;">
     <h2 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:34px; margin:0;">Готовы работать с African Bloom?</h2>
-    <p style="font-size:14.5px; color:#6E6660; margin:16px 0 0;">Цены на постоянные заказы на 2026 год открыты для новых розничных партнёров.</p>
+    <p style="font-size:14.5px; color:#4F4741; margin:16px 0 0;">Цены на постоянные заказы на 2026 год открыты для новых розничных партнёров.</p>
     <a href="contact.html" class="cta-box" style="display:inline-block; margin-top:30px; border:1px solid #201C1A; color:#201C1A; padding:15px 34px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase;">Запросить каталог</a>
   </div>
 
@@ -421,26 +512,26 @@
           <img src="logo-header.png" alt="African Bloom" style="height:26px; width:auto;">
           <span style="font-size:15px; letter-spacing:0.12em;">AFRICAN BLOOM</span>
         </div>
-        <p style="font-size:13px; line-height:1.7; color:#6E6660; max-width:280px; margin:0;">Оптовый импорт срезанных цветов для ритейлеров по всему миру, штаб-квартира в Швеции.</p>
+        <p style="font-size:13px; line-height:1.7; color:#4F4741; max-width:280px; margin:0;">Оптовый импорт срезанных цветов для ритейлеров по всему миру, штаб-квартира в Швеции.</p>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Разделы</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Разделы</span>
         <a href="about.html" style="text-decoration:none; color:inherit;"><span>О нас</span></a>
         <a href="collection.html" style="text-decoration:none; color:inherit;"><span>Коллекция</span></a>
         <a href="ordering.html" style="text-decoration:none; color:inherit;"><span>Как Заказать</span></a>
-        <a href="certifications.html" style="text-decoration:none; color:inherit;"><span>Сертификаты</span></a>
         <a href="faq.html" style="text-decoration:none; color:inherit;"><span>FAQ</span></a>
         <a href="contact.html" style="text-decoration:none; color:inherit;"><span>Контакты</span></a>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Контакты</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Контакты</span>
         <span>info@africane.se</span>
         <span>+46 73 756 57 58</span>
-        <span>Sweden</span>
+        <a href="https://wa.me/46737565758" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;"><span>WhatsApp</span></a>
+        <span>Швеция</span>
       </div>
     </div>
-    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#9C9186;">
-      <span>&copy; 2026 African Bloom &mdash; Cabrera Group AB</span>
+    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#5E564F;">
+      <span>&copy; 2026 African Bloom</span>
       <span>www.africane.se</span>
     </div>
   </div>
@@ -449,24 +540,23 @@
 <div data-lang="sv" style="display:none;">
 
   <!-- Header -->
-  <div style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
+  <div class="ab-header" style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
     <div style="display:flex; align-items:center; gap:12px;">
       <img src="logo-header.png" alt="African Bloom" style="height:36px; width:auto; display:block;">
       <span style="font-family:'EB Garamond',serif; font-size:21px; letter-spacing:0.14em; font-weight:500;">AFRICAN BLOOM</span>
     </div>
-    <div style="display:flex; align-items:center; gap:26px; font-size:13px; color:#201C1A;">
+    <div class="ab-nav" style="display:flex; align-items:center; gap:26px; font-size:13px; color:#201C1A;">
       <a href="index.html" style="text-decoration:none; color:inherit;"><span class="navlink">Hem</span></a>
       <a href="about.html" style="text-decoration:none; color:inherit;"><span class="navlink active">Om Oss</span></a>
       <a href="collection.html" style="text-decoration:none; color:inherit;"><span class="navlink">Kollektion</span></a>
       <a href="ordering.html" style="text-decoration:none; color:inherit;"><span class="navlink">Beställning</span></a>
-      <a href="certifications.html" style="text-decoration:none; color:inherit;"><span class="navlink">Certifieringar</span></a>
       <a href="faq.html" style="text-decoration:none; color:inherit;"><span class="navlink">FAQ</span></a>
       <a href="contact.html" style="text-decoration:none; color:inherit;"><span class="navlink">Kontakt</span></a>
     </div>
-    <div style="display:flex; align-items:center; gap:20px;">
-      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#9C9186; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#9C9186; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#9C9186; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#9C5323; font-weight:600; cursor:pointer;">SV</span></div>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
-      <svg width="20" height="14" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg>
+    <div class="ab-right" style="display:flex; align-items:center; gap:20px;">
+      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#5E564F; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#5E564F; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#5E564F; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">SV</span></div>
+      <svg class="ab-search" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+      <button class="ab-burger" type="button" aria-label="Menu" aria-expanded="false"><svg width="22" height="16" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg></button>
     </div>
   </div>
 
@@ -477,25 +567,25 @@
     <div style="position:absolute; left:40px; bottom:40px; max-width:640px;">
       <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#D8C9A3;">Hem &nbsp;/&nbsp; Om Oss</span>
       <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:52px; line-height:1.15; margin:16px 0 0; color:#FBF8F2;">Två Ursprung. En Standard.</h1>
-      <p style="font-size:14.5px; color:#E4DFD8; margin:16px 0 0; line-height:1.7; max-width:560px;">Cabrera Group AB är en grossistimportör baserad i Sverige som för in över 300 sorters snittblommor från betrodda odlare i Sydamerika, där kenyanska gårdar nu ansluter sig till programmet.</p>
+      <p style="font-size:14.5px; color:#E4DFD8; margin:16px 0 0; line-height:1.7; max-width:560px;">African Bloom är en grossistimportör baserad i Sverige som för in över 300 sorters snittblommor från betrodda odlare i Sydamerika, och kenyanska gårdar ansluter sig nu till programmet.</p>
     </div>
   </div>
 
   <!-- Brand story -->
   <div style="padding: 80px 64px 0; text-align:center;">
-    <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:28px; line-height:1.55; max-width:820px; margin:0 auto; color:#201C1A;">Vi byggde African Bloom kring en enda idé: en återförsäljare ska aldrig behöva välja mellan pålitlig volym och verklig kvalitet. Varje stjälk vi importerar sorteras, spåras och skeppas genom partners vi känner personligen &mdash; inte inhandlade på en anonym marknad.</p>
+    <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:28px; line-height:1.55; max-width:820px; margin:0 auto; color:#201C1A;">Vi byggde African Bloom kring en enda idé: en återförsäljare ska aldrig behöva välja mellan pålitlig volym och verklig kvalitet. Varje stjälk vi importerar sorteras, spåras och skickas genom partners vi känner personligen &mdash; inte inhandlade på en anonym marknad.</p>
   </div>
 
   <!-- South America -->
   <div style="padding: 88px 64px 0;">
     <div style="display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #3E6A47; padding-bottom:14px; margin-bottom:32px;">
-      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:28px; margin:0; color:#3E6A47;">Sydamerika &mdash; Källan Idag</h2>
+      <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:28px; margin:0; color:#3E6A47;">Sydamerika &mdash; Nuvarande Inköp</h2>
     </div>
     <div style="display:grid; grid-template-columns: 1.1fr 1fr; gap:56px; align-items:center;">
-      <p style="font-size:15px; line-height:1.8; color:#3A342E; margin:0;">Våra längsta relationer är med odlare av rosor, sprayrosor, alstromeria och ranunkel i Sydamerikas blomsterregioner. Dessa gårdar har levererat till African Bloom sedan första dagen, och deras jämnhet är grunden för vårt fyra-nivåers sorteringssystem. Från öppna rosodlingar till industriella växthus i stål inspekteras varje gård i vårt sydamerikanska nätverk enligt samma standard innan en enda stjälk skeppas.</p>
+      <p style="font-size:15px; line-height:1.8; color:#3A342E; margin:0;">Våra äldsta relationer är med odlare av rosor, sprayrosor, alstroemeria och ranunkel i Sydamerikas blomsterregioner. Dessa gårdar har levererat till African Bloom sedan första dagen, och deras jämnhet är grunden för vårt fyrastegs sorteringssystem. Från öppna rosodlingar till industriella växthus i stål inspekteras varje gård i vårt sydamerikanska nätverk enligt samma standard innan en enda stjälk skickas.</p>
       <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
-        <div style="height:260px; overflow:hidden; border-radius:14px;"><img src="farm-southamerica-1.jpg" alt="South America rose greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
-        <div style="height:260px; overflow:hidden; border-radius:14px;"><img src="farm-southamerica-2.jpg" alt="South America tulip greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+        <div style="height:260px; overflow:hidden; border-radius:14px;"><img loading="lazy" decoding="async" src="farm-southamerica-1.jpg" alt="South America rose greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+        <div style="height:260px; overflow:hidden; border-radius:14px;"><img loading="lazy" decoding="async" src="farm-southamerica-2.jpg" alt="South America tulip greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
       </div>
     </div>
   </div>
@@ -507,23 +597,23 @@
     </div>
     <div style="display:grid; grid-template-columns: 1fr 1.1fr; gap:56px; align-items:center;">
       <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
-        <div style="height:260px; overflow:hidden; border-radius:14px;"><img src="farm-kenya-1.jpg" alt="Kenya dahlia farm" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
-        <div style="height:260px; overflow:hidden; border-radius:14px;"><img src="farm-kenya-2.jpg" alt="Kenya dianthus greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+        <div style="height:260px; overflow:hidden; border-radius:14px;"><img loading="lazy" decoding="async" src="farm-kenya-1.jpg" alt="Kenya dahlia farm" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+        <div style="height:260px; overflow:hidden; border-radius:14px;"><img loading="lazy" decoding="async" src="farm-kenya-2.jpg" alt="Kenya dianthus greenhouse" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
       </div>
-      <p style="font-size:15px; line-height:1.8; color:#3A342E; margin:0;">År 2026 började vi ta in kenyanska odlare för att bredda vår ursprungsbas och föra in afrikanskodlade stjälkar i samma stående beställningsprogram. Kenyas klimat stödjer ett bredare sortiment &mdash; från dahlior till trädgårdsnäjlikor &mdash; odlade sida vid sida med bananodlingarna och de öppna fälten som präglar blomsterodling i Östafrika. Vi bygger dessa relationer på samma sätt som våra sydamerikanska: långsamt, med våra egna människor på plats.</p>
+      <p style="font-size:15px; line-height:1.8; color:#3A342E; margin:0;">År 2026 började vi ta in kenyanska odlare för att bredda vår ursprungsbas och föra in afrikanskodlade stjälkar i samma stående beställningsprogram. Kenyas klimat stödjer ett bredare sortiment &mdash; från dahlior till nejlikor &mdash; odlade sida vid sida med bananodlingarna och de öppna fälten som präglar blomsterodling i Östafrika. Vi bygger dessa relationer på samma sätt som våra sydamerikanska: långsamt, med våra egna människor på plats.</p>
     </div>
   </div>
 
-  <!-- Sweden HQ -->
+  <!-- Sverige HQ -->
   <div style="margin: 88px 64px 0; background:#241E17; border-radius:20px; padding:56px 64px; display:grid; grid-template-columns: 1fr 1.6fr; gap:48px; align-items:center;">
     <h2 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:28px; margin:0; color:#F6ECE0;">Sverige &mdash; Huvudkontor &amp; Logistik</h2>
-    <p style="font-size:14.5px; line-height:1.8; color:#C9B8A8; margin:0;">Cabrera Group AB har sitt huvudkontor i Sverige, där varje beställning samordnas, faktureras i EUR och skickas vidare till återförsäljare världen över. Vårt lilla logistikteam är den enda kontaktpunkten för varje konto, från första förfrågan till förnyad stående beställning.</p>
+    <p style="font-size:14.5px; line-height:1.8; color:#C9B8A8; margin:0;">African Bloom har sitt huvudkontor i Sverige, där varje beställning samordnas, faktureras i EUR och skickas vidare till återförsäljare världen över. Vårt lilla logistikteam är den enda kontaktpunkten för varje konto, från första förfrågan till förnyad stående beställning.</p>
   </div>
 
   <!-- CTA -->
   <div style="padding: 96px 64px 96px; text-align:center;">
     <h2 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:34px; margin:0;">Redo att Börja Sälja African Bloom?</h2>
-    <p style="font-size:14.5px; color:#6E6660; margin:16px 0 0;">Priser för stående beställningar 2026 är öppna för nya återförsäljarpartners.</p>
+    <p style="font-size:14.5px; color:#4F4741; margin:16px 0 0;">Priser för stående beställningar 2026 är öppna för nya återförsäljarpartners.</p>
     <a href="contact.html" class="cta-box" style="display:inline-block; margin-top:30px; border:1px solid #201C1A; color:#201C1A; padding:15px 34px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase;">Begär Katalogen</a>
   </div>
 
@@ -535,26 +625,26 @@
           <img src="logo-header.png" alt="African Bloom" style="height:26px; width:auto;">
           <span style="font-size:15px; letter-spacing:0.12em;">AFRICAN BLOOM</span>
         </div>
-        <p style="font-size:13px; line-height:1.7; color:#6E6660; max-width:280px; margin:0;">Grossistimport av snittblommor till återförsäljare världen över, baserat i Sverige.</p>
+        <p style="font-size:13px; line-height:1.7; color:#4F4741; max-width:280px; margin:0;">Grossistimport av snittblommor till återförsäljare världen över, baserat i Sverige.</p>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Utforska</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Utforska</span>
         <a href="about.html" style="text-decoration:none; color:inherit;"><span>Om Oss</span></a>
         <a href="collection.html" style="text-decoration:none; color:inherit;"><span>Kollektion</span></a>
         <a href="ordering.html" style="text-decoration:none; color:inherit;"><span>Beställning</span></a>
-        <a href="certifications.html" style="text-decoration:none; color:inherit;"><span>Certifieringar</span></a>
         <a href="faq.html" style="text-decoration:none; color:inherit;"><span>FAQ</span></a>
         <a href="contact.html" style="text-decoration:none; color:inherit;"><span>Kontakt</span></a>
       </div>
       <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
-        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#9C9186; margin-bottom:6px;">Kontakt</span>
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Kontakt</span>
         <span>info@africane.se</span>
         <span>+46 73 756 57 58</span>
-        <span>Sweden</span>
+        <a href="https://wa.me/46737565758" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;"><span>WhatsApp</span></a>
+        <span>Sverige</span>
       </div>
     </div>
-    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#9C9186;">
-      <span>&copy; 2026 African Bloom &mdash; Cabrera Group AB</span>
+    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#5E564F;">
+      <span>&copy; 2026 African Bloom</span>
       <span>www.africane.se</span>
     </div>
   </div>
@@ -570,13 +660,28 @@ function setLang(code) {
   for (var i = 0; i < blocks.length; i++) {
     blocks[i].style.display = (blocks[i].getAttribute('data-lang') === code) ? 'block' : 'none';
   }
+  document.documentElement.lang = code;
+  try { localStorage.setItem('ab-lang', code); } catch (e) {}
 }
-</script>
+(function () {
+  // Make the EN / ES / RU / SV switchers keyboard-accessible.
+  document.querySelectorAll('span[onclick^="setLang("]').forEach(function (el) {
+    el.setAttribute('role', 'button');
+    el.setAttribute('tabindex', '0');
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+    });
+  });
+  // Remember the visitor's language across pages.
+  var saved = null;
+  try { saved = localStorage.getItem('ab-lang'); } catch (e) {}
+  if (saved && saved !== 'en' && document.querySelector('[data-lang="' + saved + '"]')) setLang(saved);
+})();
 </script>
 
 <script>
 function abFitScale() {
-  if (window.innerWidth <= 1024) return;
+  if (window.innerWidth <= 1200) return;
   var outer = document.getElementById('ab-scale-outer');
   var wrap = document.getElementById('ab-scale-wrap');
   if (!outer || !wrap) return;
@@ -591,5 +696,33 @@ var abOrigSetLang = setLang;
 setLang = function(code) { abOrigSetLang(code); setTimeout(abFitScale, 0); };
 </script>
 
+<script>
+document.querySelectorAll('.ab-burger').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var nav = b.closest('.ab-header').querySelector('.ab-nav');
+    b.setAttribute('aria-expanded', nav.classList.toggle('open'));
+  });
+});
+</script>
+<a id="ab-wa" href="https://wa.me/46737565758" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="WhatsApp +46 73 756 57 58">
+  <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><path fill="#fff" d="M16 3.2C8.9 3.2 3.2 8.9 3.2 16c0 2.4.7 4.7 1.9 6.7L3.1 28.9l6.4-1.7c1.9 1 4 1.6 6.5 1.6 7.1 0 12.8-5.7 12.8-12.8S23.1 3.2 16 3.2z"/><path fill="#25D366" d="M22.5 19.6c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.2.2 2.2 3.3 5.3 4.6 3 1.2 3 .8 3.6.8.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+</a>
+<style>
+#ab-wa{position:fixed;right:22px;bottom:22px;z-index:900;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.28);transition:transform .15s,box-shadow .15s;}
+#ab-wa:hover{transform:scale(1.08);box-shadow:0 6px 18px rgba(0,0,0,.34);}
+#ab-wa:focus-visible{outline:3px solid #201C1A;outline-offset:3px;}
+@media (max-width:640px){#ab-wa{right:14px;bottom:14px;width:56px;height:56px;}}
+</style>
+<script>
+(function(){
+  var L={en:['Chat on WhatsApp','Hello African Bloom, I would like to ask about your flowers.'],
+         es:['Escribir por WhatsApp','Hola African Bloom, me gustaría consultar sobre sus flores.'],
+         ru:['Написать в WhatsApp','Здравствуйте, African Bloom! Хочу узнать о ваших цветах.'],
+         sv:['Chatta på WhatsApp','Hej African Bloom, jag vill fråga om era blommor.']};
+  var a=document.getElementById('ab-wa');
+  function upd(){var l=L[document.documentElement.lang]||L.en;a.setAttribute('aria-label',l[0]);a.href='https://wa.me/46737565758?text='+encodeURIComponent(l[1]);}
+  var o=window.setLang;window.setLang=function(c){o(c);upd();};upd();
+})();
+</script>
 </body>
 </html>
