@@ -265,7 +265,7 @@
 
     <div>
       <span style="font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#8A4A1E;">Send an Inquiry</span>
-      <form class="ab-form" method="POST" action="https://formsubmit.co/info@africane.se" data-lang-form="en">
+      <form class="ab-form" method="POST" action="https://formsubmit.co/dc7087dd982518597a18847399951c8d" data-lang-form="en">
       <input type="hidden" name="_subject" value="New inquiry from africane.se">
       <input type="hidden" name="_template" value="table">
       <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
@@ -391,7 +391,7 @@
 
     <div>
       <span style="font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#8A4A1E;">Enviar una Consulta</span>
-      <form class="ab-form" method="POST" action="https://formsubmit.co/info@africane.se" data-lang-form="es">
+      <form class="ab-form" method="POST" action="https://formsubmit.co/dc7087dd982518597a18847399951c8d" data-lang-form="es">
       <input type="hidden" name="_subject" value="New inquiry from africane.se">
       <input type="hidden" name="_template" value="table">
       <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
@@ -517,7 +517,7 @@
 
     <div>
       <span style="font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#8A4A1E;">Отправить Запрос</span>
-      <form class="ab-form" method="POST" action="https://formsubmit.co/info@africane.se" data-lang-form="ru">
+      <form class="ab-form" method="POST" action="https://formsubmit.co/dc7087dd982518597a18847399951c8d" data-lang-form="ru">
       <input type="hidden" name="_subject" value="New inquiry from africane.se">
       <input type="hidden" name="_template" value="table">
       <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
@@ -643,7 +643,7 @@
 
     <div>
       <span style="font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#8A4A1E;">Skicka en Förfrågan</span>
-      <form class="ab-form" method="POST" action="https://formsubmit.co/info@africane.se" data-lang-form="sv">
+      <form class="ab-form" method="POST" action="https://formsubmit.co/dc7087dd982518597a18847399951c8d" data-lang-form="sv">
       <input type="hidden" name="_subject" value="New inquiry from africane.se">
       <input type="hidden" name="_template" value="table">
       <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
@@ -795,7 +795,7 @@ document.querySelectorAll('.ab-burger').forEach(function (b) {
       e.preventDefault();
       if (form.querySelector('[name="_honey"]').value) return;
       btn.disabled = true; st.className = 'ab-form-status'; st.textContent = L.sending;
-      fetch('https://formsubmit.co/ajax/info@africane.se', { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
+      fetch('https://formsubmit.co/ajax/dc7087dd982518597a18847399951c8d', { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
         .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); })
         .then(function (res) {
           if (res.ok && (res.j.success === true || res.j.success === 'true')) { st.className = 'ab-form-status ok'; st.textContent = L.ok; form.reset(); }
