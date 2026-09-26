@@ -37,7 +37,7 @@ Cloni Success Vanilla|u|cl|4
 Elegance Malva|u|el|8
 Elegance Rosa Chiaro|u|el|14
 Veronicas|o||11
-Hypericum|o||11
+Hypericum|o||11|photo-var-hypericum.jpg
 Sunflower Sunrich|o||18
 Delphinium Andes White|o|de|
 Hashtag Medium Pink|s|hs|14
@@ -273,13 +273,13 @@ Sweet Beat|r||14
 Wildcat|r||0
 White Shimmer|r||17
 Violet Hill|r||8
-Vendela|r||4
+Vendela|r||4|photo-var-vendela.jpg
 V.I. Pink|r||7
 Twilight|r||12
-Topaz|r||7
+Topaz|r||7|photo-var-topaz.jpg
 Tiffany|r||13
 Tibet|r||17
-Sweetness|r||0
+Sweetness|r||0|photo-var-sweetness.jpg
 Sweet Unique|r||14
 Sweet Escimo|r||14
 Sweet Cake|r||14
@@ -290,7 +290,7 @@ Snowbliss|r||17
 Silantoi|r||0
 Shocking Blue|r||8
 Shimmer|r||13
-Rosita Vendela|r||14
+Rosita Vendela|r||14|photo-var-rosita-vendela.jpg
 Roseberry|r||7
 Rhoslyn|r||14
 Redvolution|r||16
@@ -298,19 +298,19 @@ Rediant|r||16
 Red Panther|r||16
 Quicksand|r||4
 Queen Berry|r||7
-Proud|r||17
+Proud|r||17|photo-var-proud.jpg
 Pomarosa|r||14
 Polo|r||17
 Playa Blanca|r||17
 Pink Mondial|r||14
-Pink Floyd|r||7
+Pink Floyd|r||7|photo-var-pink-floyd.jpg
 Piacere|r||8
 Phoenix|r||13
 Peach Avalanche|r||13
 Pastella|r||14
 Pandora|r||0
 Paloma|r||0
-Orange Crush|r||12
+Orange Crush|r||12|photo-var-orange-crush.jpg
 Opala|r||14
 Ocean Song|r||8
 Nina|r||12
@@ -320,16 +320,16 @@ Nena|r||14
 Nectarine|r||13
 Nautica|r||14
 Mother of Pearl|r||14
-Moody Blues|r||8
-Mondial|r||17
+Moody Blues|r||8|photo-var-moody-blues.jpg
+Mondial|r||17|photo-var-mondial.jpg
 Momentum|r||18
 Miss Piggy|r||14
 Mandala|r||14
 Mamma Mia|r||16
-Magic Times|r||0
+Magic Times|r||0|photo-var-magic-times.jpg
 Lola|r||7
 Lighthouse|r||18
-Kahala|r||0
+Kahala|r||0|photo-var-kahala.jpg
 Joy|r||12
 Jet Set|r||14
 Jessika|r||14
@@ -337,7 +337,7 @@ Hotspot|r||7
 Hot Explorer|r||7
 Highlight|r||17
 High & Yellow Magic|r||18
-High & Magic|r||0
+High & Magic|r||0|photo-var-high-magic.jpg
 Hard Rock|r||14
 Green Romance|r||6
 Grace Kelly|r||7
@@ -347,7 +347,7 @@ Goldfinch|r||18
 Geraldine|r||14
 Full Monty|r||7
 Frutteto|r||0
-Freedom|r||16
+Freedom|r||16|photo-var-freedom.jpg
 Free Spirit|r||12
 Fortune|r||16
 Flirty|r||14
@@ -356,10 +356,10 @@ Felicity|r||13
 Fascination|r||14
 Fancy Dreams|r||4
 Faith|r||14
-Explorer|r||16
-Esperance|r||0
+Explorer|r||16|photo-var-explorer.jpg
+Esperance|r||0|photo-var-esperance.jpg
 Encanto|r||12
-Deep Purple|r||8
+Deep Purple|r||8|photo-var-deep-purple.jpg
 Crème de la crème|r||4
 Coral Reef|r||13
 Cool Water|r||8
@@ -380,7 +380,7 @@ Avalanche|r||17
 Atomic|r||0
 Alba|r||17
 Absolut in Pink|r||14
-White O’hara|g||17
+White O’hara|g||17|photo-var-white-o-hara.jpg
 Vicky Gardens|g||4
 Veggie|g||6
 Tip Top|g||13
