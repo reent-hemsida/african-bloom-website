@@ -10,11 +10,11 @@ window.VARIETY_DATA = `Bach|c||7|photo-var-bach.jpg
 Cotton Mist|g||14|photo-var-cotton-mist.jpg
 Celia X-Press|s|gl|14|photo-var-celia-x-press.jpg
 Zafiro|c||15|photo-var-zafiro.jpg
-Virgilio|c||16|photo-var-virgilio.jpg
+Virgilio|c||16
 Violet Pixel|c||15|photo-var-violet-pixel.jpg
 Uyuni|c||17|photo-var-uyuni.jpg
 Siren|c||8|photo-var-siren.jpg
-Sassicaia|c||3|photo-var-sassicaia.jpg
+Sassicaia|c||3
 Polimnia|c||4|photo-var-polimnia.jpg
 Polar Route|c||17|photo-var-polar-route.jpg
 Pink Pixel|c||14|photo-var-pink-pixel.jpg
@@ -29,149 +29,149 @@ Epic|c||16|photo-var-epic.jpg
 Crimea|c||13|photo-var-crimea.jpg
 Corvette|c||14|photo-var-corvette.jpg
 Cocuy|c||17|photo-var-cocuy.jpg
-Clearwater|c||8|photo-var-clearwater.jpg
+Clearwater|c||8
 Charisma|c||14|photo-var-charisma.jpg
-Brut|c||13|photo-var-brut.jpg
+Brut|c||13
 Ariadna|c||14|photo-var-ariadna.jpg
-Cloni Success Vanilla|u|cl|4|photo-var-cloni-success-vanilla.jpg
+Cloni Success Vanilla|u|cl|4
 Elegance Malva|u|el|8|photo-var-elegance-malva.jpg
 Elegance Rosa Chiaro|u|el|14|photo-var-elegance-rosa-chiaro.jpg
-Veronicas|o||11|photo-var-veronicas.jpg
+Veronicas|o||11
 Hypericum|o||11|photo-var-hypericum.jpg
 Sunflower Sunrich|o||18|photo-var-sunflower-sunrich.jpg
-Delphinium Andes White|o|de||photo-var-delphinium-andes-white.jpg
-Hashtag Medium Pink|s|hs|14|photo-var-hashtag-medium-pink.jpg
+Delphinium Andes White|o|de|
+Hashtag Medium Pink|s|hs|14
 Juicy X-Pression|g||13|photo-var-juicy-x-pression.jpg
 Gypsophila Xlence White|y||17|photo-var-gypsophila-xlence-white.jpg
-Hydrangea Jumbo White|o|hy|17|photo-var-hydrangea-jumbo-white.jpg
-Gypsophila Xlence Light Blue|y||9|photo-var-gypsophila-xlence-light-blue.jpg
-Gypsophila Xlence Light Pink|y||10|photo-var-gypsophila-xlence-light-pink.jpg
-Delphinium Serene|o|de|8|photo-var-delphinium-serene.jpg
+Hydrangea Jumbo White|o|hy|17
+Gypsophila Xlence Light Blue|y||9
+Gypsophila Xlence Light Pink|y||10
+Delphinium Serene|o|de|8
 Disbud Ball Purple|o|ch|15|photo-var-disbud-ball-purple.jpg
 Disbud Ball Yellow|o|ch|18|photo-var-disbud-ball-yellow.jpg
-Disbud Ball Green|o|ch|6|photo-var-disbud-ball-green.jpg
+Disbud Ball Green|o|ch|6
 Disbud Ball Pink|o|ch|14|photo-var-disbud-ball-pink.jpg
-Disbud Ball White|o|ch|17|photo-var-disbud-ball-white.jpg
-Cremons Bronze|o|ch|2|photo-var-cremons-bronze.jpg
-Cremons Red|o|ch|16|photo-var-cremons-red.jpg
+Disbud Ball White|o|ch|17
+Cremons Bronze|o|ch|2
+Cremons Red|o|ch|16
 Cremons Purple|o|ch|15|photo-var-cremons-purple.jpg
-Cremons Peach|o|ch|13|photo-var-cremons-peach.jpg
+Cremons Peach|o|ch|13
 Cremons Orange|o|ch|12|photo-var-cremons-orange.jpg
-Cremons Lavender|o|ch|8|photo-var-cremons-lavender.jpg
-Cremons Yellow|o|ch|18|photo-var-cremons-yellow.jpg
+Cremons Lavender|o|ch|8
+Cremons Yellow|o|ch|18
 Cremons Pink|o|ch|14|photo-var-cremons-pink.jpg
-Cremons White|o|ch|17|photo-var-cremons-white.jpg
-Football Mum Bronze|o|ch|2|photo-var-football-mum-bronze.jpg
+Cremons White|o|ch|17
+Football Mum Bronze|o|ch|2
 Football Mum White|o|ch|17|photo-var-football-mum-white.jpg
-Spider Mum Purple|o|ch|15|photo-var-spider-mum-purple.jpg
-Spider Mum Yellow|o|ch|18|photo-var-spider-mum-yellow.jpg
+Spider Mum Purple|o|ch|15
+Spider Mum Yellow|o|ch|18
 Spider Mum Green|o|ch|6|photo-var-spider-mum-green.jpg
 Spider Mum Pink|o|ch|14|photo-var-spider-mum-pink.jpg
-Spider Mum White|o|ch|17|photo-var-spider-mum-white.jpg
-Sunflower Vincent’s|o||18|photo-var-sunflower-vincent-s.jpg
-Solidago Golden Glory|o||18|photo-var-solidago-golden-glory.jpg
+Spider Mum White|o|ch|17
+Sunflower Vincent’s|o||18
+Solidago Golden Glory|o||18
 Stock White|o|st|17|photo-var-stock-white.jpg
-Stock Lavender|o|st|8|photo-var-stock-lavender.jpg
-Stock Hot Pink|o|st|7|photo-var-stock-hot-pink.jpg
+Stock Lavender|o|st|8
+Stock Hot Pink|o|st|7
 Stock Dark Purple|o|st|15|photo-var-stock-dark-purple.jpg
-Lisianthus Assorted|o||11|photo-var-lisianthus-assorted.jpg
-Hydrangea Premium White|o|hy|17|photo-var-hydrangea-premium-white.jpg
-Hydrangea Tinted Pink|o|hy|14|photo-var-hydrangea-tinted-pink.jpg
-Hydrangea Tinted Light Yellow|o|hy|18|photo-var-hydrangea-tinted-light-yellow.jpg
-Hydrangea Tinted Light Orange|o|hy|12|photo-var-hydrangea-tinted-light-orange.jpg
+Lisianthus Assorted|o||11
+Hydrangea Premium White|o|hy|17
+Hydrangea Tinted Pink|o|hy|14
+Hydrangea Tinted Light Yellow|o|hy|18
+Hydrangea Tinted Light Orange|o|hy|12
 Hydrangea Tinted Light Purple|o|hy|15|photo-var-hydrangea-tinted-light-purple.jpg
 Hydrangea Tinted Light Pink|o|hy|14|photo-var-hydrangea-tinted-light-pink.jpg
-Hydrangea Tinted Light Peach|o|hy|13|photo-var-hydrangea-tinted-light-peach.jpg
-Hydrangea Tinted Hot Pink|o|hy|7|photo-var-hydrangea-tinted-hot-pink.jpg
+Hydrangea Tinted Light Peach|o|hy|13
+Hydrangea Tinted Hot Pink|o|hy|7
 Hydrangea Premium Lemon|o|hy|6|photo-var-hydrangea-premium-lemon.jpg
 Hydrangea Tinted Burgundy|o|hy|16|photo-var-hydrangea-tinted-burgundy.jpg
 Hydrangea Tinted Dark Blue|o|hy|1|photo-var-hydrangea-tinted-dark-blue.jpg
 Hydrangea Tinted Gold|o|hy|5|photo-var-hydrangea-tinted-gold.jpg
-Hydrangea Tinted Light Lime Green|o|hy|6|photo-var-hydrangea-tinted-light-lime-green.jpg
+Hydrangea Tinted Light Lime Green|o|hy|6
 Hydrangea Tinted Light Red|o|hy|16|photo-var-hydrangea-tinted-light-red.jpg
 Hydrangea Tinted Orange|o|hy|12|photo-var-hydrangea-tinted-orange.jpg
 Hydrangea Tinted Purple|o|hy|15|photo-var-hydrangea-tinted-purple.jpg
 Hydrangea Tinted Rainbow|o|hy|11|photo-var-hydrangea-tinted-rainbow.jpg
-Hydrangea Tinted Red|o|hy|16|photo-var-hydrangea-tinted-red.jpg
-Hydrangea Tinted Yellow|o|hy|18|photo-var-hydrangea-tinted-yellow.jpg
+Hydrangea Tinted Red|o|hy|16
+Hydrangea Tinted Yellow|o|hy|18
 Hydrangea Mini Emerald|o|hy|6|photo-var-hydrangea-mini-emerald.jpg
-Hydrangea Mini Green|o|hy|6|photo-var-hydrangea-mini-green.jpg
-Hydrangea Mini Lemon|o|hy|6|photo-var-hydrangea-mini-lemon.jpg
-Hydrangea Premium Emerald|o|hy|6|photo-var-hydrangea-premium-emerald.jpg
+Hydrangea Mini Green|o|hy|6
+Hydrangea Mini Lemon|o|hy|6
+Hydrangea Premium Emerald|o|hy|6
 Hydrangea Select Emerald|o|hy|6|photo-var-hydrangea-select-emerald.jpg
 Hydrangea Shocking Blue|o|hy|1|photo-var-hydrangea-shocking-blue.jpg
-Hydrangea Premium Blue|o|hy|1|photo-var-hydrangea-premium-blue.jpg
+Hydrangea Premium Blue|o|hy|1
 Gypsophila Xlence Rainbow|y||11|photo-var-gypsophila-xlence-rainbow.jpg
-Delphinium Sky Waltz|o|de|1|photo-var-delphinium-sky-waltz.jpg
-Delphinium Sea Waltz|o|de|1|photo-var-delphinium-sea-waltz.jpg
+Delphinium Sky Waltz|o|de|1
+Delphinium Sea Waltz|o|de|1
 Bells of Ireland|o||6|photo-var-bells-of-ireland.jpg
 Winterfell|a||17|photo-var-winterfell.jpg
 White Focus|a||17|photo-var-white-focus.jpg
-Whistler|a||17|photo-var-whistler.jpg
+Whistler|a||17
 Testarossa|a||16|photo-var-testarossa.jpg
-Sweetheart|a||0|photo-var-sweetheart.jpg
-Sunny Lady|a||18|photo-var-sunny-lady.jpg
-Strawberry Snow|a||0|photo-var-strawberry-snow.jpg
+Sweetheart|a||0
+Sunny Lady|a||18
+Strawberry Snow|a||0
 Stratus|a||14|photo-var-stratus.jpg
-Stephanie|a||14|photo-var-stephanie.jpg
-Snow Time|a||17|photo-var-snow-time.jpg
+Stephanie|a||14
+Snow Time|a||17
 Secret|a||7|photo-var-secret.jpg
-Seattle|a||14|photo-var-seattle.jpg
+Seattle|a||14
 Savanna|a||12|photo-var-savanna.jpg
-Rosewood|a||14|photo-var-rosewood.jpg
+Rosewood|a||14
 Rome|a||7|photo-var-rome.jpg
 Romance|a||16|photo-var-romance.jpg
 Red Queen|a||16|photo-var-red-queen.jpg
 Primadonna|a||14|photo-var-primadonna.jpg
 Pompeii|a||15|photo-var-pompeii.jpg
-Pierrot|a||0|photo-var-pierrot.jpg
-Party|a||12|photo-var-party.jpg
+Pierrot|a||0
+Party|a||12
 Orange Queen|a||12|photo-var-orange-queen.jpg
 Nora|a||14|photo-var-nora.jpg
-Nirvana|a||16|photo-var-nirvana.jpg
+Nirvana|a||16
 Mistral|a||17|photo-var-mistral.jpg
 Mila|a||14|photo-var-mila.jpg
 Melrose|a||7|photo-var-melrose.jpg
 Maracana|a||15|photo-var-maracana.jpg
 Luzon|a||17|photo-var-luzon.jpg
-Lucia|a||7|photo-var-lucia.jpg
+Lucia|a||7
 Lousiana|a||8|photo-var-lousiana.jpg
 Limelight|a||6|photo-var-limelight.jpg
-Libya|a||13|photo-var-libya.jpg
+Libya|a||13
 Jennifer|a||17|photo-var-jennifer.jpg
-Intenz|a||7|photo-var-intenz.jpg
+Intenz|a||7
 Hot Shot|a||0|photo-var-hot-shot.jpg
 Hot Pepper|a||0|photo-var-hot-pepper.jpg
 Himalaya|a||17|photo-var-himalaya.jpg
 Gold|a||18|photo-var-gold.jpg
 Galeras|a||16|photo-var-galeras.jpg
-Galaxy|a||8|photo-var-galaxy.jpg
-Florida|a||18|photo-var-florida.jpg
+Galaxy|a||8
+Florida|a||18
 Florentina|a||8|photo-var-florentina.jpg
 Elegance|a||14|photo-var-elegance.jpg
 Dubai|a||14|photo-var-dubai.jpg
-Dirty Dancing|a||4|photo-var-dirty-dancing.jpg
-Debby|a||14|photo-var-debby.jpg
-Corsica|a||0|photo-var-corsica.jpg
-Cordoba|a||0|photo-var-cordoba.jpg
-Concorde|a||17|photo-var-concorde.jpg
+Dirty Dancing|a||4
+Debby|a||14
+Corsica|a||0
+Cordoba|a||0
+Concorde|a||17
 Cleo|a||15|photo-var-cleo.jpg
 Cinnamon|a||12|photo-var-cinnamon.jpg
-Champagne|a||4|photo-var-champagne.jpg
+Champagne|a||4
 Casanova|a||7|photo-var-casanova.jpg
-Canyon|a||13|photo-var-canyon.jpg
+Canyon|a||13
 Canary|a||18|photo-var-canary.jpg
-Bounty|a||17|photo-var-bounty.jpg
+Bounty|a||17
 Bohemian|a||0|photo-var-bohemian.jpg
 Bali|a||0|photo-var-bali.jpg
-Bahia|a||16|photo-var-bahia.jpg
+Bahia|a||16
 Badalona|a||18|photo-var-badalona.jpg
 Antaris|a||8|photo-var-antaris.jpg
 Andalusia|a||0|photo-var-andalusia.jpg
 Amposta|a||14|photo-var-amposta.jpg
 Amatista|a||15|photo-var-amatista.jpg
-Alice|a||14|photo-var-alice.jpg
-Alegria|a||7|photo-var-alegria.jpg
+Alice|a||14
+Alegria|a||7
 Aaron|a||15|photo-var-aaron.jpg
 Elegance Viola|u|el|15|photo-var-elegance-viola.jpg
 Elegance Salmone|u|el|13|photo-var-elegance-salmone.jpg
@@ -188,91 +188,91 @@ Cloni Success Lady|u|cl|14|photo-var-cloni-success-lady.jpg
 Cloni Success Hanoi|u|cl|14|photo-var-cloni-success-hanoi.jpg
 Cloni Success Favola|u|cl|14|photo-var-cloni-success-favola.jpg
 Cloni Success Blush|u|cl|14|photo-var-cloni-success-blush.jpg
-Cloni Pon Pon Igloo|u|cl|0|photo-var-cloni-pon-pon-igloo.jpg
-Wink Coral Kiss|s|gl|14|photo-var-wink-coral-kiss.jpg
-Wink Allure|s|gl|4|photo-var-wink-allure.jpg
+Cloni Pon Pon Igloo|u|cl|0
+Wink Coral Kiss|s|gl|14
+Wink Allure|s|gl|4
 White Majolika|s||17|photo-var-white-majolika.jpg
-White Flow|s|gl|17|photo-var-white-flow.jpg
-Wedding Sensation|s||14|photo-var-wedding-sensation.jpg
+White Flow|s|gl|17
+Wedding Sensation|s||14
 Wedding Rosever|s|gl|14|photo-var-wedding-rosever.jpg
 Vintage Rosever|s||15|photo-var-vintage-rosever.jpg
 Verona|s||16|photo-var-verona.jpg
 That’s Red Jewel|s|gl|16|photo-var-that-s-red-jewel.jpg
-Sweet Jewel|s||0|photo-var-sweet-jewel.jpg
-Sweet Dreams|s||17|photo-var-sweet-dreams.jpg
+Sweet Jewel|s||0
+Sweet Dreams|s||17
 Suspiro|s||14|photo-var-suspiro.jpg
-Star Blush|s||14|photo-var-star-blush.jpg
+Star Blush|s||14
 Snowy Jewel|s||17|photo-var-snowy-jewel.jpg
 Snowflake|s||17|photo-var-snowflake.jpg
 Silver Mikado|s||8|photo-var-silver-mikado.jpg
-Shining Star|s||17|photo-var-shining-star.jpg
-Saona|s||12|photo-var-saona.jpg
+Shining Star|s||17
+Saona|s||12
 Rubicon|s||16|photo-var-rubicon.jpg
 Royal Porcelina|s||14|photo-var-royal-porcelina.jpg
-Purple Irishka|s||7|photo-var-purple-irishka.jpg
+Purple Irishka|s||7
 Portrait|s||8|photo-var-portrait.jpg
 Polar Sensation|s||17|photo-var-polar-sensation.jpg
-Pink Irishka|s||14|photo-var-pink-irishka.jpg
+Pink Irishka|s||14
 Peachy Pink Jewel|s||14|photo-var-peachy-pink-jewel.jpg
-Party Trendsetter|s|gl|7|photo-var-party-trendsetter.jpg
+Party Trendsetter|s|gl|7
 Orange Trendsetter|s|gl|12|photo-var-orange-trendsetter.jpg
 New Moon|s||4|photo-var-new-moon.jpg
 Morning Star|s||13|photo-var-morning-star.jpg
-Lavender Irishka|s||8|photo-var-lavender-irishka.jpg
-Hot Pink Trendsetter|s|gl|7|photo-var-hot-pink-trendsetter.jpg
+Lavender Irishka|s||8
+Hot Pink Trendsetter|s|gl|7
 Hot Magenta Jewel|s||7|photo-var-hot-magenta-jewel.jpg
 Green Rosever|s||6|photo-var-green-rosever.jpg
 Gem Star|s||7|photo-var-gem-star.jpg
 Garden Bridal Jewel|s|gl|14|photo-var-garden-bridal-jewel.jpg
-Floreana|s||17|photo-var-floreana.jpg
+Floreana|s||17
 Fire Up|s||7|photo-var-fire-up.jpg
 Fibonacci Yantra|s|gl|0|photo-var-fibonacci-yantra.jpg
 Fibonacci Rosso|s|gl|16|photo-var-fibonacci-rosso.jpg
-Fibonacci Nautilus|s|gl|14|photo-var-fibonacci-nautilus.jpg
-Fibonacci Gioconda|s|gl|18|photo-var-fibonacci-gioconda.jpg
+Fibonacci Nautilus|s|gl|14
+Fibonacci Gioconda|s|gl|18
 Fibonacci Aureus|s|gl|13|photo-var-fibonacci-aureus.jpg
 Elba|s||14|photo-var-elba.jpg
 Creta|s||13|photo-var-creta.jpg
 Cream Flow|s|gl|4|photo-var-cream-flow.jpg
 Constellation|s|gl|14|photo-var-constellation.jpg
-Candy Jewel|s||14|photo-var-candy-jewel.jpg
+Candy Jewel|s||14
 B.S Volans|s||13|photo-var-b-s-volans.jpg
-B.S Vela|s||14|photo-var-b-s-vela.jpg
+B.S Vela|s||14
 B.S Taurus|s||12|photo-var-b-s-taurus.jpg
 B.S Scorpio|s||14|photo-var-b-s-scorpio.jpg
 B.S Sagitta|s||8|photo-var-b-s-sagitta.jpg
-B.S Cygnus|s||14|photo-var-b-s-cygnus.jpg
+B.S Cygnus|s||14
 B.S Cassiopeia|s||15|photo-var-b-s-cassiopeia.jpg
-B.S Bonbon|s||14|photo-var-b-s-bonbon.jpg
+B.S Bonbon|s||14
 B.S Aries|s||16|photo-var-b-s-aries.jpg
-B.S Leo|s||18|photo-var-b-s-leo.jpg
+B.S Leo|s||18
 B.S Capricorn|s||13|photo-var-b-s-capricorn.jpg
 Bright Sensation|s||12|photo-var-bright-sensation.jpg
 Boomie Gardens|s|gl|14|photo-var-boomie-gardens.jpg
 Boomerang|s|gl|14|photo-var-boomerang.jpg
 Blue Moon|s||8|photo-var-blue-moon.jpg
-Big Dipper|s||14|photo-var-big-dipper.jpg
-Bellalinda Cerise|s||7|photo-var-bellalinda-cerise.jpg
+Big Dipper|s||14
+Bellalinda Cerise|s||7
 Be True|s|gl|14|photo-var-be-true.jpg
 Be Strong|s|gl|4|photo-var-be-strong.jpg
-Be Loyal|s|gl|4|photo-var-be-loyal.jpg
+Be Loyal|s|gl|4
 Be Loving|s|gl|14|photo-var-be-loving.jpg
 Be Gracious|s|gl|7|photo-var-be-gracious.jpg
 Be Generous|s|gl|4|photo-var-be-generous.jpg
-Arctic Flow|s|gl|17|photo-var-arctic-flow.jpg
+Arctic Flow|s|gl|17
 Flow Pink|s|gl|14|photo-var-flow-pink.jpg
 Baby Flow|s|gl|14|photo-var-baby-flow.jpg
-Apricot Jewel|s||13|photo-var-apricot-jewel.jpg
-Hashtag Treasure|s|hs|16|photo-var-hashtag-treasure.jpg
-Hashtag Pink|s|hs|14|photo-var-hashtag-pink.jpg
-Hashtag Paradise|s|hs|18|photo-var-hashtag-paradise.jpg
-Hashtag Light Pink|s|hs|14|photo-var-hashtag-light-pink.jpg
+Apricot Jewel|s||13
+Hashtag Treasure|s|hs|16
+Hashtag Pink|s|hs|14
+Hashtag Paradise|s|hs|18
+Hashtag Light Pink|s|hs|14
 Hashtag Hot Pink|s|hs|7|photo-var-hashtag-hot-pink.jpg
-Exotix Mint|g||6|photo-var-exotix-mint.jpg
+Exotix Mint|g||6
 Sweet Beat|r||14|photo-var-sweet-beat.jpg
 Wildcat|r||0|photo-var-wildcat.jpg
 White Shimmer|r||17|photo-var-white-shimmer.jpg
-Violet Hill|r||8|photo-var-violet-hill.jpg
+Violet Hill|r||8
 Vendela|r||4|photo-var-vendela.jpg
 V.I. Pink|r||7|photo-var-v-i-pink.jpg
 Twilight|r||12|photo-var-twilight.jpg
@@ -294,7 +294,7 @@ Rosita Vendela|r||14|photo-var-rosita-vendela.jpg
 Roseberry|r||7|photo-var-roseberry.jpg
 Rhoslyn|r||14|photo-var-rhoslyn.jpg
 Redvolution|r||16|photo-var-redvolution.jpg
-Rediant|r||16|photo-var-rediant.jpg
+Rediant|r||16
 Red Panther|r||16|photo-var-red-panther.jpg
 Quicksand|r||4|photo-var-quicksand.jpg
 Queen Berry|r||7|photo-var-queen-berry.jpg
@@ -314,7 +314,7 @@ Orange Crush|r||12|photo-var-orange-crush.jpg
 Opala|r||14|photo-var-opala.jpg
 Ocean Song|r||8|photo-var-ocean-song.jpg
 Nina|r||12|photo-var-nina.jpg
-Nexus|r||12|photo-var-nexus.jpg
+Nexus|r||12
 New Face|r||12|photo-var-new-face.jpg
 Nena|r||14|photo-var-nena.jpg
 Nectarine|r||13|photo-var-nectarine.jpg
@@ -324,24 +324,24 @@ Moody Blues|r||8|photo-var-moody-blues.jpg
 Mondial|r||17|photo-var-mondial.jpg
 Momentum|r||18|photo-var-momentum.jpg
 Miss Piggy|r||14|photo-var-miss-piggy.jpg
-Mandala|r||14|photo-var-mandala.jpg
+Mandala|r||14
 Mamma Mia|r||16|photo-var-mamma-mia.jpg
 Magic Times|r||0|photo-var-magic-times.jpg
 Lola|r||7|photo-var-lola.jpg
 Lighthouse|r||18|photo-var-lighthouse.jpg
 Kahala|r||0|photo-var-kahala.jpg
-Joy|r||12|photo-var-joy.jpg
+Joy|r||12
 Jet Set|r||14|photo-var-jet-set.jpg
 Jessika|r||14|photo-var-jessika.jpg
 Hotspot|r||7|photo-var-hotspot.jpg
-Hot Explorer|r||7|photo-var-hot-explorer.jpg
+Hot Explorer|r||7
 Highlight|r||17|photo-var-highlight.jpg
 High & Yellow Magic|r||18|photo-var-high-yellow-magic.jpg
 High & Magic|r||0|photo-var-high-magic.jpg
 Hard Rock|r||14|photo-var-hard-rock.jpg
-Green Romance|r||6|photo-var-green-romance.jpg
+Green Romance|r||6
 Grace Kelly|r||7|photo-var-grace-kelly.jpg
-Govinda|r||8|photo-var-govinda.jpg
+Govinda|r||8
 Gotcha|r||7|photo-var-gotcha.jpg
 Goldfinch|r||18|photo-var-goldfinch.jpg
 Geraldine|r||14|photo-var-geraldine.jpg
@@ -362,13 +362,13 @@ Encanto|r||12|photo-var-encanto.jpg
 Deep Purple|r||8|photo-var-deep-purple.jpg
 Crème de la crème|r||4|photo-var-cr-me-de-la-cr-me.jpg
 Coral Reef|r||13|photo-var-coral-reef.jpg
-Cool Water|r||8|photo-var-cool-water.jpg
+Cool Water|r||8
 Cool Down|r||8|photo-var-cool-down.jpg
 Cherry Brandy|r||0|photo-var-cherry-brandy.jpg
 Carnelian|r||12|photo-var-carnelian.jpg
-Candlelight|r||17|photo-var-candlelight.jpg
+Candlelight|r||17
 Cancun|r||18|photo-var-cancun.jpg
-Cabaret|r||0|photo-var-cabaret.jpg
+Cabaret|r||0
 Bumblebee|r||18|photo-var-bumblebee.jpg
 Bromo|r||12|photo-var-bromo.jpg
 Born Beauty|r||7|photo-var-born-beauty.jpg
@@ -383,18 +383,18 @@ Absolut in Pink|r||14|photo-var-absolut-in-pink.jpg
 White O’hara|g||17|photo-var-white-o-hara.jpg
 Vicky Gardens|g||4|photo-var-vicky-gardens.jpg
 Veggie|g||6|photo-var-veggie.jpg
-Tip Top|g||13|photo-var-tip-top.jpg
+Tip Top|g||13
 Tie-Dye|g||13|photo-var-tie-dye.jpg
 Sunset X-Pression|g||0|photo-var-sunset-x-pression.jpg
 Scandal|g||8|photo-var-scandal.jpg
 Queen’s Crown|g||8|photo-var-queen-s-crown.jpg
-Purple Crown|g||8|photo-var-purple-crown.jpg
+Purple Crown|g||8
 Princess Crown|g||13|photo-var-princess-crown.jpg
 Pink X-Pression|g||14|photo-var-pink-x-pression.jpg
 Peonikiss|g||14|photo-var-peonikiss.jpg
 Newsflash|r||0|photo-var-newsflash.jpg
-Moonstone|g||4|photo-var-moonstone.jpg
-Melon X-Pression|g||13|photo-var-melon-x-pression.jpg
+Moonstone|g||4
+Melon X-Pression|g||13
 Mayra’s Peach|g||13|photo-var-mayra-s-peach.jpg
 Mayra’s Hot Pink|g||7|photo-var-mayra-s-hot-pink.jpg
 Mandarin X-Pression|g||13|photo-var-mandarin-x-pression.jpg
@@ -402,7 +402,7 @@ Limonada|g||6|photo-var-limonada.jpg
 Kings Cross|g||12|photo-var-kings-cross.jpg
 Journey|g||6|photo-var-journey.jpg
 Hearts|g||16|photo-var-hearts.jpg
-Garden Spirit|g||4|photo-var-garden-spirit.jpg
+Garden Spirit|g||4
 Fatima Gardens|g||4|photo-var-fatima-gardens.jpg
 Dynamic|g||4|photo-var-dynamic.jpg
 Dragonfly|g||12|photo-var-dragonfly.jpg
@@ -413,7 +413,7 @@ Country Home|g||13|photo-var-country-home.jpg
 Country Candy|g||0|photo-var-country-candy.jpg
 Country Blues|g||8|photo-var-country-blues.jpg
 Cotton X-Pression|g||4|photo-var-cotton-x-pression.jpg
-Candy X-Pression|g||14|photo-var-candy-x-pression.jpg
+Candy X-Pression|g||14
 Aurora Gardens|g||4|photo-var-aurora-gardens.jpg
 Apple Jack|g||0|photo-var-apple-jack.jpg
 Antonia Gardens|g||4|photo-var-antonia-gardens.jpg
