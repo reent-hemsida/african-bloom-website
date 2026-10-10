@@ -56,7 +56,7 @@ AB.addStrings({
     a_vg_now: 'Currently in the database: {n} varieties with a price group.', a_vg_replace: 'Replace links',
     a_preview: 'File checked: {n} valid rows.', a_errors: 'Problems found — nothing was changed:', a_done: 'Saved: {n} rows.',
     a_search: 'Search…', a_only_missing: 'Only varieties without price group', a_save: 'Save changes', a_unsaved: '{n} unsaved change(s).',
-    a_group_none: '— price on request —', a_cat_all: 'All categories',
+    a_group_none: '— price on request —', a_group_own: 'Own prices (this variety only)', a_cat_all: 'All categories',
     a_vat: 'VAT rate (%)', a_vat_help: 'Used to show and store totals including VAT. 25 = 25 %.', a_min: 'Minimum order, total stems per order', a_min_help: 'Orders below this number of stems are rejected. 0 = no minimum.', a_saved: 'Saved.'
   },
   sv: {
@@ -74,7 +74,7 @@ AB.addStrings({
     a_vg_now: 'Just nu i databasen: {n} sorter med prisgrupp.', a_vg_replace: 'Ersätt kopplingar',
     a_preview: 'Filen är kontrollerad: {n} giltiga rader.', a_errors: 'Problem hittades — inget har ändrats:', a_done: 'Sparat: {n} rader.',
     a_search: 'Sök…', a_only_missing: 'Bara sorter utan prisgrupp', a_save: 'Spara ändringar', a_unsaved: '{n} osparad(e) ändring(ar).',
-    a_group_none: '— pris på förfrågan —', a_cat_all: 'Alla kategorier',
+    a_group_none: '— pris på förfrågan —', a_group_own: 'Egna priser (bara denna sort)', a_cat_all: 'Alla kategorier',
     a_vat: 'Momssats (%)', a_vat_help: 'Används för att visa och spara summor inklusive moms. 25 = 25 %.', a_min: 'Minsta order, totalt antal stjälkar per order', a_min_help: 'Ordrar under detta antal stjälkar avvisas. 0 = ingen miniminivå.', a_saved: 'Sparat.'
   }
 });
@@ -201,13 +201,15 @@ AB.addStrings({
   });
 
   /* ---------- prices (CSV import) ---------- */
+  function okGroup(g) { return AB.groups.indexOf(g) >= 0 || /^v:.{1,120}$/.test(g); }
+  function normGroup(g) { g = (g || '').trim(); return /^v:/i.test(g) ? 'v:' + g.slice(2) : g.toLowerCase(); }
   function checkPrices(rows) {
     var errs = [], out = [], seen = {};
     rows.forEach(function (r, i) {
-      var n = i + 2, g = (r.price_group || '').toLowerCase(), h = (r.head_size || 'standard').toLowerCase();
+      var n = i + 2, g = normGroup(r.price_group), h = (r.head_size || 'standard').toLowerCase();
       var len = parseInt(r.length_cm, 10), tier = parseInt(r.tier_qty, 10), ex = parseFloat(String(r.price_ex_vat).replace(',', '.')), inc = parseFloat(String(r.price_inc_vat).replace(',', '.'));
       var k = [g, h, len, tier].join('|');
-      if (AB.groups.indexOf(g) < 0) errs.push('Row ' + n + ': unknown price_group “' + g + '”');
+      if (!okGroup(g)) errs.push('Row ' + n + ': unknown price_group “' + g + '”');
       else if (AB.heads.indexOf(h) < 0) errs.push('Row ' + n + ': unknown head_size “' + h + '”');
       else if (!(len >= 10 && len <= 150)) errs.push('Row ' + n + ': bad length_cm');
       else if (!(tier > 0)) errs.push('Row ' + n + ': bad tier_qty');
@@ -221,9 +223,9 @@ AB.addStrings({
   function checkGroups(rows) {
     var errs = [], out = [], seen = {};
     rows.forEach(function (r, i) {
-      var n = i + 2, v = (r.variety || '').trim(), g = (r.price_group || '').trim().toLowerCase();
+      var n = i + 2, v = (r.variety || '').trim(), g = normGroup(r.price_group);
       if (!v) errs.push('Row ' + n + ': empty variety');
-      else if (AB.groups.indexOf(g) < 0) errs.push('Row ' + n + ': unknown price_group “' + g + '”');
+      else if (!okGroup(g)) errs.push('Row ' + n + ': unknown price_group “' + g + '”');
       else if (seen[v]) errs.push('Row ' + n + ': duplicate variety ' + v);
       else { seen[v] = 1; out.push({ variety: v, price_group: g }); }
     });
@@ -288,7 +290,8 @@ AB.addStrings({
         if (++n > 300) return;
         html += '<tr><td style="width:56px;"><img src="' + esc(v.photo) + '" alt="" width="48" height="48" loading="lazy" style="object-fit:cover;"></td><td><b>' + esc(v.name) + '</b><br><span class="sh-muted">' + esc(AB.catLabel(v.cat)) + (v.colour >= 0 ? ' · ' + esc(AB.colourLabel(v.colour)) : '') + '</span></td>' +
           '<td><select class="sh-in" style="margin:0;" data-v="' + esc(v.name) + '"><option value="">' + esc(t('a_group_none')) + '</option>' +
-          AB.groups.map(function (g) { return '<option value="' + g + '"' + (cur(v.name) === g ? ' selected' : '') + '>' + esc(GROUP_LABEL[g]) + '</option>'; }).join('') + '</select></td></tr>';
+          AB.groups.map(function (g) { return '<option value="' + g + '"' + (cur(v.name) === g ? ' selected' : '') + '>' + esc(GROUP_LABEL[g]) + '</option>'; }).join('') +
+          (/^v:/.test(cur(v.name)) ? '<option value="' + esc(cur(v.name)) + '" selected>' + esc(t('a_group_own')) + '</option>' : '') + '</select></td></tr>';
       });
       $('vbody').innerHTML = html || '<tr><td>' + esc(t('a_none')) + '</td></tr>';
       $('vstat').textContent = Object.keys(vgEdits).length ? t('a_unsaved', { n: Object.keys(vgEdits).length }) : '';

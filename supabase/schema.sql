@@ -81,6 +81,14 @@ create table if not exists public.order_items (
   line_inc_vat  numeric(12,2)
 );
 
+-- Price groups: the eight shared groups, or an own price list for one variety named 'v:<variety>'.
+alter table public.price_rows drop constraint if exists price_rows_price_group_check;
+alter table public.price_rows add constraint price_rows_price_group_check
+  check (price_group in ('red','white','pink','yellow','orange','peach','spray','special_spray') or price_group like 'v:%');
+alter table public.variety_groups drop constraint if exists variety_groups_price_group_check;
+alter table public.variety_groups add constraint variety_groups_price_group_check
+  check (price_group in ('red','white','pink','yellow','orange','peach','spray','special_spray') or price_group like 'v:%');
+
 create index if not exists orders_user_idx on public.orders(user_id, created_at desc);
 create index if not exists order_items_order_idx on public.order_items(order_id);
 
