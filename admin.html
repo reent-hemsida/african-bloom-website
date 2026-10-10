@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin — Africane Bloom</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B9%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
+<link rel="stylesheet" href="shop.css">
+</head>
+<body>
+<div id="sh-header"></div>
+
+<main class="sh-main">
+  <section id="v-loading"><p data-i18n="c_loading">Loading…</p></section>
+  <section id="v-denied" hidden>
+    <h1>Admin</h1>
+    <div class="sh-banner err" style="margin-top:24px;" id="denied-msg"></div>
+    <p><a class="btn" href="login.html" data-i18n="c_login"></a></p>
+  </section>
+
+  <section id="v-admin" hidden>
+    <h1>Admin</h1>
+    <div class="sh-tabs" style="margin-top:22px;" id="tabs">
+      <button type="button" data-tab="customers" class="on"><span data-i18n="a_customers"></span><span class="cnt" id="cnt-pending" hidden></span></button>
+      <button type="button" data-tab="orders"><span data-i18n="a_orders"></span><span class="cnt" id="cnt-new" hidden></span></button>
+      <button type="button" data-tab="prices" data-i18n="a_prices"></button>
+      <button type="button" data-tab="varieties" data-i18n="a_varieties"></button>
+      <button type="button" data-tab="settings" data-i18n="a_settings"></button>
+    </div>
+    <div id="msg"></div>
+    <div id="pane"></div>
+  </section>
+</main>
+
+<div id="sh-footer"></div>
+
+<script src="varieties-data.js"></script>
+<script src="shop-config.js"></script>
+<script src="shop-core.js"></script>
+<script>
+AB.addStrings({
+  en: {
+    a_customers: 'Customers', a_orders: 'Orders', a_prices: 'Price list', a_varieties: 'Varieties → price group', a_settings: 'Settings',
+    a_denied: 'You need to log in with an admin account to see this page.', a_denied_off: 'The webshop is not configured yet.',
+    a_pending: 'Awaiting approval', a_all: 'All customers', a_none: 'Nothing here.',
+    a_col_date: 'Registered', a_col_company: 'Company', a_col_contact: 'Contact', a_col_status: 'Status', a_col_actions: 'Actions',
+    a_approve: 'Approve', a_reject: 'Reject', a_revoke: 'Block', a_mail: 'E-mail customer',
+    a_status_pending: 'Pending', a_status_approved: 'Approved', a_status_rejected: 'Rejected',
+    a_order_new: 'Received', a_order_confirmed: 'Confirmed', a_order_cancelled: 'Cancelled', a_unpriced: 'on request',
+    a_customer: 'Customer', a_export: 'Export all order lines (CSV)', a_lines: 'Lines',
+    a_prices_help: 'Upload the price list as CSV with the columns: price_group, head_size, length_cm, tier_qty, price_ex_vat, price_inc_vat. Uploading REPLACES the whole price list.',
+    a_prices_now: 'Currently in the database: {n} price rows.', a_choose: 'Choose CSV file', a_replace: 'Replace price list',
+    a_vg_help: 'Upload a CSV with the columns: variety, price_group. Uploading REPLACES all variety-to-price-group links. You can also set groups one by one under “Varieties → price group”.',
+    a_vg_now: 'Currently in the database: {n} varieties with a price group.', a_vg_replace: 'Replace links',
+    a_preview: 'File checked: {n} valid rows.', a_errors: 'Problems found — nothing was changed:', a_done: 'Saved: {n} rows.',
+    a_search: 'Search…', a_only_missing: 'Only varieties without price group', a_save: 'Save changes', a_unsaved: '{n} unsaved change(s).',
+    a_group_none: '— price on request —', a_cat_all: 'All categories',
+    a_min: 'Minimum order, total stems per order', a_min_help: 'Orders below this number of stems are rejected. 0 = no minimum.', a_saved: 'Saved.'
+  },
+  sv: {
+    a_customers: 'Kunder', a_orders: 'Ordrar', a_prices: 'Prislista', a_varieties: 'Sorter → prisgrupp', a_settings: 'Inställningar',
+    a_denied: 'Du måste logga in med ett adminkonto för att se den här sidan.', a_denied_off: 'Webbshopen är inte konfigurerad ännu.',
+    a_pending: 'Väntar på godkännande', a_all: 'Alla kunder', a_none: 'Inget här.',
+    a_col_date: 'Registrerad', a_col_company: 'Företag', a_col_contact: 'Kontakt', a_col_status: 'Status', a_col_actions: 'Åtgärder',
+    a_approve: 'Godkänn', a_reject: 'Avslå', a_revoke: 'Spärra', a_mail: 'Mejla kunden',
+    a_status_pending: 'Väntar', a_status_approved: 'Godkänd', a_status_rejected: 'Avslagen',
+    a_order_new: 'Mottagen', a_order_confirmed: 'Bekräftad', a_order_cancelled: 'Avbruten', a_unpriced: 'på förfrågan',
+    a_customer: 'Kund', a_export: 'Exportera alla orderrader (CSV)', a_lines: 'Rader',
+    a_prices_help: 'Ladda upp prislistan som CSV med kolumnerna: price_group, head_size, length_cm, tier_qty, price_ex_vat, price_inc_vat. Uppladdningen ERSÄTTER hela prislistan.',
+    a_prices_now: 'Just nu i databasen: {n} prisrader.', a_choose: 'Välj CSV-fil', a_replace: 'Ersätt prislistan',
+    a_vg_help: 'Ladda upp en CSV med kolumnerna: variety, price_group. Uppladdningen ERSÄTTER alla kopplingar mellan sort och prisgrupp. Du kan också sätta grupp en och en under ”Sorter → prisgrupp”.',
+    a_vg_now: 'Just nu i databasen: {n} sorter med prisgrupp.', a_vg_replace: 'Ersätt kopplingar',
+    a_preview: 'Filen är kontrollerad: {n} giltiga rader.', a_errors: 'Problem hittades — inget har ändrats:', a_done: 'Sparat: {n} rader.',
+    a_search: 'Sök…', a_only_missing: 'Bara sorter utan prisgrupp', a_save: 'Spara ändringar', a_unsaved: '{n} osparad(e) ändring(ar).',
+    a_group_none: '— pris på förfrågan —', a_cat_all: 'Alla kategorier',
+    a_min: 'Minsta order, totalt antal stjälkar per order', a_min_help: 'Ordrar under detta antal stjälkar avvisas. 0 = ingen miniminivå.', a_saved: 'Sparat.'
+  }
+});
+
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var t = AB.t, esc = AB.esc;
+  var GROUP_LABEL = { red: 'Red rose', white: 'White rose', pink: 'Pink rose', yellow: 'Yellow rose', orange: 'Orange rose', peach: 'Peach/cream rose', spray: 'Spray rose', special_spray: 'Special spray rose' };
+  var tab = 'customers';
+  var data = { profiles: [], orders: [], cat: null };
+  var vgEdits = {}, vgFilter = { q: '', cat: 'r', missing: true };
+
+  function show(id) { ['v-loading', 'v-denied', 'v-admin'].forEach(function (s) { $(s).hidden = s !== id; }); }
+  function banner(kind, html) { $('msg').innerHTML = html ? '<div class="sh-banner ' + kind + '">' + html + '</div>' : ''; }
+  function fail(e) { banner('err', esc(t('c_error')) + (e && e.extra ? ' (' + esc(e.extra) + ')' : '')); }
+
+  AB.active = 'admin.html';
+  AB.init().then(function () {
+    AB.renderShell('admin.html');
+    if (AB.mode === 'off') { $('denied-msg').textContent = t('a_denied_off'); show('v-denied'); return; }
+    if (!AB.user || !AB.profile || !AB.profile.is_admin) { $('denied-msg').textContent = t('a_denied'); show('v-denied'); return; }
+    show('v-admin');
+    return reload().then(function () { render(); });
+  }).catch(function (e) { $('denied-msg').textContent = t('c_error'); show('v-denied'); });
+
+  AB.onLang(function () { if (!$('v-admin').hidden) render(); });
+
+  function reload() {
+    return Promise.all([AB.backend.listProfiles(), AB.backend.listOrders(), AB.backend.catalog()]).then(function (r) {
+      data.profiles = r[0]; data.orders = r[1]; data.cat = r[2];
+    });
+  }
+
+  $('tabs').addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-tab]'); if (!b) return;
+    tab = b.getAttribute('data-tab'); banner('', ''); render();
+  });
+
+  function render() {
+    document.querySelectorAll('#tabs button').forEach(function (b) { b.classList.toggle('on', b.getAttribute('data-tab') === tab); });
+    var np = data.profiles.filter(function (p) { return p.status === 'pending'; }).length;
+    var no = data.orders.filter(function (o) { return o.status === 'new'; }).length;
+    $('cnt-pending').hidden = !np; $('cnt-pending').textContent = np;
+    $('cnt-new').hidden = !no; $('cnt-new').textContent = no;
+    ({ customers: renderCustomers, orders: renderOrders, prices: renderPrices, varieties: renderVarieties, settings: renderSettings })[tab]();
+  }
+
+  /* ---------- customers ---------- */
+  function mailto(p) {
+    var useLang = p.lang === 'sv' ? 'sv' : 'en'; // e-mail template exists in sv and en
+    var subj = ({ en: 'Your Africane Bloom account is approved', sv: 'Ditt konto hos Africane Bloom är godkänt' })[useLang];
+    var tpl = ({
+      en: 'Hello ' + p.contact_name + ',\n\nYour customer account at africane.se is now approved. Log in at https://www.africane.se/login.html to see prices and send order requests.\n\nBest regards,\nAfricane Bloom',
+      sv: 'Hej ' + p.contact_name + ',\n\nDitt kundkonto på africane.se är nu godkänt. Logga in på https://www.africane.se/login.html för att se priser och skicka orderförfrågningar.\n\nVänliga hälsningar,\nAfricane Bloom'
+    })[useLang];
+    return 'mailto:' + encodeURIComponent(p.email) + '?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(tpl);
+  }
+  function renderCustomers() {
+    var list = data.profiles.slice().sort(function (a, b) {
+      var ap = a.status === 'pending' ? 0 : 1, bp = b.status === 'pending' ? 0 : 1;
+      return ap - bp || (a.created_at < b.created_at ? 1 : -1);
+    });
+    if (!list.length) { $('pane').innerHTML = '<p>' + esc(t('a_none')) + '</p>'; return; }
+    $('pane').innerHTML = '<div class="sh-scroll"><table class="sh-table"><thead><tr><th>' + esc(t('a_col_date')) + '</th><th>' + esc(t('a_col_company')) + '</th><th>' + esc(t('a_col_contact')) +
+      '</th><th>' + esc(t('a_col_status')) + '</th><th>' + esc(t('a_col_actions')) + '</th></tr></thead><tbody>' +
+      list.map(function (p) {
+        var acts = '';
+        if (p.status !== 'approved') acts += '<button class="btn small" data-act="approved" data-id="' + esc(p.id) + '">' + esc(t('a_approve')) + '</button>';
+        if (p.status === 'pending') acts += '<button class="btn small ghost" data-act="rejected" data-id="' + esc(p.id) + '">' + esc(t('a_reject')) + '</button>';
+        if (p.status === 'approved' && !p.is_admin) acts += '<button class="btn small ghost" data-act="rejected" data-id="' + esc(p.id) + '">' + esc(t('a_revoke')) + '</button>';
+        if (p.status === 'approved') acts += '<a class="btn small ghost" href="' + esc(mailto(p)) + '">' + esc(t('a_mail')) + '</a>';
+        return '<tr><td>' + esc(AB.fmtDate(p.created_at)) + '</td><td><b>' + esc(p.company) + '</b><br><span class="sh-muted">' + esc(p.country || '') + (p.vat_no ? ' · ' + esc(p.vat_no) : '') + '</span></td>' +
+          '<td>' + esc(p.contact_name) + '<br><span class="sh-muted">' + esc(p.email) + (p.phone ? ' · ' + esc(p.phone) : '') + '</span></td>' +
+          '<td><span class="pill ' + esc(p.status) + '">' + esc(t('a_status_' + p.status)) + '</span>' + (p.is_admin ? ' <span class="pill">admin</span>' : '') + '</td>' +
+          '<td><div class="sh-actions">' + acts + '</div></td></tr>';
+      }).join('') + '</tbody></table></div>';
+  }
+  $('pane').addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-act]');
+    if (!b) return;
+    b.disabled = true;
+    AB.backend.setProfileStatus(b.getAttribute('data-id'), b.getAttribute('data-act')).then(reload).then(render).catch(fail);
+  });
+
+  /* ---------- orders ---------- */
+  function profileOf(uid) { return data.profiles.filter(function (p) { return p.id === uid; })[0] || {}; }
+  function renderOrders() {
+    if (!data.orders.length) { $('pane').innerHTML = '<p>' + esc(t('a_none')) + '</p>'; return; }
+    $('pane').innerHTML = '<p><button class="btn small ghost" id="exp">' + esc(t('a_export')) + '</button></p>' +
+      data.orders.map(function (o) {
+        var p = profileOf(o.user_id), items = o.order_items || [];
+        return '<details class="sh-order"><summary><b>#' + esc(o.order_no) + '</b><span>' + esc(p.company || '?') + '</span><span class="sh-muted">' + esc(AB.fmtDate(o.created_at)) + '</span>' +
+          '<span class="pill ' + esc(o.status) + '">' + esc(t('a_order_' + o.status)) + '</span>' +
+          '<span style="margin-left:auto;">SEK ' + esc(AB.fmt(o.total_ex_vat)) + (o.unpriced_lines ? ' <span class="sh-muted">+ ' + esc(o.unpriced_lines) + ' ' + esc(t('a_unpriced')) + '</span>' : '') + '</span></summary><div>' +
+          '<p class="sh-muted">' + esc(p.contact_name || '') + ' · ' + esc(p.email || '') + (p.phone ? ' · ' + esc(p.phone) : '') + '</p>' +
+          '<div class="sh-scroll"><table class="sh-table"><thead><tr><th>' + esc(t('a_lines')) + '</th><th class="num">cm</th><th class="num">Qty</th><th class="num">SEK/stem</th><th class="num">SEK</th></tr></thead><tbody>' +
+          items.map(function (it) {
+            return '<tr><td>' + esc(it.variety) + (it.head_size !== 'standard' ? ' <span class="sh-muted">· ' + esc(it.head_size) + '</span>' : '') + '</td><td class="num">' + esc(it.length_cm) + '</td><td class="num">' + esc(AB.fmtInt(it.qty)) +
+              '</td><td class="num">' + (it.unit_ex_vat === null ? '–' : esc(AB.fmt(it.unit_ex_vat))) + '</td><td class="num">' + (it.line_ex_vat === null ? esc(t('a_unpriced')) : esc(AB.fmt(it.line_ex_vat))) + '</td></tr>';
+          }).join('') + '</tbody></table></div>' +
+          (o.note ? '<p class="sh-pre">' + esc(o.note) + '</p>' : '') + (o.delivery_note ? '<p class="sh-pre">' + esc(o.delivery_note) + '</p>' : '') +
+          '<p><select class="sh-in" style="width:auto;" data-oid="' + esc(o.id) + '">' + ['new', 'confirmed', 'cancelled'].map(function (s) {
+            return '<option value="' + s + '"' + (o.status === s ? ' selected' : '') + '>' + esc(t('a_order_' + s)) + '</option>';
+          }).join('') + '</select></p></div></details>';
+      }).join('');
+    $('exp').onclick = function () {
+      var rows = [];
+      data.orders.forEach(function (o) {
+        var p = profileOf(o.user_id);
+        (o.order_items || []).forEach(function (it) {
+          rows.push({ order_no: o.order_no, date: o.created_at, status: o.status, company: p.company, email: p.email, variety: it.variety, head_size: it.head_size, length_cm: it.length_cm, qty: it.qty, unit_ex_vat: it.unit_ex_vat, line_ex_vat: it.line_ex_vat });
+        });
+      });
+      var csv = AB.toCSV(rows, ['order_no', 'date', 'status', 'company', 'email', 'variety', 'head_size', 'length_cm', 'qty', 'unit_ex_vat', 'line_ex_vat']);
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob(['﻿' + csv], { type: 'text/csv;charset=utf-8' }));
+      a.download = 'africane-orders.csv'; document.body.appendChild(a); a.click(); a.remove();
+    };
+  }
+  $('pane').addEventListener('change', function (e) {
+    var oid = e.target.getAttribute && e.target.getAttribute('data-oid');
+    if (!oid) return;
+    AB.backend.setOrderStatus(oid, e.target.value).then(reload).then(function () { render(); }).catch(fail);
+  });
+
+  /* ---------- prices (CSV import) ---------- */
+  function checkPrices(rows) {
+    var errs = [], out = [], seen = {};
+    rows.forEach(function (r, i) {
+      var n = i + 2, g = (r.price_group || '').toLowerCase(), h = (r.head_size || 'standard').toLowerCase();
+      var len = parseInt(r.length_cm, 10), tier = parseInt(r.tier_qty, 10), ex = parseFloat(String(r.price_ex_vat).replace(',', '.')), inc = parseFloat(String(r.price_inc_vat).replace(',', '.'));
+      var k = [g, h, len, tier].join('|');
+      if (AB.groups.indexOf(g) < 0) errs.push('Row ' + n + ': unknown price_group “' + g + '”');
+      else if (AB.heads.indexOf(h) < 0) errs.push('Row ' + n + ': unknown head_size “' + h + '”');
+      else if (!(len >= 10 && len <= 150)) errs.push('Row ' + n + ': bad length_cm');
+      else if (!(tier > 0)) errs.push('Row ' + n + ': bad tier_qty');
+      else if (!(ex >= 0) || !(inc >= 0)) errs.push('Row ' + n + ': bad price');
+      else if (seen[k]) errs.push('Row ' + n + ': duplicate ' + k);
+      else { seen[k] = 1; out.push({ price_group: g, head_size: h, length_cm: len, tier_qty: tier, price_ex_vat: ex, price_inc_vat: inc }); }
+    });
+    if (!rows.length) errs.push('The file has no data rows.');
+    return { rows: out, errors: errs };
+  }
+  function checkGroups(rows) {
+    var errs = [], out = [], seen = {};
+    rows.forEach(function (r, i) {
+      var n = i + 2, v = (r.variety || '').trim(), g = (r.price_group || '').trim().toLowerCase();
+      if (!v) errs.push('Row ' + n + ': empty variety');
+      else if (AB.groups.indexOf(g) < 0) errs.push('Row ' + n + ': unknown price_group “' + g + '”');
+      else if (seen[v]) errs.push('Row ' + n + ': duplicate variety ' + v);
+      else { seen[v] = 1; out.push({ variety: v, price_group: g }); }
+    });
+    if (!rows.length) errs.push('The file has no data rows.');
+    return { rows: out, errors: errs };
+  }
+  function importBlock(id, helpKey, nowText, btnKey, checker, apply) {
+    return '<div class="sh-card"><p style="margin:0;">' + esc(t(helpKey)) + '</p><p class="sh-muted">' + esc(nowText) + '</p>' +
+      '<p><input type="file" id="' + id + '-file" accept=".csv,text/csv"></p><div id="' + id + '-out"></div>' +
+      '<p><button class="btn" id="' + id + '-go" disabled>' + esc(t(btnKey)) + '</button></p></div>';
+  }
+  function wireImport(id, checker, apply) {
+    var pending = null;
+    $(id + '-file').addEventListener('change', function () {
+      var f = this.files[0]; pending = null; $(id + '-go').disabled = true; $(id + '-out').innerHTML = '';
+      if (!f) return;
+      var rd = new FileReader();
+      rd.onload = function () {
+        var res = checker(AB.parseCSV(rd.result));
+        if (res.errors.length) {
+          $(id + '-out').innerHTML = '<div class="sh-banner err"><b>' + esc(t('a_errors')) + '</b><br>' + res.errors.slice(0, 12).map(esc).join('<br>') + (res.errors.length > 12 ? '<br>…' : '') + '</div>';
+          return;
+        }
+        pending = res.rows;
+        $(id + '-out').innerHTML = '<div class="sh-banner ok">' + esc(t('a_preview', { n: res.rows.length })) + '</div>';
+        $(id + '-go').disabled = false;
+      };
+      rd.readAsText(f);
+    });
+    $(id + '-go').addEventListener('click', function () {
+      if (!pending) return;
+      this.disabled = true;
+      apply(pending).then(function (n) { return reload().then(function () { renderPrices(); banner('ok', esc(t('a_done', { n: n }))); }); }).catch(fail);
+    });
+  }
+  function renderPrices() {
+    var nGroups = Object.keys(data.cat.groups).length;
+    $('pane').innerHTML =
+      importBlock('pr', 'a_prices_help', t('a_prices_now', { n: data.cat.rows.length }), 'a_replace') +
+      importBlock('vg', 'a_vg_help', t('a_vg_now', { n: nGroups }), 'a_vg_replace');
+    wireImport('pr', checkPrices, function (rows) { return AB.backend.replacePrices(rows).then(function () { return rows.length; }); });
+    wireImport('vg', checkGroups, function (rows) { return AB.backend.replaceVarietyGroups(rows).then(function () { return rows.length; }); });
+  }
+
+  /* ---------- varieties → price group ---------- */
+  function renderVarieties() {
+    var cats = AB.catLabels();
+    $('pane').innerHTML =
+      '<div class="sh-filters sh-form"><input class="sh-in" id="vq" type="search" placeholder="' + esc(t('a_search')) + '" value="' + esc(vgFilter.q) + '" style="margin-top:0;">' +
+      '<select class="sh-in" id="vc" style="margin-top:0;"><option value="">' + esc(t('a_cat_all')) + '</option>' +
+      Object.keys(cats).map(function (k) { return '<option value="' + k + '"' + (vgFilter.cat === k ? ' selected' : '') + '>' + esc(cats[k]) + '</option>'; }).join('') + '</select></div>' +
+      '<label class="sh-check"><input type="checkbox" id="vm"' + (vgFilter.missing ? ' checked' : '') + '><span>' + esc(t('a_only_missing')) + '</span></label>' +
+      '<p><button class="btn" id="vsave">' + esc(t('a_save')) + '</button> <span class="sh-muted" id="vstat"></span></p>' +
+      '<div class="sh-scroll"><table class="sh-table"><tbody id="vbody"></tbody></table></div>';
+    function cur(name) { return vgEdits.hasOwnProperty(name) ? vgEdits[name] : (data.cat.groups[name] || ''); }
+    function list() {
+      var q = vgFilter.q.trim().toLowerCase(), n = 0, html = '';
+      AB.varieties.forEach(function (v) {
+        if (vgFilter.cat && v.cat !== vgFilter.cat) return;
+        if (q && v.name.toLowerCase().indexOf(q) < 0) return;
+        if (vgFilter.missing && cur(v.name)) return;
+        if (++n > 300) return;
+        html += '<tr><td style="width:56px;"><img src="' + esc(v.photo) + '" alt="" width="48" height="48" loading="lazy" style="object-fit:cover;"></td><td><b>' + esc(v.name) + '</b><br><span class="sh-muted">' + esc(AB.catLabel(v.cat)) + (v.colour >= 0 ? ' · ' + esc(AB.colourLabel(v.colour)) : '') + '</span></td>' +
+          '<td><select class="sh-in" style="margin:0;" data-v="' + esc(v.name) + '"><option value="">' + esc(t('a_group_none')) + '</option>' +
+          AB.groups.map(function (g) { return '<option value="' + g + '"' + (cur(v.name) === g ? ' selected' : '') + '>' + esc(GROUP_LABEL[g]) + '</option>'; }).join('') + '</select></td></tr>';
+      });
+      $('vbody').innerHTML = html || '<tr><td>' + esc(t('a_none')) + '</td></tr>';
+      $('vstat').textContent = Object.keys(vgEdits).length ? t('a_unsaved', { n: Object.keys(vgEdits).length }) : '';
+    }
+    list();
+    $('vq').addEventListener('input', function () { vgFilter.q = this.value; list(); });
+    $('vc').addEventListener('change', function () { vgFilter.cat = this.value; list(); });
+    $('vm').addEventListener('change', function () { vgFilter.missing = this.checked; list(); });
+    $('vbody').addEventListener('change', function (e) {
+      var v = e.target.getAttribute('data-v'); if (!v) return;
+      vgEdits[v] = e.target.value;
+      $('vstat').textContent = t('a_unsaved', { n: Object.keys(vgEdits).length });
+    });
+    $('vsave').addEventListener('click', function () {
+      if (!Object.keys(vgEdits).length) return;
+      var all = {};
+      Object.keys(data.cat.groups).forEach(function (k) { all[k] = data.cat.groups[k]; });
+      Object.keys(vgEdits).forEach(function (k) { if (vgEdits[k]) all[k] = vgEdits[k]; else delete all[k]; });
+      var rows = Object.keys(all).map(function (k) { return { variety: k, price_group: all[k] }; });
+      this.disabled = true;
+      AB.backend.replaceVarietyGroups(rows).then(function () { vgEdits = {}; return reload(); })
+        .then(function () { renderVarieties(); banner('ok', esc(t('a_saved'))); }).catch(fail);
+    });
+  }
+
+  /* ---------- settings ---------- */
+  function renderSettings() {
+    $('pane').innerHTML = '<form class="sh-form sh-card" id="fs"><label><span class="lbl">' + esc(t('a_min')) + '</span>' +
+      '<input type="number" min="0" step="1" name="min" value="' + esc(data.cat.settings.min_total_stems || '0') + '" style="max-width:220px;"></label>' +
+      '<p class="sh-muted">' + esc(t('a_min_help')) + '</p><p><button class="btn" type="submit">' + esc(t('a_save')) + '</button></p></form>';
+    $('fs').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var n = Math.max(0, parseInt(this.min.value, 10) || 0);
+      AB.backend.saveSetting('min_total_stems', n).then(reload).then(function () { renderSettings(); banner('ok', esc(t('a_saved'))); }).catch(fail);
+    });
+  }
+})();
+</script>
+</body>
+</html>

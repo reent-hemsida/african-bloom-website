@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customer login — Africane Bloom</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B9%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
+<link rel="stylesheet" href="shop.css">
+</head>
+<body>
+<div id="sh-header"></div>
+
+<main class="sh-main sh-narrow">
+  <h1 data-i18n="l_title">Customer login</h1>
+  <p class="sh-lead" data-i18n="l_lead"></p>
+  <div id="msg" style="margin-top:24px;"></div>
+
+  <section id="v-loading"><p data-i18n="c_loading">Loading…</p></section>
+
+  <section id="v-off" hidden>
+    <div class="sh-banner warn" data-i18n="l_off"></div>
+  </section>
+
+  <!-- not logged in -->
+  <section id="v-auth" hidden>
+    <div class="sh-tabs" role="tablist">
+      <button type="button" id="tab-login" class="on" data-i18n="l_tab_login"></button>
+      <button type="button" id="tab-reg" data-i18n="l_tab_reg"></button>
+    </div>
+
+    <form id="f-login" class="sh-form sh-card" novalidate>
+      <label><span class="lbl" data-i18n="l_email"></span><input type="email" name="email" autocomplete="username" required></label>
+      <label><span class="lbl" data-i18n="l_pw"></span><input type="password" name="password" autocomplete="current-password" required></label>
+      <p style="margin:22px 0 0;"><button class="btn" type="submit" data-i18n="l_btn_login"></button></p>
+      <p style="margin:18px 0 0; font-size:15px;"><button type="button" class="linkbtn" id="show-forgot" data-i18n="l_forgot"></button></p>
+    </form>
+
+    <form id="f-forgot" class="sh-form sh-card" novalidate hidden>
+      <label><span class="lbl" data-i18n="l_email"></span><input type="email" name="email" autocomplete="username" required></label>
+      <p style="margin:22px 0 0;"><button class="btn" type="submit" data-i18n="l_reset_btn"></button></p>
+      <p style="margin:18px 0 0; font-size:15px;"><button type="button" class="linkbtn" id="back-login" data-i18n="l_tab_login"></button></p>
+    </form>
+
+    <form id="f-reg" class="sh-form sh-card" novalidate hidden>
+      <label><span class="lbl" data-i18n="l_company"></span><input type="text" name="company" autocomplete="organization" maxlength="200" required></label>
+      <label><span class="lbl" data-i18n="l_name"></span><input type="text" name="contact_name" autocomplete="name" maxlength="200" required></label>
+      <div class="sh-row2">
+        <label><span class="lbl" data-i18n="l_phone"></span><input type="tel" name="phone" autocomplete="tel" maxlength="60"></label>
+        <label><span class="lbl" data-i18n="l_country"></span><input type="text" name="country" autocomplete="country-name" maxlength="80" required></label>
+      </div>
+      <label><span class="lbl" data-i18n="l_vat"></span><input type="text" name="vat_no" maxlength="60"></label>
+      <label><span class="lbl" data-i18n="l_email"></span><input type="email" name="email" autocomplete="email" required></label>
+      <div class="sh-row2">
+        <label><span class="lbl" data-i18n="l_pw"></span><input type="password" name="password" autocomplete="new-password" minlength="8" required></label>
+        <label><span class="lbl" data-i18n="l_pw2"></span><input type="password" name="password2" autocomplete="new-password" minlength="8" required></label>
+      </div>
+      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0;">
+      <label class="sh-check"><input type="checkbox" name="consent" required><span data-i18n-html="l_consent"></span></label>
+      <p style="margin:22px 0 0;"><button class="btn" type="submit" data-i18n="l_btn_reg"></button></p>
+    </form>
+  </section>
+
+  <!-- logged in, status pending / rejected / approved -->
+  <section id="v-status" hidden>
+    <div class="sh-card">
+      <h2 id="st-title"></h2>
+      <p id="st-text" style="margin:12px 0 0;"></p>
+      <p style="margin:22px 0 0; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="btn" id="st-go" href="shop.html" hidden data-i18n="l_go_shop"></a>
+        <a class="btn ghost" id="st-admin" href="admin.html" hidden data-i18n="c_admin"></a>
+        <button class="btn ghost" type="button" id="st-out" data-i18n="c_logout"></button>
+      </p>
+    </div>
+  </section>
+
+  <!-- arrived through a password reset e-mail -->
+  <section id="v-recovery" hidden>
+    <form id="f-newpw" class="sh-form sh-card" novalidate>
+      <h2 data-i18n="l_newpw"></h2>
+      <label><span class="lbl" data-i18n="l_newpw"></span><input type="password" name="password" autocomplete="new-password" minlength="8" required></label>
+      <label><span class="lbl" data-i18n="l_pw2"></span><input type="password" name="password2" autocomplete="new-password" minlength="8" required></label>
+      <p style="margin:22px 0 0;"><button class="btn" type="submit" data-i18n="l_newpw_btn"></button></p>
+    </form>
+  </section>
+</main>
+
+<div id="sh-footer"></div>
+
+<script src="varieties-data.js"></script>
+<script src="shop-config.js"></script>
+<script src="shop-core.js"></script>
+<script>
+AB.addStrings({
+  en: {
+    l_title: 'Customer login',
+    l_lead: 'Log in to see prices and send order requests. New customer? Register and we will approve your account.',
+    l_tab_login: 'Log in', l_tab_reg: 'Register', l_email: 'E-mail', l_pw: 'Password', l_pw2: 'Repeat password',
+    l_company: 'Company', l_name: 'Contact person', l_phone: 'Phone', l_country: 'Country', l_vat: 'VAT number (if any)',
+    l_consent: 'I have read the <a href="privacy.html" target="_blank" rel="noopener">privacy policy</a> and agree that Africane Bloom stores my details to handle my account and orders.',
+    l_btn_login: 'Log in', l_btn_reg: 'Create account', l_forgot: 'Forgot your password?', l_reset_btn: 'Send reset link',
+    l_reset_sent: 'If the address is registered with us, a link to reset the password is on its way.',
+    l_newpw: 'Choose a new password', l_newpw_btn: 'Save password', l_newpw_ok: 'Your password has been updated. You can now log in.',
+    l_reg_ok: 'Thank you! If this address is new to us, a confirmation e-mail is on its way — please click the link in it. We then review your account and approve it as soon as possible. Already registered? Log in, or use “Forgot your password?”.',
+    l_pending_title: 'Your account is awaiting approval',
+    l_pending: 'We check every new customer before prices and ordering are unlocked. Please log in again later, or contact us at info@africane.se to speed things up.',
+    l_rejected_title: 'Account not approved',
+    l_rejected: 'Your application was not approved. If you think this is a mistake, please contact info@africane.se.',
+    l_approved_title: 'You are logged in', l_approved: 'Your account is approved. You can see prices and send order requests.',
+    l_go_shop: 'Go to the webshop',
+    l_off: 'The webshop is not open yet. Please contact us at info@africane.se.',
+    l_err_creds: 'Wrong e-mail or password.', l_err_confirm: 'Please confirm your e-mail address first — check your inbox.',
+    l_err_weak: 'Please choose a password of at least 8 characters.', l_err_mismatch: 'The passwords do not match.',
+    l_err_rate: 'Too many attempts. Please wait a few minutes and try again.', l_err_req: 'Please fill in all required fields and tick the box.'
+  },
+  sv: {
+    l_title: 'Kundinloggning',
+    l_lead: 'Logga in för att se priser och skicka orderförfrågningar. Ny kund? Registrera dig så godkänner vi ditt konto.',
+    l_tab_login: 'Logga in', l_tab_reg: 'Registrera dig', l_email: 'E-post', l_pw: 'Lösenord', l_pw2: 'Upprepa lösenord',
+    l_company: 'Företag', l_name: 'Kontaktperson', l_phone: 'Telefon', l_country: 'Land', l_vat: 'Momsregistreringsnummer (om du har)',
+    l_consent: 'Jag har läst <a href="privacy.html" target="_blank" rel="noopener">integritetspolicyn</a> och godkänner att Africane Bloom lagrar mina uppgifter för att hantera mitt konto och mina beställningar.',
+    l_btn_login: 'Logga in', l_btn_reg: 'Skapa konto', l_forgot: 'Glömt lösenordet?', l_reset_btn: 'Skicka återställningslänk',
+    l_reset_sent: 'Om adressen är registrerad hos oss är en länk för att återställa lösenordet på väg.',
+    l_newpw: 'Välj ett nytt lösenord', l_newpw_btn: 'Spara lösenord', l_newpw_ok: 'Ditt lösenord är uppdaterat. Du kan nu logga in.',
+    l_reg_ok: 'Tack! Om adressen är ny hos oss är ett bekräftelsemejl på väg — klicka på länken i det. Därefter granskar vi ditt konto och godkänner det så snart som möjligt. Redan registrerad? Logga in, eller använd ”Glömt lösenordet?”.',
+    l_pending_title: 'Ditt konto väntar på godkännande',
+    l_pending: 'Vi kontrollerar varje ny kund innan priser och beställning låses upp. Logga in igen lite senare, eller kontakta oss på info@africane.se så går det snabbare.',
+    l_rejected_title: 'Kontot har inte godkänts',
+    l_rejected: 'Din ansökan har inte godkänts. Tror du att det är ett misstag, kontakta info@africane.se.',
+    l_approved_title: 'Du är inloggad', l_approved: 'Ditt konto är godkänt. Du kan se priser och skicka orderförfrågningar.',
+    l_go_shop: 'Gå till webbshopen',
+    l_off: 'Webbshopen är inte öppen ännu. Kontakta oss på info@africane.se.',
+    l_err_creds: 'Fel e-postadress eller lösenord.', l_err_confirm: 'Bekräfta först din e-postadress — kolla din inkorg.',
+    l_err_weak: 'Välj ett lösenord på minst 8 tecken.', l_err_mismatch: 'Lösenorden stämmer inte överens.',
+    l_err_rate: 'För många försök. Vänta några minuter och försök igen.', l_err_req: 'Fyll i alla obligatoriska fält och kryssa i rutan.'
+  },
+  es: {
+    l_title: 'Acceso de clientes',
+    l_lead: 'Inicie sesión para ver precios y enviar solicitudes de pedido. ¿Cliente nuevo? Regístrese y aprobaremos su cuenta.',
+    l_tab_login: 'Iniciar sesión', l_tab_reg: 'Registrarse', l_email: 'Correo electrónico', l_pw: 'Contraseña', l_pw2: 'Repetir contraseña',
+    l_company: 'Empresa', l_name: 'Persona de contacto', l_phone: 'Teléfono', l_country: 'País', l_vat: 'Número de IVA (si tiene)',
+    l_consent: 'He leído la <a href="privacy.html" target="_blank" rel="noopener">política de privacidad</a> y acepto que Africane Bloom almacene mis datos para gestionar mi cuenta y mis pedidos.',
+    l_btn_login: 'Iniciar sesión', l_btn_reg: 'Crear cuenta', l_forgot: '¿Olvidó su contraseña?', l_reset_btn: 'Enviar enlace',
+    l_reset_sent: 'Si la dirección está registrada, le llegará un enlace para restablecer la contraseña.',
+    l_newpw: 'Elija una nueva contraseña', l_newpw_btn: 'Guardar contraseña', l_newpw_ok: 'Su contraseña se ha actualizado. Ya puede iniciar sesión.',
+    l_reg_ok: '¡Gracias! Si esta dirección es nueva para nosotros, recibirá un correo de confirmación: haga clic en el enlace. Después revisaremos y aprobaremos su cuenta lo antes posible. ¿Ya está registrado? Inicie sesión o use «¿Olvidó su contraseña?».',
+    l_pending_title: 'Su cuenta está pendiente de aprobación',
+    l_pending: 'Revisamos a cada cliente nuevo antes de habilitar precios y pedidos. Vuelva a iniciar sesión más tarde o escríbanos a info@africane.se para agilizarlo.',
+    l_rejected_title: 'Cuenta no aprobada',
+    l_rejected: 'Su solicitud no fue aprobada. Si cree que es un error, escriba a info@africane.se.',
+    l_approved_title: 'Ha iniciado sesión', l_approved: 'Su cuenta está aprobada. Puede ver precios y enviar solicitudes de pedido.',
+    l_go_shop: 'Ir a la tienda',
+    l_off: 'La tienda online aún no está abierta. Escríbanos a info@africane.se.',
+    l_err_creds: 'Correo o contraseña incorrectos.', l_err_confirm: 'Confirme primero su correo electrónico: revise su bandeja de entrada.',
+    l_err_weak: 'Elija una contraseña de al menos 8 caracteres.', l_err_mismatch: 'Las contraseñas no coinciden.',
+    l_err_rate: 'Demasiados intentos. Espere unos minutos e inténtelo de nuevo.', l_err_req: 'Complete todos los campos obligatorios y marque la casilla.'
+  },
+  ru: {
+    l_title: 'Вход для клиентов',
+    l_lead: 'Войдите, чтобы видеть цены и отправлять заявки на заказ. Новый клиент? Зарегистрируйтесь, и мы подтвердим вашу учётную запись.',
+    l_tab_login: 'Войти', l_tab_reg: 'Регистрация', l_email: 'Эл. почта', l_pw: 'Пароль', l_pw2: 'Повторите пароль',
+    l_company: 'Компания', l_name: 'Контактное лицо', l_phone: 'Телефон', l_country: 'Страна', l_vat: 'Номер плательщика НДС (если есть)',
+    l_consent: 'Я ознакомился(-лась) с <a href="privacy.html" target="_blank" rel="noopener">политикой конфиденциальности</a> и согласен(-на), что Africane Bloom хранит мои данные для работы с учётной записью и заказами.',
+    l_btn_login: 'Войти', l_btn_reg: 'Создать учётную запись', l_forgot: 'Забыли пароль?', l_reset_btn: 'Отправить ссылку',
+    l_reset_sent: 'Если адрес зарегистрирован, вам отправлена ссылка для сброса пароля.',
+    l_newpw: 'Задайте новый пароль', l_newpw_btn: 'Сохранить пароль', l_newpw_ok: 'Пароль обновлён. Теперь вы можете войти.',
+    l_reg_ok: 'Спасибо! Если этого адреса у нас ещё нет, вам отправлено письмо с подтверждением — перейдите по ссылке в нём. Затем мы проверим и подтвердим вашу учётную запись как можно скорее. Уже зарегистрированы? Войдите или воспользуйтесь «Забыли пароль?».',
+    l_pending_title: 'Ваша учётная запись ожидает подтверждения',
+    l_pending: 'Мы проверяем каждого нового клиента, прежде чем открыть цены и заказ. Войдите позже ещё раз или напишите нам на info@africane.se, чтобы ускорить процесс.',
+    l_rejected_title: 'Учётная запись не подтверждена',
+    l_rejected: 'Ваша заявка не подтверждена. Если вы считаете, что это ошибка, напишите на info@africane.se.',
+    l_approved_title: 'Вы вошли в систему', l_approved: 'Ваша учётная запись подтверждена. Вы можете видеть цены и отправлять заявки на заказ.',
+    l_go_shop: 'Перейти в магазин',
+    l_off: 'Интернет-магазин ещё не открыт. Напишите нам на info@africane.se.',
+    l_err_creds: 'Неверная почта или пароль.', l_err_confirm: 'Сначала подтвердите адрес эл. почты — проверьте входящие.',
+    l_err_weak: 'Выберите пароль не короче 8 символов.', l_err_mismatch: 'Пароли не совпадают.',
+    l_err_rate: 'Слишком много попыток. Подождите несколько минут и повторите.', l_err_req: 'Заполните все обязательные поля и поставьте галочку.'
+  }
+});
+
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var msg = $('msg');
+  var secs = ['v-loading', 'v-off', 'v-auth', 'v-status', 'v-recovery'];
+  function show(id) { secs.forEach(function (s) { $(s).hidden = s !== id; }); }
+  function banner(kind, key) {
+    msg.innerHTML = key ? '<div class="sh-banner ' + kind + '">' + AB.esc(AB.t(key)) + '</div>' : '';
+    msg.setAttribute('data-key', key || ''); msg.setAttribute('data-kind', kind || '');
+  }
+  AB.onLang(function () { var k = msg.getAttribute('data-key'); if (k) banner(msg.getAttribute('data-kind'), k); renderStatus(); });
+  function errKey(e) {
+    return { invalid_credentials: 'l_err_creds', email_not_confirmed: 'l_err_confirm', weak_password: 'l_err_weak', rate_limit: 'l_err_rate' }[e && e.code] || 'c_error';
+  }
+  function nextUrl() {
+    var m = /[?&]next=([a-z\-]+\.html)\b/.exec(location.search);
+    return m ? m[1] : 'shop.html';
+  }
+  function busy(form, on) { form.querySelectorAll('button[type=submit]').forEach(function (b) { b.disabled = on; }); }
+
+  function renderStatus() {
+    var p = AB.profile;
+    if (!AB.user || !p) return;
+    var k = p.status === 'approved' ? 'approved' : p.status === 'rejected' ? 'rejected' : 'pending';
+    $('st-title').textContent = AB.t('l_' + k + '_title');
+    $('st-text').textContent = AB.t('l_' + k);
+    $('st-go').hidden = k !== 'approved';
+    $('st-admin').hidden = !p.is_admin;
+  }
+
+  function route() {
+    banner('', '');
+    if (AB.mode === 'off') { show('v-off'); return; }
+    if (AB.backend.isRecovery()) { show('v-recovery'); return; }
+    if (AB.user && AB.profile) {
+      if (AB.profile.status === 'approved' && /[?&]next=/.test(location.search)) { location.replace(nextUrl()); return; }
+      renderStatus(); show('v-status'); return;
+    }
+    show('v-auth');
+  }
+
+  AB.active = 'login';
+  AB.init().then(function () { AB.renderShell('login'); route(); }).catch(function () { show('v-off'); banner('err', 'c_error'); });
+
+  /* tabs */
+  function tab(which) {
+    $('f-login').hidden = which !== 'login';
+    $('f-reg').hidden = which !== 'reg';
+    $('f-forgot').hidden = which !== 'forgot';
+    $('tab-login').classList.toggle('on', which !== 'reg');
+    $('tab-reg').classList.toggle('on', which === 'reg');
+    banner('', '');
+  }
+  $('tab-login').onclick = function () { tab('login'); };
+  $('tab-reg').onclick = function () { tab('reg'); };
+  $('show-forgot').onclick = function () { tab('forgot'); };
+  $('back-login').onclick = function () { tab('login'); };
+  $('st-out').onclick = function () { AB.logout(); };
+
+  /* login */
+  $('f-login').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = e.target, email = f.email.value.trim(), pw = f.password.value;
+    if (!email || !pw) { banner('err', 'l_err_req'); return; }
+    busy(f, true);
+    AB.backend.signIn(email, pw).then(function () { return AB.refresh(); }).then(function () {
+      f.password.value = '';
+      if (AB.profile && AB.profile.status === 'approved') { location.href = nextUrl(); return; }
+      route();
+    }).catch(function (er) { banner('err', errKey(er)); }).then(function () { busy(f, false); });
+  });
+
+  /* forgot password */
+  $('f-forgot').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = e.target, email = f.email.value.trim();
+    if (!email) { banner('err', 'l_err_req'); return; }
+    busy(f, true);
+    AB.backend.resetPassword(email).then(function () { banner('ok', 'l_reset_sent'); })
+      .catch(function (er) { banner('err', errKey(er)); }).then(function () { busy(f, false); });
+  });
+
+  /* register */
+  $('f-reg').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = e.target;
+    if (f.website.value) return; /* honeypot */
+    var v = {
+      company: f.company.value.trim(), contact_name: f.contact_name.value.trim(), phone: f.phone.value.trim(),
+      country: f.country.value.trim(), vat_no: f.vat_no.value.trim(), email: f.email.value.trim()
+    };
+    if (!v.company || !v.contact_name || !v.country || !v.email || !f.consent.checked) { banner('err', 'l_err_req'); return; }
+    if (f.password.value.length < 8) { banner('err', 'l_err_weak'); return; }
+    if (f.password.value !== f.password2.value) { banner('err', 'l_err_mismatch'); return; }
+    busy(f, true);
+    var meta = { company: v.company, contact_name: v.contact_name, phone: v.phone, country: v.country, vat_no: v.vat_no, lang: AB.lang() };
+    AB.backend.signUp(v.email, f.password.value, meta).then(function () {
+      AB.notify('New customer awaiting approval: ' + v.company, {
+        company: v.company, contact: v.contact_name, email: v.email, phone: v.phone, country: v.country, vat_no: v.vat_no,
+        message: 'A new customer has registered on the webshop and awaits approval. Open admin.html to approve.'
+      });
+      f.reset(); tab('login'); banner('ok', 'l_reg_ok');
+    }).catch(function (er) { banner('err', errKey(er)); }).then(function () { busy(f, false); });
+  });
+
+  /* new password after reset link */
+  $('f-newpw').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = e.target;
+    if (f.password.value.length < 8) { banner('err', 'l_err_weak'); return; }
+    if (f.password.value !== f.password2.value) { banner('err', 'l_err_mismatch'); return; }
+    busy(f, true);
+    AB.backend.updatePassword(f.password.value).then(function () {
+      banner('ok', 'l_newpw_ok');
+      return AB.backend.signOut();
+    }).then(function () { history.replaceState(null, '', location.pathname); AB.user = null; AB.profile = null; AB.renderShell(); show('v-auth'); tab('login'); banner('ok', 'l_newpw_ok'); })
+      .catch(function (er) { banner('err', errKey(er)); }).then(function () { busy(f, false); });
+  });
+})();
+</script>
+</body>
+</html>
