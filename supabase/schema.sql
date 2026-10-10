@@ -85,7 +85,8 @@ create index if not exists orders_user_idx on public.orders(user_id, created_at 
 create index if not exists order_items_order_idx on public.order_items(order_id);
 
 insert into public.shop_settings(key, value) values
-  ('min_total_stems', '1000')
+  ('min_total_stems', '1000'),
+  ('vat_percent',     '25')
 on conflict (key) do nothing;
 
 -- ---------------------------------------------------------------------------
@@ -229,6 +230,7 @@ declare
   v_ono   bigint;
   v_ex    numeric;
   v_inc   numeric;
+  v_vat   numeric;
   v_un    int;
 begin
   if v_uid is null or not public.is_approved() then
@@ -252,6 +254,8 @@ begin
   if v_total < coalesce(v_min, 0) then
     raise exception 'below_minimum:%', v_min;
   end if;
+  select nullif(value, '')::numeric into v_vat from public.shop_settings where key = 'vat_percent';
+  v_vat := coalesce(v_vat, 25);
 
   insert into public.orders (user_id, note, delivery_note)
   values (v_uid, left(p_note, 2000), left(p_delivery, 500))
@@ -260,9 +264,9 @@ begin
   insert into public.order_items
     (order_id, variety, category, price_group, head_size, length_cm, qty, unit_ex_vat, unit_inc_vat, line_ex_vat, line_inc_vat)
   select v_oid, i.variety, i.category, vg.price_group, i.head_size, i.length_cm, i.qty,
-         p.price_ex_vat, p.price_inc_vat,
+         p.price_ex_vat, case when p.price_ex_vat is null then null else round(p.price_ex_vat * (1 + v_vat / 100), 2) end,
          case when p.price_ex_vat  is null then null else round(p.price_ex_vat  * i.qty, 2) end,
-         case when p.price_inc_vat is null then null else round(p.price_inc_vat * i.qty, 2) end
+         case when p.price_ex_vat  is null then null else round(round(p.price_ex_vat * i.qty, 2) * (1 + v_vat / 100), 2) end
   from (
     select left(e->>'variety', 120)                       as variety,
            left(coalesce(e->>'category', ''), 30)         as category,
@@ -287,10 +291,11 @@ begin
     limit 1
   ) p on true;
 
-  select coalesce(sum(line_ex_vat), 0), coalesce(sum(line_inc_vat), 0),
-         count(*) filter (where line_ex_vat is null)
-    into v_ex, v_inc, v_un
+  select coalesce(sum(line_ex_vat), 0), count(*) filter (where line_ex_vat is null)
+    into v_ex, v_un
   from public.order_items where order_items.order_id = v_oid;
+  -- VAT is calculated on the net total (as on an invoice), not summed per stem.
+  v_inc := round(v_ex * (1 + v_vat / 100), 2);
 
   update public.orders
      set total_ex_vat = v_ex, total_inc_vat = v_inc, unpriced_lines = v_un

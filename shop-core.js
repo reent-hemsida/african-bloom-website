@@ -133,6 +133,8 @@
     Object.keys(idx).forEach(function (k) { idx[k].sort(function (a, b) { return b.tier_qty - a.tier_qty; }); });
     var cat = { rows: rows, idx: idx, byGroup: byGroup, groups: groups || {}, settings: settings || {} };
     cat.minStems = parseInt(cat.settings.min_total_stems, 10) || 0;
+    var vp = parseFloat(cat.settings.vat_percent);
+    cat.vatPct = isFinite(vp) && vp >= 0 ? vp : 25;
     return cat;
   }
   function priceFor(cat, group, head, len, vqty) {
@@ -158,15 +160,17 @@
   }
   /* cart: [{variety, category, head, len, qty}] */
   function calcCart(cat, cart) {
+    var vat = cat.vatPct === undefined ? 25 : cat.vatPct;
     var vq = {};
     cart.forEach(function (i) { vq[i.variety] = (vq[i.variety] || 0) + i.qty; });
     var lines = cart.map(function (i) {
       var gi = groupInfo(cat, i.variety);
       var r = gi ? priceFor(cat, gi.group, i.head, i.len, vq[i.variety]) : null;
+      var lineEx = r ? round2(r.price_ex_vat * i.qty) : null;
       return {
         item: i, group: gi ? gi.group : null, varietyQty: vq[i.variety],
-        unitEx: r ? r.price_ex_vat : null, unitInc: r ? r.price_inc_vat : null,
-        lineEx: r ? round2(r.price_ex_vat * i.qty) : null, lineInc: r ? round2(r.price_inc_vat * i.qty) : null,
+        unitEx: r ? r.price_ex_vat : null, unitInc: r ? round2(r.price_ex_vat * (1 + vat / 100)) : null,
+        lineEx: lineEx, lineInc: lineEx === null ? null : round2(lineEx * (1 + vat / 100)),
         tier: r ? r.tier_qty : null
       };
     });
@@ -181,12 +185,13 @@
         if (vq[v] < list[i]) { hints.push({ variety: v, have: vq[v], next: list[i], first: i === 0 }); break; }
       }
     });
-    var tot = { stems: 0, ex: 0, inc: 0, unpriced: 0 };
+    var tot = { stems: 0, ex: 0, inc: 0, vat: 0, vatPct: vat, unpriced: 0 };
     lines.forEach(function (l) {
       tot.stems += l.item.qty;
-      if (l.lineEx === null) tot.unpriced++; else { tot.ex += l.lineEx; tot.inc += l.lineInc; }
+      if (l.lineEx === null) tot.unpriced++; else tot.ex += l.lineEx;
     });
-    tot.ex = round2(tot.ex); tot.inc = round2(tot.inc);
+    // VAT is calculated on the net total, as on an invoice.
+    tot.ex = round2(tot.ex); tot.inc = round2(tot.ex * (1 + vat / 100)); tot.vat = round2(tot.inc - tot.ex);
     return { lines: lines, hints: hints, totals: tot };
   }
 

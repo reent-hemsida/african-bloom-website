@@ -57,7 +57,7 @@ AB.addStrings({
     a_preview: 'File checked: {n} valid rows.', a_errors: 'Problems found — nothing was changed:', a_done: 'Saved: {n} rows.',
     a_search: 'Search…', a_only_missing: 'Only varieties without price group', a_save: 'Save changes', a_unsaved: '{n} unsaved change(s).',
     a_group_none: '— price on request —', a_cat_all: 'All categories',
-    a_min: 'Minimum order, total stems per order', a_min_help: 'Orders below this number of stems are rejected. 0 = no minimum.', a_saved: 'Saved.'
+    a_vat: 'VAT rate (%)', a_vat_help: 'Used to show and store totals including VAT. 25 = 25 %.', a_min: 'Minimum order, total stems per order', a_min_help: 'Orders below this number of stems are rejected. 0 = no minimum.', a_saved: 'Saved.'
   },
   sv: {
     a_customers: 'Kunder', a_orders: 'Ordrar', a_prices: 'Prislista', a_varieties: 'Sorter → prisgrupp', a_settings: 'Inställningar',
@@ -75,7 +75,7 @@ AB.addStrings({
     a_preview: 'Filen är kontrollerad: {n} giltiga rader.', a_errors: 'Problem hittades — inget har ändrats:', a_done: 'Sparat: {n} rader.',
     a_search: 'Sök…', a_only_missing: 'Bara sorter utan prisgrupp', a_save: 'Spara ändringar', a_unsaved: '{n} osparad(e) ändring(ar).',
     a_group_none: '— pris på förfrågan —', a_cat_all: 'Alla kategorier',
-    a_min: 'Minsta order, totalt antal stjälkar per order', a_min_help: 'Ordrar under detta antal stjälkar avvisas. 0 = ingen miniminivå.', a_saved: 'Sparat.'
+    a_vat: 'Momssats (%)', a_vat_help: 'Används för att visa och spara summor inklusive moms. 25 = 25 %.', a_min: 'Minsta order, totalt antal stjälkar per order', a_min_help: 'Ordrar under detta antal stjälkar avvisas. 0 = ingen miniminivå.', a_saved: 'Sparat.'
   }
 });
 
@@ -318,11 +318,14 @@ AB.addStrings({
   function renderSettings() {
     $('pane').innerHTML = '<form class="sh-form sh-card" id="fs"><label><span class="lbl">' + esc(t('a_min')) + '</span>' +
       '<input type="number" min="0" step="1" name="min" value="' + esc(data.cat.settings.min_total_stems || '0') + '" style="max-width:220px;"></label>' +
-      '<p class="sh-muted">' + esc(t('a_min_help')) + '</p><p><button class="btn" type="submit">' + esc(t('a_save')) + '</button></p></form>';
+      '<p class="sh-muted">' + esc(t('a_min_help')) + '</p>' +
+      '<label><span class="lbl">' + esc(t('a_vat')) + '</span><input type="number" min="0" max="100" step="0.5" name="vat" value="' + esc(data.cat.settings.vat_percent || '25') + '" style="max-width:220px;"></label>' +
+      '<p class="sh-muted">' + esc(t('a_vat_help')) + '</p><p><button class="btn" type="submit">' + esc(t('a_save')) + '</button></p></form>';
     $('fs').addEventListener('submit', function (e) {
       e.preventDefault();
       var n = Math.max(0, parseInt(this.min.value, 10) || 0);
-      AB.backend.saveSetting('min_total_stems', n).then(reload).then(function () { renderSettings(); banner('ok', esc(t('a_saved'))); }).catch(fail);
+      var vat = Math.min(100, Math.max(0, parseFloat(this.vat.value) || 0));
+      AB.backend.saveSetting('min_total_stems', n).then(function () { return AB.backend.saveSetting('vat_percent', vat); }).then(reload).then(function () { renderSettings(); banner('ok', esc(t('a_saved'))); }).catch(fail);
     });
   }
 })();

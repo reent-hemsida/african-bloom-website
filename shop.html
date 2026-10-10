@@ -77,6 +77,7 @@ AB.addStrings({
     s_cart: 'Your order request', s_cart_empty: 'Nothing added yet. Choose length and number of stems on a variety and press “Add to order”.',
     s_remove: 'Remove', s_close: 'Close', s_open: 'View order request',
     s_total_stems: 'Total stems', s_total_ex: 'Total excl. VAT', s_total_inc: 'Total incl. VAT',
+    s_vat: 'VAT {p} %', s_vat_note: 'VAT is shown at the standard rate; the final VAT is stated on the invoice.',
     s_unpriced: '{n} line(s) with price on request — we will quote these separately.',
     s_min_warn: 'Minimum order is {min} stems in total ({have} so far).',
     s_hint: '{variety}: {have} stems — add {more} more to reach the next volume price ({next} stems).',
@@ -101,6 +102,7 @@ AB.addStrings({
     s_cart: 'Din orderförfrågan', s_cart_empty: 'Inget tillagt ännu. Välj längd och antal stjälkar på en sort och tryck ”Lägg i order”.',
     s_remove: 'Ta bort', s_close: 'Stäng', s_open: 'Visa orderförfrågan',
     s_total_stems: 'Totalt antal stjälkar', s_total_ex: 'Summa exkl. moms', s_total_inc: 'Summa inkl. moms',
+    s_vat: 'Moms {p} %', s_vat_note: 'Momsen visas med normalsatsen; slutlig moms framgår av fakturan.',
     s_unpriced: '{n} rad(er) med pris på förfrågan — dessa offererar vi separat.',
     s_min_warn: 'Minsta order är {min} stjälkar totalt ({have} hittills).',
     s_hint: '{variety}: {have} stjälkar — lägg till {more} till för nästa volympris ({next} stjälkar).',
@@ -125,6 +127,7 @@ AB.addStrings({
     s_cart: 'Su solicitud de pedido', s_cart_empty: 'Aún no ha añadido nada. Elija longitud y número de tallos en una variedad y pulse «Añadir al pedido».',
     s_remove: 'Quitar', s_close: 'Cerrar', s_open: 'Ver solicitud de pedido',
     s_total_stems: 'Total de tallos', s_total_ex: 'Total sin IVA', s_total_inc: 'Total con IVA',
+    s_vat: 'IVA {p} %', s_vat_note: 'El IVA se muestra al tipo general; el IVA definitivo figura en la factura.',
     s_unpriced: '{n} línea(s) con precio bajo petición: las cotizaremos por separado.',
     s_min_warn: 'El pedido mínimo es de {min} tallos en total ({have} hasta ahora).',
     s_hint: '{variety}: {have} tallos — añada {more} más para el siguiente precio por volumen ({next} tallos).',
@@ -149,6 +152,7 @@ AB.addStrings({
     s_cart: 'Ваша заявка на заказ', s_cart_empty: 'Пока ничего не добавлено. Выберите длину и количество стеблей у сорта и нажмите «Добавить в заказ».',
     s_remove: 'Удалить', s_close: 'Закрыть', s_open: 'Открыть заявку',
     s_total_stems: 'Всего стеблей', s_total_ex: 'Итого без НДС', s_total_inc: 'Итого с НДС',
+    s_vat: 'НДС {p} %', s_vat_note: 'НДС показан по стандартной ставке; окончательная сумма НДС указывается в счёте.',
     s_unpriced: 'Строк с ценой по запросу: {n} — мы рассчитаем их отдельно.',
     s_min_warn: 'Минимальный заказ — {min} стеблей в сумме (пока {have}).',
     s_hint: '{variety}: {have} стеблей — добавьте ещё {more} до следующей объёмной цены ({next} стеблей).',
@@ -324,7 +328,9 @@ AB.addStrings({
     html += '<div class="sh-totals">' +
       '<div><span>' + esc(t('s_total_stems')) + '</span><span>' + AB.fmtInt(tot.stems) + '</span></div>' +
       '<div><span>' + esc(t('s_total_ex')) + '</span><span>SEK ' + AB.fmt(tot.ex) + '</span></div>' +
-      '<div class="big"><span>' + esc(t('s_total_inc')) + '</span><span>SEK ' + AB.fmt(tot.inc) + '</span></div></div>';
+      '<div><span>' + esc(t('s_vat', { p: AB.fmtInt(tot.vatPct) })) + '</span><span>SEK ' + AB.fmt(tot.vat) + '</span></div>' +
+      '<div class="big"><span>' + esc(t('s_total_inc')) + '</span><span>SEK ' + AB.fmt(tot.inc) + '</span></div></div>' +
+      '<p class="sh-muted" style="margin:8px 0 0;">' + esc(t('s_vat_note')) + '</p>';
     if (tot.unpriced) html += '<p class="sh-muted" style="margin:10px 0 0;">' + esc(t('s_unpriced', { n: tot.unpriced })) + '</p>';
     var below = min && tot.stems < min;
     if (below) html += '<div class="sh-banner warn" style="margin-top:12px;">' + esc(t('s_min_warn', { min: AB.fmtInt(min), have: AB.fmtInt(tot.stems) })) + '</div>';
