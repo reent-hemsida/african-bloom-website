@@ -296,9 +296,20 @@
       updatePassword: function (pw) { return sb.auth.updateUser({ password: pw }).then(function (r) { if (r.error) throw mapAuth(r.error); }); },
       profile: function (uid) { return sb.from('profiles').select('*').eq('id', uid).maybeSingle().then(must); },
       catalog: function () {
+        // Supabase caps every response at 1000 rows, so read the big tables page by page.
+        function fetchAll(table, cols, order) {
+          var out = [], size = 1000;
+          function page(from) {
+            return sb.from(table).select(cols).order(order, { ascending: true }).range(from, from + size - 1).then(must).then(function (rows) {
+              out = out.concat(rows);
+              return rows.length === size ? page(from + size) : out;
+            });
+          }
+          return page(0);
+        }
         return Promise.all([
-          sb.from('price_rows').select('price_group,head_size,length_cm,tier_qty,price_ex_vat,price_inc_vat').limit(5000).then(must),
-          sb.from('variety_groups').select('variety,price_group').limit(5000).then(must),
+          fetchAll('price_rows', 'price_group,head_size,length_cm,tier_qty,price_ex_vat,price_inc_vat', 'id'),
+          fetchAll('variety_groups', 'variety,price_group', 'variety'),
           sb.from('shop_settings').select('key,value').then(must)
         ]).then(function (a) {
           var g = {}, s = {};
