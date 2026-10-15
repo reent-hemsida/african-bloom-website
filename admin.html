@@ -46,7 +46,7 @@ AB.addStrings({
     a_denied: 'You need to log in with an admin account to see this page.', a_denied_off: 'The webshop is not configured yet.',
     a_pending: 'Awaiting approval', a_all: 'All customers', a_none: 'Nothing here.',
     a_col_date: 'Registered', a_col_company: 'Company', a_col_contact: 'Contact', a_col_status: 'Status', a_col_actions: 'Actions',
-    a_approve: 'Approve', a_reject: 'Reject', a_revoke: 'Block', a_mail: 'E-mail customer',
+    a_send_mail: 'Send approval e-mail', a_mail_sent: 'Approved. An e-mail was sent to the customer.', a_mail_failed: 'Approved, but the e-mail could not be sent. Use “E-mail customer” to write it yourself.', a_mail_resent: 'E-mail sent.', a_approve: 'Approve', a_reject: 'Reject', a_revoke: 'Block', a_mail: 'E-mail customer',
     a_status_pending: 'Pending', a_status_approved: 'Approved', a_status_rejected: 'Rejected',
     a_order_new: 'Received', a_order_confirmed: 'Confirmed', a_order_cancelled: 'Cancelled', a_unpriced: 'on request',
     a_customer: 'Customer', a_export: 'Export all order lines (CSV)', a_lines: 'Lines',
@@ -64,7 +64,7 @@ AB.addStrings({
     a_denied: 'Du måste logga in med ett adminkonto för att se den här sidan.', a_denied_off: 'Webbshopen är inte konfigurerad ännu.',
     a_pending: 'Väntar på godkännande', a_all: 'Alla kunder', a_none: 'Inget här.',
     a_col_date: 'Registrerad', a_col_company: 'Företag', a_col_contact: 'Kontakt', a_col_status: 'Status', a_col_actions: 'Åtgärder',
-    a_approve: 'Godkänn', a_reject: 'Avslå', a_revoke: 'Spärra', a_mail: 'Mejla kunden',
+    a_send_mail: 'Skicka godkännandemejl', a_mail_sent: 'Godkänd. Ett mejl har skickats till kunden.', a_mail_failed: 'Godkänd, men mejlet kunde inte skickas. Använd ”Mejla kunden” och skriv det själv.', a_mail_resent: 'Mejlet har skickats.', a_approve: 'Godkänn', a_reject: 'Avslå', a_revoke: 'Spärra', a_mail: 'Mejla kunden',
     a_status_pending: 'Väntar', a_status_approved: 'Godkänd', a_status_rejected: 'Avslagen',
     a_order_new: 'Mottagen', a_order_confirmed: 'Bekräftad', a_order_cancelled: 'Avbruten', a_unpriced: 'på förfrågan',
     a_customer: 'Kund', a_export: 'Exportera alla orderrader (CSV)', a_lines: 'Rader',
@@ -124,13 +124,14 @@ AB.addStrings({
 
   /* ---------- customers ---------- */
   function mailto(p) {
-    var useLang = p.lang === 'sv' ? 'sv' : 'en'; // e-mail template exists in sv and en
-    var subj = ({ en: 'Your Africane Bloom account is approved', sv: 'Ditt konto hos Africane Bloom är godkänt' })[useLang];
-    var tpl = ({
-      en: 'Hello ' + p.contact_name + ',\n\nYour customer account at africane.se is now approved. Log in at https://www.africane.se/login.html to see prices and send order requests.\n\nBest regards,\nAfricane Bloom',
-      sv: 'Hej ' + p.contact_name + ',\n\nDitt kundkonto på africane.se är nu godkänt. Logga in på https://www.africane.se/login.html för att se priser och skicka orderförfrågningar.\n\nVänliga hälsningar,\nAfricane Bloom'
-    })[useLang];
-    return 'mailto:' + encodeURIComponent(p.email) + '?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(tpl);
+    var T = {
+      en: ['Your Africane Bloom account is approved', 'Hello NAME,\n\nYour customer account at africane.se is now approved. Log in at https://www.africane.se/login.html to see prices and send order requests.\n\nBest regards,\nAfricane Bloom'],
+      sv: ['Ditt konto hos Africane Bloom är godkänt', 'Hej NAME,\n\nDitt kundkonto på africane.se är nu godkänt. Logga in på https://www.africane.se/login.html för att se priser och skicka orderförfrågningar.\n\nVänliga hälsningar,\nAfricane Bloom'],
+      es: ['Su cuenta de Africane Bloom ha sido aprobada', 'Hola NAME,\n\nSu cuenta de cliente en africane.se ha sido aprobada. Inicie sesión en https://www.africane.se/login.html para ver precios y enviar solicitudes de pedido.\n\nSaludos cordiales,\nAfricane Bloom'],
+      ru: ['Ваша учётная запись Africane Bloom подтверждена', 'Здравствуйте, NAME!\n\nВаша учётная запись клиента на africane.se подтверждена. Войдите на https://www.africane.se/login.html, чтобы видеть цены и отправлять заявки на заказ.\n\nС уважением,\nAfricane Bloom']
+    };
+    var m = T[p.lang] || T.en;
+    return 'mailto:' + encodeURIComponent(p.email) + '?subject=' + encodeURIComponent(m[0]) + '&body=' + encodeURIComponent(m[1].replace('NAME', p.contact_name));
   }
   function renderCustomers() {
     var list = data.profiles.slice().sort(function (a, b) {
@@ -145,6 +146,7 @@ AB.addStrings({
         if (p.status !== 'approved') acts += '<button class="btn small" data-act="approved" data-id="' + esc(p.id) + '">' + esc(t('a_approve')) + '</button>';
         if (p.status === 'pending') acts += '<button class="btn small ghost" data-act="rejected" data-id="' + esc(p.id) + '">' + esc(t('a_reject')) + '</button>';
         if (p.status === 'approved' && !p.is_admin) acts += '<button class="btn small ghost" data-act="rejected" data-id="' + esc(p.id) + '">' + esc(t('a_revoke')) + '</button>';
+        if (p.status === 'approved' && !p.is_admin) acts += '<button class="btn small ghost" data-send="' + esc(p.id) + '">' + esc(t('a_send_mail')) + '</button>';
         if (p.status === 'approved') acts += '<a class="btn small ghost" href="' + esc(mailto(p)) + '">' + esc(t('a_mail')) + '</a>';
         return '<tr><td>' + esc(AB.fmtDate(p.created_at)) + '</td><td><b>' + esc(p.company) + '</b><br><span class="sh-muted">' + esc(p.country || '') + (p.vat_no ? ' · ' + esc(p.vat_no) : '') + '</span></td>' +
           '<td>' + esc(p.contact_name) + '<br><span class="sh-muted">' + esc(p.email) + (p.phone ? ' · ' + esc(p.phone) : '') + '</span></td>' +
@@ -153,10 +155,29 @@ AB.addStrings({
       }).join('') + '</tbody></table></div>';
   }
   $('pane').addEventListener('click', function (e) {
+    var sb = e.target.closest('button[data-send]');
+    if (sb) {
+      sb.disabled = true;
+      AB.backend.notifyApproved(sb.getAttribute('data-send'))
+        .then(function () { banner('ok', esc(t('a_mail_resent'))); }, function () { banner('warn', esc(t('a_mail_failed'))); })
+        .then(function () { sb.disabled = false; });
+      return;
+    }
     var b = e.target.closest('button[data-act]');
     if (!b) return;
     b.disabled = true;
-    AB.backend.setProfileStatus(b.getAttribute('data-id'), b.getAttribute('data-act')).then(reload).then(render).catch(fail);
+    var id = b.getAttribute('data-id'), act = b.getAttribute('data-act');
+    AB.backend.setProfileStatus(id, act).then(function () {
+      if (act !== 'approved') return null;
+      // automatic approval e-mail; failure must not undo the approval
+      return AB.backend.notifyApproved(id).then(function () { return 'sent'; }, function () { return 'failed'; });
+    }).then(function (res) {
+      return reload().then(function () {
+        render();
+        if (res === 'sent') banner('ok', esc(t('a_mail_sent')));
+        else if (res === 'failed') banner('warn', esc(t('a_mail_failed')));
+      });
+    }).catch(fail);
   });
 
   /* ---------- orders ---------- */

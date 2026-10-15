@@ -336,6 +336,14 @@
       /* admin */
       listProfiles: function () { return sb.from('profiles').select('*').order('created_at', { ascending: false }).then(must); },
       setProfileStatus: function (id, status) { return sb.from('profiles').update({ status: status }).eq('id', id).then(must); },
+      /* Sends the "account approved" e-mail through the send-approval Edge Function. */
+      notifyApproved: function (id) {
+        return sb.functions.invoke('send-approval', { body: { customer_id: id } }).then(function (r) {
+          if (r.error) throw err('generic', r.error.message);
+          if (r.data && r.data.error) throw err('generic', r.data.error);
+          return r.data;
+        });
+      },
       listOrders: function () { return sb.from('orders').select('*, order_items(*)').order('created_at', { ascending: false }).limit(500).then(must); },
       setOrderStatus: function (id, status) { return sb.from('orders').update({ status: status }).eq('id', id).then(must); },
       replacePrices: function (rows) { return sb.rpc('admin_replace_prices', { p_rows: rows }).then(must); },
@@ -437,6 +445,7 @@
       myOrders: function (id) { db = load(); return resolve(db.orders.filter(function (o) { return o.user_id === id; })); },
       listProfiles: function () { db = load(); needAdmin(); return resolve(Object.keys(db.profiles).map(function (k) { return db.profiles[k]; }).sort(function (a, b) { return b.created_at < a.created_at ? -1 : 1; })); },
       setProfileStatus: function (id, status) { db = load(); needAdmin(); db.profiles[id].status = status; save(); return resolve(true); },
+      notifyApproved: function () { return resolve({ demo: true }); },
       listOrders: function () { db = load(); needAdmin(); return resolve(db.orders); },
       setOrderStatus: function (id, status) { db = load(); needAdmin(); db.orders.forEach(function (o) { if (o.id === id) o.status = status; }); save(); return resolve(true); },
       replacePrices: function (rows) { db = load(); needAdmin(); db.price_rows = rows.map(function (r) { return { price_group: r.price_group, head_size: r.head_size || 'standard', length_cm: +r.length_cm, tier_qty: +r.tier_qty, price_ex_vat: +r.price_ex_vat, price_inc_vat: +r.price_inc_vat }; }); save(); return resolve(rows.length); },
