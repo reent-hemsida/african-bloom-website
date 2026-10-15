@@ -46,7 +46,7 @@ AB.addStrings({
     a_denied: 'You need to log in with an admin account to see this page.', a_denied_off: 'The webshop is not configured yet.',
     a_pending: 'Awaiting approval', a_all: 'All customers', a_none: 'Nothing here.',
     a_col_date: 'Registered', a_col_company: 'Company', a_col_contact: 'Contact', a_col_status: 'Status', a_col_actions: 'Actions',
-    a_send_mail: 'Send approval e-mail', a_mail_sent: 'Approved. An e-mail was sent to the customer.', a_mail_failed: 'Approved, but the e-mail could not be sent. Use “E-mail customer” to write it yourself.', a_mail_resent: 'E-mail sent.', a_approve: 'Approve', a_reject: 'Reject', a_revoke: 'Block', a_mail: 'E-mail customer',
+    a_lang: 'Language', a_lang_saved: 'Language saved. The approval e-mail will use it.', a_send_mail: 'Send approval e-mail', a_mail_sent: 'Approved. An e-mail was sent to the customer.', a_mail_failed: 'Approved, but the e-mail could not be sent. Use “E-mail customer” to write it yourself.', a_mail_resent: 'E-mail sent.', a_approve: 'Approve', a_reject: 'Reject', a_revoke: 'Block', a_mail: 'E-mail customer',
     a_status_pending: 'Pending', a_status_approved: 'Approved', a_status_rejected: 'Rejected',
     a_order_new: 'Received', a_order_confirmed: 'Confirmed', a_order_cancelled: 'Cancelled', a_unpriced: 'on request',
     a_customer: 'Customer', a_export: 'Export all order lines (CSV)', a_lines: 'Lines',
@@ -64,7 +64,7 @@ AB.addStrings({
     a_denied: 'Du måste logga in med ett adminkonto för att se den här sidan.', a_denied_off: 'Webbshopen är inte konfigurerad ännu.',
     a_pending: 'Väntar på godkännande', a_all: 'Alla kunder', a_none: 'Inget här.',
     a_col_date: 'Registrerad', a_col_company: 'Företag', a_col_contact: 'Kontakt', a_col_status: 'Status', a_col_actions: 'Åtgärder',
-    a_send_mail: 'Skicka godkännandemejl', a_mail_sent: 'Godkänd. Ett mejl har skickats till kunden.', a_mail_failed: 'Godkänd, men mejlet kunde inte skickas. Använd ”Mejla kunden” och skriv det själv.', a_mail_resent: 'Mejlet har skickats.', a_approve: 'Godkänn', a_reject: 'Avslå', a_revoke: 'Spärra', a_mail: 'Mejla kunden',
+    a_lang: 'Språk', a_lang_saved: 'Språket är sparat. Godkännandemejlet använder det.', a_send_mail: 'Skicka godkännandemejl', a_mail_sent: 'Godkänd. Ett mejl har skickats till kunden.', a_mail_failed: 'Godkänd, men mejlet kunde inte skickas. Använd ”Mejla kunden” och skriv det själv.', a_mail_resent: 'Mejlet har skickats.', a_approve: 'Godkänn', a_reject: 'Avslå', a_revoke: 'Spärra', a_mail: 'Mejla kunden',
     a_status_pending: 'Väntar', a_status_approved: 'Godkänd', a_status_rejected: 'Avslagen',
     a_order_new: 'Mottagen', a_order_confirmed: 'Bekräftad', a_order_cancelled: 'Avbruten', a_unpriced: 'på förfrågan',
     a_customer: 'Kund', a_export: 'Exportera alla orderrader (CSV)', a_lines: 'Rader',
@@ -149,7 +149,10 @@ AB.addStrings({
         if (p.status === 'approved' && !p.is_admin) acts += '<button class="btn small ghost" data-send="' + esc(p.id) + '">' + esc(t('a_send_mail')) + '</button>';
         if (p.status === 'approved') acts += '<a class="btn small ghost" href="' + esc(mailto(p)) + '">' + esc(t('a_mail')) + '</a>';
         return '<tr><td>' + esc(AB.fmtDate(p.created_at)) + '</td><td><b>' + esc(p.company) + '</b><br><span class="sh-muted">' + esc(p.country || '') + (p.vat_no ? ' · ' + esc(p.vat_no) : '') + '</span></td>' +
-          '<td>' + esc(p.contact_name) + '<br><span class="sh-muted">' + esc(p.email) + (p.phone ? ' · ' + esc(p.phone) : '') + '</span></td>' +
+          '<td>' + esc(p.contact_name) + '<br><span class="sh-muted">' + esc(p.email) + (p.phone ? ' · ' + esc(p.phone) : '') + '</span>' +
+            '<br><label class="sh-muted" style="font-size:13px;">' + esc(t('a_lang')) + ': <select data-lang-of="' + esc(p.id) + '" style="border:1px solid #D9C7B3; background:#fff; padding:2px 4px; font-size:13px;">' +
+            ['en', 'sv', 'es', 'ru'].map(function (l) { return '<option value="' + l + '"' + ((p.lang || 'en') === l ? ' selected' : '') + '>' + l.toUpperCase() + '</option>'; }).join('') +
+            '</select></label></td>' +
           '<td><span class="pill ' + esc(p.status) + '">' + esc(t('a_status_' + p.status)) + '</span>' + (p.is_admin ? ' <span class="pill">admin</span>' : '') + '</td>' +
           '<td><div class="sh-actions">' + acts + '</div></td></tr>';
       }).join('') + '</tbody></table></div>';
@@ -216,6 +219,11 @@ AB.addStrings({
     };
   }
   $('pane').addEventListener('change', function (e) {
+    var lid = e.target.getAttribute && e.target.getAttribute('data-lang-of');
+    if (lid) {
+      AB.backend.setProfileLang(lid, e.target.value).then(reload).then(function () { render(); banner('ok', esc(t('a_lang_saved'))); }).catch(fail);
+      return;
+    }
     var oid = e.target.getAttribute && e.target.getAttribute('data-oid');
     if (!oid) return;
     AB.backend.setOrderStatus(oid, e.target.value).then(reload).then(function () { render(); }).catch(fail);

@@ -336,6 +336,7 @@
       /* admin */
       listProfiles: function () { return sb.from('profiles').select('*').order('created_at', { ascending: false }).then(must); },
       setProfileStatus: function (id, status) { return sb.from('profiles').update({ status: status }).eq('id', id).then(must); },
+      setProfileLang: function (id, lang) { return sb.from('profiles').update({ lang: lang }).eq('id', id).then(must); },
       /* Sends the "account approved" e-mail through the send-approval Edge Function. */
       notifyApproved: function (id) {
         return sb.functions.invoke('send-approval', { body: { customer_id: id } }).then(function (r) {
@@ -445,6 +446,7 @@
       myOrders: function (id) { db = load(); return resolve(db.orders.filter(function (o) { return o.user_id === id; })); },
       listProfiles: function () { db = load(); needAdmin(); return resolve(Object.keys(db.profiles).map(function (k) { return db.profiles[k]; }).sort(function (a, b) { return b.created_at < a.created_at ? -1 : 1; })); },
       setProfileStatus: function (id, status) { db = load(); needAdmin(); db.profiles[id].status = status; save(); return resolve(true); },
+      setProfileLang: function (id, lang) { db = load(); needAdmin(); db.profiles[id].lang = lang; save(); return resolve(true); },
       notifyApproved: function () { return resolve({ demo: true }); },
       listOrders: function () { db = load(); needAdmin(); return resolve(db.orders); },
       setOrderStatus: function (id, status) { db = load(); needAdmin(); db.orders.forEach(function (o) { if (o.id === id) o.status = status; }); save(); return resolve(true); },
