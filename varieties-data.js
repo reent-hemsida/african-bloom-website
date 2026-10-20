@@ -465,7 +465,7 @@ Orange Wave|r||12|photo-var-orange-wave.jpg
 Orleans Night|r||8|photo-var-orleans-night.jpg
 Palm Peach|r|||photo-var-palm-peach.jpg
 Paloma Royale|r|||photo-var-paloma-royale.jpg
-Paloma|r||4|photo-var-cream-dream.jpg
+Paloma|r||4|photo-var-paloma-rose.jpg
 Papaya|r||12|photo-var-papaya.jpg
 Paranita|r||8|photo-var-paranita.jpg
 Patz|r|||photo-var-patz.jpg
