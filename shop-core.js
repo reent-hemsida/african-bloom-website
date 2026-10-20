@@ -10,7 +10,7 @@
   var CFG = window.AB_SHOP_CONFIG || {};
   var SB_SRC = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js';
   var SB_SRI = 'sha384-0w2KAL2YHP6wKOkUDzkCDGgVvfmHnj02DHeQ6XcHOgTfFsGyonKOpShMH1x6nk9o';
-  var LANGS = ['en', 'es', 'ru', 'sv'];
+  var LANGS = ['sv', 'en']; // es/ru hidden for now (strings kept in S/CAT_LABELS/COLOR_LABELS)
   var LOCALES = { en: 'en-GB', es: 'es-ES', ru: 'ru-RU', sv: 'sv-SE' };
   var GROUPS = ['red', 'white', 'pink', 'yellow', 'orange', 'peach', 'spray', 'special_spray'];
   var HEADS = ['standard', 'large', 'xlarge'];
@@ -64,7 +64,7 @@
     sv: ['Tvåfärgad', 'Blå', 'Brons', 'Vinröd', 'Gräddvit', 'Guld', 'Grön', 'Cerise', 'Lavendel', 'Ljusblå', 'Ljusrosa', 'Blandade färger', 'Orange', 'Persika', 'Rosa', 'Lila', 'Röd', 'Vit', 'Gul']
   };
 
-  var lang = 'en';
+  var lang = 'sv';
   try { var sv = localStorage.getItem('ab-lang'); if (LANGS.indexOf(sv) >= 0) lang = sv; } catch (e) {}
   var langCbs = [];
 
