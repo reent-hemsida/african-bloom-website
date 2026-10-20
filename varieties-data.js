@@ -317,7 +317,7 @@ Bahama|r||18|photo-var-bahama.jpg
 Bella Rose|r||14|photo-var-bella-rose.jpg
 Belle Vue|r||0|photo-var-sweet-jumilia.jpg
 Bellerosa|r||14|photo-var-ace-pink.jpg
-Bellerose|r||0|photo-var-wendy-kristy.jpg
+Belle Rose|r||0|photo-var-wendy-kristy.jpg
 Bisou|r|||photo-var-bisou.jpg
 Blue Berry|r||14|photo-var-blue-berry.jpg
 Blush|r|||photo-var-blush.jpg
@@ -333,6 +333,7 @@ Comanche|r||12|photo-var-diablo.jpg
 Confidential|r||12|photo-var-confidential.jpg
 Cool Blue|r||15|photo-var-cool-blue.jpg
 Cool Breeze|r||14|photo-var-cool-breeze.jpg
+Countdown|r||17|photo-var-athena.jpg
 Cream Dream|r|||photo-var-cream-dream.jpg
 Cuenca|r||14|photo-var-cuenca.jpg
 Dancing Cloud|r|||photo-var-dancing-cloud.jpg
@@ -406,7 +407,7 @@ Karsu|r||17|photo-var-karsu.jpg
 Killer Queen|r||16|photo-var-killer-queen.jpg
 Kingsday|r||12|photo-var-kingsday.jpg
 Kiwi|r||4|photo-roses.jpg
-Labelle|r||0|photo-var-labelle.jpg
+La Belle|r||0|photo-var-labelle.jpg
 Ladorado|r||18|photo-var-ladorado.jpg
 Lady Suzanne|r||13|photo-var-lady-suzanne.jpg
 Latina|r||18|photo-var-latina.jpg
@@ -447,7 +448,7 @@ Momentum|r||18|photo-var-momentum.jpg
 Mondial|r||17|photo-var-mondial.jpg
 Mont Royal|r||17|photo-var-mont-royal.jpg
 Moody Blues|r||15|photo-var-moody-blues.jpg
-Moonwalk|r||18|photo-var-moonwalk.jpg
+Moon Walk|r||18|photo-var-moonwalk.jpg
 Movie Star|r|||photo-var-movie-star.jpg
 Nassue|r||12|photo-var-nassue.jpg
 Navarra|r|||photo-roses.jpg
@@ -469,6 +470,7 @@ Papaya|r||12|photo-var-papaya.jpg
 Paranita|r||8|photo-var-paranita.jpg
 Patz|r|||photo-var-patz.jpg
 Payal|r||0|photo-var-payal.jpg
+Pebbles|r||0|photo-var-payal.jpg
 Pegassa|r||17|photo-var-icebreaker.jpg
 Pink Athena|r||14|photo-var-pink-athena.jpg
 Pink Floyd|r|||photo-var-pink-floyd.jpg
@@ -484,6 +486,7 @@ Proud|r||17|photo-var-proud.jpg
 Queen Of Africa|r||17|photo-var-queen-of-africa.jpg
 Red Bently|r||16|photo-var-red-bently.jpg
 Red Eye|r|||photo-var-red-eye.jpg
+Red Naomi|r||16|photo-var-explorer.jpg
 Red Paris|r|||photo-var-red-paris.jpg
 Release|r||0|photo-var-release.jpg
 Revival|r||14|photo-var-revival.jpg
