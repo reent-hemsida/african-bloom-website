@@ -20,7 +20,6 @@ Jaffa|a||12|photo-alstroemeria.jpg
 Kurosawa|a|||photo-var-kurosawa.jpg
 Lovely|a|||photo-var-lovely.jpg
 Maracana|a|||photo-var-maracana.jpg
-Paloma|a||0|photo-var-paloma.jpg
 Pink Floyd / Prima Donna / Disco|a||14|photo-alstroemeria.jpg
 Primadona|a|||photo-var-primadona.jpg
 River Dance|a||15|photo-alstroemeria.jpg
@@ -466,6 +465,7 @@ Orange Wave|r||12|photo-var-orange-wave.jpg
 Orleans Night|r||8|photo-var-orleans-night.jpg
 Palm Peach|r|||photo-var-palm-peach.jpg
 Paloma Royale|r|||photo-var-paloma-royale.jpg
+Paloma|r||4|photo-var-cream-dream.jpg
 Papaya|r||12|photo-var-papaya.jpg
 Paranita|r||8|photo-var-paranita.jpg
 Patz|r|||photo-var-patz.jpg
