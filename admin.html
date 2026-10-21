@@ -153,7 +153,7 @@ AB.addStrings({
         return '<tr><td>' + esc(AB.fmtDate(p.created_at)) + '</td><td><b>' + esc(p.company) + '</b><br><span class="sh-muted">' + esc(p.country || '') + (p.vat_no ? ' · ' + esc(p.vat_no) : '') + '</span></td>' +
           '<td>' + esc(p.contact_name) + '<br><span class="sh-muted">' + esc(p.email) + (p.phone ? ' · ' + esc(p.phone) : '') + '</span>' +
             '<br><label class="sh-muted" style="font-size:13px;">' + esc(t('a_lang')) + ': <select data-lang-of="' + esc(p.id) + '" style="border:1px solid #D9C7B3; background:#fff; padding:2px 4px; font-size:13px;">' +
-            ['en', 'sv', 'es', 'ru'].map(function (l) { return '<option value="' + l + '"' + ((p.lang || 'en') === l ? ' selected' : '') + '>' + l.toUpperCase() + '</option>'; }).join('') +
+            ['en', 'sv', 'es', 'ru', 'hu'].map(function (l) { return '<option value="' + l + '"' + ((p.lang || 'en') === l ? ' selected' : '') + '>' + l.toUpperCase() + '</option>'; }).join('') +
             '</select></label></td>' +
           '<td><span class="pill ' + esc(p.status) + '">' + esc(t('a_status_' + p.status)) + '</span>' + (p.is_admin ? ' <span class="pill">admin</span>' : '') + '</td>' +
           '<td><div class="sh-actions">' + acts + '</div></td></tr>';

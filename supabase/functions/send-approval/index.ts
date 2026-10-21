@@ -44,6 +44,13 @@ const TEXT: Record<string, { subject: string; hello: string; body: string; butto
     button: "Iniciar sesi\u00f3n",
     foot: "\u00bfPreguntas? Responda a este correo o escriba a info@africane.se.",
   },
+  hu: {
+    subject: "Africane Bloom fi\u00f3kja j\u00f3v\u00e1hagyva",
+    hello: "\u00dcdv\u00f6zlj\u00fck",
+    body: "\u00dcgyf\u00e9lfi\u00f3kja az africane.se oldalon j\u00f3v\u00e1hagy\u00e1sra ker\u00fclt. Most m\u00e1r bel\u00e9phet, hogy l\u00e1ssa az \u00e1rakat \u00e9s rendel\u00e9si k\u00e9relmeket k\u00fcldj\u00f6n.",
+    button: "Bel\u00e9p\u00e9s",
+    foot: "K\u00e9rd\u00e9se van? V\u00e1laszoljon erre a lev\u00e9lre, vagy \u00edrjon az info@africane.se c\u00edmre.",
+  },
   ru: {
     subject: "\u0412\u0430\u0448\u0430 \u0443\u0447\u0451\u0442\u043d\u0430\u044f \u0437\u0430\u043f\u0438\u0441\u044c Africane Bloom \u043f\u043e\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043d\u0430",
     hello: "\u0417\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439\u0442\u0435",

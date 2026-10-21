@@ -127,7 +127,7 @@ begin
     nullif(left(trim(new.raw_user_meta_data->>'phone'), 60), ''),
     nullif(left(trim(new.raw_user_meta_data->>'country'), 80), ''),
     nullif(left(trim(new.raw_user_meta_data->>'vat_no'), 60), ''),
-    case when new.raw_user_meta_data->>'lang' in ('en','es','ru','sv') then new.raw_user_meta_data->>'lang' else 'en' end
+    case when new.raw_user_meta_data->>'lang' in ('en','es','ru','sv','hu') then new.raw_user_meta_data->>'lang' else 'en' end
   );
   return new;
 end $$;

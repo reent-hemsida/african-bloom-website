@@ -217,7 +217,7 @@
       <a href="contact.html" style="text-decoration:none; color:inherit;"><span class="navlink">Contact</span></a>
     </div>
     <div class="ab-right" style="display:flex; align-items:center; gap:20px;">
-      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#5E564F; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#5E564F; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#5E564F; cursor:pointer;">SV</span></div>
+      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#5E564F; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#5E564F; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#5E564F; cursor:pointer;">SV</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('hu')" style="color:#5E564F; cursor:pointer;">HU</span></div>
       <svg class="ab-search" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
       <button class="ab-burger" type="button" aria-label="Menu" aria-expanded="false"><svg width="22" height="16" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg></button>
     </div>
@@ -331,6 +331,137 @@
   </div>
 </div>
 
+<div data-lang="hu" style="display:none;">
+
+  <!-- Header -->
+  <div class="ab-header" style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
+    <div style="display:flex; align-items:center; gap:12px;">
+      <img src="logo-header.png" alt="Africane Bloom" style="height:36px; width:auto; display:block;">
+      <span style="font-family:'EB Garamond',serif; font-size:21px; letter-spacing:0.14em; font-weight:500;">AFRICANE BLOOM</span>
+    </div>
+    <div class="ab-nav" style="display:flex; align-items:center; gap:26px; font-size:13px; color:#201C1A;">
+      <a href="index.html" style="text-decoration:none; color:inherit;"><span class="navlink">Főoldal</span></a>
+      <a href="about.html" style="text-decoration:none; color:inherit;"><span class="navlink">Rólunk</span></a>
+      <a href="collection.html" style="text-decoration:none; color:inherit;"><span class="navlink">Kollekció</span></a>
+      <a href="ordering.html" style="text-decoration:none; color:inherit;"><span class="navlink active">Rendelés menete</span></a>
+      <a href="faq.html" style="text-decoration:none; color:inherit;"><span class="navlink">GYIK</span></a>
+      <a href="contact.html" style="text-decoration:none; color:inherit;"><span class="navlink">Kapcsolat</span></a>
+    </div>
+    <div class="ab-right" style="display:flex; align-items:center; gap:20px;">
+      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#5E564F; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#5E564F; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#5E564F; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#5E564F; cursor:pointer;">SV</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('hu')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">HU</span></div>
+      <svg class="ab-search" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+      <button class="ab-burger" type="button" aria-label="Menü" aria-expanded="false"><svg width="22" height="16" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg></button>
+    </div>
+  </div>
+
+  <!-- Title band -->
+  <div style="padding: 64px 64px 48px; border-bottom:1px solid #241E17;">
+    <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#8A4A1E;">Főoldal &nbsp;/&nbsp; Rendelés menete</span>
+    <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:48px; margin:14px 0 0;">Így működik a rendelés</h1>
+    <p style="font-size:15px; color:#4F4741; max-width:620px; margin:16px 0 0; line-height:1.7;">Az első megkereséstől az első állandó szállításig &mdash; pontosan ezt várhatja.</p>
+  </div>
+
+  <!-- Steps -->
+  <div style="padding: 56px 64px 0; max-width:920px;">
+
+    <div style="display:grid; grid-template-columns: 70px 1fr; gap:24px; padding:32px 0; border-bottom:1px solid #E4DFD8;">
+      <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:44px; color:#8A4A1E; line-height:1;">01</div>
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:21px; margin:0 0 8px;">Küldjön megkeresést</h3>
+        <p style="font-size:14.5px; line-height:1.75; color:#3A342E; margin:0; max-width:640px;">Meséljen vállalkozásáról, várható mennyiségeiről és a szállítási helyről Kapcsolat oldalunkon keresztül. A legtöbb ügyfél néhány munkanapon belül választ kap.</p>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns: 70px 1fr; gap:24px; padding:32px 0; border-bottom:1px solid #E4DFD8;">
+      <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:44px; color:#8A4A1E; line-height:1;">02</div>
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:21px; margin:0 0 8px;">Fiók &amp; feltételek</h3>
+        <p style="font-size:14.5px; line-height:1.75; color:#3A342E; margin:0; max-width:640px;">Regisztráljon ügyfélként webshopunkban. Miután jóváhagytuk fiókját, láthatja az árakat és az aktuális elérhetőséget, és megállapodhatunk a fizetési feltételekben. <a href="login.html" style="color:#8A4A1E;">Ügyfélbelépés</a></p>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns: 70px 1fr; gap:24px; padding:32px 0; border-bottom:1px solid #E4DFD8;">
+      <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:44px; color:#8A4A1E; line-height:1;">03</div>
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:21px; margin:0 0 8px;">Állítsa össze állandó megrendelését</h3>
+        <p style="font-size:14.5px; line-height:1.75; color:#3A342E; margin:0; max-width:640px;">Válasszon fajtát, szárhosszt és mennyiséget, és küldjön rendelési kérelmet. A minimális rendelés összesen 1000 szál, amely fajták között kombinálható. A mennyiségi árak rendelésen belül fajtánként érvényesek.</p>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns: 70px 1fr; gap:24px; padding:32px 0; border-bottom:1px solid #E4DFD8;">
+      <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:44px; color:#8A4A1E; line-height:1;">04</div>
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:21px; margin:0 0 8px;">Heti teljesítés</h3>
+        <p style="font-size:14.5px; line-height:1.75; color:#3A342E; margin:0; max-width:640px;">Amint rendelése vagy állandó megrendelése megerősítésre kerül, megbízható heti mennyiségeket szállítunk a megállapodott 2026-os áron, házhoz szállítva.</p>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns: 70px 1fr; gap:24px; padding:32px 0; border-bottom:1px solid #E4DFD8;">
+      <div style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:44px; color:#8A4A1E; line-height:1;">05</div>
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:21px; margin:0 0 8px;">Folyamatos támogatás</h3>
+        <p style="font-size:14.5px; line-height:1.75; color:#3A342E; margin:0; max-width:640px;">Kapcsolattartója intézi az újrarendelést, az elérhetőségi kérdéseket és minden minőségi észrevételt, amíg nálunk vásárol.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Terms -->
+  <div style="padding: 72px 64px 0;">
+    <h2 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:22px; margin:0 0 24px;">Fő feltételek</h2>
+    <div style="display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:20px;">
+      <div style="background:#FFFFFF; border:1px solid #E4DFD8; border-radius:14px; padding:24px;">
+        <h4 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:16px; margin:0 0 8px; color:#241E17;">Szállított árak</h4>
+        <p style="font-size:13px; line-height:1.6; color:#4F4741; margin:0;">Az árak SEK-ben értendők szálanként, házhoz szállítva és ÁFA nélkül. A mennyiségi árak rendelésen belül fajtánként érvényesek; egyéb virágok kérésre.</p>
+      </div>
+      <div style="background:#FFFFFF; border:1px solid #E4DFD8; border-radius:14px; padding:24px;">
+        <h4 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:16px; margin:0 0 8px; color:#241E17;">Állandó megrendelés</h4>
+        <p style="font-size:13px; line-height:1.6; color:#4F4741; margin:0;">Ismétlődő megrendelés &mdash; jellemzően heti &mdash; az idényre rögzített áron, így a mennyiségek és a költségek kiszámíthatók maradnak.</p>
+      </div>
+      <div style="background:#FFFFFF; border:1px solid #E4DFD8; border-radius:14px; padding:24px;">
+        <h4 style="font-family:'Cormorant Garamond',serif; font-weight:500; font-size:16px; margin:0 0 8px; color:#241E17;">Minimális rendelési mennyiség</h4>
+        <p style="font-size:13px; line-height:1.6; color:#4F4741; margin:0;">Rendelésenként 1000 szál, amely ugyanazon állandó megrendelésen belül fajták és minőségi osztályok között kombinálható.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div style="padding: 96px 64px 96px; text-align:center;">
+    <h2 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:34px; margin:0;">Készen áll a kezdésre?</h2>
+    <p style="font-size:14.5px; color:#4F4741; margin:16px 0 0;">Küldjön megkeresést, és kapcsolattartója végigvezeti Önt a többin.</p>
+    <a href="contact.html" class="cta-box" style="display:inline-block; margin-top:30px; background:#241E17; border:1px solid #241E17; color:#FFFFFF; padding:15px 34px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase;">Beszéljen csapatunkkal</a>
+  </div>
+
+  <!-- Footer -->
+  <div style="border-top:1px solid #241E17; padding: 56px 64px 32px; margin-top:32px;">
+    <div style="display:grid; grid-template-columns: 1.4fr 1fr 1fr; gap:48px;">
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <img src="logo-header.png" alt="Africane Bloom" style="height:26px; width:auto;">
+          <span style="font-size:15px; letter-spacing:0.12em;">AFRICANE BLOOM</span>
+        </div>
+        <p style="font-size:13px; line-height:1.7; color:#4F4741; max-width:280px; margin:0;">Vágott virág nagykereskedelem Kenyából viszonteladóknak világszerte, svédországi székhellyel.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Navigáció</span>
+        <a href="about.html" style="text-decoration:none; color:inherit;"><span>Rólunk</span></a>
+        <a href="collection.html" style="text-decoration:none; color:inherit;"><span>Kollekció</span></a>
+        <a href="ordering.html" style="text-decoration:none; color:inherit;"><span>Rendelés menete</span></a>
+        <a href="faq.html" style="text-decoration:none; color:inherit;"><span>GYIK</span></a>
+        <a href="contact.html" style="text-decoration:none; color:inherit;"><span>Kapcsolat</span></a>
+        <a href="complaints-policy.pdf" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;"><span>Reklamációs szabályzat</span></a>
+        <a href="login.html" style="text-decoration:none; color:inherit;"><span>Ügyfélbelépés</span></a>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:13px; color:#201C1A;">
+        <span style="font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:#5E564F; margin-bottom:6px;">Kapcsolat</span>
+        <span>info@africane.se</span>
+        <span>+46 73 756 57 58</span>
+        <a href="https://wa.me/46737565758" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;"><span>WhatsApp</span></a>
+        <span>Svédország</span>
+      </div>
+    </div>
+    <div style="border-top:1px solid #E4DFD8; margin-top:44px; padding-top:22px; display:flex; justify-content:space-between; font-size:12px; color:#5E564F;">
+      <span>&copy; 2026 Africane Bloom &middot; Cabrera Group AB</span>
+      <span>www.africane.se</span>
+    </div>
+  </div>
+</div>
+
 <div data-lang="es" style="display:none;">
 
   <!-- Header -->
@@ -348,7 +479,7 @@
       <a href="contact.html" style="text-decoration:none; color:inherit;"><span class="navlink">Contacto</span></a>
     </div>
     <div class="ab-right" style="display:flex; align-items:center; gap:20px;">
-      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#5E564F; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#5E564F; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#5E564F; cursor:pointer;">SV</span></div>
+      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#5E564F; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#5E564F; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#5E564F; cursor:pointer;">SV</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('hu')" style="color:#5E564F; cursor:pointer;">HU</span></div>
       <svg class="ab-search" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
       <button class="ab-burger" type="button" aria-label="Menu" aria-expanded="false"><svg width="22" height="16" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg></button>
     </div>
@@ -479,7 +610,7 @@
       <a href="contact.html" style="text-decoration:none; color:inherit;"><span class="navlink">Контакты</span></a>
     </div>
     <div class="ab-right" style="display:flex; align-items:center; gap:20px;">
-      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#5E564F; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#5E564F; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#5E564F; cursor:pointer;">SV</span></div>
+      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#5E564F; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#5E564F; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#5E564F; cursor:pointer;">SV</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('hu')" style="color:#5E564F; cursor:pointer;">HU</span></div>
       <svg class="ab-search" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
       <button class="ab-burger" type="button" aria-label="Menu" aria-expanded="false"><svg width="22" height="16" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg></button>
     </div>
@@ -610,7 +741,7 @@
       <a href="contact.html" style="text-decoration:none; color:inherit;"><span class="navlink">Kontakt</span></a>
     </div>
     <div class="ab-right" style="display:flex; align-items:center; gap:20px;">
-      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#5E564F; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#5E564F; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#5E564F; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">SV</span></div>
+      <div style="display:flex; align-items:center; gap:9px; font-size:11.5px; letter-spacing:0.05em;"><span onclick="setLang('en')" style="color:#5E564F; cursor:pointer;">EN</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('es')" style="color:#5E564F; cursor:pointer;">ES</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('ru')" style="color:#5E564F; cursor:pointer;">RU</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('sv')" style="color:#8A4A1E; font-weight:600; cursor:pointer;">SV</span><span style="color:#D8CDBE;">/</span><span onclick="setLang('hu')" style="color:#5E564F; cursor:pointer;">HU</span></div>
       <svg class="ab-search" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#201C1A" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
       <button class="ab-burger" type="button" aria-label="Menu" aria-expanded="false"><svg width="22" height="16" viewBox="0 0 24 16" fill="none" stroke="#201C1A" stroke-width="1.4"><path d="M1 1h22M1 8h22M1 15h22"/></svg></button>
     </div>
