@@ -16,7 +16,7 @@ från en annan dator (Windows). **Inga lösenord eller nycklar ska någonsin skr
 | Mejlmallar för registrering/lösenord | Supabase → Authentication → Emails → Templates | Klistra in HTML |
 | Orderavisering till ägaren | FormSubmit (`notifyEndpoint` i `shop-config.js`) | – |
 
-Sidor: `index/about/collection/ordering/faq/contact.html` (4 språk i samma fil, `data-lang`-block),
+Sidor: `index/about/collection/ordering/faq/contact.html` (5 språk: en, es, ru, sv, hu, i samma fil, `data-lang`-block; engelska är standard),
 `login.html`, `shop.html`, `admin.html`, `privacy.html` (delar `shop-core.js` och `shop.css`).
 Sorter och bilder: `varieties-data.js` (en rad per sort: `Namn|kategori|sub|färgindex|bildfil`).
 
@@ -89,13 +89,14 @@ Interna prislistor (PDF med farm-namn och kostnadsunderlag) är konfidentiella o
 * Godkännande av kunder sker i *Admin → Customers*. Språket per kund kan ändras där (styr mejlspråket).
 * Edge Function `send-approval` kräver secrets i *Edge Functions → Secrets*: `SMTP_HOST`, `SMTP_PORT` (465),
   `SMTP_USER`, `SMTP_PASS`, `SMTP_FROM`. *Verify JWT with legacy secret* ska vara **av** (funktionen kontrollerar själv).
-* Mejlmallar innehåller svenska/spanska/ryska tecken som HTML-entiteter (`&#…;`) för att klistras in utan teckenfel.
+* Mejlmallar innehåller svenska/spanska/ryska/ungerska tecken som HTML-entiteter (`&#…;`) för att klistras in utan teckenfel.
   Använd `Get-Content fil.html | Set-Clipboard` i PowerShell om du kopierar filer till urklipp.
 
 ## 6. Kända öppna punkter
 
-* Modersmålsgranskning av spanska och ryska texter, och juridisk granskning av `privacy.html`, innan fler kunder bjuds in.
+* Modersmålsgranskning av spanska, ryska och ungerska texter, och juridisk granskning av `privacy.html`, innan fler kunder bjuds in.
 * Sorter utan pris visas som "pris på förfrågan" tills priser finns.
+* Nya leverantörer/sorter: lägg raden i `varieties-data.js`, lägg priserna som en egen grupp `v:<sortnamn>` i prisfilen (ladda alltid upp den *kompletta* sammanslagna filen, uppladdningen ersätter allt) och länka sorten i kopplingsfilen. Leverantörsnamn och inköpspriser får aldrig in i repot.
 * Nya sorter från prislistan har liknande befintliga bilder tills egna foton finns (byt `bildfil` i `varieties-data.js`).
 * 0 % moms för EU-företag med giltigt momsnummer är inte inbyggt (momsen visas alltid med standardsats).
 
