@@ -709,4 +709,30 @@ Gypsophila Purple|y||15|photo-var-gypsophila-purple.jpg
 Gypsophila White|y||17|photo-var-gypsophila-white.jpg
 Gypsophila Xlence|y|||photo-var-gypsophila-xlence.jpg
 Gypsophila Yellow|y||18|photo-var-gypsophila-yellow.jpg
-Gypsophila Zinzi|y|||photo-var-gypsophila-zinzi.jpg`;
+Gypsophila Zinzi|y|||photo-var-gypsophila-zinzi.jpg
+Limonium Kansas Blue|o||1|photo-var-statice-blue.jpg
+Limonium Florida Pink|o||14|photo-var-limonium-pina-colada.jpg
+Limonium Safora Lilac|o||8|photo-var-statice-lavender.jpg
+Limonium Tenesse|o|||photo-var-statice-white.jpg
+Limonium Arizona|o|||photo-var-limonium-china.jpg
+Limonium Blush Diamond|o||14|photo-var-limonium-pina-colada.jpg
+Limonium Naomi Diamond|o|||photo-var-limonium-shooting-star.jpg
+Limonium Scarlet Diamond|o||16|photo-var-limonium-scarlet.jpg
+Dianthus Kiwi Mellow|c||6|photo-carnations.jpg
+Dianthus Rosemagic|c||14|photo-carnations.jpg
+Dianthus Neon Purple|c||15|photo-carnations.jpg
+Veronica Blue|o||1|photo-var-veronica.jpg
+Eryngium Blue Lagoon|o||1|photo-var-eryngium-blue-angel.jpg
+Chrysanthemum All Varieties|o||11|photo-var-chrysanthemum-pink-deco.jpg
+Hypericum Apple Green|o||6|photo-var-hypericum-green.jpg
+Hypericum Globo Coral|o||12|photo-var-hypericum-excellent-fair.jpg
+Hypericum Raspberry|o||3|photo-var-hypericum-burgundy.jpg
+Hypericum Magical Royal Princess|o|||photo-var-hypericum-royal.jpg
+Hypericum White Princess|o||17|photo-var-hypericum-snow.jpg
+Eucalyptus Populus|o||6|photo-var-eucalyptus-baby-blue.jpg
+Eucalyptus Webstreana|o||6|photo-var-eucalyptus-baby-blue.jpg
+Bupleurum Rortadi Grifith|o||6|photo-var-bupleurum.jpg
+Solidago Golden Glory|o||18|photo-var-solidago.jpg
+Lepidium Green Dragon|o||6|photo-var-lepidium.jpg
+Gypsophila Pearls Grandastic|y||17|photo-var-gypsophila-white.jpg
+Mollucella|o||6|photo-other-flowers.jpg`;
