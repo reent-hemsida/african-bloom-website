@@ -1,22 +1,22 @@
-/* Offer banner: sample box of 100 roses for 995 kr.
+/* Offer banner: sample box of 100 roses for 995 kr (excl. VAT).
    Shown once when a visitor enters the site; the X (or Esc / a click outside) closes it and it stays
-   closed for 7 days. To change the offer, edit the texts below. */
+   closed for 7 days. A small button at the bottom left re-opens it at any time. To change the offer, edit the texts below. */
 (function () {
   var KEY = 'ab-offer-closed', DAYS = 7;
   var TXT = {
-    sv: { tag: 'Erbjudande till företag', title: 'Provlåda: 100 rosor för 995 kr', vat: 'exkl. moms',
+    sv: { pill: 'Provlåda 995 kr', tag: 'Erbjudande till företag', title: 'Provlåda: 100 rosor för 995 kr', vat: 'exkl. moms',
           body: 'Prova våra rosor innan du beställer i större volym. Välj 100 rosor ur vår katalog med de 35 mest populära rosorna.',
           cta: 'Beställ provlåda', more: 'Se rosorna', close: 'Stäng' },
-    en: { tag: 'Offer for businesses', title: 'Sample box: 100 roses for SEK 995', vat: 'excl. VAT',
+    en: { pill: 'Sample box', tag: 'Offer for businesses', title: 'Sample box: 100 roses for SEK 995', vat: 'excl. VAT',
           body: 'Try our roses before you order larger volumes. Choose 100 roses from our catalogue of our 35 most popular roses.',
           cta: 'Order a sample box', more: 'See the roses', close: 'Close' },
-    es: { tag: 'Oferta para empresas', title: 'Caja de prueba: 100 rosas por 995 SEK', vat: 'sin IVA',
+    es: { pill: 'Caja de prueba', tag: 'Oferta para empresas', title: 'Caja de prueba: 100 rosas por 995 SEK', vat: 'sin IVA',
           body: 'Pruebe nuestras rosas antes de pedir mayores volúmenes. Elija 100 rosas de nuestro catálogo de las 35 rosas más populares.',
           cta: 'Pedir caja de prueba', more: 'Ver las rosas', close: 'Cerrar' },
-    ru: { tag: 'Предложение для компаний', title: 'Пробная коробка: 100 роз за 995 SEK', vat: 'без НДС',
+    ru: { pill: 'Пробная коробка', tag: 'Предложение для компаний', title: 'Пробная коробка: 100 роз за 995 SEK', vat: 'без НДС',
           body: 'Попробуйте наши розы, прежде чем заказывать большие объёмы. Выберите 100 роз из каталога наших 35 самых популярных роз.',
           cta: 'Заказать пробную коробку', more: 'Смотреть розы', close: 'Закрыть' },
-    hu: { tag: 'Ajánlat vállalkozásoknak', title: 'Próbadoboz: 100 rózsa 995 SEK-ért', vat: '+ ÁFA',
+    hu: { pill: 'Próbadoboz', tag: 'Ajánlat vállalkozásoknak', title: 'Próbadoboz: 100 rózsa 995 SEK-ért', vat: '+ ÁFA',
           body: 'Próbálja ki rózsáinkat, mielőtt nagyobb mennyiséget rendel. Válasszon 100 rózsát a 35 legnépszerűbb rózsánkat tartalmazó katalógusunkból.',
           cta: 'Próbadoboz rendelése', more: 'Rózsák megtekintése', close: 'Bezárás' }
   };
@@ -24,7 +24,6 @@
     try { var t = parseInt(localStorage.getItem(KEY), 10); return t && Date.now() - t < DAYS * 86400000; } catch (e) { return false; }
   }
   function remember() { try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {} }
-  if (recentlyClosed()) return;
 
   var css = document.createElement('style');
   css.textContent =
@@ -41,7 +40,11 @@
     '#ab-offer .cta{display:inline-block;background:#8A4A1E;color:#fff;text-decoration:none;font-family:Inter,Arial,sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:13px 26px;}' +
     '#ab-offer .cta:hover{background:#6F3A17;}' +
     '#ab-offer .more{display:block;margin-top:14px;font-family:Inter,Arial,sans-serif;font-size:13px;color:#5E564F;}' +
-    '@media (max-width:480px){#ab-offer .box{padding:30px 20px 22px;}#ab-offer h2{font-size:28px;}}';
+    '#ab-offer-pill{position:fixed;left:18px;bottom:22px;z-index:900;display:flex;align-items:center;gap:8px;border:0;cursor:pointer;background:#8A4A1E;color:#fff;font-family:Inter,Arial,sans-serif;font-size:13px;font-weight:600;letter-spacing:.04em;padding:12px 18px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.28);transition:transform .15s,background .15s;}' +
+    '#ab-offer-pill:hover{background:#6F3A17;transform:scale(1.04);}#ab-offer-pill:focus-visible{outline:3px solid #201C1A;outline-offset:3px;}' +
+    '#ab-offer-pill svg{width:18px;height:18px;flex:none;}' +
+    '@media print{#ab-offer-pill{display:none;}}' +
+    '@media (max-width:480px){#ab-offer .box{padding:30px 20px 22px;}#ab-offer h2{font-size:28px;}#ab-offer-pill{left:12px;bottom:14px;padding:10px 14px;font-size:12px;}}';
   document.head.appendChild(css);
 
   var el = document.createElement('div');
@@ -49,29 +52,41 @@
   el.innerHTML = '<div class="box"><button type="button" class="x">&times;</button><p class="tag"></p><h2 id="ab-offer-t"></h2><p class="b"></p>' +
     '<a class="cta" href="contact.html"></a><a class="more" href="collection.html"></a></div>';
 
+  var pill = document.createElement('button');
+  pill.id = 'ab-offer-pill'; pill.type = 'button';
+  pill.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v9H4v-9"/><path d="M2 7h20v5H2z"/><path d="M12 21V7"/><path d="M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7z"/></svg><span></span>';
+
   function fill() {
     var t = TXT[document.documentElement.lang] || TXT.sv;
     el.querySelector('.tag').textContent = t.tag; var h = el.querySelector('h2'); h.textContent = t.title + ' '; var sp = document.createElement('span'); sp.className = 'vat'; sp.textContent = t.vat; h.appendChild(sp); el.querySelector('p.b').textContent = t.body;
     el.querySelector('.cta').textContent = t.cta; el.querySelector('.more').textContent = t.more;
     el.querySelector('.x').setAttribute('aria-label', t.close);
-  }
-  function close() {
-    remember(); el.classList.remove('on');
-    setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 260);
-    document.removeEventListener('keydown', onKey);
+    pill.querySelector('span').textContent = t.pill; pill.setAttribute('aria-label', t.title + ' ' + t.vat);
   }
   function onKey(e) { if (e.key === 'Escape') close(); }
+  function open() {
+    fill(); pill.style.display = 'none'; document.body.appendChild(el);
+    document.addEventListener('keydown', onKey);
+    requestAnimationFrame(function () { el.classList.add('on'); el.querySelector('.x').focus(); });
+  }
+  function close() {
+    remember(); el.classList.remove('on'); pill.style.display = '';
+    setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 260);
+    document.removeEventListener('keydown', onKey);
+    pill.focus();
+  }
 
-  function show() {
-    fill(); document.body.appendChild(el);
+  function init() {
+    fill(); document.body.appendChild(pill);
     new MutationObserver(fill).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
     el.querySelector('.x').addEventListener('click', close);
     el.addEventListener('click', function (e) { if (e.target === el) close(); });
     el.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', remember); });
-    document.addEventListener('keydown', onKey);
-    requestAnimationFrame(function () { el.classList.add('on'); el.querySelector('.x').focus(); });
+    pill.addEventListener('click', open);
+    // open by itself on a first visit (or after 7 days); otherwise only the small button is shown
+    if (!recentlyClosed()) open();
   }
   // wait a moment so the page's own language switch has run
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { setTimeout(show, 700); });
-  else setTimeout(show, 700);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { setTimeout(init, 700); });
+  else setTimeout(init, 700);
 })();

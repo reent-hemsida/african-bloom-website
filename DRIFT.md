@@ -76,6 +76,8 @@ att först ha pushat och dragit (`git pull`).
 * Beslut ägaren tagit: **Prislista 2026 gäller där den finns**; övriga sorter prissätts från den interna listan
   (högsta pris bland varianter per längd och volymnivå); inga farm-namn, kostnader eller leverantörsuppgifter får visas
   eller sparas i repot/databasen; rosor i lila, lavendel, tvåfärgad och bronze samt rosor utan färg är pris på förfrågan.
+* **Visningsordning:** `variety-order.js` styr ordningen i Collection och webshop: Red Naomi, Ever Red och Explorer först, sedan katalogens 35 rosor, sedan övriga sorter med pris, sist sorter utan pris.
+  Collection-sidan kan inte läsa priser, så listan `priced` i filen måste uppdateras när sorter får eller tappar pris (webshopen kollar live).
 * Priserna visas bara för inloggade, godkända kunder (Row Level Security i databasen, priset räknas på servern i
   `place_order`).
 * Supabase begränsar svar till 1 000 rader. `shop-core.js` läser därför stora tabeller sida för sida.

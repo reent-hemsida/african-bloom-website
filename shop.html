@@ -64,6 +64,7 @@
 <div id="sh-footer"></div>
 
 <script src="varieties-data.js"></script>
+<script src="variety-order.js"></script>
 <script src="shop-config.js"></script>
 <script src="shop-core.js"></script>
 <script>
@@ -258,11 +259,11 @@ AB.addStrings({ hu: {"s_title": "Webshop", "s_lead": "Az árak SEK-ben értendő
       if (q && v.name.toLowerCase().indexOf(q) < 0) return false;
       return true;
     });
-    // Featured varieties are shown first.
-    var FEAT = ['Red Naomi', 'Ever Red', 'Explorer'];
+    // Featured roses first, then the catalog roses, then other priced varieties; varieties without a price last.
     filtered.sort(function (a, b) {
-      var fa = FEAT.indexOf(a.name), fb = FEAT.indexOf(b.name);
-      if (fa < 0 && fb < 0) return 0; if (fa < 0) return 1; if (fb < 0) return -1; return fa - fb;
+      var ra = abVarietyRank(a.name, a.cat, !!AB.groupInfo(cat, a.name)), rb = abVarietyRank(b.name, b.cat, !!AB.groupInfo(cat, b.name));
+      if (ra !== rb) return ra - rb;
+      return ra < 100 ? 0 : a.name.localeCompare(b.name, AB.lang(), { sensitivity: 'base' });
     });
   }
   function cardHTML(v, i) {
