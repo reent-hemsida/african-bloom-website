@@ -353,7 +353,7 @@ Engagement|r|||photo-var-engagement.jpg
 Espana|r||0|photo-var-espana.jpg
 Esperance|r|||photo-var-esperance.jpg
 Eternity|r||16|photo-var-eternity.jpg
-Ever Red|r||16|photo-var-ever-red.jpg
+Ever Red|r||16|photo-cat-ever-red.jpg
 Everpink|r||7|photo-var-everpink.jpg
 Exite|r||17|photo-var-exite.jpg
 Explorer|r||16|photo-cat-explorer.jpg
