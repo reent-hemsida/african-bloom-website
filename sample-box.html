@@ -218,11 +218,15 @@
 .sb-card img{width:100%;aspect-ratio:4/5;object-fit:contain;background:#fff;display:block;}
 .sb-name{font-family:'Cormorant Garamond',serif;font-size:26px;margin:8px 0 2px;color:#241E17;}
 .sb-meta{font-size:18px;color:#6E6660;margin-bottom:12px;}
-.sb-step{display:flex;align-items:center;justify-content:center;gap:10px;}
-.sb-step button{width:46px;height:46px;border:1px solid #8A4A1E;background:#fff;color:#8A4A1E;font-size:26px;line-height:1;cursor:pointer;font-family:inherit;}
+.sb-lens{display:flex;flex-direction:column;gap:8px;}
+.sb-len{display:flex;align-items:center;justify-content:space-between;gap:8px;}
+.sb-len .lb{font-size:19px;color:#241E17;min-width:56px;text-align:left;}
+.sb-len.on .lb{color:#8A4A1E;font-weight:600;}
+.sb-step{display:flex;align-items:center;justify-content:center;gap:6px;}
+.sb-step button{width:40px;height:40px;border:1px solid #8A4A1E;background:#fff;color:#8A4A1E;font-size:24px;line-height:1;cursor:pointer;font-family:inherit;}
 .sb-step button:hover:not([disabled]){background:#8A4A1E;color:#fff;}
 .sb-step button[disabled]{opacity:.35;cursor:not-allowed;}
-.sb-step input{width:76px;height:46px;text-align:center;border:1px solid #D9C7B3;font-size:22px;font-family:inherit;background:#fff;}
+.sb-step input{width:62px;height:40px;text-align:center;border:1px solid #D9C7B3;font-size:20px;font-family:inherit;background:#fff;}
 .sb-guarantee{margin-top:36px;padding:22px 26px;background:#F3EADB;border-left:4px solid #8A4A1E;font-size:19px;line-height:1.6;color:#3A342E;}
 .sb-guarantee a{text-decoration:underline;}
 .sb-form{margin-top:48px;padding:36px 36px 40px;background:#fff;border:1px solid #E4DFD8;max-width:900px;}
@@ -237,7 +241,7 @@
 .sb-form .note{font-size:17px;color:#5E564F;margin:14px 0 0;}
 .sb-st{font-size:21px;line-height:1.5;margin-top:16px;}
 .sb-st.ok{color:#2F5D3A;font-weight:500;}.sb-st.err{color:#9B2C2C;}.sb-st.err a{color:#9B2C2C;text-decoration:underline;}
-@media (max-width:1200px){.sb-wrap{padding:28px 20px 0;}.sb-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}.sb-form{padding:24px 18px;}.sb-form .g2{grid-template-columns:1fr;}.sb-bar .row{flex-wrap:wrap;gap:6px;}.sb-count{font-size:26px;}}
+@media (max-width:1200px){.sb-wrap{padding:28px 20px 0;}.sb-grid{grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;}.sb-card{display:flex;align-items:flex-start;gap:12px;text-align:left;padding:12px;}.sb-card img{width:34%;flex:none;}.sb-info{flex:1;min-width:0;}.sb-name{margin-top:0;font-size:24px;}.sb-meta{margin-bottom:10px;font-size:16px;}.sb-form{padding:24px 18px;}.sb-form .g2{grid-template-columns:1fr;}.sb-bar .row{flex-wrap:wrap;gap:6px;}.sb-count{font-size:26px;}.sb-len .lb{min-width:46px;font-size:17px;}.sb-step{gap:4px;}.sb-step button{width:34px;height:34px;}.sb-step input{width:46px;height:34px;font-size:17px;}}
 </style>
 </head>
 <body>
@@ -275,7 +279,7 @@
   <div style="padding: 64px 64px 48px; border-bottom:1px solid #241E17;">
     <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#8A4A1E;">Home &nbsp;/&nbsp; Sample box</span>
     <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:48px; margin:14px 0 0;">Sample box: 100 roses for SEK 995 <span style="font-size:22px; font-style:normal; color:#4F4741;">excl. VAT</span></h1>
-    <p style="font-size:15px; color:#4F4741; max-width:720px; margin:16px 0 0; line-height:1.7;">The offer is for businesses and our 35 most popular roses. Choose and combine freely until you reach 100 stems, fill in your details and send your request.</p>
+    <p style="font-size:15px; color:#4F4741; max-width:720px; margin:16px 0 0; line-height:1.7;">The offer is for businesses and our 35 most popular roses. Choose variety and stem length and combine freely until you reach 100 stems, fill in your details and send your request.</p>
   </div>
   <div class="sb-wrap">
     <div class="sb-bar"><div class="row"><div class="sb-count">Roses selected: <b data-sb-n>0</b> of 100</div><div class="sb-msg" data-sb-msg role="status" aria-live="polite"></div></div><div class="sb-prog" data-sb-prog><i></i></div></div>
@@ -290,7 +294,7 @@
       <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
       <div class="g2"><div><label class="fl" for="sb-company-en">Company *</label><input class="fb" type="text" id="sb-company-en" name="company" required></div><div><label class="fl" for="sb-name-en">Contact person *</label><input class="fb" type="text" id="sb-name-en" name="name" required></div><div><label class="fl" for="sb-email-en">Email *</label><input class="fb" type="email" id="sb-email-en" name="email" required></div><div><label class="fl" for="sb-phone-en">Phone</label><input class="fb" type="tel" id="sb-phone-en" name="phone"></div></div>
       <div style="margin-top:20px;"><div><label class="fl" for="sb-addr-en">Delivery address (street, postcode and city) *</label><input class="fb" type="text" id="sb-addr-en" name="addr" required></div></div>
-      <div style="margin-top:20px;"><div><label class="fl" for="sb-msg-en">Wishes (e.g. stem length or delivery time)</label><textarea class="fb" id="sb-msg-en" name="msg" style="height:96px;"></textarea></div></div>
+      <div style="margin-top:20px;"><div><label class="fl" for="sb-msg-en">Wishes (e.g. delivery time)</label><textarea class="fb" id="sb-msg-en" name="msg" style="height:96px;"></textarea></div></div>
       <div class="sum"><b>Your sample box:</b> <span data-sb-sum>No roses selected yet.</span></div>
       <button type="submit" class="go" disabled>Send request</button>
       <p class="note">We use your details only to answer your request. The price of SEK 995 is excluding VAT.</p>
@@ -362,7 +366,7 @@
   <div style="padding: 64px 64px 48px; border-bottom:1px solid #241E17;">
     <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#8A4A1E;">Hem &nbsp;/&nbsp; Provlåda</span>
     <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:48px; margin:14px 0 0;">Provlåda: 100 rosor för 995 kr <span style="font-size:22px; font-style:normal; color:#4F4741;">exkl. moms</span></h1>
-    <p style="font-size:15px; color:#4F4741; max-width:720px; margin:16px 0 0; line-height:1.7;">Erbjudandet gäller företag och våra 35 mest populära rosor. Välj och kombinera fritt tills du nått 100 stjälkar, fyll i dina uppgifter och skicka din förfrågan.</p>
+    <p style="font-size:15px; color:#4F4741; max-width:720px; margin:16px 0 0; line-height:1.7;">Erbjudandet gäller företag och våra 35 mest populära rosor. Välj sort och stjälklängd och kombinera fritt tills du nått 100 stjälkar, fyll i dina uppgifter och skicka din förfrågan.</p>
   </div>
   <div class="sb-wrap">
     <div class="sb-bar"><div class="row"><div class="sb-count">Valda rosor: <b data-sb-n>0</b> av 100</div><div class="sb-msg" data-sb-msg role="status" aria-live="polite"></div></div><div class="sb-prog" data-sb-prog><i></i></div></div>
@@ -377,7 +381,7 @@
       <input type="text" name="_honey" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
       <div class="g2"><div><label class="fl" for="sb-company-sv">Företag *</label><input class="fb" type="text" id="sb-company-sv" name="company" required></div><div><label class="fl" for="sb-name-sv">Kontaktperson *</label><input class="fb" type="text" id="sb-name-sv" name="name" required></div><div><label class="fl" for="sb-email-sv">E-post *</label><input class="fb" type="email" id="sb-email-sv" name="email" required></div><div><label class="fl" for="sb-phone-sv">Telefon</label><input class="fb" type="tel" id="sb-phone-sv" name="phone"></div></div>
       <div style="margin-top:20px;"><div><label class="fl" for="sb-addr-sv">Leveransadress (gata, postnummer och ort) *</label><input class="fb" type="text" id="sb-addr-sv" name="addr" required></div></div>
-      <div style="margin-top:20px;"><div><label class="fl" for="sb-msg-sv">Önskemål (t.ex. stjälklängd eller leveranstid)</label><textarea class="fb" id="sb-msg-sv" name="msg" style="height:96px;"></textarea></div></div>
+      <div style="margin-top:20px;"><div><label class="fl" for="sb-msg-sv">Önskemål (t.ex. leveranstid)</label><textarea class="fb" id="sb-msg-sv" name="msg" style="height:96px;"></textarea></div></div>
       <div class="sum"><b>Din provlåda:</b> <span data-sb-sum>Inga rosor valda än.</span></div>
       <button type="submit" class="go" disabled>Skicka förfrågan</button>
       <p class="note">Vi använder dina uppgifter bara för att besvara din förfrågan. Priset 995 kr gäller exkl. moms.</p>
@@ -500,26 +504,31 @@ document.querySelectorAll('.ab-burger').forEach(function (b) {
 </script>
 <script>
 (function () {
-  var ROSES = [["Explorer", "photo-cat-explorer.jpg", "Röd", "Red", "4,5 cm"], ["Madam Red", "photo-cat-madam-red.jpg", "Röd", "Red", "4,5 cm+"], ["Red Naomi", "photo-cat-red-naomi.jpg", "Röd", "Red", "5,5 cm"], ["Rhodos", "photo-cat-rhodos.jpg", "Röd", "Red", "5 cm+"], ["Upper Class", "photo-cat-upper-class.jpg", "Röd", "Red", "4,5 cm"], ["Ever Red", "photo-cat-ever-red.jpg", "Röd", "Red", "6 cm+"], ["Ace Pink", "photo-cat-ace-pink.jpg", "Rosa", "Pink", "4,5 cm+"], ["Belle Rose", "photo-cat-belle-rose.jpg", "Rosa", "Pink", "6 cm"], ["Madam Pink", "photo-cat-madam-pink.jpg", "Rosa", "Pink", ""], ["Opala", "photo-cat-opala.jpg", "Rosa", "Pink", ""], ["Smoothie", "photo-cat-smoothie.jpg", "Rosa", "Pink", "4,5 cm+"], ["Sofia Loreen", "photo-cat-sofia-loreen.jpg", "Rosa", "Pink", "4,5 cm"], ["Jumilia", "photo-cat-jumilia.jpg", "Cerise", "Cerise", "4,5 cm+"], ["Madam Cerise", "photo-cat-madam-cerise.jpg", "Cerise", "Cerise", "4,5 cm+"], ["Athena", "photo-cat-athena.jpg", "Vit", "White", "4,5 cm+"], ["Countdown", "photo-cat-countdown.jpg", "Vit", "White", "5 cm"], ["Pegassa", "photo-cat-pegassa.jpg", "Vit", "White", "4,5 cm"], ["Snowstorm", "photo-cat-snowstorm.jpg", "Vit", "White", "4,5 cm"], ["Golden Bird", "photo-cat-golden-bird.jpg", "Gul", "Yellow", "4,5 cm"], ["Moon Walk", "photo-cat-moon-walk.jpg", "Gul", "Yellow", "4,5 cm+"], ["Yelloween", "photo-cat-yelloween.jpg", "Gul", "Yellow", "4,5 cm"], ["Comanche", "photo-cat-comanche.jpg", "Orange", "Orange", "4,5 cm"], ["Confidential", "photo-cat-confidential.jpg", "Orange", "Orange", "4,5 cm"], ["Cream Dream", "photo-cat-cream-dream.jpg", "Kräm", "Cream", "4,5 cm"], ["Lovely Peach", "photo-cat-lovely-peach.jpg", "Kräm", "Cream", "4,5 cm"], ["Paloma", "photo-var-paloma-rose.jpg", "Kräm", "Cream", "6,5 cm"], ["Deep Purple", "photo-cat-deep-purple.jpg", "Lila", "Lilac", "5,5 cm"], ["Nightingale", "photo-cat-nightingale.jpg", "Lila", "Lilac", "5 cm"], ["Wild Moss", "photo-cat-wild-moss.jpg", "Lila", "Lilac", "4,5 cm"], ["Belle Vue", "photo-cat-belle-vue.jpg", "Tvåfärgad", "Bicolour", "4,5 cm+"], ["Chapeau", "photo-cat-chapeau.jpg", "", "", "4,5 cm"], ["Double Date", "photo-cat-double-date.jpg", "", "", "4,5 cm"], ["Ink", "photo-cat-ink.jpg", "", "", "4,5 cm"], ["La Belle", "photo-cat-la-belle.jpg", "Tvåfärgad", "Bicolour", "4,5 cm+"], ["Pebbles", "photo-cat-pebbles.jpg", "Tvåfärgad", "Bicolour", "5,5 cm"]];
+  var ROSES = [["Explorer", "photo-cat-explorer.jpg", "Röd", "Red", "4,5 cm", [50, 60, 70, 80]], ["Madam Red", "photo-cat-madam-red.jpg", "Röd", "Red", "4,5 cm+", [50, 60, 70, 80]], ["Red Naomi", "photo-cat-red-naomi.jpg", "Röd", "Red", "5,5 cm", [50, 60, 70]], ["Rhodos", "photo-cat-rhodos.jpg", "Röd", "Red", "5 cm+", [50, 60, 70, 80]], ["Upper Class", "photo-cat-upper-class.jpg", "Röd", "Red", "4,5 cm", [50, 60, 70, 80]], ["Ever Red", "photo-cat-ever-red.jpg", "Röd", "Red", "6 cm+", [50, 60, 70, 80]], ["Ace Pink", "photo-cat-ace-pink.jpg", "Rosa", "Pink", "4,5 cm+", [50, 60, 70, 80]], ["Belle Rose", "photo-cat-belle-rose.jpg", "Rosa", "Pink", "6 cm", [50, 60, 70]], ["Madam Pink", "photo-cat-madam-pink.jpg", "Rosa", "Pink", "", [50, 60, 70, 80]], ["Opala", "photo-cat-opala.jpg", "Rosa", "Pink", "", [50, 60, 70, 80]], ["Smoothie", "photo-cat-smoothie.jpg", "Rosa", "Pink", "4,5 cm+", [50, 60, 70, 80]], ["Sofia Loreen", "photo-cat-sofia-loreen.jpg", "Rosa", "Pink", "4,5 cm", [50, 60, 70, 80]], ["Jumilia", "photo-cat-jumilia.jpg", "Cerise", "Cerise", "4,5 cm+", [50, 60, 70, 80]], ["Madam Cerise", "photo-cat-madam-cerise.jpg", "Cerise", "Cerise", "4,5 cm+", [50, 60, 70, 80]], ["Athena", "photo-cat-athena.jpg", "Vit", "White", "4,5 cm+", [50, 60, 70, 80]], ["Countdown", "photo-cat-countdown.jpg", "Vit", "White", "5 cm", [50, 60, 70]], ["Pegassa", "photo-cat-pegassa.jpg", "Vit", "White", "4,5 cm", [50, 60, 70, 80]], ["Snowstorm", "photo-cat-snowstorm.jpg", "Vit", "White", "4,5 cm", [50, 60, 70, 80]], ["Golden Bird", "photo-cat-golden-bird.jpg", "Gul", "Yellow", "4,5 cm", [50, 60, 70, 80]], ["Moon Walk", "photo-cat-moon-walk.jpg", "Gul", "Yellow", "4,5 cm+", [50, 60, 70, 80]], ["Yelloween", "photo-cat-yelloween.jpg", "Gul", "Yellow", "4,5 cm", [50, 60, 70, 80]], ["Comanche", "photo-cat-comanche.jpg", "Orange", "Orange", "4,5 cm", [50, 60, 70, 80]], ["Confidential", "photo-cat-confidential.jpg", "Orange", "Orange", "4,5 cm", [50, 60, 70, 80]], ["Cream Dream", "photo-cat-cream-dream.jpg", "Kräm", "Cream", "4,5 cm", [50, 60, 70, 80]], ["Lovely Peach", "photo-cat-lovely-peach.jpg", "Kräm", "Cream", "4,5 cm", [50, 60, 70, 80]], ["Paloma", "photo-var-paloma-rose.jpg", "Kräm", "Cream", "6,5 cm", [50, 60, 70, 80]], ["Deep Purple", "photo-cat-deep-purple.jpg", "Lila", "Lilac", "5,5 cm", [50, 60, 70, 80]], ["Nightingale", "photo-cat-nightingale.jpg", "Lila", "Lilac", "5 cm", [50, 60, 70, 80]], ["Wild Moss", "photo-cat-wild-moss.jpg", "Lila", "Lilac", "4,5 cm", [50, 60, 70, 80]], ["Belle Vue", "photo-cat-belle-vue.jpg", "Tvåfärgad", "Bicolour", "4,5 cm+", [50, 60, 70, 80]], ["Chapeau", "photo-cat-chapeau.jpg", "", "", "4,5 cm", [50, 60, 70, 80]], ["Double Date", "photo-cat-double-date.jpg", "", "", "4,5 cm", [50, 60, 70, 80]], ["Ink", "photo-cat-ink.jpg", "", "", "4,5 cm", [50, 60, 70, 80]], ["La Belle", "photo-cat-la-belle.jpg", "Tvåfärgad", "Bicolour", "4,5 cm+", [50, 60, 70, 80]], ["Pebbles", "photo-cat-pebbles.jpg", "Tvåfärgad", "Bicolour", "5,5 cm", [50, 60, 70]]];
   var TX = {"sv": {"m_more": "Välj {n} till.", "m_ok": "Du har valt 100. Fyll i uppgifterna nedan och skicka din förfrågan.", "m_over": "Du har valt för många. Ta bort {n}.", "empty": "Inga rosor valda än.", "sending": "Skickar…", "ok": "Tack! Din förfrågan om provlåda är skickad. Vi återkommer så snart vi kan.", "err": "Tyvärr kunde förfrågan inte skickas. Mejla <a href=\"mailto:info@africane.se\">info@africane.se</a> så hjälper vi dig.", "pcs": "st", "minus": "Minska antal", "plus": "Öka antal"}, "en": {"m_more": "Choose {n} more.", "m_ok": "You have selected 100. Fill in your details below and send your request.", "m_over": "You have selected too many. Remove {n}.", "empty": "No roses selected yet.", "sending": "Sending…", "ok": "Thank you! Your sample box request has been sent. We will reply as soon as we can.", "err": "Sorry, the request could not be sent. Please email <a href=\"mailto:info@africane.se\">info@africane.se</a> and we will help you.", "pcs": "pcs", "minus": "Decrease quantity", "plus": "Increase quantity"}};
   var qty = {}, TOTAL = 100;
   function total() { var n = 0; for (var k in qty) n += qty[k]; return n; }
   function lang() { var l = document.documentElement.lang; return TX[l] ? l : 'sv'; }
   function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); }
   function summaryText() {
-    var out = []; ROSES.forEach(function (r) { if (qty[r[0]]) out.push(r[0] + ': ' + qty[r[0]]); }); return out;
+    var out = []; ROSES.forEach(function (r) { r[5].forEach(function (L) { var k = r[0] + '|' + L; if (qty[k]) out.push(r[0] + ' ' + L + ' cm: ' + qty[k]); }); }); return out;
   }
   function render() {
     var n = total(), l = lang(), t = TX[l], over = n > TOTAL;
     document.querySelectorAll('[data-sb-grid]').forEach(function (g) {
       var gl = g.getAttribute('data-sb-grid'), tt = TX[gl];
       g.innerHTML = ROSES.map(function (r) {
-        var q = qty[r[0]] || 0, col = gl === 'sv' ? r[2] : r[3], metaTxt = [col, r[4] ? (gl === 'sv' ? 'huvud ' : 'head ') + r[4] : ''].filter(Boolean).join(' · ');
-        return '<div class="sb-card' + (q ? ' sel' : '') + '"><img loading="lazy" src="' + esc(r[1]) + '" alt="' + esc(r[0]) + '">' +
-          '<div class="sb-name">' + esc(r[0]) + '</div><div class="sb-meta">' + esc(metaTxt) + '</div>' +
-          '<div class="sb-step"><button type="button" data-rose="' + esc(r[0]) + '" data-d="-1" aria-label="' + esc(tt.minus + ': ' + r[0]) + '"' + (q ? '' : ' disabled') + '>&minus;</button>' +
-          '<input type="number" inputmode="numeric" min="0" max="100" value="' + q + '" data-rose="' + esc(r[0]) + '" aria-label="' + esc(r[0] + ' ' + tt.pcs) + '">' +
-          '<button type="button" data-rose="' + esc(r[0]) + '" data-d="1" aria-label="' + esc(tt.plus + ': ' + r[0]) + '"' + (n >= TOTAL ? ' disabled' : '') + '>+</button></div></div>';
+        var rq = 0; r[5].forEach(function (L) { rq += qty[r[0] + '|' + L] || 0; });
+        var col = gl === 'sv' ? r[2] : r[3], metaTxt = [col, r[4] ? (gl === 'sv' ? 'huvud ' : 'head ') + r[4] : ''].filter(Boolean).join(' · ');
+        return '<div class="sb-card' + (rq ? ' sel' : '') + '"><img loading="lazy" src="' + esc(r[1]) + '" alt="' + esc(r[0]) + '">' +
+          '<div class="sb-info"><div class="sb-name">' + esc(r[0]) + '</div><div class="sb-meta">' + esc(metaTxt) + '</div><div class="sb-lens">' +
+          r[5].map(function (L) {
+            var k = r[0] + '|' + L, q = qty[k] || 0, lab = r[0] + ' ' + L + ' cm';
+            return '<div class="sb-len' + (q ? ' on' : '') + '"><span class="lb">' + L + ' cm</span><div class="sb-step">' +
+              '<button type="button" data-rose="' + esc(k) + '" data-d="-1" aria-label="' + esc(tt.minus + ': ' + lab) + '"' + (q ? '' : ' disabled') + '>&minus;</button>' +
+              '<input type="number" inputmode="numeric" min="0" max="100" value="' + q + '" data-rose="' + esc(k) + '" aria-label="' + esc(lab + ' ' + tt.pcs) + '">' +
+              '<button type="button" data-rose="' + esc(k) + '" data-d="1" aria-label="' + esc(tt.plus + ': ' + lab) + '"' + (n >= TOTAL ? ' disabled' : '') + '>+</button></div></div>';
+          }).join('') + '</div></div></div>';
       }).join('');
     });
     document.querySelectorAll('[data-sb-n]').forEach(function (e) { e.textContent = n; });
