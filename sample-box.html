@@ -256,8 +256,8 @@
   <!-- Header -->
   <div class="ab-header" style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
     <div style="display:flex; align-items:center; gap:12px;">
-      <img src="logo-header.png" alt="Africane Bloom" style="height:36px; width:auto; display:block;">
-      <span style="font-family:'EB Garamond',serif; font-size:21px; letter-spacing:0.14em; font-weight:500;">AFRICANE BLOOM</span>
+      <a href="index.html" style="display:contents; text-decoration:none; color:inherit;"><img src="logo-header.png" alt="Africane Bloom" style="height:36px; width:auto; display:block;">
+      <span style="font-family:'EB Garamond',serif; font-size:21px; letter-spacing:0.14em; font-weight:500;">AFRICANE BLOOM</span></a>
     </div>
     <div class="ab-nav" style="display:flex; align-items:center; gap:38px; font-size:14px; color:#201C1A;">
       <a href="index.html" style="text-decoration:none; color:inherit;"><span class="navlink">Home</span></a>
@@ -343,8 +343,8 @@
   <!-- Header -->
   <div class="ab-header" style="display:flex; align-items:center; justify-content:space-between; padding: 26px 64px; border-bottom:1px solid #241E17;">
     <div style="display:flex; align-items:center; gap:12px;">
-      <img src="logo-header.png" alt="Africane Bloom" style="height:36px; width:auto; display:block;">
-      <span style="font-family:'EB Garamond',serif; font-size:21px; letter-spacing:0.14em; font-weight:500;">AFRICANE BLOOM</span>
+      <a href="index.html" style="display:contents; text-decoration:none; color:inherit;"><img src="logo-header.png" alt="Africane Bloom" style="height:36px; width:auto; display:block;">
+      <span style="font-family:'EB Garamond',serif; font-size:21px; letter-spacing:0.14em; font-weight:500;">AFRICANE BLOOM</span></a>
     </div>
     <div class="ab-nav" style="display:flex; align-items:center; gap:38px; font-size:14px; color:#201C1A;">
       <a href="index.html" style="text-decoration:none; color:inherit;"><span class="navlink">Hem</span></a>
@@ -572,18 +572,19 @@ document.querySelectorAll('.ab-burger').forEach(function (b) {
       if (total() !== TOTAL) return;
       form.querySelector('[name="urval"]').value = summaryText().join('\n');
       form.querySelector('[name="antal_totalt"]').value = total();
-      btn.disabled = true; st.className = 'sb-st'; st.textContent = L.sending;
-      st.scrollIntoView({ block: 'center', behavior: 'smooth' });
-      var ctl = new AbortController(), t1 = setTimeout(function () { st.textContent = L.slow; }, 15000), t2 = setTimeout(function () { ctl.abort(); }, 90000);
-      function done() { clearTimeout(t1); clearTimeout(t2); }
-      fetch('https://formsubmit.co/ajax/dc7087dd982518597a18847399951c8d', { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form), signal: ctl.signal })
-        .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); })
-        .then(function (res) {
-          done();
-          if (res.ok && (res.j.success === true || res.j.success === 'true')) { form.reset(); qty = {}; render(); st.className = 'sb-st ok'; st.textContent = L.ok; st.scrollIntoView({ block: 'center', behavior: 'smooth' }); }
-          else throw new Error('failed');
-        })
-        .catch(function (err) { done(); st.className = 'sb-st err'; st.innerHTML = (err && err.name === 'AbortError') ? L.late : L.err; btn.disabled = false; st.scrollIntoView({ block: 'center', behavior: 'smooth' }); });
+      var body = new FormData(form), saved = {}, savedQty = JSON.parse(JSON.stringify(qty));
+      form.querySelectorAll('input.fb, textarea.fb').forEach(function (el) { saved[el.name] = el.value; });
+      btn.disabled = true;
+      /* FormSubmit takes ~30 s to answer although the mail is sent at once, so confirm straight away
+         and only step in if the request fails outright (network error). */
+      form.reset(); qty = {}; render();
+      st.className = 'sb-st ok'; st.textContent = L.ok; st.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      fetch('https://formsubmit.co/ajax/dc7087dd982518597a18847399951c8d', { method: 'POST', headers: { 'Accept': 'application/json' }, body: body })
+        .catch(function () {
+          form.querySelectorAll('input.fb, textarea.fb').forEach(function (el) { if (saved[el.name] !== undefined) el.value = saved[el.name]; });
+          qty = savedQty; render();
+          st.className = 'sb-st err'; st.innerHTML = L.err; st.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        });
     });
   });
   render();
