@@ -218,9 +218,9 @@ create policy order_items_select on public.order_items for select to authenticat
 
 -- ---------------------------------------------------------------------------
 -- 5. place_order(): validates, prices on the server, and stores the order
---    Volume price: the tier is decided by the TOTAL stems of one variety in the
---    order (all lengths and head sizes together). Below the lowest tier a line
---    has no price ("price on request").
+--    Volume price: the tier is decided by the TOTAL stems in the whole order
+--    (all varieties, lengths and head sizes together). Below the lowest tier a
+--    line has no price ("price on request").
 -- ---------------------------------------------------------------------------
 
 create or replace function public.place_order(
@@ -283,10 +283,6 @@ begin
            (e->>'qty')::int                               as qty
     from jsonb_array_elements(p_items) e
   ) i
-  join (
-    select left(e->>'variety', 120) as variety, sum((e->>'qty')::int) as vqty
-    from jsonb_array_elements(p_items) e group by 1
-  ) vt on vt.variety = i.variety
   left join public.variety_groups vg on vg.variety = i.variety
   left join lateral (
     select pr.price_ex_vat, pr.price_inc_vat
@@ -294,7 +290,7 @@ begin
     where pr.price_group = vg.price_group
       and pr.head_size   = i.head_size
       and pr.length_cm   = i.length_cm
-      and pr.tier_qty   <= vt.vqty
+      and pr.tier_qty   <= v_total
     order by pr.tier_qty desc
     limit 1
   ) p on true;

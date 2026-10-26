@@ -165,11 +165,12 @@
   /* cart: [{variety, category, head, len, qty}] */
   function calcCart(cat, cart) {
     var vat = cat.vatPct === undefined ? 25 : cat.vatPct;
-    var vq = {};
-    cart.forEach(function (i) { vq[i.variety] = (vq[i.variety] || 0) + i.qty; });
+    var vq = {}, orderQty = 0;
+    cart.forEach(function (i) { vq[i.variety] = (vq[i.variety] || 0) + i.qty; orderQty += i.qty; });
+    // The volume tier is decided by the TOTAL stems in the order (all varieties together).
     var lines = cart.map(function (i) {
       var gi = groupInfo(cat, i.variety);
-      var r = gi ? priceFor(cat, gi.group, i.head, i.len, vq[i.variety]) : null;
+      var r = gi ? priceFor(cat, gi.group, i.head, i.len, orderQty) : null;
       var lineEx = r ? round2(r.price_ex_vat * i.qty) : null;
       return {
         item: i, group: gi ? gi.group : null, varietyQty: vq[i.variety],
@@ -179,16 +180,14 @@
       };
     });
     var hints = [];
-    Object.keys(vq).forEach(function (v) {
-      var gi = groupInfo(cat, v);
-      if (!gi) return;
-      var tiers = {};
-      cat.rows.forEach(function (r) { if (r.price_group === gi.group) tiers[r.tier_qty] = true; });
-      var list = Object.keys(tiers).map(Number).sort(function (a, b) { return a - b; });
-      for (var i = 0; i < list.length; i++) {
-        if (vq[v] < list[i]) { hints.push({ variety: v, have: vq[v], next: list[i], first: i === 0 }); break; }
+    var tiers = {};
+    cat.rows.forEach(function (r) { tiers[r.tier_qty] = true; });
+    var tierList = Object.keys(tiers).map(Number).sort(function (a, b) { return a - b; });
+    if (cart.length) {
+      for (var ti = 0; ti < tierList.length; ti++) {
+        if (orderQty < tierList[ti]) { hints.push({ have: orderQty, next: tierList[ti], first: ti === 0 }); break; }
       }
-    });
+    }
     var tot = { stems: 0, ex: 0, inc: 0, vat: 0, vatPct: vat, unpriced: 0 };
     lines.forEach(function (l) {
       tot.stems += l.item.qty;
@@ -378,7 +377,7 @@
       return rows;
     }
     function seed() {
-      var d = { users: [], profiles: {}, price_rows: demoPrices(), groups: {}, settings: { min_total_stems: '1000' }, orders: [], orderNo: 1000 };
+      var d = { users: [], profiles: {}, price_rows: demoPrices(), groups: {}, settings: { min_total_stems: '5000' }, orders: [], orderNo: 1000 };
       var map = { 16: 'red', 17: 'white', 14: 'pink', 10: 'pink', 7: 'pink', 18: 'yellow', 12: 'orange', 13: 'peach', 4: 'peach' };
       VARIETIES.forEach(function (v) {
         if (v.cat === 'r' && map[v.colour]) d.groups[v.name] = map[v.colour];
