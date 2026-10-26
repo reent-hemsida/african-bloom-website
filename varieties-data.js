@@ -6,8 +6,7 @@
              ch chrysanthemum, hy hydrangea, de delphinium, st stock, an anemone
    color (optional): number from the COLORS list in varieties.html (0 Bicolor ... 18 Yellow)
    Every variety has its photo file as the fifth part, e.g.  Freedom|r||16|photo-var-freedom.jpg */
-window.VARIETY_DATA = `7 0 + C M|a|||photo-var-7-0-c-m.jpg
-Bali|a|||photo-var-bali.jpg
+window.VARIETY_DATA = `Bali|a|||photo-var-bali.jpg
 Bella Star|a||18|photo-alstroemeria.jpg
 Bianca / Ice Cream / Whistler|a||17|photo-alstroemeria.jpg
 Cardinal|a|||photo-var-cardinal.jpg
@@ -486,7 +485,7 @@ Proud|r||17|photo-var-proud.jpg
 Queen Of Africa|r||17|photo-var-queen-of-africa.jpg
 Red Bently|r||16|photo-var-red-bently.jpg
 Red Eye|r|||photo-var-red-eye.jpg
-Red Naomi|r||16|photo-var-explorer.jpg
+Red Naomi|r||16|photo-var-red-naomi.jpg
 Red Paris|r|||photo-var-red-paris.jpg
 Release|r||0|photo-var-release.jpg
 Revival|r||14|photo-var-revival.jpg

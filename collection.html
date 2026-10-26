@@ -724,7 +724,15 @@ document.querySelectorAll('.ab-burger').forEach(function (b) {
   function render(root) {
     var lang = root.getAttribute('data-vc'), t = T[lang], s = state, needle = s.search.trim().toLowerCase();
     var list = V.filter(function (v) { return matches(v, s.cat, s.color, needle); });
-    list.sort(function (a, b) { var r = a.n.localeCompare(b.n, lang, { sensitivity: 'base' }); return s.sort === 'az' ? r : -r; });
+    // Featured varieties come first in the default (A to Z) view.
+    var FEAT = ['Red Naomi', 'Ever Red', 'Explorer'];
+    list.sort(function (a, b) {
+      if (s.sort === 'az') {
+        var fa = FEAT.indexOf(a.n), fb = FEAT.indexOf(b.n);
+        if (fa >= 0 || fb >= 0) { if (fa < 0) return 1; if (fb < 0) return -1; return fa - fb; }
+      }
+      var r = a.n.localeCompare(b.n, lang, { sensitivity: 'base' }); return s.sort === 'az' ? r : -r;
+    });
     var total = list.length, tp = Math.max(1, Math.ceil(total / PER));
     if (s.page > tp) s.page = tp;
     var from = total ? (s.page - 1) * PER : 0, view = list.slice(from, from + PER);
@@ -810,5 +818,6 @@ document.querySelectorAll('.ab-burger').forEach(function (b) {
   var o=window.setLang;window.setLang=function(c){o(c);upd();};upd();
 })();
 </script>
+<script src="offer-banner.js" defer></script>
 </body>
 </html>
