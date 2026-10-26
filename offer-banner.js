@@ -4,19 +4,19 @@
 (function () {
   var KEY = 'ab-offer-closed', DAYS = 7;
   var TXT = {
-    sv: { tag: 'Erbjudande till företag', title: 'Provlåda: 100 rosor för 995 kr',
+    sv: { tag: 'Erbjudande till företag', title: 'Provlåda: 100 rosor för 995 kr', vat: 'exkl. moms',
           body: 'Prova våra rosor innan du beställer i större volym. Välj 100 rosor ur vår katalog med de 35 mest populära rosorna.',
           cta: 'Beställ provlåda', more: 'Se rosorna', close: 'Stäng' },
-    en: { tag: 'Offer for businesses', title: 'Sample box: 100 roses for SEK 995',
+    en: { tag: 'Offer for businesses', title: 'Sample box: 100 roses for SEK 995', vat: 'excl. VAT',
           body: 'Try our roses before you order larger volumes. Choose 100 roses from our catalogue of our 35 most popular roses.',
           cta: 'Order a sample box', more: 'See the roses', close: 'Close' },
-    es: { tag: 'Oferta para empresas', title: 'Caja de prueba: 100 rosas por 995 SEK',
+    es: { tag: 'Oferta para empresas', title: 'Caja de prueba: 100 rosas por 995 SEK', vat: 'sin IVA',
           body: 'Pruebe nuestras rosas antes de pedir mayores volúmenes. Elija 100 rosas de nuestro catálogo de las 35 rosas más populares.',
           cta: 'Pedir caja de prueba', more: 'Ver las rosas', close: 'Cerrar' },
-    ru: { tag: 'Предложение для компаний', title: 'Пробная коробка: 100 роз за 995 SEK',
+    ru: { tag: 'Предложение для компаний', title: 'Пробная коробка: 100 роз за 995 SEK', vat: 'без НДС',
           body: 'Попробуйте наши розы, прежде чем заказывать большие объёмы. Выберите 100 роз из каталога наших 35 самых популярных роз.',
           cta: 'Заказать пробную коробку', more: 'Смотреть розы', close: 'Закрыть' },
-    hu: { tag: 'Ajánlat vállalkozásoknak', title: 'Próbadoboz: 100 rózsa 995 SEK-ért',
+    hu: { tag: 'Ajánlat vállalkozásoknak', title: 'Próbadoboz: 100 rózsa 995 SEK-ért', vat: '+ ÁFA',
           body: 'Próbálja ki rózsáinkat, mielőtt nagyobb mennyiséget rendel. Válasszon 100 rózsát a 35 legnépszerűbb rózsánkat tartalmazó katalógusunkból.',
           cta: 'Próbadoboz rendelése', more: 'Rózsák megtekintése', close: 'Bezárás' }
   };
@@ -36,6 +36,7 @@
     '#ab-offer .x:hover{color:#201C1A;}#ab-offer .x:focus-visible,#ab-offer a:focus-visible{outline:3px solid #201C1A;outline-offset:2px;}' +
     '#ab-offer .tag{font-family:Inter,Arial,sans-serif;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A4A1E;font-weight:600;margin:0 0 10px;}' +
     '#ab-offer h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:34px;line-height:1.15;color:#201C1A;margin:0 0 12px;}' +
+    '#ab-offer .vat{font-family:Inter,Arial,sans-serif;font-size:14px;font-weight:400;color:#5E564F;white-space:nowrap;}' +
     '#ab-offer p.b{font-family:Inter,Arial,sans-serif;font-size:14.5px;line-height:1.7;color:#3A342E;margin:0 0 22px;}' +
     '#ab-offer .cta{display:inline-block;background:#8A4A1E;color:#fff;text-decoration:none;font-family:Inter,Arial,sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:13px 26px;}' +
     '#ab-offer .cta:hover{background:#6F3A17;}' +
@@ -50,7 +51,7 @@
 
   function fill() {
     var t = TXT[document.documentElement.lang] || TXT.sv;
-    el.querySelector('.tag').textContent = t.tag; el.querySelector('h2').textContent = t.title; el.querySelector('p.b').textContent = t.body;
+    el.querySelector('.tag').textContent = t.tag; var h = el.querySelector('h2'); h.textContent = t.title + ' '; var sp = document.createElement('span'); sp.className = 'vat'; sp.textContent = t.vat; h.appendChild(sp); el.querySelector('p.b').textContent = t.body;
     el.querySelector('.cta').textContent = t.cta; el.querySelector('.more').textContent = t.more;
     el.querySelector('.x').setAttribute('aria-label', t.close);
   }
