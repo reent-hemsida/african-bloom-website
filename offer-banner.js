@@ -2,6 +2,7 @@
    Shown once when a visitor enters the site; the X (or Esc / a click outside) closes it and it stays
    closed for 7 days. A small button at the bottom left re-opens it at any time. To change the offer, edit the texts below. */
 (function () {
+  if (/sample-box\.html$/.test(location.pathname)) return; // the offer page itself needs no banner
   var KEY = 'ab-offer-closed', DAYS = 7;
   var TXT = {
     sv: { pill: 'Provlåda 995 kr', tag: 'Erbjudande till företag', title: 'Provlåda: 100 rosor för 995 kr', vat: 'exkl. moms',
@@ -50,7 +51,7 @@
   var el = document.createElement('div');
   el.id = 'ab-offer'; el.setAttribute('role', 'dialog'); el.setAttribute('aria-modal', 'true'); el.setAttribute('aria-labelledby', 'ab-offer-t');
   el.innerHTML = '<div class="box"><button type="button" class="x">&times;</button><p class="tag"></p><h2 id="ab-offer-t"></h2><p class="b"></p>' +
-    '<a class="cta" href="contact.html"></a><a class="more" href="collection.html"></a></div>';
+    '<a class="cta" href="sample-box.html"></a><a class="more" href="collection.html"></a></div>';
 
   var pill = document.createElement('button');
   pill.id = 'ab-offer-pill'; pill.type = 'button';
