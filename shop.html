@@ -266,21 +266,31 @@ AB.addStrings({ hu: {"s_title": "Webshop", "s_lead": "Az árak SEK-ben értendő
       return ra < 100 ? 0 : a.name.localeCompare(b.name, AB.lang(), { sensitivity: 'base' });
     });
   }
+  /* price (excl. VAT) of the selected head size and length at the lowest volume tier */
+  function priceInner(v, head, len) {
+    var gi = AB.groupInfo(cat, v.name), r = gi ? AB.priceFor(cat, gi.group, head, len, gi.info.minTier) : null;
+    if (!r) return esc(t('s_req'));
+    return esc(t('s_one', { a: AB.fmt(r.price_ex_vat) })) + '<br><span class="mt">' + esc(t('s_from_q', { q: AB.fmtInt(gi.info.minTier) }) + ' · ' + t('s_vat_hint').toLowerCase()) + '</span>';
+  }
+  function refreshCardPrice(card) {
+    var el = card.querySelector('[data-pr]'); if (!el) return;
+    var v = filtered[+card.getAttribute('data-i')], hs = card.querySelector('.head');
+    var head = hs ? hs.value : AB.headsFor(cat, v.name)[0];
+    el.innerHTML = priceInner(v, head, +card.querySelector('.len').value);
+  }
   function cardHTML(v, i) {
     var gi = AB.groupInfo(cat, v.name), price;
-    if (gi) {
-      var r = groupRange(gi.group);
-      var one = AB.fmt(r.lo) === AB.fmt(r.hi);
-      price = '<div class="pr">' + esc(one ? t('s_one', { a: AB.fmt(r.lo) }) : t('s_from', { a: AB.fmt(r.lo), b: AB.fmt(r.hi) })) + '<br><span class="mt">' + esc(t('s_from_q', { q: AB.fmtInt(r.q) }) + ' · ' + t('s_vat_hint').toLowerCase()) + '</span></div>';
-    } else price = '<div class="pr req">' + esc(t('s_req')) + '</div>';
     var heads = AB.headsFor(cat, v.name), lens = AB.lengthsFor(cat, v.name, heads[0]);
+    var defLen = lens.indexOf(50) >= 0 ? 50 : lens[0];
+    if (gi) price = '<div class="pr" data-pr>' + priceInner(v, heads[0], defLen) + '</div>';
+    else price = '<div class="pr req">' + esc(t('s_req')) + '</div>';
     var meta = [AB.catLabel(v.cat), AB.colourLabel(v.colour)].filter(Boolean).join(' · ');
     return '<div class="sh-v" data-i="' + i + '">' +
       '<img loading="lazy" src="' + esc(v.photo) + '" alt="' + esc(v.name) + '">' +
       '<div class="in"><div class="nm">' + esc(v.name) + '</div><div class="mt">' + esc(meta) + '</div>' + price +
       '<div class="ctl">' +
       (heads.length > 1 ? '<select class="head full" aria-label="' + esc(t('s_head')) + '">' + heads.map(function (h) { return '<option value="' + h + '">' + esc(t(HEAD_KEY[h])) + '</option>'; }).join('') + '</select>' : '') +
-      '<select class="len" aria-label="' + esc(t('s_length')) + '">' + lens.map(function (l) { return '<option value="' + l + '"' + (l === 50 ? ' selected' : '') + '>' + l + ' ' + esc(t('c_cm')) + '</option>'; }).join('') + '</select>' +
+      '<select class="len" aria-label="' + esc(t('s_length')) + '">' + lens.map(function (l) { return '<option value="' + l + '"' + (l === defLen ? ' selected' : '') + '>' + l + ' ' + esc(t('c_cm')) + '</option>'; }).join('') + '</select>' +
       '<input class="qty" type="number" inputmode="numeric" min="1" step="1" placeholder="' + esc(t('s_qty')) + '" aria-label="' + esc(t('s_qty')) + '">' +
       '<button type="button" class="btn small full add">' + esc(addedFlash[v.name] ? t('s_added') : t('s_add')) + '</button>' +
       '</div></div></div>';
@@ -293,10 +303,13 @@ AB.addStrings({ hu: {"s_title": "Webshop", "s_lead": "Az árak SEK-ben értendő
     $('more').hidden = filtered.length <= shown;
   }
   $('grid').addEventListener('change', function (e) {
+    var card = e.target.closest('.sh-v');
+    if (e.target.classList.contains('len')) { if (card) refreshCardPrice(card); return; }
     if (!e.target.classList.contains('head')) return;
-    var card = e.target.closest('.sh-v'), v = filtered[+card.getAttribute('data-i')];
+    var v = filtered[+card.getAttribute('data-i')];
     var lens = AB.lengthsFor(cat, v.name, e.target.value), sel = card.querySelector('.len'), cur = +sel.value;
     sel.innerHTML = lens.map(function (l) { return '<option value="' + l + '"' + (l === cur ? ' selected' : '') + '>' + l + ' ' + esc(t('c_cm')) + '</option>'; }).join('');
+    refreshCardPrice(card);
   });
   $('grid').addEventListener('click', function (e) {
     if (!e.target.classList.contains('add')) return;
