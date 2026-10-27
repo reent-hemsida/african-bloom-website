@@ -220,6 +220,7 @@
 @media (max-width:1200px){ #ab-scale-wrap .ab-hero-sub{font-size:19px !important; line-height:1.5 !important; margin-top:10px !important;} }
 @media (max-width:640px){ #ab-scale-wrap .ab-hero-sub{font-size:16px !important;} }
 </style>
+<link rel="stylesheet" href="hero.css">
 </head>
 <body>
 <a class="skip-link" href="#ab-scale-wrap">Skip to content</a>
@@ -251,15 +252,24 @@
     </div>
   </div>
 
-  <!-- Hero: real greenhouse photography -->
-  <div style="position:relative; height:520px; overflow:hidden; margin:24px 64px 0; border-radius:20px;">
-    <img src="hero-roses.jpg" alt="Rose greenhouse" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
-    <div style="position:absolute; inset:0; background: linear-gradient(0deg, rgba(20,16,13,0.82) 0%, rgba(20,16,13,0.35) 45%, rgba(20,16,13,0.05) 75%);"></div>
-    <div style="position:absolute; left:40px; bottom:40px; max-width:680px;">
-      <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#D8C9A3;">Direct from Kenya</span>
-      <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:64px; line-height:1.1; margin:18px 0 0; color:#FBF8F2;">Wholesale Flowers<br>from Kenya.</h1>
-      <p class="ab-hero-sub" style="font-size:14.5px; color:#E4DFD8; margin:16px 0 0; line-height:1.7; max-width:600px;">We deliver cut flowers from Kenya to retailers worldwide, complemented by growers in South America.</p>
-    </div>
+  <!-- Hero: time-limited price campaign (hero.css / hero.js) + docked sample-box offer -->
+  <div class="ab-herorow">
+    <section class="ab-hero2" data-hero="en" aria-roledescription="carousel" aria-label="Featured roses with guaranteed prices">
+      <div class="hs-copy">
+        <div class="hs-badge"><b>New</b></div>
+        <h1 class="hs-guar" data-expired="Wholesale roses from Kenya">Prices guaranteed until 31 December 2026</h1>
+        <p class="hs-sub">Lock in today's wholesale prices and order before the year ends. The prices apply to our most popular roses, delivered to your shop.</p>
+        <p class="hs-cd" hidden></p>
+        <div class="hs-cta"><a class="hs-btn" href="shop.html" data-expired="Go to the webshop">Order at the guaranteed price</a><a class="hs-more" href="collection.html">See the full collection</a></div>
+      </div>
+      <div class="hs-stage">
+        <div class="hs-track" tabindex="0"><a class="hs-slide" href="shop.html" aria-label="Red Naomi"><img src="photo-cat-red-naomi.jpg" alt="Red Naomi" width="640" height="800" fetchpriority="high"><div class="hs-info"><div><div class="hs-name">Red Naomi</div><div class="hs-meta">Red &middot; head 5,5 cm</div></div><div class="hs-price" data-v="Red Naomi" hidden><span class="f">from</span><span class="v"></span><span class="n">excl. VAT · from 5,000 stems</span></div></div></a><a class="hs-slide" href="shop.html" aria-label="Explorer"><img src="photo-cat-explorer.jpg" alt="Explorer" width="640" height="800" loading="lazy"><div class="hs-info"><div><div class="hs-name">Explorer</div><div class="hs-meta">Red &middot; head 4,5 cm</div></div><div class="hs-price" data-v="Explorer" hidden><span class="f">from</span><span class="v"></span><span class="n">excl. VAT · from 5,000 stems</span></div></div></a><a class="hs-slide" href="shop.html" aria-label="Ever Red"><img src="photo-cat-ever-red.jpg" alt="Ever Red" width="640" height="800" loading="lazy"><div class="hs-info"><div><div class="hs-name">Ever Red</div><div class="hs-meta">Red &middot; head 6 cm+</div></div><div class="hs-price" data-v="Ever Red" hidden><span class="f">from</span><span class="v"></span><span class="n">excl. VAT · from 5,000 stems</span></div></div></a><a class="hs-slide" href="shop.html" aria-label="Madam Red"><img src="photo-cat-madam-red.jpg" alt="Madam Red" width="640" height="800" loading="lazy"><div class="hs-info"><div><div class="hs-name">Madam Red</div><div class="hs-meta">Red &middot; head 4,5 cm+</div></div><div class="hs-price" data-v="Madam Red" hidden><span class="f">from</span><span class="v"></span><span class="n">excl. VAT · from 5,000 stems</span></div></div></a></div>
+        <button type="button" class="hs-arrow hs-prev" aria-label="Previous rose"><svg width="14" height="22" viewBox="0 0 14 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M11 2 3 11l8 9"/></svg></button>
+        <button type="button" class="hs-arrow hs-next" aria-label="Next rose"><svg width="14" height="22" viewBox="0 0 14 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 2l8 9-8 9"/></svg></button>
+        <div class="hs-dots"></div>
+      </div>
+    </section>
+    <aside class="ab-dock" data-dock="en"></aside>
   </div>
 
   <!-- Brand statement -->
@@ -422,15 +432,24 @@
     </div>
   </div>
 
-  <!-- Hero: real greenhouse photography -->
-  <div style="position:relative; height:520px; overflow:hidden; margin:24px 64px 0; border-radius:20px;">
-    <img src="hero-roses.jpg" alt="Üvegházi rózsák" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
-    <div style="position:absolute; inset:0; background: linear-gradient(0deg, rgba(20,16,13,0.82) 0%, rgba(20,16,13,0.35) 45%, rgba(20,16,13,0.05) 75%);"></div>
-    <div style="position:absolute; left:40px; bottom:40px; max-width:680px;">
-      <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#D8C9A3;">Közvetlenül Kenyából</span>
-      <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:64px; line-height:1.1; margin:18px 0 0; color:#FBF8F2;">Nagykereskedelmi virágok<br>Kenyából.</h1>
-      <p class="ab-hero-sub" style="font-size:14.5px; color:#E4DFD8; margin:16px 0 0; line-height:1.7; max-width:600px;">Vágott virágot szállítunk Kenyából viszonteladóknak szerte a világon, kiegészítve dél-amerikai termelőkkel.</p>
-    </div>
+  <!-- Hero: time-limited price campaign (hero.css / hero.js) + docked sample-box offer -->
+  <div class="ab-herorow">
+    <section class="ab-hero2" data-hero="hu" aria-roledescription="carousel" aria-label="Kiemelt rózsák garantált árakkal">
+      <div class="hs-copy">
+        <div class="hs-badge"><b>Újdonság</b></div>
+        <h1 class="hs-guar" data-expired="Nagykereskedelmi rózsák Kenyából">Az árak 2026. december 31-ig garantáltak</h1>
+        <p class="hs-sub">Rögzítse a mai nagykereskedelmi árakat, és rendeljen az év vége előtt. Az árak legnépszerűbb rózsáinkra vonatkoznak, az Ön üzletébe szállítva.</p>
+        <p class="hs-cd" hidden></p>
+        <div class="hs-cta"><a class="hs-btn" href="shop.html" data-expired="A webshopba">Rendelés a garantált áron</a><a class="hs-more" href="collection.html">Teljes kollekció</a></div>
+      </div>
+      <div class="hs-stage">
+        <div class="hs-track" tabindex="0"><a class="hs-slide" href="shop.html" aria-label="Red Naomi"><img src="photo-cat-red-naomi.jpg" alt="Red Naomi" width="640" height="800" fetchpriority="high"><div class="hs-info"><div><div class="hs-name">Red Naomi</div><div class="hs-meta">Piros &middot; fej 5,5 cm</div></div><div class="hs-price" data-v="Red Naomi" hidden><span class="f">-tól</span><span class="v"></span><span class="n">+ ÁFA · 5 000 száltól</span></div></div></a><a class="hs-slide" href="shop.html" aria-label="Explorer"><img src="photo-cat-explorer.jpg" alt="Explorer" width="640" height="800" loading="lazy"><div class="hs-info"><div><div class="hs-name">Explorer</div><div class="hs-meta">Piros &middot; fej 4,5 cm</div></div><div class="hs-price" data-v="Explorer" hidden><span class="f">-tól</span><span class="v"></span><span class="n">+ ÁFA · 5 000 száltól</span></div></div></a><a class="hs-slide" href="shop.html" aria-label="Ever Red"><img src="photo-cat-ever-red.jpg" alt="Ever Red" width="640" height="800" loading="lazy"><div class="hs-info"><div><div class="hs-name">Ever Red</div><div class="hs-meta">Piros &middot; fej 6 cm+</div></div><div class="hs-price" data-v="Ever Red" hidden><span class="f">-tól</span><span class="v"></span><span class="n">+ ÁFA · 5 000 száltól</span></div></div></a><a class="hs-slide" href="shop.html" aria-label="Madam Red"><img src="photo-cat-madam-red.jpg" alt="Madam Red" width="640" height="800" loading="lazy"><div class="hs-info"><div><div class="hs-name">Madam Red</div><div class="hs-meta">Piros &middot; fej 4,5 cm+</div></div><div class="hs-price" data-v="Madam Red" hidden><span class="f">-tól</span><span class="v"></span><span class="n">+ ÁFA · 5 000 száltól</span></div></div></a></div>
+        <button type="button" class="hs-arrow hs-prev" aria-label="Előző rózsa"><svg width="14" height="22" viewBox="0 0 14 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M11 2 3 11l8 9"/></svg></button>
+        <button type="button" class="hs-arrow hs-next" aria-label="Következő rózsa"><svg width="14" height="22" viewBox="0 0 14 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 2l8 9-8 9"/></svg></button>
+        <div class="hs-dots"></div>
+      </div>
+    </section>
+    <aside class="ab-dock" data-dock="hu"></aside>
   </div>
 
   <!-- Brand statement -->
@@ -593,15 +612,24 @@
     </div>
   </div>
 
-  <!-- Hero: real greenhouse photography -->
-  <div style="position:relative; height:520px; overflow:hidden; margin:24px 64px 0; border-radius:20px;">
-    <img src="hero-roses.jpg" alt="Rose greenhouse" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
-    <div style="position:absolute; inset:0; background: linear-gradient(0deg, rgba(20,16,13,0.82) 0%, rgba(20,16,13,0.35) 45%, rgba(20,16,13,0.05) 75%);"></div>
-    <div style="position:absolute; left:40px; bottom:40px; max-width:680px;">
-      <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#D8C9A3;">Directo desde Kenia</span>
-      <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:64px; line-height:1.1; margin:18px 0 0; color:#FBF8F2;">Flores al por mayor<br>desde Kenia.</h1>
-      <p class="ab-hero-sub" style="font-size:14.5px; color:#E4DFD8; margin:16px 0 0; line-height:1.7; max-width:600px;">Entregamos flores cortadas de Kenia a minoristas de todo el mundo, complementadas con cultivadores de Sudamérica.</p>
-    </div>
+  <!-- Hero: time-limited price campaign (hero.css / hero.js) + docked sample-box offer -->
+  <div class="ab-herorow">
+    <section class="ab-hero2" data-hero="es" aria-roledescription="carousel" aria-label="Rosas destacadas con precios garantizados">
+      <div class="hs-copy">
+        <div class="hs-badge"><b>Novedad</b></div>
+        <h1 class="hs-guar" data-expired="Rosas al por mayor desde Kenia">Precios garantizados hasta el 31 de diciembre de 2026</h1>
+        <p class="hs-sub">Asegure los precios mayoristas de hoy y pida antes de fin de año. Los precios son para nuestras rosas más populares, entregadas en su tienda.</p>
+        <p class="hs-cd" hidden></p>
+        <div class="hs-cta"><a class="hs-btn" href="shop.html" data-expired="Ir a la tienda online">Pedir al precio garantizado</a><a class="hs-more" href="collection.html">Ver toda la colección</a></div>
+      </div>
+      <div class="hs-stage">
+        <div class="hs-track" tabindex="0"><a class="hs-slide" href="shop.html" aria-label="Red Naomi"><img src="photo-cat-red-naomi.jpg" alt="Red Naomi" width="640" height="800" fetchpriority="high"><div class="hs-info"><div><div class="hs-name">Red Naomi</div><div class="hs-meta">Roja &middot; cabeza 5,5 cm</div></div><div class="hs-price" data-v="Red Naomi" hidden><span class="f">desde</span><span class="v"></span><span class="n">sin IVA · a partir de 5.000 tallos</span></div></div></a><a class="hs-slide" href="shop.html" aria-label="Explorer"><img src="photo-cat-explorer.jpg" alt="Explorer" width="640" height="800" loading="lazy"><div class="hs-info"><div><div class="hs-name">Explorer</div><div class="hs-meta">Roja &middot; cabeza 4,5 cm</div></div><div class="hs-price" data-v="Explorer" hidden><span class="f">desde</span><span class="v"></span><span class="n">sin IVA · a partir de 5.000 tallos</span></div></div></a><a class="hs-slide" href="shop.html" aria-label="Ever Red"><img src="photo-cat-ever-red.jpg" alt="Ever Red" width="640" height="800" loading="lazy"><div class="hs-info"><div><div class="hs-name">Ever Red</div><div class="hs-meta">Roja &middot; cabeza 6 cm+</div></div><div class="hs-price" data-v="Ever Red" hidden><span class="f">desde</span><span class="v"></span><span class="n">sin IVA · a partir de 5.000 tallos</span></div></div></a><a class="hs-slide" href="shop.html" aria-label="Madam Red"><img src="photo-cat-madam-red.jpg" alt="Madam Red" width="640" height="800" loading="lazy"><div class="hs-info"><div><div class="hs-name">Madam Red</div><div class="hs-meta">Roja &middot; cabeza 4,5 cm+</div></div><div class="hs-price" data-v="Madam Red" hidden><span class="f">desde</span><span class="v"></span><span class="n">sin IVA · a partir de 5.000 tallos</span></div></div></a></div>
+        <button type="button" class="hs-arrow hs-prev" aria-label="Rosa anterior"><svg width="14" height="22" viewBox="0 0 14 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M11 2 3 11l8 9"/></svg></button>
+        <button type="button" class="hs-arrow hs-next" aria-label="Rosa siguiente"><svg width="14" height="22" viewBox="0 0 14 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 2l8 9-8 9"/></svg></button>
+        <div class="hs-dots"></div>
+      </div>
+    </section>
+    <aside class="ab-dock" data-dock="es"></aside>
   </div>
 
   <!-- Brand statement -->
@@ -764,15 +792,24 @@
     </div>
   </div>
 
-  <!-- Hero: real greenhouse photography -->
-  <div style="position:relative; height:520px; overflow:hidden; margin:24px 64px 0; border-radius:20px;">
-    <img src="hero-roses.jpg" alt="Rose greenhouse" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
-    <div style="position:absolute; inset:0; background: linear-gradient(0deg, rgba(20,16,13,0.82) 0%, rgba(20,16,13,0.35) 45%, rgba(20,16,13,0.05) 75%);"></div>
-    <div style="position:absolute; left:40px; bottom:40px; max-width:680px;">
-      <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#D8C9A3;">Напрямую из Кении</span>
-      <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:64px; line-height:1.1; margin:18px 0 0; color:#FBF8F2;">Оптовые цветы<br>из Кении.</h1>
-      <p class="ab-hero-sub" style="font-size:14.5px; color:#E4DFD8; margin:16px 0 0; line-height:1.7; max-width:600px;">Мы поставляем срезанные цветы из Кении розничным продавцам по всему миру, а также от производителей из Южной Америки.</p>
-    </div>
+  <!-- Hero: time-limited price campaign (hero.css / hero.js) + docked sample-box offer -->
+  <div class="ab-herorow">
+    <section class="ab-hero2" data-hero="ru" aria-roledescription="carousel" aria-label="Избранные розы с гарантированными ценами">
+      <div class="hs-copy">
+        <div class="hs-badge"><b>Новинка</b></div>
+        <h1 class="hs-guar" data-expired="Оптовые розы из Кении">Цены гарантированы до 31 декабря 2026 года</h1>
+        <p class="hs-sub">Зафиксируйте сегодняшние оптовые цены и закажите до конца года. Цены действуют на наши самые популярные розы с доставкой в ваш магазин.</p>
+        <p class="hs-cd" hidden></p>
+        <div class="hs-cta"><a class="hs-btn" href="shop.html" data-expired="В интернет-магазин">Заказать по гарантированной цене</a><a class="hs-more" href="collection.html">Вся коллекция</a></div>
+      </div>
+      <div class="hs-stage">
+        <div class="hs-track" tabindex="0"><a class="hs-slide" href="shop.html" aria-label="Red Naomi"><img src="photo-cat-red-naomi.jpg" alt="Red Naomi" width="640" height="800" fetchpriority="high"><div class="hs-info"><div><div class="hs-name">Red Naomi</div><div class="hs-meta">Красная &middot; бутон 5,5 cm</div></div><div class="hs-price" data-v="Red Naomi" hidden><span class="f">от</span><span class="v"></span><span class="n">без НДС · от 5 000 стеблей</span></div></div></a><a class="hs-slide" href="shop.html" aria-label="Explorer"><img src="photo-cat-explorer.jpg" alt="Explorer" width="640" height="800" loading="lazy"><div class="hs-info"><div><div class="hs-name">Explorer</div><div class="hs-meta">Красная &middot; бутон 4,5 cm</div></div><div class="hs-price" data-v="Explorer" hidden><span class="f">от</span><span class="v"></span><span class="n">без НДС · от 5 000 стеблей</span></div></div></a><a class="hs-slide" href="shop.html" aria-label="Ever Red"><img src="photo-cat-ever-red.jpg" alt="Ever Red" width="640" height="800" loading="lazy"><div class="hs-info"><div><div class="hs-name">Ever Red</div><div class="hs-meta">Красная &middot; бутон 6 cm+</div></div><div class="hs-price" data-v="Ever Red" hidden><span class="f">от</span><span class="v"></span><span class="n">без НДС · от 5 000 стеблей</span></div></div></a><a class="hs-slide" href="shop.html" aria-label="Madam Red"><img src="photo-cat-madam-red.jpg" alt="Madam Red" width="640" height="800" loading="lazy"><div class="hs-info"><div><div class="hs-name">Madam Red</div><div class="hs-meta">Красная &middot; бутон 4,5 cm+</div></div><div class="hs-price" data-v="Madam Red" hidden><span class="f">от</span><span class="v"></span><span class="n">без НДС · от 5 000 стеблей</span></div></div></a></div>
+        <button type="button" class="hs-arrow hs-prev" aria-label="Предыдущая роза"><svg width="14" height="22" viewBox="0 0 14 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M11 2 3 11l8 9"/></svg></button>
+        <button type="button" class="hs-arrow hs-next" aria-label="Следующая роза"><svg width="14" height="22" viewBox="0 0 14 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 2l8 9-8 9"/></svg></button>
+        <div class="hs-dots"></div>
+      </div>
+    </section>
+    <aside class="ab-dock" data-dock="ru"></aside>
   </div>
 
   <!-- Brand statement -->
@@ -935,15 +972,24 @@
     </div>
   </div>
 
-  <!-- Hero: real greenhouse photography -->
-  <div style="position:relative; height:520px; overflow:hidden; margin:24px 64px 0; border-radius:20px;">
-    <img src="hero-roses.jpg" alt="Rose greenhouse" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
-    <div style="position:absolute; inset:0; background: linear-gradient(0deg, rgba(20,16,13,0.82) 0%, rgba(20,16,13,0.35) 45%, rgba(20,16,13,0.05) 75%);"></div>
-    <div style="position:absolute; left:40px; bottom:40px; max-width:680px;">
-      <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:#D8C9A3;">Direkt från Kenya</span>
-      <h1 style="font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:500; font-size:64px; line-height:1.1; margin:18px 0 0; color:#FBF8F2;">Grossistblommor<br>från Kenya.</h1>
-      <p class="ab-hero-sub" style="font-size:14.5px; color:#E4DFD8; margin:16px 0 0; line-height:1.7; max-width:600px;">Vi levererar snittblommor från Kenya till återförsäljare världen över, kompletterat med odlare i Sydamerika.</p>
-    </div>
+  <!-- Hero: time-limited price campaign (hero.css / hero.js) + docked sample-box offer -->
+  <div class="ab-herorow">
+    <section class="ab-hero2" data-hero="sv" aria-roledescription="carousel" aria-label="Utvalda rosor med garanterade priser">
+      <div class="hs-copy">
+        <div class="hs-badge"><b>Nyhet</b></div>
+        <h1 class="hs-guar" data-expired="Grossistrosor från Kenya">Priserna är garanterade till och med 31 december 2026</h1>
+        <p class="hs-sub">Lås in dagens grossistpriser och beställ före årsskiftet. Priserna gäller våra mest populära rosor, levererade till din butik.</p>
+        <p class="hs-cd" hidden></p>
+        <div class="hs-cta"><a class="hs-btn" href="shop.html" data-expired="Till webshoppen">Beställ till garanterat pris</a><a class="hs-more" href="collection.html">Se hela kollektionen</a></div>
+      </div>
+      <div class="hs-stage">
+        <div class="hs-track" tabindex="0"><a class="hs-slide" href="shop.html" aria-label="Red Naomi"><img src="photo-cat-red-naomi.jpg" alt="Red Naomi" width="640" height="800" fetchpriority="high"><div class="hs-info"><div><div class="hs-name">Red Naomi</div><div class="hs-meta">Röd &middot; huvud 5,5 cm</div></div><div class="hs-price" data-v="Red Naomi" hidden><span class="f">från</span><span class="v"></span><span class="n">exkl. moms · från 5 000 st</span></div></div></a><a class="hs-slide" href="shop.html" aria-label="Explorer"><img src="photo-cat-explorer.jpg" alt="Explorer" width="640" height="800" loading="lazy"><div class="hs-info"><div><div class="hs-name">Explorer</div><div class="hs-meta">Röd &middot; huvud 4,5 cm</div></div><div class="hs-price" data-v="Explorer" hidden><span class="f">från</span><span class="v"></span><span class="n">exkl. moms · från 5 000 st</span></div></div></a><a class="hs-slide" href="shop.html" aria-label="Ever Red"><img src="photo-cat-ever-red.jpg" alt="Ever Red" width="640" height="800" loading="lazy"><div class="hs-info"><div><div class="hs-name">Ever Red</div><div class="hs-meta">Röd &middot; huvud 6 cm+</div></div><div class="hs-price" data-v="Ever Red" hidden><span class="f">från</span><span class="v"></span><span class="n">exkl. moms · från 5 000 st</span></div></div></a><a class="hs-slide" href="shop.html" aria-label="Madam Red"><img src="photo-cat-madam-red.jpg" alt="Madam Red" width="640" height="800" loading="lazy"><div class="hs-info"><div><div class="hs-name">Madam Red</div><div class="hs-meta">Röd &middot; huvud 4,5 cm+</div></div><div class="hs-price" data-v="Madam Red" hidden><span class="f">från</span><span class="v"></span><span class="n">exkl. moms · från 5 000 st</span></div></div></a></div>
+        <button type="button" class="hs-arrow hs-prev" aria-label="Föregående ros"><svg width="14" height="22" viewBox="0 0 14 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M11 2 3 11l8 9"/></svg></button>
+        <button type="button" class="hs-arrow hs-next" aria-label="Nästa ros"><svg width="14" height="22" viewBox="0 0 14 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 2l8 9-8 9"/></svg></button>
+        <div class="hs-dots"></div>
+      </div>
+    </section>
+    <aside class="ab-dock" data-dock="sv"></aside>
   </div>
 
   <!-- Brand statement -->
@@ -1189,6 +1235,8 @@ document.querySelectorAll('.ab-burger').forEach(function (b) {
   var o=window.setLang;window.setLang=function(c){o(c);upd();};upd();
 })();
 </script>
+<script src="shop-config.js"></script>
+<script src="hero.js" defer></script>
 <script src="offer-banner.js" defer></script>
 </body>
 </html>

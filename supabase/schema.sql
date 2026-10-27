@@ -357,3 +357,21 @@ grant execute on function public.admin_replace_variety_groups(jsonb) to authenti
 --      set is_admin = true, status = 'approved'
 --    where email = 'info@africane.se';
 -- ---------------------------------------------------------------------------
+
+-- ---------------------------------------------------------------------------
+-- 7. Public "from" prices for the homepage hero (the ONLY price data visible without login)
+-- ---------------------------------------------------------------------------
+-- Returns the lowest ex-VAT price at the lowest volume tier for a fixed list of featured roses.
+-- To feature other roses, edit the list below AND the slides in index.html (see build in DRIFT.md).
+
+create or replace function public.public_from_prices() returns table(variety text, from_ex numeric)
+language sql stable security definer set search_path = public as $$
+  select vg.variety, min(pr.price_ex_vat)
+  from public.variety_groups vg
+  join public.price_rows pr on pr.price_group = vg.price_group and pr.head_size = 'standard'
+   and pr.tier_qty = (select min(p2.tier_qty) from public.price_rows p2 where p2.price_group = vg.price_group)
+  where vg.variety in ('Red Naomi', 'Explorer', 'Ever Red', 'Madam Red')
+  group by vg.variety
+$$;
+revoke all on function public.public_from_prices() from public;
+grant execute on function public.public_from_prices() to anon, authenticated;

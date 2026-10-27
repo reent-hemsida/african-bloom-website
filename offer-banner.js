@@ -21,6 +21,42 @@
           body: 'Próbálja ki rózsáinkat, mielőtt nagyobb mennyiséget rendel. Válasszon 100 rózsát a 35 legnépszerűbb rózsánkat tartalmazó katalógusunkból.',
           cta: 'Próbadoboz rendelése', more: 'Rózsák megtekintése', close: 'Bezárás' }
   };
+  // card docked beside the homepage hero (desktop only; the markup is in index.html, hero.css styles it)
+  var DOCK = {
+    sv: { big: '100 rosor', small: 'i en provlåda', price: '995 kr', vat: 'exkl. moms' },
+    en: { big: '100 roses', small: 'in a sample box', price: 'SEK 995', vat: 'excl. VAT' },
+    es: { big: '100 rosas', small: 'en una caja de prueba', price: '995 SEK', vat: 'sin IVA' },
+    ru: { big: '100 роз', small: 'в пробной коробке', price: '995 SEK', vat: 'без НДС' },
+    hu: { big: '100 rózsa', small: 'egy próbadobozban', price: '995 SEK', vat: '+ ÁFA' }
+  };
+  function fillDocks() {
+    document.querySelectorAll('.ab-dock').forEach(function (d) {
+      var l = d.getAttribute('data-dock') || 'sv', t = TXT[l] || TXT.sv, k = DOCK[l] || DOCK.sv;
+      d.innerHTML = '<p class="dtag"></p><p class="dbig"><span></span><small></small></p><p class="dprice"><b></b><span></span></p><p class="dbody"></p><a class="dcta" href="sample-box.html"></a>';
+      d.querySelector('.dtag').textContent = t.tag; d.querySelector('.dbig span').textContent = k.big; d.querySelector('.dbig small').textContent = k.small;
+      d.querySelector('.dprice b').textContent = k.price; d.querySelector('.dprice span').textContent = k.vat;
+      d.querySelector('.dbody').textContent = t.body; d.querySelector('.dcta').textContent = t.cta;
+    });
+  }
+  function watchDocks() {
+    var docks = document.querySelectorAll('.ab-dock'); if (!docks.length) return;
+    // the floating button is hidden while the docked card is on screen (see hero.css)
+    if ('IntersectionObserver' in window) {
+      var seen = {};
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { seen[e.target.getAttribute('data-dock')] = e.isIntersecting; });
+        var any = false; for (var k in seen) if (seen[k]) any = true;
+        document.body.classList.toggle('ab-dock-seen', any);
+      }, { threshold: 0.3 });
+      docks.forEach(function (d) { io.observe(d); });
+    }
+  }
+  function pulseDock() {
+    document.querySelectorAll('.ab-dock').forEach(function (d) {
+      if (!d.offsetParent) return;
+      d.classList.remove('pulse'); void d.offsetWidth; d.classList.add('pulse');
+    });
+  }
   function recentlyClosed() {
     try { var t = parseInt(localStorage.getItem(KEY), 10); return t && Date.now() - t < DAYS * 86400000; } catch (e) { return false; }
   }
@@ -63,6 +99,7 @@
     el.querySelector('.cta').textContent = t.cta; el.querySelector('.more').textContent = t.more;
     el.querySelector('.x').setAttribute('aria-label', t.close);
     pill.querySelector('span').textContent = t.pill; pill.setAttribute('aria-label', t.title + ' ' + t.vat);
+    fillDocks();
   }
   function onKey(e) { if (e.key === 'Escape') close(); }
   function open() {
@@ -75,10 +112,11 @@
     setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 260);
     document.removeEventListener('keydown', onKey);
     pill.focus();
+    setTimeout(pulseDock, 300);
   }
 
   function init() {
-    fill(); document.body.appendChild(pill);
+    fill(); document.body.appendChild(pill); watchDocks();
     new MutationObserver(fill).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
     el.querySelector('.x').addEventListener('click', close);
     el.addEventListener('click', function (e) { if (e.target === el) close(); });
@@ -87,6 +125,7 @@
     // open by itself on a first visit (or after 7 days); otherwise only the small button is shown
     if (!recentlyClosed()) open();
   }
+  fillDocks(); // docked card on the homepage: fill straight away so it is never shown empty
   // wait a moment so the page's own language switch has run
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { setTimeout(init, 700); });
   else setTimeout(init, 700);

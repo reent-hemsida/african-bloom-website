@@ -108,3 +108,11 @@ Interna prislistor (PDF med farm-namn och kostnadsunderlag) är konfidentiella o
 Ägaren skriver svenska och är inte tekniskt van: ge en sak i taget, kopiera kommandon till urklipp, be om skärmdumpar,
 och be aldrig om lösenord. Kontrollera alltid att ändringar är live (hämta sidan efter publicering) innan du säger att
 något är klart.
+
+## Hero på startsidan (kampanj)
+
+* Hero visar fyra rosor (Red Naomi, Explorer, Ever Red, Madam Red) ett i taget, med "från"-pris och nedräkning till 31 dec 2026. Stil: `hero.css`, beteende: `hero.js`, texter per språk direkt i `index.html`.
+* **Undantag från prisregeln (beslutat av ägaren):** de fyra rosornas lägsta pris (exkl. moms, nivå 5 000 st) visas för alla via databasfunktionen `public_from_prices()` (se `supabase/schema.sql`, avsnitt 7). Inga andra priser lämnas ut. Priset hämtas live och följer prislistan.
+* Byta ros: ändra listan i funktionen i Supabase (SQL-editorn) **och** slide-listan i `index.html`.
+* Garantin slutar 31 dec 2026: `GUARANTEE_END` i `hero.js`. Efter datumet byts rubriken automatiskt till "Grossistrosor från Kenya" och nedräkning/Nyhet döljs. Uppdatera texterna inför nästa kampanj.
+* Provlådeerbjudandet ligger som ett kort till höger om hero (bara dator, `offer-banner.js`); knappen nere till vänster döljs medan kortet syns.
