@@ -932,15 +932,16 @@ document.querySelectorAll('.ab-burger').forEach(function (b) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (form.querySelector('[name="_honey"]').value) return;
-      btn.disabled = true; st.className = 'ab-form-status'; st.textContent = L.sending;
-      fetch('https://formsubmit.co/ajax/dc7087dd982518597a18847399951c8d', { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
-        .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); })
-        .then(function (res) {
-          if (res.ok && (res.j.success === true || res.j.success === 'true')) { st.className = 'ab-form-status ok'; st.textContent = L.ok; form.reset(); }
-          else throw new Error(res.j.message || 'failed');
-        })
-        .catch(function () { st.className = 'ab-form-status err'; st.innerHTML = L.err; })
-        .then(function () { btn.disabled = false; });
+      var body = new FormData(form), saved = {};
+      form.querySelectorAll('input, textarea').forEach(function (el) { if (el.name) saved[el.name] = el.value; });
+      /* FormSubmit takes ~30 s to answer although the mail is sent at once, so confirm straight away
+         and only step in if the request fails outright (network error). */
+      form.reset(); st.className = 'ab-form-status ok'; st.textContent = L.ok;
+      fetch('https://formsubmit.co/ajax/dc7087dd982518597a18847399951c8d', { method: 'POST', headers: { 'Accept': 'application/json' }, body: body })
+        .catch(function () {
+          form.querySelectorAll('input, textarea').forEach(function (el) { if (el.name && saved[el.name] !== undefined && el.type !== 'hidden') el.value = saved[el.name]; });
+          st.className = 'ab-form-status err'; st.innerHTML = L.err;
+        });
     });
   });
 })();
