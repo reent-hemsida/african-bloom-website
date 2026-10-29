@@ -381,7 +381,7 @@
       return rows;
     }
     function seed() {
-      var d = { users: [], profiles: {}, price_rows: demoPrices(), groups: {}, settings: { min_total_stems: '5000' }, orders: [], orderNo: 1000 };
+      var d = { users: [], profiles: {}, price_rows: demoPrices(), groups: {}, settings: { min_total_stems: '1000' }, orders: [], orderNo: 1000 };
       var map = { 16: 'red', 17: 'white', 14: 'pink', 10: 'pink', 7: 'pink', 18: 'yellow', 12: 'orange', 13: 'peach', 4: 'peach' };
       VARIETIES.forEach(function (v) {
         if (v.cat === 'r' && map[v.colour]) d.groups[v.name] = map[v.colour];
