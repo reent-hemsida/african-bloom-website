@@ -10,8 +10,8 @@
   var CFG = window.AB_SHOP_CONFIG || {};
   var SB_SRC = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js';
   var SB_SRI = 'sha384-0w2KAL2YHP6wKOkUDzkCDGgVvfmHnj02DHeQ6XcHOgTfFsGyonKOpShMH1x6nk9o';
-  var LANGS = ['en', 'es', 'ru', 'sv', 'hu'];
-  var LOCALES = { en: 'en-GB', es: 'es-ES', ru: 'ru-RU', sv: 'sv-SE', hu: 'hu-HU' };
+  var LANGS = ['en', 'es', 'ru', 'sv', 'hu', 'it'];
+  var LOCALES = { en: 'en-GB', es: 'es-ES', ru: 'ru-RU', sv: 'sv-SE', hu: 'hu-HU', it: 'it-IT' };
   var GROUPS = ['red', 'white', 'pink', 'yellow', 'orange', 'peach', 'spray', 'special_spray'];
   var HEADS = ['standard', 'large', 'xlarge'];
 
@@ -49,7 +49,7 @@
       c_cm: 'см', c_stems: 'стеблей', c_sek: 'SEK', c_error: 'Что-то пошло не так. Попробуйте ещё раз.'
     }
   };
-  var PDF = { hu: 'complaints-policy.pdf', en: 'complaints-policy.pdf', sv: 'reklamationspolicy.pdf', es: 'politica-de-reclamaciones.pdf', ru: 'politika-reklamatsiy.pdf' };
+  var PDF = { it: 'complaints-policy.pdf', hu: 'complaints-policy.pdf', en: 'complaints-policy.pdf', sv: 'reklamationspolicy.pdf', es: 'politica-de-reclamaciones.pdf', ru: 'politika-reklamatsiy.pdf' };
   var CAT_KEYS = { r: 'Roses', g: 'Garden Roses', s: 'Spray Roses', c: 'Carnations', a: 'Alstroemeria', u: 'Ranunculus', y: 'Gypsophila', o: 'Other Flowers' };
   var CAT_LABELS = {
     en: { r: 'Roses', g: 'Garden Roses', s: 'Spray Roses', c: 'Carnations', a: 'Alstroemeria', u: 'Ranunculus', y: 'Gypsophila', o: 'Other Flowers' },
@@ -67,6 +67,10 @@
   S.hu = {"c_home": "Főoldal", "c_about": "Rólunk", "c_collection": "Kollekció", "c_order": "Rendelés menete", "c_faq": "GYIK", "c_contact": "Kapcsolat", "c_shop": "Webshop", "c_customer": "Ügyfélbelépés", "c_login": "Belépés", "c_logout": "Kilépés", "c_admin": "Admin", "c_complaints": "Reklamációs szabályzat", "c_privacy": "Adatvédelmi tájékoztató", "c_loading": "Betöltés…", "c_cm": "cm", "c_stems": "szál", "c_sek": "SEK", "c_error": "Hiba történt. Kérjük, próbálja újra."};
   CAT_LABELS.hu = {"r": "Rózsák", "g": "Kerti rózsák", "s": "Spray rózsák", "c": "Szegfűk", "a": "Alstroemeria", "u": "Boglárka", "y": "Fátyolvirág", "o": "Egyéb virágok"};
   COLOR_LABELS.hu = ["Kétszínű", "Kék", "Bronz", "Bordó", "Krém", "Arany", "Zöld", "Élénkrózsaszín", "Levendula", "Világoskék", "Világos rózsaszín", "Vegyes szín", "Narancs", "Barack", "Rózsaszín", "Lila", "Piros", "Fehér", "Sárga"];
+
+  S.it = {"c_home": "Home", "c_about": "Chi siamo", "c_collection": "Collezione", "c_order": "Come ordinare", "c_faq": "FAQ", "c_contact": "Contatti", "c_shop": "Webshop", "c_customer": "Accesso clienti", "c_login": "Accedi", "c_logout": "Esci", "c_admin": "Admin", "c_complaints": "Politica sui reclami", "c_privacy": "Informativa sulla privacy", "c_loading": "Caricamento…", "c_cm": "cm", "c_stems": "steli", "c_sek": "SEK", "c_error": "Qualcosa è andato storto. Riprovate."};
+  CAT_LABELS.it = {"r": "Rose", "g": "Rose da giardino", "s": "Rose spray", "c": "Garofani", "a": "Alstroemeria", "u": "Ranuncoli", "y": "Gypsophila", "o": "Altri fiori"};
+  COLOR_LABELS.it = ["Bicolore", "Blu", "Bronzo", "Bordeaux", "Crema", "Oro", "Verde", "Rosa shocking", "Lavanda", "Azzurro", "Rosa chiaro", "Colori misti", "Arancione", "Pesca", "Rosa", "Viola", "Rosso", "Bianco", "Giallo"];
 
   var lang = 'en';
   try { var sv = localStorage.getItem('ab-lang'); if (LANGS.indexOf(sv) >= 0) lang = sv; } catch (e) {}

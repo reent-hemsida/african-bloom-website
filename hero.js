@@ -9,9 +9,10 @@
     en: { d0: 'Last day to order is today', d1: 'Last day: 1 day left to order', dn: '{n} days left to order at the guaranteed price', fmt: function (p) { return 'SEK ' + p; } },
     es: { d0: 'Hoy es el último día para pedir', d1: 'Último día: queda 1 día para pedir', dn: 'Quedan {n} días para pedir al precio garantizado', fmt: function (p) { return p + ' SEK'; } },
     ru: { d0: 'Сегодня последний день для заказа', d1: 'Последний день: остался 1 день для заказа', dn: 'Осталось дней для заказа по гарантированной цене: {n}', fmt: function (p) { return p + ' SEK'; } },
+    it: { d0: 'Oggi è l’ultimo giorno per ordinare', d1: 'Ultimo giorno: manca 1 giorno per ordinare', dn: 'Mancano {n} giorni per ordinare al prezzo garantito', fmt: function (p) { return p + ' SEK'; } },
     hu: { d0: 'Ma az utolsó nap a rendelésre', d1: 'Utolsó nap: még 1 nap a rendelésre', dn: 'Még {n} nap a rendelésre a garantált áron', fmt: function (p) { return p + ' SEK'; } }
   };
-  var LOCALE = { sv: 'sv-SE', en: 'en-GB', es: 'es-ES', ru: 'ru-RU', hu: 'hu-HU' };
+  var LOCALE = { sv: 'sv-SE', en: 'en-GB', es: 'es-ES', ru: 'ru-RU', hu: 'hu-HU', it: 'it-IT' };
   var heroes = Array.prototype.slice.call(document.querySelectorAll('[data-hero]'));
   if (!heroes.length) return;
 

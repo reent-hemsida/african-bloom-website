@@ -51,6 +51,13 @@ const TEXT: Record<string, { subject: string; hello: string; body: string; butto
     button: "Bel\u00e9p\u00e9s",
     foot: "K\u00e9rd\u00e9se van? V\u00e1laszoljon erre a lev\u00e9lre, vagy \u00edrjon az info@africane.se c\u00edmre.",
   },
+  it: {
+    subject: "Il vostro account Africane Bloom \u00e8 stato approvato",
+    hello: "Buongiorno",
+    body: "Il vostro account cliente su africane.se \u00e8 stato approvato. Ora potete accedere per vedere i prezzi e inviare richieste d\u2019ordine.",
+    button: "Accedi",
+    foot: "Domande? Rispondete a questa e-mail o scrivete a info@africane.se.",
+  },
   ru: {
     subject: "\u0412\u0430\u0448\u0430 \u0443\u0447\u0451\u0442\u043d\u0430\u044f \u0437\u0430\u043f\u0438\u0441\u044c Africane Bloom \u043f\u043e\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043d\u0430",
     hello: "\u0417\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439\u0442\u0435",

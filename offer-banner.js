@@ -17,6 +17,9 @@
     ru: { pill: 'Пробная коробка', tag: 'Предложение для компаний', title: 'Пробная коробка: 100 роз за 995 SEK', vat: 'без НДС',
           body: 'Попробуйте наши розы, прежде чем заказывать большие объёмы. Выберите 100 роз из каталога наших 35 самых популярных роз.',
           cta: 'Заказать пробную коробку', more: 'Смотреть розы', close: 'Закрыть' },
+    it: { pill: 'Scatola di prova', tag: 'Offerta per aziende', title: 'Scatola di prova: 100 rose a 995 SEK', vat: 'IVA esclusa',
+          body: 'Provate le nostre rose prima di ordinare volumi maggiori. Scegliete 100 rose dal nostro catalogo delle 35 rose più richieste.',
+          cta: 'Ordina una scatola di prova', more: 'Vedi le rose', close: 'Chiudi' },
     hu: { pill: 'Próbadoboz', tag: 'Ajánlat vállalkozásoknak', title: 'Próbadoboz: 100 rózsa 995 SEK-ért', vat: '+ ÁFA',
           body: 'Próbálja ki rózsáinkat, mielőtt nagyobb mennyiséget rendel. Válasszon 100 rózsát a 35 legnépszerűbb rózsánkat tartalmazó katalógusunkból.',
           cta: 'Próbadoboz rendelése', more: 'Rózsák megtekintése', close: 'Bezárás' }
@@ -27,6 +30,7 @@
     en: { big: '100 roses', small: 'in a sample box', price: 'SEK 995', vat: 'excl. VAT' },
     es: { big: '100 rosas', small: 'en una caja de prueba', price: '995 SEK', vat: 'sin IVA' },
     ru: { big: '100 роз', small: 'в пробной коробке', price: '995 SEK', vat: 'без НДС' },
+    it: { big: '100 rose', small: 'in una scatola di prova', price: '995 SEK', vat: 'IVA esclusa' },
     hu: { big: '100 rózsa', small: 'egy próbadobozban', price: '995 SEK', vat: '+ ÁFA' }
   };
   function fillDocks() {
