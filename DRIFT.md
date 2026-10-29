@@ -70,7 +70,7 @@ att först ha pushat och dragit (`git pull`).
 * Prisgrupper: `red, white, pink, yellow, orange, peach, spray, special_spray` (Prislista 2026, med huvudstorlekar)
   samt egna prislistor per sort som heter `v:<sortnamn>` (alltid `head_size=standard`).
 * Volymnivåer 5 000 / 10 000 / 20 000 stjälkar. Priset bestäms av **summan av alla stjälkar i hela ordern (alla sorter och längder tillsammans)**.
-  Under lägsta nivån: pris på förfrågan. Minsta order: inställning i admin (`min_total_stems`, nu 1 000 stjälkar totalt, sorter kan blandas fritt).
+  Under lägsta nivån: pris på förfrågan. Minsta order: inställning i admin (`min_total_stems`, nu 1 000 stjälkar totalt, sorter kan blandas fritt). Volymtrappan börjar vid 5 000 stjälkar totalt; order på 1 000–4 999 stjälkar har pris på förfrågan.
   Ändras logiken måste både `shop-core.js` (`calcCart`) och `place_order` i `supabase/schema.sql` ändras, och SQL:en köras om i Supabase.
 * **Moms:** `vat_percent` (25) räknas på nettosumman. Kolumnen `price_inc_vat` används inte för totalsummor.
 * Beslut ägaren tagit: **Prislista 2026 gäller där den finns**; övriga sorter prissätts från den interna listan
