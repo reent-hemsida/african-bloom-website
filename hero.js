@@ -6,12 +6,14 @@
   var GUARANTEE_END = new Date('2027-01-01T00:00:00+01:00'); // prices guaranteed through 31 Dec 2026
   var TX = {
     sv: { d0: 'Sista dagen att beställa är i dag', d1: 'Sista dagen: 1 dag kvar att beställa', dn: '{n} dagar kvar att beställa till garanterat pris', fmt: function (p) { return p + ' kr'; } },
-    en: { d0: 'Last day to order is today', d1: 'Last day: 1 day left to order', dn: '{n} days left to order at the guaranteed price', fmt: function (p) { return 'SEK ' + p; } },
-    es: { d0: 'Hoy es el último día para pedir', d1: 'Último día: queda 1 día para pedir', dn: 'Quedan {n} días para pedir al precio garantizado', fmt: function (p) { return p + ' SEK'; } },
-    ru: { d0: 'Сегодня последний день для заказа', d1: 'Последний день: остался 1 день для заказа', dn: 'Осталось дней для заказа по гарантированной цене: {n}', fmt: function (p) { return p + ' SEK'; } },
-    it: { d0: 'Oggi è l’ultimo giorno per ordinare', d1: 'Ultimo giorno: manca 1 giorno per ordinare', dn: 'Mancano {n} giorni per ordinare al prezzo garantito', fmt: function (p) { return p + ' SEK'; } },
-    hu: { d0: 'Ma az utolsó nap a rendelésre', d1: 'Utolsó nap: még 1 nap a rendelésre', dn: 'Még {n} nap a rendelésre a garantált áron', fmt: function (p) { return p + ' SEK'; } }
+    en: { d0: 'Last day to order is today', d1: 'Last day: 1 day left to order', dn: '{n} days left to order at the guaranteed price', fmt: function (p) { return 'EUR ' + p; } },
+    es: { d0: 'Hoy es el último día para pedir', d1: 'Último día: queda 1 día para pedir', dn: 'Quedan {n} días para pedir al precio garantizado', fmt: function (p) { return p + ' €'; } },
+    ru: { d0: 'Сегодня последний день для заказа', d1: 'Последний день: остался 1 день для заказа', dn: 'Осталось дней для заказа по гарантированной цене: {n}', fmt: function (p) { return p + ' €'; } },
+    it: { d0: 'Oggi è l’ultimo giorno per ordinare', d1: 'Ultimo giorno: manca 1 giorno per ordinare', dn: 'Mancano {n} giorni per ordinare al prezzo garantito', fmt: function (p) { return p + ' €'; } },
+    hu: { d0: 'Ma az utolsó nap a rendelésre', d1: 'Utolsó nap: még 1 nap a rendelésre', dn: 'Még {n} nap a rendelésre a garantált áron', fmt: function (p) { return p + ' €'; } }
   };
+  // Swedish shows the SEK price; every other language shows EUR. Same conversion as the sample box (SEK 995 = EUR 99), i.e. 10.05 SEK per EUR.
+  var SEK_PER_EUR = 10.05;
   var LOCALE = { sv: 'sv-SE', en: 'en-GB', es: 'es-ES', ru: 'ru-RU', hu: 'hu-HU', it: 'it-IT' };
   var heroes = Array.prototype.slice.call(document.querySelectorAll('[data-hero]'));
   if (!heroes.length) return;
@@ -83,7 +85,8 @@
       Array.prototype.forEach.call(h.querySelectorAll('.hs-price'), function (el) {
         var v = by[el.getAttribute('data-v')];
         if (!isFinite(v)) return;
-        el.querySelector('.v').textContent = t.fmt(v.toLocaleString(LOCALE[lang] || 'sv-SE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+        var shown = lang === 'sv' ? v : Math.round(v / SEK_PER_EUR * 100) / 100;
+        el.querySelector('.v').textContent = t.fmt(shown.toLocaleString(LOCALE[lang] || 'sv-SE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
         el.hidden = false;
       });
     });
