@@ -18,6 +18,9 @@
     .navlink { position:relative; padding-bottom:14px; transition: color 0.15s ease; }
     .navlink:hover { color: #8A4A1E !important; }
     .navlink::after { content:""; position:absolute; left:0; right:0; bottom:0; height:1px; background:#241E17; }
+    /* keep a clear gap between logo, menu and language switcher; Russian menu words are longer */
+    .ab-header { gap: 24px; }
+    html[lang="ru"] .ab-nav { gap: 24px !important; }
     .cta-box { transition: background 0.15s ease, color 0.15s ease; }
     .cta-box:hover { background:#241E17 !important; color:#FFFFFF !important; border-color:#241E17 !important; }
     .cat-figure { transition: opacity 0.15s ease; }
