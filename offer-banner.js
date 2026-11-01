@@ -1,4 +1,4 @@
-/* Offer banner: sample box of 100 roses for SEK 995 / EUR 89 (excl. VAT). Swedish shows SEK, all other languages show EUR.
+/* Offer banner: sample box of 100 roses for SEK 995 / EUR 99 (excl. VAT). Swedish shows SEK, all other languages show EUR.
    Shown once when a visitor enters the site; the X (or Esc / a click outside) closes it and it stays
    closed for 7 days. A small button at the bottom left re-opens it at any time. To change the offer, edit the texts below. */
 (function () {
@@ -8,30 +8,30 @@
     sv: { pill: 'Provlåda 995 kr', tag: 'Erbjudande till företag', title: 'Provlåda: 100 rosor för 995 kr', vat: 'exkl. moms',
           body: 'Prova våra rosor innan du beställer i större volym. Välj 100 rosor ur vår katalog med de 35 mest populära rosorna.',
           cta: 'Beställ provlåda', more: 'Se rosorna', close: 'Stäng' },
-    en: { pill: 'Sample box', tag: 'Offer for businesses', title: 'Sample box: 100 roses for EUR 89', vat: 'excl. VAT',
+    en: { pill: 'Sample box', tag: 'Offer for businesses', title: 'Sample box: 100 roses for EUR 99', vat: 'excl. VAT',
           body: 'Try our roses before you order larger volumes. Choose 100 roses from our catalogue of our 35 most popular roses.',
           cta: 'Order a sample box', more: 'See the roses', close: 'Close' },
-    es: { pill: 'Caja de prueba', tag: 'Oferta para empresas', title: 'Caja de prueba: 100 rosas por 89 €', vat: 'sin IVA',
+    es: { pill: 'Caja de prueba', tag: 'Oferta para empresas', title: 'Caja de prueba: 100 rosas por 99 €', vat: 'sin IVA',
           body: 'Pruebe nuestras rosas antes de pedir mayores volúmenes. Elija 100 rosas de nuestro catálogo de las 35 rosas más populares.',
           cta: 'Pedir caja de prueba', more: 'Ver las rosas', close: 'Cerrar' },
-    ru: { pill: 'Пробная коробка', tag: 'Предложение для компаний', title: 'Пробная коробка: 100 роз за 89 €', vat: 'без НДС',
+    ru: { pill: 'Пробная коробка', tag: 'Предложение для компаний', title: 'Пробная коробка: 100 роз за 99 €', vat: 'без НДС',
           body: 'Попробуйте наши розы, прежде чем заказывать большие объёмы. Выберите 100 роз из каталога наших 35 самых популярных роз.',
           cta: 'Заказать пробную коробку', more: 'Смотреть розы', close: 'Закрыть' },
-    it: { pill: 'Scatola di prova', tag: 'Offerta per aziende', title: 'Scatola di prova: 100 rose a 89 €', vat: 'IVA esclusa',
+    it: { pill: 'Scatola di prova', tag: 'Offerta per aziende', title: 'Scatola di prova: 100 rose a 99 €', vat: 'IVA esclusa',
           body: 'Provate le nostre rose prima di ordinare volumi maggiori. Scegliete 100 rose dal nostro catalogo delle 35 rose più richieste.',
           cta: 'Ordina una scatola di prova', more: 'Vedi le rose', close: 'Chiudi' },
-    hu: { pill: 'Próbadoboz', tag: 'Ajánlat vállalkozásoknak', title: 'Próbadoboz: 100 rózsa 89 euróért', vat: '+ ÁFA',
+    hu: { pill: 'Próbadoboz', tag: 'Ajánlat vállalkozásoknak', title: 'Próbadoboz: 100 rózsa 99 euróért', vat: '+ ÁFA',
           body: 'Próbálja ki rózsáinkat, mielőtt nagyobb mennyiséget rendel. Válasszon 100 rózsát a 35 legnépszerűbb rózsánkat tartalmazó katalógusunkból.',
           cta: 'Próbadoboz rendelése', more: 'Rózsák megtekintése', close: 'Bezárás' }
   };
   // card docked beside the homepage hero (desktop only; the markup is in index.html, hero.css styles it)
   var DOCK = {
     sv: { big: '100 rosor', small: 'i en provlåda', price: '995 kr', vat: 'exkl. moms' },
-    en: { big: '100 roses', small: 'in a sample box', price: 'EUR 89', vat: 'excl. VAT' },
-    es: { big: '100 rosas', small: 'en una caja de prueba', price: '89 €', vat: 'sin IVA' },
-    ru: { big: '100 роз', small: 'в пробной коробке', price: '89 €', vat: 'без НДС' },
-    it: { big: '100 rose', small: 'in una scatola di prova', price: '89 €', vat: 'IVA esclusa' },
-    hu: { big: '100 rózsa', small: 'egy próbadobozban', price: '89 €', vat: '+ ÁFA' }
+    en: { big: '100 roses', small: 'in a sample box', price: 'EUR 99', vat: 'excl. VAT' },
+    es: { big: '100 rosas', small: 'en una caja de prueba', price: '99 €', vat: 'sin IVA' },
+    ru: { big: '100 роз', small: 'в пробной коробке', price: '99 €', vat: 'без НДС' },
+    it: { big: '100 rose', small: 'in una scatola di prova', price: '99 €', vat: 'IVA esclusa' },
+    hu: { big: '100 rózsa', small: 'egy próbadobozban', price: '99 €', vat: '+ ÁFA' }
   };
   function fillDocks() {
     document.querySelectorAll('.ab-dock').forEach(function (d) {
