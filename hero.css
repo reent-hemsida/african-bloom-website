@@ -1,7 +1,7 @@
 /* Homepage hero: time-limited price campaign (one rose at a time) + docked sample-box offer.
    Markup is generated per language in index.html; behaviour is in hero.js, the dock content in offer-banner.js. */
 .ab-herorow{display:flex;gap:24px;margin:24px 64px 0;align-items:stretch;}
-.ab-hero2{flex:1;min-width:0;display:grid;grid-template-columns:44% 56%;height:520px;background:#F3EADB;border-radius:20px;overflow:hidden;position:relative;}
+.ab-hero2{flex:1;min-width:0;display:grid;grid-template-columns:44% 56%;grid-template-rows:minmax(0,1fr);height:520px;background:#F3EADB;border-radius:20px;overflow:hidden;position:relative;}
 .hs-copy{padding:44px 36px 40px 44px;display:flex;flex-direction:column;justify-content:center;}
 .hs-badge{display:inline-flex;align-items:center;gap:10px;font-family:Inter,Arial,sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8A4A1E;font-weight:600;}
 .hs-badge b{background:#8A4A1E;color:#fff;padding:5px 10px;letter-spacing:.12em;font-weight:600;}
@@ -49,6 +49,15 @@
 @keyframes abDockPulse{0%{box-shadow:0 0 0 0 rgba(138,74,30,.65);}100%{box-shadow:0 0 0 22px rgba(138,74,30,0);}}
 /* the floating button is redundant while the dock is on screen */
 body.ab-dock-seen #ab-offer-pill{display:none !important;}
+
+/* Russian copy is longer: tighten it on desktop so the left column fits in the 520px hero and the price bar of the slide is never pushed out of view */
+@media (min-width:1201px){
+  html[lang="ru"] .hs-copy{padding:30px 32px 26px 40px;}
+  html[lang="ru"] .hs-guar{font-size:34px;margin-top:12px;}
+  html[lang="ru"] .hs-sub{font-size:14px;line-height:1.55;margin-top:10px;}
+  html[lang="ru"] .hs-cd{font-size:13px;margin-top:10px;}
+  html[lang="ru"] .hs-cta{margin-top:18px;}
+}
 
 @media (max-width:1200px){
   .ab-herorow{margin:16px 16px 0;}
